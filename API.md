@@ -43,10 +43,10 @@ Must be unique amongst siblings in the same scope
 ##### `putPostrender` <a name="@cdktf/provider-helm.DataHelmTemplate.putPostrender"></a>
 
 ```typescript
-public putPostrender(value?: DataHelmTemplatePostrender)
+public putPostrender(value: DataHelmTemplatePostrender)
 ```
 
-###### `value`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.parameter.value"></a>
 
 - *Type:* [`@cdktf/provider-helm.DataHelmTemplatePostrender`](#@cdktf/provider-helm.DataHelmTemplatePostrender)
 
@@ -703,6 +703,26 @@ public readonly waitInput: boolean | IResolvable;
 
 ---
 
+##### `apiVersions`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.apiVersions"></a>
+
+```typescript
+public readonly apiVersions: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `atomic`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.atomic"></a>
+
+```typescript
+public readonly atomic: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
 ##### `chart`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.chart"></a>
 
 ```typescript
@@ -710,6 +730,116 @@ public readonly chart: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `createNamespace`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.createNamespace"></a>
+
+```typescript
+public readonly createNamespace: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `dependencyUpdate`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.dependencyUpdate"></a>
+
+```typescript
+public readonly dependencyUpdate: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `description`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `devel`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.devel"></a>
+
+```typescript
+public readonly devel: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `disableOpenapiValidation`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.disableOpenapiValidation"></a>
+
+```typescript
+public readonly disableOpenapiValidation: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `disableWebhooks`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.disableWebhooks"></a>
+
+```typescript
+public readonly disableWebhooks: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `includeCrds`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.includeCrds"></a>
+
+```typescript
+public readonly includeCrds: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `isUpgrade`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.isUpgrade"></a>
+
+```typescript
+public readonly isUpgrade: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `keyring`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.keyring"></a>
+
+```typescript
+public readonly keyring: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `manifest`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.manifest"></a>
+
+```typescript
+public readonly manifest: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `manifests`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.manifests"></a>
+
+```typescript
+public readonly manifests: IResolvable | {[ key: string ]: string};
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | {[ key: string ]: `string`}
 
 ---
 
@@ -723,137 +853,7 @@ public readonly name: string;
 
 ---
 
-##### `apiVersions`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.apiVersions"></a>
-
-```typescript
-public readonly apiVersions: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `atomic`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.atomic"></a>
-
-```typescript
-public readonly atomic: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `createNamespace`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.createNamespace"></a>
-
-```typescript
-public readonly createNamespace: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `dependencyUpdate`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.dependencyUpdate"></a>
-
-```typescript
-public readonly dependencyUpdate: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `description`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.description"></a>
-
-```typescript
-public readonly description: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `devel`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.devel"></a>
-
-```typescript
-public readonly devel: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `disableOpenapiValidation`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.disableOpenapiValidation"></a>
-
-```typescript
-public readonly disableOpenapiValidation: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `disableWebhooks`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.disableWebhooks"></a>
-
-```typescript
-public readonly disableWebhooks: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `includeCrds`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.includeCrds"></a>
-
-```typescript
-public readonly includeCrds: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `isUpgrade`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.isUpgrade"></a>
-
-```typescript
-public readonly isUpgrade: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `keyring`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.keyring"></a>
-
-```typescript
-public readonly keyring: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `manifest`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.manifest"></a>
-
-```typescript
-public readonly manifest: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `manifests`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.manifests"></a>
-
-```typescript
-public readonly manifests: IResolvable | {[ key: string ]: string};
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | {[ key: string ]: `string`}
-
----
-
-##### `namespace`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.namespace"></a>
+##### `namespace`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.namespace"></a>
 
 ```typescript
 public readonly namespace: string;
@@ -863,7 +863,7 @@ public readonly namespace: string;
 
 ---
 
-##### `notes`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.notes"></a>
+##### `notes`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.notes"></a>
 
 ```typescript
 public readonly notes: string;
@@ -873,7 +873,7 @@ public readonly notes: string;
 
 ---
 
-##### `renderSubchartNotes`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.renderSubchartNotes"></a>
+##### `renderSubchartNotes`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.renderSubchartNotes"></a>
 
 ```typescript
 public readonly renderSubchartNotes: boolean | IResolvable;
@@ -883,7 +883,7 @@ public readonly renderSubchartNotes: boolean | IResolvable;
 
 ---
 
-##### `replace`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.replace"></a>
+##### `replace`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.replace"></a>
 
 ```typescript
 public readonly replace: boolean | IResolvable;
@@ -893,7 +893,7 @@ public readonly replace: boolean | IResolvable;
 
 ---
 
-##### `repository`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repository"></a>
+##### `repository`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repository"></a>
 
 ```typescript
 public readonly repository: string;
@@ -903,7 +903,7 @@ public readonly repository: string;
 
 ---
 
-##### `repositoryCaFile`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryCaFile"></a>
+##### `repositoryCaFile`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryCaFile"></a>
 
 ```typescript
 public readonly repositoryCaFile: string;
@@ -913,7 +913,7 @@ public readonly repositoryCaFile: string;
 
 ---
 
-##### `repositoryCertFile`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryCertFile"></a>
+##### `repositoryCertFile`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryCertFile"></a>
 
 ```typescript
 public readonly repositoryCertFile: string;
@@ -923,7 +923,7 @@ public readonly repositoryCertFile: string;
 
 ---
 
-##### `repositoryKeyFile`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryKeyFile"></a>
+##### `repositoryKeyFile`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryKeyFile"></a>
 
 ```typescript
 public readonly repositoryKeyFile: string;
@@ -933,7 +933,7 @@ public readonly repositoryKeyFile: string;
 
 ---
 
-##### `repositoryPassword`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryPassword"></a>
+##### `repositoryPassword`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryPassword"></a>
 
 ```typescript
 public readonly repositoryPassword: string;
@@ -943,7 +943,7 @@ public readonly repositoryPassword: string;
 
 ---
 
-##### `repositoryUsername`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryUsername"></a>
+##### `repositoryUsername`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.repositoryUsername"></a>
 
 ```typescript
 public readonly repositoryUsername: string;
@@ -953,7 +953,7 @@ public readonly repositoryUsername: string;
 
 ---
 
-##### `resetValues`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.resetValues"></a>
+##### `resetValues`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.resetValues"></a>
 
 ```typescript
 public readonly resetValues: boolean | IResolvable;
@@ -963,7 +963,7 @@ public readonly resetValues: boolean | IResolvable;
 
 ---
 
-##### `reuseValues`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.reuseValues"></a>
+##### `reuseValues`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.reuseValues"></a>
 
 ```typescript
 public readonly reuseValues: boolean | IResolvable;
@@ -973,7 +973,7 @@ public readonly reuseValues: boolean | IResolvable;
 
 ---
 
-##### `set`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.set"></a>
+##### `set`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.set"></a>
 
 ```typescript
 public readonly set: DataHelmTemplateSet[];
@@ -983,7 +983,7 @@ public readonly set: DataHelmTemplateSet[];
 
 ---
 
-##### `setSensitive`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setSensitive"></a>
+##### `setSensitive`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setSensitive"></a>
 
 ```typescript
 public readonly setSensitive: DataHelmTemplateSetSensitive[];
@@ -993,7 +993,7 @@ public readonly setSensitive: DataHelmTemplateSetSensitive[];
 
 ---
 
-##### `setString`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setString"></a>
+##### `setString`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setString"></a>
 
 ```typescript
 public readonly setString: DataHelmTemplateSetString[];
@@ -1003,7 +1003,7 @@ public readonly setString: DataHelmTemplateSetString[];
 
 ---
 
-##### `showOnly`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.showOnly"></a>
+##### `showOnly`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.showOnly"></a>
 
 ```typescript
 public readonly showOnly: string[];
@@ -1013,7 +1013,7 @@ public readonly showOnly: string[];
 
 ---
 
-##### `skipCrds`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.skipCrds"></a>
+##### `skipCrds`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.skipCrds"></a>
 
 ```typescript
 public readonly skipCrds: boolean | IResolvable;
@@ -1023,7 +1023,7 @@ public readonly skipCrds: boolean | IResolvable;
 
 ---
 
-##### `skipTests`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.skipTests"></a>
+##### `skipTests`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.skipTests"></a>
 
 ```typescript
 public readonly skipTests: boolean | IResolvable;
@@ -1033,7 +1033,7 @@ public readonly skipTests: boolean | IResolvable;
 
 ---
 
-##### `timeout`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.timeout"></a>
+##### `timeout`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.timeout"></a>
 
 ```typescript
 public readonly timeout: number;
@@ -1043,7 +1043,7 @@ public readonly timeout: number;
 
 ---
 
-##### `validate`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.validate"></a>
+##### `validate`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.validate"></a>
 
 ```typescript
 public readonly validate: boolean | IResolvable;
@@ -1053,7 +1053,7 @@ public readonly validate: boolean | IResolvable;
 
 ---
 
-##### `values`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.values"></a>
+##### `values`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.values"></a>
 
 ```typescript
 public readonly values: string[];
@@ -1063,7 +1063,7 @@ public readonly values: string[];
 
 ---
 
-##### `verify`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.verify"></a>
+##### `verify`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.verify"></a>
 
 ```typescript
 public readonly verify: boolean | IResolvable;
@@ -1073,7 +1073,7 @@ public readonly verify: boolean | IResolvable;
 
 ---
 
-##### `version`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.version"></a>
+##### `version`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.version"></a>
 
 ```typescript
 public readonly version: string;
@@ -1083,7 +1083,7 @@ public readonly version: string;
 
 ---
 
-##### `wait`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.wait"></a>
+##### `wait`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.wait"></a>
 
 ```typescript
 public readonly wait: boolean | IResolvable;
@@ -1437,10 +1437,10 @@ public metadata(index: string)
 ##### `putPostrender` <a name="@cdktf/provider-helm.Release.putPostrender"></a>
 
 ```typescript
-public putPostrender(value?: ReleasePostrender)
+public putPostrender(value: ReleasePostrender)
 ```
 
-###### `value`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.parameter.value"></a>
 
 - *Type:* [`@cdktf/provider-helm.ReleasePostrender`](#@cdktf/provider-helm.ReleasePostrender)
 
@@ -2069,6 +2069,16 @@ public readonly waitInput: boolean | IResolvable;
 
 ---
 
+##### `atomic`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.atomic"></a>
+
+```typescript
+public readonly atomic: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
 ##### `chart`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.chart"></a>
 
 ```typescript
@@ -2076,6 +2086,126 @@ public readonly chart: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `cleanupOnFail`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.cleanupOnFail"></a>
+
+```typescript
+public readonly cleanupOnFail: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `createNamespace`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.createNamespace"></a>
+
+```typescript
+public readonly createNamespace: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `dependencyUpdate`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.dependencyUpdate"></a>
+
+```typescript
+public readonly dependencyUpdate: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `description`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `devel`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.devel"></a>
+
+```typescript
+public readonly devel: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `disableCrdHooks`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.disableCrdHooks"></a>
+
+```typescript
+public readonly disableCrdHooks: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `disableOpenapiValidation`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.disableOpenapiValidation"></a>
+
+```typescript
+public readonly disableOpenapiValidation: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `disableWebhooks`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.disableWebhooks"></a>
+
+```typescript
+public readonly disableWebhooks: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `forceUpdate`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.forceUpdate"></a>
+
+```typescript
+public readonly forceUpdate: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `keyring`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.keyring"></a>
+
+```typescript
+public readonly keyring: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `lint`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.lint"></a>
+
+```typescript
+public readonly lint: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `maxHistory`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.maxHistory"></a>
+
+```typescript
+public readonly maxHistory: number;
+```
+
+- *Type:* `number`
 
 ---
 
@@ -2089,137 +2219,7 @@ public readonly name: string;
 
 ---
 
-##### `atomic`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.atomic"></a>
-
-```typescript
-public readonly atomic: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `cleanupOnFail`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.cleanupOnFail"></a>
-
-```typescript
-public readonly cleanupOnFail: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `createNamespace`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.createNamespace"></a>
-
-```typescript
-public readonly createNamespace: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `dependencyUpdate`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.dependencyUpdate"></a>
-
-```typescript
-public readonly dependencyUpdate: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `description`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.description"></a>
-
-```typescript
-public readonly description: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `devel`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.devel"></a>
-
-```typescript
-public readonly devel: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `disableCrdHooks`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.disableCrdHooks"></a>
-
-```typescript
-public readonly disableCrdHooks: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `disableOpenapiValidation`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.disableOpenapiValidation"></a>
-
-```typescript
-public readonly disableOpenapiValidation: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `disableWebhooks`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.disableWebhooks"></a>
-
-```typescript
-public readonly disableWebhooks: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `forceUpdate`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.forceUpdate"></a>
-
-```typescript
-public readonly forceUpdate: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `keyring`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.keyring"></a>
-
-```typescript
-public readonly keyring: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `lint`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.lint"></a>
-
-```typescript
-public readonly lint: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `maxHistory`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.maxHistory"></a>
-
-```typescript
-public readonly maxHistory: number;
-```
-
-- *Type:* `number`
-
----
-
-##### `namespace`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.namespace"></a>
+##### `namespace`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.namespace"></a>
 
 ```typescript
 public readonly namespace: string;
@@ -2229,7 +2229,7 @@ public readonly namespace: string;
 
 ---
 
-##### `recreatePods`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.recreatePods"></a>
+##### `recreatePods`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.recreatePods"></a>
 
 ```typescript
 public readonly recreatePods: boolean | IResolvable;
@@ -2239,7 +2239,7 @@ public readonly recreatePods: boolean | IResolvable;
 
 ---
 
-##### `renderSubchartNotes`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.renderSubchartNotes"></a>
+##### `renderSubchartNotes`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.renderSubchartNotes"></a>
 
 ```typescript
 public readonly renderSubchartNotes: boolean | IResolvable;
@@ -2249,7 +2249,7 @@ public readonly renderSubchartNotes: boolean | IResolvable;
 
 ---
 
-##### `replace`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.replace"></a>
+##### `replace`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.replace"></a>
 
 ```typescript
 public readonly replace: boolean | IResolvable;
@@ -2259,7 +2259,7 @@ public readonly replace: boolean | IResolvable;
 
 ---
 
-##### `repository`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.repository"></a>
+##### `repository`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.repository"></a>
 
 ```typescript
 public readonly repository: string;
@@ -2269,7 +2269,7 @@ public readonly repository: string;
 
 ---
 
-##### `repositoryCaFile`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.repositoryCaFile"></a>
+##### `repositoryCaFile`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.repositoryCaFile"></a>
 
 ```typescript
 public readonly repositoryCaFile: string;
@@ -2279,7 +2279,7 @@ public readonly repositoryCaFile: string;
 
 ---
 
-##### `repositoryCertFile`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.repositoryCertFile"></a>
+##### `repositoryCertFile`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.repositoryCertFile"></a>
 
 ```typescript
 public readonly repositoryCertFile: string;
@@ -2289,7 +2289,7 @@ public readonly repositoryCertFile: string;
 
 ---
 
-##### `repositoryKeyFile`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.repositoryKeyFile"></a>
+##### `repositoryKeyFile`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.repositoryKeyFile"></a>
 
 ```typescript
 public readonly repositoryKeyFile: string;
@@ -2299,7 +2299,7 @@ public readonly repositoryKeyFile: string;
 
 ---
 
-##### `repositoryPassword`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.repositoryPassword"></a>
+##### `repositoryPassword`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.repositoryPassword"></a>
 
 ```typescript
 public readonly repositoryPassword: string;
@@ -2309,7 +2309,7 @@ public readonly repositoryPassword: string;
 
 ---
 
-##### `repositoryUsername`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.repositoryUsername"></a>
+##### `repositoryUsername`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.repositoryUsername"></a>
 
 ```typescript
 public readonly repositoryUsername: string;
@@ -2319,7 +2319,7 @@ public readonly repositoryUsername: string;
 
 ---
 
-##### `resetValues`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.resetValues"></a>
+##### `resetValues`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.resetValues"></a>
 
 ```typescript
 public readonly resetValues: boolean | IResolvable;
@@ -2329,7 +2329,7 @@ public readonly resetValues: boolean | IResolvable;
 
 ---
 
-##### `reuseValues`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.reuseValues"></a>
+##### `reuseValues`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.reuseValues"></a>
 
 ```typescript
 public readonly reuseValues: boolean | IResolvable;
@@ -2339,7 +2339,7 @@ public readonly reuseValues: boolean | IResolvable;
 
 ---
 
-##### `set`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.set"></a>
+##### `set`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.set"></a>
 
 ```typescript
 public readonly set: ReleaseSet[];
@@ -2349,7 +2349,7 @@ public readonly set: ReleaseSet[];
 
 ---
 
-##### `setSensitive`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.setSensitive"></a>
+##### `setSensitive`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.setSensitive"></a>
 
 ```typescript
 public readonly setSensitive: ReleaseSetSensitive[];
@@ -2359,7 +2359,7 @@ public readonly setSensitive: ReleaseSetSensitive[];
 
 ---
 
-##### `skipCrds`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.skipCrds"></a>
+##### `skipCrds`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.skipCrds"></a>
 
 ```typescript
 public readonly skipCrds: boolean | IResolvable;
@@ -2369,7 +2369,7 @@ public readonly skipCrds: boolean | IResolvable;
 
 ---
 
-##### `timeout`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.timeout"></a>
+##### `timeout`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.timeout"></a>
 
 ```typescript
 public readonly timeout: number;
@@ -2379,7 +2379,7 @@ public readonly timeout: number;
 
 ---
 
-##### `values`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.values"></a>
+##### `values`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.values"></a>
 
 ```typescript
 public readonly values: string[];
@@ -2389,7 +2389,7 @@ public readonly values: string[];
 
 ---
 
-##### `verify`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.verify"></a>
+##### `verify`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.verify"></a>
 
 ```typescript
 public readonly verify: boolean | IResolvable;
@@ -2399,7 +2399,7 @@ public readonly verify: boolean | IResolvable;
 
 ---
 
-##### `version`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.version"></a>
+##### `version`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.version"></a>
 
 ```typescript
 public readonly version: string;
@@ -2409,7 +2409,7 @@ public readonly version: string;
 
 ---
 
-##### `wait`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.wait"></a>
+##### `wait`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.wait"></a>
 
 ```typescript
 public readonly wait: boolean | IResolvable;
@@ -2419,7 +2419,7 @@ public readonly wait: boolean | IResolvable;
 
 ---
 
-##### `waitForJobs`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.waitForJobs"></a>
+##### `waitForJobs`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.waitForJobs"></a>
 
 ```typescript
 public readonly waitForJobs: boolean | IResolvable;
@@ -4363,605 +4363,13 @@ public readonly binaryPath: string;
 
 ---
 
-
-### HelmProviderExperimentsOutputReference <a name="@cdktf/provider-helm.HelmProviderExperimentsOutputReference"></a>
-
-#### Initializers <a name="@cdktf/provider-helm.HelmProviderExperimentsOutputReference.Initializer"></a>
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplatePostrenderOutputReference.property.internalValue"></a>
 
 ```typescript
-import { HelmProviderExperimentsOutputReference } from '@cdktf/provider-helm'
-
-new HelmProviderExperimentsOutputReference(terraformResource: ITerraformResource, terraformAttribute: string, isSingleItem: boolean)
+public readonly internalValue: DataHelmTemplatePostrender;
 ```
 
-##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderExperimentsOutputReference.parameter.terraformResource"></a>
-
-- *Type:* [`cdktf.ITerraformResource`](#cdktf.ITerraformResource)
-
-The parent resource.
-
----
-
-##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderExperimentsOutputReference.parameter.terraformAttribute"></a>
-
-- *Type:* `string`
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderExperimentsOutputReference.parameter.isSingleItem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
-
----
-
-#### Methods <a name="Methods"></a>
-
-##### `resetManifest` <a name="@cdktf/provider-helm.HelmProviderExperimentsOutputReference.resetManifest"></a>
-
-```typescript
-public resetManifest()
-```
-
-
-#### Properties <a name="Properties"></a>
-
-##### `manifestInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderExperimentsOutputReference.property.manifestInput"></a>
-
-```typescript
-public readonly manifestInput: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `manifest`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderExperimentsOutputReference.property.manifest"></a>
-
-```typescript
-public readonly manifest: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-
-### HelmProviderKubernetesExecOutputReference <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference"></a>
-
-#### Initializers <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.Initializer"></a>
-
-```typescript
-import { HelmProviderKubernetesExecOutputReference } from '@cdktf/provider-helm'
-
-new HelmProviderKubernetesExecOutputReference(terraformResource: ITerraformResource, terraformAttribute: string, isSingleItem: boolean)
-```
-
-##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.parameter.terraformResource"></a>
-
-- *Type:* [`cdktf.ITerraformResource`](#cdktf.ITerraformResource)
-
-The parent resource.
-
----
-
-##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.parameter.terraformAttribute"></a>
-
-- *Type:* `string`
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.parameter.isSingleItem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
-
----
-
-#### Methods <a name="Methods"></a>
-
-##### `resetArgs` <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.resetArgs"></a>
-
-```typescript
-public resetArgs()
-```
-
-##### `resetEnv` <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.resetEnv"></a>
-
-```typescript
-public resetEnv()
-```
-
-
-#### Properties <a name="Properties"></a>
-
-##### `apiVersionInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.property.apiVersionInput"></a>
-
-```typescript
-public readonly apiVersionInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `argsInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.property.argsInput"></a>
-
-```typescript
-public readonly argsInput: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `commandInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.property.commandInput"></a>
-
-```typescript
-public readonly commandInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `envInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.property.envInput"></a>
-
-```typescript
-public readonly envInput: IResolvable | {[ key: string ]: string};
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | {[ key: string ]: `string`}
-
----
-
-##### `apiVersion`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.property.apiVersion"></a>
-
-```typescript
-public readonly apiVersion: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `args`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.property.args"></a>
-
-```typescript
-public readonly args: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `command`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.property.command"></a>
-
-```typescript
-public readonly command: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `env`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExecOutputReference.property.env"></a>
-
-```typescript
-public readonly env: IResolvable | {[ key: string ]: string};
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | {[ key: string ]: `string`}
-
----
-
-
-### HelmProviderKubernetesOutputReference <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference"></a>
-
-#### Initializers <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.Initializer"></a>
-
-```typescript
-import { HelmProviderKubernetesOutputReference } from '@cdktf/provider-helm'
-
-new HelmProviderKubernetesOutputReference(terraformResource: ITerraformResource, terraformAttribute: string, isSingleItem: boolean)
-```
-
-##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.parameter.terraformResource"></a>
-
-- *Type:* [`cdktf.ITerraformResource`](#cdktf.ITerraformResource)
-
-The parent resource.
-
----
-
-##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.parameter.terraformAttribute"></a>
-
-- *Type:* `string`
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.parameter.isSingleItem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
-
----
-
-#### Methods <a name="Methods"></a>
-
-##### `resetClientCertificate` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetClientCertificate"></a>
-
-```typescript
-public resetClientCertificate()
-```
-
-##### `resetClientKey` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetClientKey"></a>
-
-```typescript
-public resetClientKey()
-```
-
-##### `resetClusterCaCertificate` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetClusterCaCertificate"></a>
-
-```typescript
-public resetClusterCaCertificate()
-```
-
-##### `resetConfigContext` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetConfigContext"></a>
-
-```typescript
-public resetConfigContext()
-```
-
-##### `resetConfigContextAuthInfo` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetConfigContextAuthInfo"></a>
-
-```typescript
-public resetConfigContextAuthInfo()
-```
-
-##### `resetConfigContextCluster` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetConfigContextCluster"></a>
-
-```typescript
-public resetConfigContextCluster()
-```
-
-##### `resetConfigPath` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetConfigPath"></a>
-
-```typescript
-public resetConfigPath()
-```
-
-##### `resetConfigPaths` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetConfigPaths"></a>
-
-```typescript
-public resetConfigPaths()
-```
-
-##### `resetExec` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetExec"></a>
-
-```typescript
-public resetExec()
-```
-
-##### `resetHost` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetHost"></a>
-
-```typescript
-public resetHost()
-```
-
-##### `resetInsecure` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetInsecure"></a>
-
-```typescript
-public resetInsecure()
-```
-
-##### `resetPassword` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetPassword"></a>
-
-```typescript
-public resetPassword()
-```
-
-##### `resetToken` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetToken"></a>
-
-```typescript
-public resetToken()
-```
-
-##### `resetUsername` <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.resetUsername"></a>
-
-```typescript
-public resetUsername()
-```
-
-
-#### Properties <a name="Properties"></a>
-
-##### `clientCertificateInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.clientCertificateInput"></a>
-
-```typescript
-public readonly clientCertificateInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `clientKeyInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.clientKeyInput"></a>
-
-```typescript
-public readonly clientKeyInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `clusterCaCertificateInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.clusterCaCertificateInput"></a>
-
-```typescript
-public readonly clusterCaCertificateInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configContextAuthInfoInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configContextAuthInfoInput"></a>
-
-```typescript
-public readonly configContextAuthInfoInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configContextClusterInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configContextClusterInput"></a>
-
-```typescript
-public readonly configContextClusterInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configContextInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configContextInput"></a>
-
-```typescript
-public readonly configContextInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configPathInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configPathInput"></a>
-
-```typescript
-public readonly configPathInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configPathsInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configPathsInput"></a>
-
-```typescript
-public readonly configPathsInput: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `execInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.execInput"></a>
-
-```typescript
-public readonly execInput: HelmProviderKubernetesExec;
-```
-
-- *Type:* [`@cdktf/provider-helm.HelmProviderKubernetesExec`](#@cdktf/provider-helm.HelmProviderKubernetesExec)
-
----
-
-##### `hostInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.hostInput"></a>
-
-```typescript
-public readonly hostInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `insecureInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.insecureInput"></a>
-
-```typescript
-public readonly insecureInput: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `passwordInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.passwordInput"></a>
-
-```typescript
-public readonly passwordInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `tokenInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.tokenInput"></a>
-
-```typescript
-public readonly tokenInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `usernameInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.usernameInput"></a>
-
-```typescript
-public readonly usernameInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `clientCertificate`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.clientCertificate"></a>
-
-```typescript
-public readonly clientCertificate: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `clientKey`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.clientKey"></a>
-
-```typescript
-public readonly clientKey: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `clusterCaCertificate`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.clusterCaCertificate"></a>
-
-```typescript
-public readonly clusterCaCertificate: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configContext`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configContext"></a>
-
-```typescript
-public readonly configContext: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configContextAuthInfo`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configContextAuthInfo"></a>
-
-```typescript
-public readonly configContextAuthInfo: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configContextCluster`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configContextCluster"></a>
-
-```typescript
-public readonly configContextCluster: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configPath`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configPath"></a>
-
-```typescript
-public readonly configPath: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `configPaths`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.configPaths"></a>
-
-```typescript
-public readonly configPaths: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `exec`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.exec"></a>
-
-```typescript
-public readonly exec: HelmProviderKubernetesExec;
-```
-
-- *Type:* [`@cdktf/provider-helm.HelmProviderKubernetesExec`](#@cdktf/provider-helm.HelmProviderKubernetesExec)
-
----
-
-##### `host`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.host"></a>
-
-```typescript
-public readonly host: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `insecure`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.insecure"></a>
-
-```typescript
-public readonly insecure: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `password`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.password"></a>
-
-```typescript
-public readonly password: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `token`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.token"></a>
-
-```typescript
-public readonly token: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `username`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesOutputReference.property.username"></a>
-
-```typescript
-public readonly username: string;
-```
-
-- *Type:* `string`
+- *Type:* [`@cdktf/provider-helm.DataHelmTemplatePostrender`](#@cdktf/provider-helm.DataHelmTemplatePostrender)
 
 ---
 
@@ -5124,6 +4532,16 @@ public readonly binaryPath: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleasePostrenderOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: ReleasePostrender;
+```
+
+- *Type:* [`@cdktf/provider-helm.ReleasePostrender`](#@cdktf/provider-helm.ReleasePostrender)
 
 ---
 

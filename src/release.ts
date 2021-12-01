@@ -276,7 +276,7 @@ export interface ReleasePostrender {
   readonly binaryPath: string;
 }
 
-function releasePostrenderToTerraform(struct?: ReleasePostrenderOutputReference | ReleasePostrender): any {
+export function releasePostrenderToTerraform(struct?: ReleasePostrenderOutputReference | ReleasePostrender): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -296,6 +296,25 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ReleasePostrender | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._binaryPath) {
+      hasAnyValues = true;
+      internalValueResult.binaryPath = this._binaryPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReleasePostrender | undefined) {
+    if (value === undefined) {
+      this._binaryPath = undefined;
+    }
+    else {
+      this._binaryPath = value.binaryPath;
+    }
+  }
+
   // binary_path - computed: false, optional: false, required: true
   private _binaryPath?: string; 
   public get binaryPath() {
@@ -306,7 +325,7 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get binaryPathInput() {
-    return this._binaryPath
+    return this._binaryPath;
   }
 }
 export interface ReleaseSet {
@@ -324,7 +343,7 @@ export interface ReleaseSet {
   readonly value: string;
 }
 
-function releaseSetToTerraform(struct?: ReleaseSet): any {
+export function releaseSetToTerraform(struct?: ReleaseSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -351,7 +370,7 @@ export interface ReleaseSetSensitive {
   readonly value: string;
 }
 
-function releaseSetSensitiveToTerraform(struct?: ReleaseSetSensitive): any {
+export function releaseSetSensitiveToTerraform(struct?: ReleaseSetSensitive): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -430,7 +449,7 @@ export class Release extends cdktf.TerraformResource {
     this._version = config.version;
     this._wait = config.wait;
     this._waitForJobs = config.waitForJobs;
-    this._postrender = config.postrender;
+    this._postrender.internalValue = config.postrender;
     this._set = config.set;
     this._setSensitive = config.setSensitive;
   }
@@ -440,11 +459,11 @@ export class Release extends cdktf.TerraformResource {
   // ==========
 
   // atomic - computed: false, optional: true, required: false
-  private _atomic?: boolean | cdktf.IResolvable | undefined; 
+  private _atomic?: boolean | cdktf.IResolvable; 
   public get atomic() {
     return this.getBooleanAttribute('atomic') as any;
   }
-  public set atomic(value: boolean | cdktf.IResolvable | undefined) {
+  public set atomic(value: boolean | cdktf.IResolvable) {
     this._atomic = value;
   }
   public resetAtomic() {
@@ -452,7 +471,7 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get atomicInput() {
-    return this._atomic
+    return this._atomic;
   }
 
   // chart - computed: false, optional: false, required: true
@@ -465,15 +484,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get chartInput() {
-    return this._chart
+    return this._chart;
   }
 
   // cleanup_on_fail - computed: false, optional: true, required: false
-  private _cleanupOnFail?: boolean | cdktf.IResolvable | undefined; 
+  private _cleanupOnFail?: boolean | cdktf.IResolvable; 
   public get cleanupOnFail() {
     return this.getBooleanAttribute('cleanup_on_fail') as any;
   }
-  public set cleanupOnFail(value: boolean | cdktf.IResolvable | undefined) {
+  public set cleanupOnFail(value: boolean | cdktf.IResolvable) {
     this._cleanupOnFail = value;
   }
   public resetCleanupOnFail() {
@@ -481,15 +500,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cleanupOnFailInput() {
-    return this._cleanupOnFail
+    return this._cleanupOnFail;
   }
 
   // create_namespace - computed: false, optional: true, required: false
-  private _createNamespace?: boolean | cdktf.IResolvable | undefined; 
+  private _createNamespace?: boolean | cdktf.IResolvable; 
   public get createNamespace() {
     return this.getBooleanAttribute('create_namespace') as any;
   }
-  public set createNamespace(value: boolean | cdktf.IResolvable | undefined) {
+  public set createNamespace(value: boolean | cdktf.IResolvable) {
     this._createNamespace = value;
   }
   public resetCreateNamespace() {
@@ -497,15 +516,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get createNamespaceInput() {
-    return this._createNamespace
+    return this._createNamespace;
   }
 
   // dependency_update - computed: false, optional: true, required: false
-  private _dependencyUpdate?: boolean | cdktf.IResolvable | undefined; 
+  private _dependencyUpdate?: boolean | cdktf.IResolvable; 
   public get dependencyUpdate() {
     return this.getBooleanAttribute('dependency_update') as any;
   }
-  public set dependencyUpdate(value: boolean | cdktf.IResolvable | undefined) {
+  public set dependencyUpdate(value: boolean | cdktf.IResolvable) {
     this._dependencyUpdate = value;
   }
   public resetDependencyUpdate() {
@@ -513,15 +532,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dependencyUpdateInput() {
-    return this._dependencyUpdate
+    return this._dependencyUpdate;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -529,15 +548,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // devel - computed: false, optional: true, required: false
-  private _devel?: boolean | cdktf.IResolvable | undefined; 
+  private _devel?: boolean | cdktf.IResolvable; 
   public get devel() {
     return this.getBooleanAttribute('devel') as any;
   }
-  public set devel(value: boolean | cdktf.IResolvable | undefined) {
+  public set devel(value: boolean | cdktf.IResolvable) {
     this._devel = value;
   }
   public resetDevel() {
@@ -545,15 +564,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get develInput() {
-    return this._devel
+    return this._devel;
   }
 
   // disable_crd_hooks - computed: false, optional: true, required: false
-  private _disableCrdHooks?: boolean | cdktf.IResolvable | undefined; 
+  private _disableCrdHooks?: boolean | cdktf.IResolvable; 
   public get disableCrdHooks() {
     return this.getBooleanAttribute('disable_crd_hooks') as any;
   }
-  public set disableCrdHooks(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableCrdHooks(value: boolean | cdktf.IResolvable) {
     this._disableCrdHooks = value;
   }
   public resetDisableCrdHooks() {
@@ -561,15 +580,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disableCrdHooksInput() {
-    return this._disableCrdHooks
+    return this._disableCrdHooks;
   }
 
   // disable_openapi_validation - computed: false, optional: true, required: false
-  private _disableOpenapiValidation?: boolean | cdktf.IResolvable | undefined; 
+  private _disableOpenapiValidation?: boolean | cdktf.IResolvable; 
   public get disableOpenapiValidation() {
     return this.getBooleanAttribute('disable_openapi_validation') as any;
   }
-  public set disableOpenapiValidation(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableOpenapiValidation(value: boolean | cdktf.IResolvable) {
     this._disableOpenapiValidation = value;
   }
   public resetDisableOpenapiValidation() {
@@ -577,15 +596,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disableOpenapiValidationInput() {
-    return this._disableOpenapiValidation
+    return this._disableOpenapiValidation;
   }
 
   // disable_webhooks - computed: false, optional: true, required: false
-  private _disableWebhooks?: boolean | cdktf.IResolvable | undefined; 
+  private _disableWebhooks?: boolean | cdktf.IResolvable; 
   public get disableWebhooks() {
     return this.getBooleanAttribute('disable_webhooks') as any;
   }
-  public set disableWebhooks(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableWebhooks(value: boolean | cdktf.IResolvable) {
     this._disableWebhooks = value;
   }
   public resetDisableWebhooks() {
@@ -593,15 +612,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disableWebhooksInput() {
-    return this._disableWebhooks
+    return this._disableWebhooks;
   }
 
   // force_update - computed: false, optional: true, required: false
-  private _forceUpdate?: boolean | cdktf.IResolvable | undefined; 
+  private _forceUpdate?: boolean | cdktf.IResolvable; 
   public get forceUpdate() {
     return this.getBooleanAttribute('force_update') as any;
   }
-  public set forceUpdate(value: boolean | cdktf.IResolvable | undefined) {
+  public set forceUpdate(value: boolean | cdktf.IResolvable) {
     this._forceUpdate = value;
   }
   public resetForceUpdate() {
@@ -609,7 +628,7 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get forceUpdateInput() {
-    return this._forceUpdate
+    return this._forceUpdate;
   }
 
   // id - computed: true, optional: true, required: false
@@ -618,11 +637,11 @@ export class Release extends cdktf.TerraformResource {
   }
 
   // keyring - computed: false, optional: true, required: false
-  private _keyring?: string | undefined; 
+  private _keyring?: string; 
   public get keyring() {
     return this.getStringAttribute('keyring');
   }
-  public set keyring(value: string | undefined) {
+  public set keyring(value: string) {
     this._keyring = value;
   }
   public resetKeyring() {
@@ -630,15 +649,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyringInput() {
-    return this._keyring
+    return this._keyring;
   }
 
   // lint - computed: false, optional: true, required: false
-  private _lint?: boolean | cdktf.IResolvable | undefined; 
+  private _lint?: boolean | cdktf.IResolvable; 
   public get lint() {
     return this.getBooleanAttribute('lint') as any;
   }
-  public set lint(value: boolean | cdktf.IResolvable | undefined) {
+  public set lint(value: boolean | cdktf.IResolvable) {
     this._lint = value;
   }
   public resetLint() {
@@ -646,7 +665,7 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get lintInput() {
-    return this._lint
+    return this._lint;
   }
 
   // manifest - computed: true, optional: false, required: false
@@ -655,11 +674,11 @@ export class Release extends cdktf.TerraformResource {
   }
 
   // max_history - computed: false, optional: true, required: false
-  private _maxHistory?: number | undefined; 
+  private _maxHistory?: number; 
   public get maxHistory() {
     return this.getNumberAttribute('max_history');
   }
-  public set maxHistory(value: number | undefined) {
+  public set maxHistory(value: number) {
     this._maxHistory = value;
   }
   public resetMaxHistory() {
@@ -667,7 +686,7 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxHistoryInput() {
-    return this._maxHistory
+    return this._maxHistory;
   }
 
   // metadata - computed: true, optional: false, required: false
@@ -685,15 +704,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace - computed: false, optional: true, required: false
-  private _namespace?: string | undefined; 
+  private _namespace?: string; 
   public get namespace() {
     return this.getStringAttribute('namespace');
   }
-  public set namespace(value: string | undefined) {
+  public set namespace(value: string) {
     this._namespace = value;
   }
   public resetNamespace() {
@@ -701,15 +720,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceInput() {
-    return this._namespace
+    return this._namespace;
   }
 
   // recreate_pods - computed: false, optional: true, required: false
-  private _recreatePods?: boolean | cdktf.IResolvable | undefined; 
+  private _recreatePods?: boolean | cdktf.IResolvable; 
   public get recreatePods() {
     return this.getBooleanAttribute('recreate_pods') as any;
   }
-  public set recreatePods(value: boolean | cdktf.IResolvable | undefined) {
+  public set recreatePods(value: boolean | cdktf.IResolvable) {
     this._recreatePods = value;
   }
   public resetRecreatePods() {
@@ -717,15 +736,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get recreatePodsInput() {
-    return this._recreatePods
+    return this._recreatePods;
   }
 
   // render_subchart_notes - computed: false, optional: true, required: false
-  private _renderSubchartNotes?: boolean | cdktf.IResolvable | undefined; 
+  private _renderSubchartNotes?: boolean | cdktf.IResolvable; 
   public get renderSubchartNotes() {
     return this.getBooleanAttribute('render_subchart_notes') as any;
   }
-  public set renderSubchartNotes(value: boolean | cdktf.IResolvable | undefined) {
+  public set renderSubchartNotes(value: boolean | cdktf.IResolvable) {
     this._renderSubchartNotes = value;
   }
   public resetRenderSubchartNotes() {
@@ -733,15 +752,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get renderSubchartNotesInput() {
-    return this._renderSubchartNotes
+    return this._renderSubchartNotes;
   }
 
   // replace - computed: false, optional: true, required: false
-  private _replace?: boolean | cdktf.IResolvable | undefined; 
+  private _replace?: boolean | cdktf.IResolvable; 
   public get replace() {
     return this.getBooleanAttribute('replace') as any;
   }
-  public set replace(value: boolean | cdktf.IResolvable | undefined) {
+  public set replace(value: boolean | cdktf.IResolvable) {
     this._replace = value;
   }
   public resetReplace() {
@@ -749,15 +768,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get replaceInput() {
-    return this._replace
+    return this._replace;
   }
 
   // repository - computed: false, optional: true, required: false
-  private _repository?: string | undefined; 
+  private _repository?: string; 
   public get repository() {
     return this.getStringAttribute('repository');
   }
-  public set repository(value: string | undefined) {
+  public set repository(value: string) {
     this._repository = value;
   }
   public resetRepository() {
@@ -765,15 +784,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryInput() {
-    return this._repository
+    return this._repository;
   }
 
   // repository_ca_file - computed: false, optional: true, required: false
-  private _repositoryCaFile?: string | undefined; 
+  private _repositoryCaFile?: string; 
   public get repositoryCaFile() {
     return this.getStringAttribute('repository_ca_file');
   }
-  public set repositoryCaFile(value: string | undefined) {
+  public set repositoryCaFile(value: string) {
     this._repositoryCaFile = value;
   }
   public resetRepositoryCaFile() {
@@ -781,15 +800,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryCaFileInput() {
-    return this._repositoryCaFile
+    return this._repositoryCaFile;
   }
 
   // repository_cert_file - computed: false, optional: true, required: false
-  private _repositoryCertFile?: string | undefined; 
+  private _repositoryCertFile?: string; 
   public get repositoryCertFile() {
     return this.getStringAttribute('repository_cert_file');
   }
-  public set repositoryCertFile(value: string | undefined) {
+  public set repositoryCertFile(value: string) {
     this._repositoryCertFile = value;
   }
   public resetRepositoryCertFile() {
@@ -797,15 +816,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryCertFileInput() {
-    return this._repositoryCertFile
+    return this._repositoryCertFile;
   }
 
   // repository_key_file - computed: false, optional: true, required: false
-  private _repositoryKeyFile?: string | undefined; 
+  private _repositoryKeyFile?: string; 
   public get repositoryKeyFile() {
     return this.getStringAttribute('repository_key_file');
   }
-  public set repositoryKeyFile(value: string | undefined) {
+  public set repositoryKeyFile(value: string) {
     this._repositoryKeyFile = value;
   }
   public resetRepositoryKeyFile() {
@@ -813,15 +832,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryKeyFileInput() {
-    return this._repositoryKeyFile
+    return this._repositoryKeyFile;
   }
 
   // repository_password - computed: false, optional: true, required: false
-  private _repositoryPassword?: string | undefined; 
+  private _repositoryPassword?: string; 
   public get repositoryPassword() {
     return this.getStringAttribute('repository_password');
   }
-  public set repositoryPassword(value: string | undefined) {
+  public set repositoryPassword(value: string) {
     this._repositoryPassword = value;
   }
   public resetRepositoryPassword() {
@@ -829,15 +848,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryPasswordInput() {
-    return this._repositoryPassword
+    return this._repositoryPassword;
   }
 
   // repository_username - computed: false, optional: true, required: false
-  private _repositoryUsername?: string | undefined; 
+  private _repositoryUsername?: string; 
   public get repositoryUsername() {
     return this.getStringAttribute('repository_username');
   }
-  public set repositoryUsername(value: string | undefined) {
+  public set repositoryUsername(value: string) {
     this._repositoryUsername = value;
   }
   public resetRepositoryUsername() {
@@ -845,15 +864,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryUsernameInput() {
-    return this._repositoryUsername
+    return this._repositoryUsername;
   }
 
   // reset_values - computed: false, optional: true, required: false
-  private _resetValues?: boolean | cdktf.IResolvable | undefined; 
+  private _resetValues?: boolean | cdktf.IResolvable; 
   public get resetValues() {
     return this.getBooleanAttribute('reset_values') as any;
   }
-  public set resetValues(value: boolean | cdktf.IResolvable | undefined) {
+  public set resetValues(value: boolean | cdktf.IResolvable) {
     this._resetValues = value;
   }
   public resetResetValues() {
@@ -861,15 +880,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resetValuesInput() {
-    return this._resetValues
+    return this._resetValues;
   }
 
   // reuse_values - computed: false, optional: true, required: false
-  private _reuseValues?: boolean | cdktf.IResolvable | undefined; 
+  private _reuseValues?: boolean | cdktf.IResolvable; 
   public get reuseValues() {
     return this.getBooleanAttribute('reuse_values') as any;
   }
-  public set reuseValues(value: boolean | cdktf.IResolvable | undefined) {
+  public set reuseValues(value: boolean | cdktf.IResolvable) {
     this._reuseValues = value;
   }
   public resetReuseValues() {
@@ -877,15 +896,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get reuseValuesInput() {
-    return this._reuseValues
+    return this._reuseValues;
   }
 
   // skip_crds - computed: false, optional: true, required: false
-  private _skipCrds?: boolean | cdktf.IResolvable | undefined; 
+  private _skipCrds?: boolean | cdktf.IResolvable; 
   public get skipCrds() {
     return this.getBooleanAttribute('skip_crds') as any;
   }
-  public set skipCrds(value: boolean | cdktf.IResolvable | undefined) {
+  public set skipCrds(value: boolean | cdktf.IResolvable) {
     this._skipCrds = value;
   }
   public resetSkipCrds() {
@@ -893,7 +912,7 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skipCrdsInput() {
-    return this._skipCrds
+    return this._skipCrds;
   }
 
   // status - computed: true, optional: false, required: false
@@ -902,11 +921,11 @@ export class Release extends cdktf.TerraformResource {
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: number | undefined; 
+  private _timeout?: number; 
   public get timeout() {
     return this.getNumberAttribute('timeout');
   }
-  public set timeout(value: number | undefined) {
+  public set timeout(value: number) {
     this._timeout = value;
   }
   public resetTimeout() {
@@ -914,15 +933,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout;
   }
 
   // values - computed: false, optional: true, required: false
-  private _values?: string[] | undefined; 
+  private _values?: string[]; 
   public get values() {
     return this.getListAttribute('values');
   }
-  public set values(value: string[] | undefined) {
+  public set values(value: string[]) {
     this._values = value;
   }
   public resetTfValues() {
@@ -930,15 +949,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 
   // verify - computed: false, optional: true, required: false
-  private _verify?: boolean | cdktf.IResolvable | undefined; 
+  private _verify?: boolean | cdktf.IResolvable; 
   public get verify() {
     return this.getBooleanAttribute('verify') as any;
   }
-  public set verify(value: boolean | cdktf.IResolvable | undefined) {
+  public set verify(value: boolean | cdktf.IResolvable) {
     this._verify = value;
   }
   public resetVerify() {
@@ -946,15 +965,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get verifyInput() {
-    return this._verify
+    return this._verify;
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -962,15 +981,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // wait - computed: false, optional: true, required: false
-  private _wait?: boolean | cdktf.IResolvable | undefined; 
+  private _wait?: boolean | cdktf.IResolvable; 
   public get wait() {
     return this.getBooleanAttribute('wait') as any;
   }
-  public set wait(value: boolean | cdktf.IResolvable | undefined) {
+  public set wait(value: boolean | cdktf.IResolvable) {
     this._wait = value;
   }
   public resetWait() {
@@ -978,15 +997,15 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get waitInput() {
-    return this._wait
+    return this._wait;
   }
 
   // wait_for_jobs - computed: false, optional: true, required: false
-  private _waitForJobs?: boolean | cdktf.IResolvable | undefined; 
+  private _waitForJobs?: boolean | cdktf.IResolvable; 
   public get waitForJobs() {
     return this.getBooleanAttribute('wait_for_jobs') as any;
   }
-  public set waitForJobs(value: boolean | cdktf.IResolvable | undefined) {
+  public set waitForJobs(value: boolean | cdktf.IResolvable) {
     this._waitForJobs = value;
   }
   public resetWaitForJobs() {
@@ -994,33 +1013,32 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get waitForJobsInput() {
-    return this._waitForJobs
+    return this._waitForJobs;
   }
 
   // postrender - computed: false, optional: true, required: false
-  private _postrender?: ReleasePostrender | undefined; 
-  private __postrenderOutput = new ReleasePostrenderOutputReference(this as any, "postrender", true);
+  private _postrender = new ReleasePostrenderOutputReference(this as any, "postrender", true);
   public get postrender() {
-    return this.__postrenderOutput;
+    return this._postrender;
   }
-  public putPostrender(value: ReleasePostrender | undefined) {
-    this._postrender = value;
+  public putPostrender(value: ReleasePostrender) {
+    this._postrender.internalValue = value;
   }
   public resetPostrender() {
-    this._postrender = undefined;
+    this._postrender.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get postrenderInput() {
-    return this._postrender
+    return this._postrender.internalValue;
   }
 
   // set - computed: false, optional: true, required: false
-  private _set?: ReleaseSet[] | undefined; 
+  private _set?: ReleaseSet[]; 
   public get set() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('set') as any;
   }
-  public set set(value: ReleaseSet[] | undefined) {
+  public set set(value: ReleaseSet[]) {
     this._set = value;
   }
   public resetSet() {
@@ -1028,16 +1046,16 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get setInput() {
-    return this._set
+    return this._set;
   }
 
   // set_sensitive - computed: false, optional: true, required: false
-  private _setSensitive?: ReleaseSetSensitive[] | undefined; 
+  private _setSensitive?: ReleaseSetSensitive[]; 
   public get setSensitive() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('set_sensitive') as any;
   }
-  public set setSensitive(value: ReleaseSetSensitive[] | undefined) {
+  public set setSensitive(value: ReleaseSetSensitive[]) {
     this._setSensitive = value;
   }
   public resetSetSensitive() {
@@ -1045,7 +1063,7 @@ export class Release extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get setSensitiveInput() {
-    return this._setSensitive
+    return this._setSensitive;
   }
 
   // =========
@@ -1088,7 +1106,7 @@ export class Release extends cdktf.TerraformResource {
       version: cdktf.stringToTerraform(this._version),
       wait: cdktf.booleanToTerraform(this._wait),
       wait_for_jobs: cdktf.booleanToTerraform(this._waitForJobs),
-      postrender: releasePostrenderToTerraform(this._postrender),
+      postrender: releasePostrenderToTerraform(this._postrender.internalValue),
       set: cdktf.listMapper(releaseSetToTerraform)(this._set),
       set_sensitive: cdktf.listMapper(releaseSetSensitiveToTerraform)(this._setSensitive),
     };
