@@ -257,7 +257,7 @@ export interface DataHelmTemplatePostrender {
   readonly binaryPath: string;
 }
 
-function dataHelmTemplatePostrenderToTerraform(struct?: DataHelmTemplatePostrenderOutputReference | DataHelmTemplatePostrender): any {
+export function dataHelmTemplatePostrenderToTerraform(struct?: DataHelmTemplatePostrenderOutputReference | DataHelmTemplatePostrender): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -277,6 +277,25 @@ export class DataHelmTemplatePostrenderOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataHelmTemplatePostrender | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._binaryPath) {
+      hasAnyValues = true;
+      internalValueResult.binaryPath = this._binaryPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataHelmTemplatePostrender | undefined) {
+    if (value === undefined) {
+      this._binaryPath = undefined;
+    }
+    else {
+      this._binaryPath = value.binaryPath;
+    }
+  }
+
   // binary_path - computed: false, optional: false, required: true
   private _binaryPath?: string; 
   public get binaryPath() {
@@ -287,7 +306,7 @@ export class DataHelmTemplatePostrenderOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get binaryPathInput() {
-    return this._binaryPath
+    return this._binaryPath;
   }
 }
 export interface DataHelmTemplateSet {
@@ -305,7 +324,7 @@ export interface DataHelmTemplateSet {
   readonly value: string;
 }
 
-function dataHelmTemplateSetToTerraform(struct?: DataHelmTemplateSet): any {
+export function dataHelmTemplateSetToTerraform(struct?: DataHelmTemplateSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -332,7 +351,7 @@ export interface DataHelmTemplateSetSensitive {
   readonly value: string;
 }
 
-function dataHelmTemplateSetSensitiveToTerraform(struct?: DataHelmTemplateSetSensitive): any {
+export function dataHelmTemplateSetSensitiveToTerraform(struct?: DataHelmTemplateSetSensitive): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -355,7 +374,7 @@ export interface DataHelmTemplateSetString {
   readonly value: string;
 }
 
-function dataHelmTemplateSetStringToTerraform(struct?: DataHelmTemplateSetString): any {
+export function dataHelmTemplateSetStringToTerraform(struct?: DataHelmTemplateSetString): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -435,7 +454,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     this._verify = config.verify;
     this._version = config.version;
     this._wait = config.wait;
-    this._postrender = config.postrender;
+    this._postrender.internalValue = config.postrender;
     this._set = config.set;
     this._setSensitive = config.setSensitive;
     this._setString = config.setString;
@@ -446,11 +465,11 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   // ==========
 
   // api_versions - computed: false, optional: true, required: false
-  private _apiVersions?: string[] | undefined; 
+  private _apiVersions?: string[]; 
   public get apiVersions() {
     return this.getListAttribute('api_versions');
   }
-  public set apiVersions(value: string[] | undefined) {
+  public set apiVersions(value: string[]) {
     this._apiVersions = value;
   }
   public resetApiVersions() {
@@ -458,15 +477,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiVersionsInput() {
-    return this._apiVersions
+    return this._apiVersions;
   }
 
   // atomic - computed: false, optional: true, required: false
-  private _atomic?: boolean | cdktf.IResolvable | undefined; 
+  private _atomic?: boolean | cdktf.IResolvable; 
   public get atomic() {
     return this.getBooleanAttribute('atomic') as any;
   }
-  public set atomic(value: boolean | cdktf.IResolvable | undefined) {
+  public set atomic(value: boolean | cdktf.IResolvable) {
     this._atomic = value;
   }
   public resetAtomic() {
@@ -474,7 +493,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get atomicInput() {
-    return this._atomic
+    return this._atomic;
   }
 
   // chart - computed: false, optional: false, required: true
@@ -487,15 +506,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get chartInput() {
-    return this._chart
+    return this._chart;
   }
 
   // create_namespace - computed: false, optional: true, required: false
-  private _createNamespace?: boolean | cdktf.IResolvable | undefined; 
+  private _createNamespace?: boolean | cdktf.IResolvable; 
   public get createNamespace() {
     return this.getBooleanAttribute('create_namespace') as any;
   }
-  public set createNamespace(value: boolean | cdktf.IResolvable | undefined) {
+  public set createNamespace(value: boolean | cdktf.IResolvable) {
     this._createNamespace = value;
   }
   public resetCreateNamespace() {
@@ -503,15 +522,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get createNamespaceInput() {
-    return this._createNamespace
+    return this._createNamespace;
   }
 
   // dependency_update - computed: false, optional: true, required: false
-  private _dependencyUpdate?: boolean | cdktf.IResolvable | undefined; 
+  private _dependencyUpdate?: boolean | cdktf.IResolvable; 
   public get dependencyUpdate() {
     return this.getBooleanAttribute('dependency_update') as any;
   }
-  public set dependencyUpdate(value: boolean | cdktf.IResolvable | undefined) {
+  public set dependencyUpdate(value: boolean | cdktf.IResolvable) {
     this._dependencyUpdate = value;
   }
   public resetDependencyUpdate() {
@@ -519,15 +538,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get dependencyUpdateInput() {
-    return this._dependencyUpdate
+    return this._dependencyUpdate;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -535,15 +554,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // devel - computed: false, optional: true, required: false
-  private _devel?: boolean | cdktf.IResolvable | undefined; 
+  private _devel?: boolean | cdktf.IResolvable; 
   public get devel() {
     return this.getBooleanAttribute('devel') as any;
   }
-  public set devel(value: boolean | cdktf.IResolvable | undefined) {
+  public set devel(value: boolean | cdktf.IResolvable) {
     this._devel = value;
   }
   public resetDevel() {
@@ -551,15 +570,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get develInput() {
-    return this._devel
+    return this._devel;
   }
 
   // disable_openapi_validation - computed: false, optional: true, required: false
-  private _disableOpenapiValidation?: boolean | cdktf.IResolvable | undefined; 
+  private _disableOpenapiValidation?: boolean | cdktf.IResolvable; 
   public get disableOpenapiValidation() {
     return this.getBooleanAttribute('disable_openapi_validation') as any;
   }
-  public set disableOpenapiValidation(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableOpenapiValidation(value: boolean | cdktf.IResolvable) {
     this._disableOpenapiValidation = value;
   }
   public resetDisableOpenapiValidation() {
@@ -567,15 +586,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get disableOpenapiValidationInput() {
-    return this._disableOpenapiValidation
+    return this._disableOpenapiValidation;
   }
 
   // disable_webhooks - computed: false, optional: true, required: false
-  private _disableWebhooks?: boolean | cdktf.IResolvable | undefined; 
+  private _disableWebhooks?: boolean | cdktf.IResolvable; 
   public get disableWebhooks() {
     return this.getBooleanAttribute('disable_webhooks') as any;
   }
-  public set disableWebhooks(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableWebhooks(value: boolean | cdktf.IResolvable) {
     this._disableWebhooks = value;
   }
   public resetDisableWebhooks() {
@@ -583,7 +602,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get disableWebhooksInput() {
-    return this._disableWebhooks
+    return this._disableWebhooks;
   }
 
   // id - computed: true, optional: true, required: false
@@ -592,11 +611,11 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
 
   // include_crds - computed: false, optional: true, required: false
-  private _includeCrds?: boolean | cdktf.IResolvable | undefined; 
+  private _includeCrds?: boolean | cdktf.IResolvable; 
   public get includeCrds() {
     return this.getBooleanAttribute('include_crds') as any;
   }
-  public set includeCrds(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeCrds(value: boolean | cdktf.IResolvable) {
     this._includeCrds = value;
   }
   public resetIncludeCrds() {
@@ -604,15 +623,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get includeCrdsInput() {
-    return this._includeCrds
+    return this._includeCrds;
   }
 
   // is_upgrade - computed: false, optional: true, required: false
-  private _isUpgrade?: boolean | cdktf.IResolvable | undefined; 
+  private _isUpgrade?: boolean | cdktf.IResolvable; 
   public get isUpgrade() {
     return this.getBooleanAttribute('is_upgrade') as any;
   }
-  public set isUpgrade(value: boolean | cdktf.IResolvable | undefined) {
+  public set isUpgrade(value: boolean | cdktf.IResolvable) {
     this._isUpgrade = value;
   }
   public resetIsUpgrade() {
@@ -620,15 +639,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get isUpgradeInput() {
-    return this._isUpgrade
+    return this._isUpgrade;
   }
 
   // keyring - computed: false, optional: true, required: false
-  private _keyring?: string | undefined; 
+  private _keyring?: string; 
   public get keyring() {
     return this.getStringAttribute('keyring');
   }
-  public set keyring(value: string | undefined) {
+  public set keyring(value: string) {
     this._keyring = value;
   }
   public resetKeyring() {
@@ -636,15 +655,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyringInput() {
-    return this._keyring
+    return this._keyring;
   }
 
   // manifest - computed: true, optional: true, required: false
-  private _manifest?: string | undefined; 
+  private _manifest?: string; 
   public get manifest() {
     return this.getStringAttribute('manifest');
   }
-  public set manifest(value: string | undefined) {
+  public set manifest(value: string) {
     this._manifest = value;
   }
   public resetManifest() {
@@ -652,16 +671,16 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get manifestInput() {
-    return this._manifest
+    return this._manifest;
   }
 
   // manifests - computed: true, optional: true, required: false
-  private _manifests?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _manifests?: { [key: string]: string } | cdktf.IResolvable; 
   public get manifests() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('manifests') as any;
   }
-  public set manifests(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set manifests(value: { [key: string]: string } | cdktf.IResolvable) {
     this._manifests = value;
   }
   public resetManifests() {
@@ -669,7 +688,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get manifestsInput() {
-    return this._manifests
+    return this._manifests;
   }
 
   // name - computed: false, optional: false, required: true
@@ -682,15 +701,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace - computed: false, optional: true, required: false
-  private _namespace?: string | undefined; 
+  private _namespace?: string; 
   public get namespace() {
     return this.getStringAttribute('namespace');
   }
-  public set namespace(value: string | undefined) {
+  public set namespace(value: string) {
     this._namespace = value;
   }
   public resetNamespace() {
@@ -698,15 +717,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceInput() {
-    return this._namespace
+    return this._namespace;
   }
 
   // notes - computed: true, optional: true, required: false
-  private _notes?: string | undefined; 
+  private _notes?: string; 
   public get notes() {
     return this.getStringAttribute('notes');
   }
-  public set notes(value: string | undefined) {
+  public set notes(value: string) {
     this._notes = value;
   }
   public resetNotes() {
@@ -714,15 +733,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get notesInput() {
-    return this._notes
+    return this._notes;
   }
 
   // render_subchart_notes - computed: false, optional: true, required: false
-  private _renderSubchartNotes?: boolean | cdktf.IResolvable | undefined; 
+  private _renderSubchartNotes?: boolean | cdktf.IResolvable; 
   public get renderSubchartNotes() {
     return this.getBooleanAttribute('render_subchart_notes') as any;
   }
-  public set renderSubchartNotes(value: boolean | cdktf.IResolvable | undefined) {
+  public set renderSubchartNotes(value: boolean | cdktf.IResolvable) {
     this._renderSubchartNotes = value;
   }
   public resetRenderSubchartNotes() {
@@ -730,15 +749,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get renderSubchartNotesInput() {
-    return this._renderSubchartNotes
+    return this._renderSubchartNotes;
   }
 
   // replace - computed: false, optional: true, required: false
-  private _replace?: boolean | cdktf.IResolvable | undefined; 
+  private _replace?: boolean | cdktf.IResolvable; 
   public get replace() {
     return this.getBooleanAttribute('replace') as any;
   }
-  public set replace(value: boolean | cdktf.IResolvable | undefined) {
+  public set replace(value: boolean | cdktf.IResolvable) {
     this._replace = value;
   }
   public resetReplace() {
@@ -746,15 +765,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get replaceInput() {
-    return this._replace
+    return this._replace;
   }
 
   // repository - computed: false, optional: true, required: false
-  private _repository?: string | undefined; 
+  private _repository?: string; 
   public get repository() {
     return this.getStringAttribute('repository');
   }
-  public set repository(value: string | undefined) {
+  public set repository(value: string) {
     this._repository = value;
   }
   public resetRepository() {
@@ -762,15 +781,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryInput() {
-    return this._repository
+    return this._repository;
   }
 
   // repository_ca_file - computed: false, optional: true, required: false
-  private _repositoryCaFile?: string | undefined; 
+  private _repositoryCaFile?: string; 
   public get repositoryCaFile() {
     return this.getStringAttribute('repository_ca_file');
   }
-  public set repositoryCaFile(value: string | undefined) {
+  public set repositoryCaFile(value: string) {
     this._repositoryCaFile = value;
   }
   public resetRepositoryCaFile() {
@@ -778,15 +797,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryCaFileInput() {
-    return this._repositoryCaFile
+    return this._repositoryCaFile;
   }
 
   // repository_cert_file - computed: false, optional: true, required: false
-  private _repositoryCertFile?: string | undefined; 
+  private _repositoryCertFile?: string; 
   public get repositoryCertFile() {
     return this.getStringAttribute('repository_cert_file');
   }
-  public set repositoryCertFile(value: string | undefined) {
+  public set repositoryCertFile(value: string) {
     this._repositoryCertFile = value;
   }
   public resetRepositoryCertFile() {
@@ -794,15 +813,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryCertFileInput() {
-    return this._repositoryCertFile
+    return this._repositoryCertFile;
   }
 
   // repository_key_file - computed: false, optional: true, required: false
-  private _repositoryKeyFile?: string | undefined; 
+  private _repositoryKeyFile?: string; 
   public get repositoryKeyFile() {
     return this.getStringAttribute('repository_key_file');
   }
-  public set repositoryKeyFile(value: string | undefined) {
+  public set repositoryKeyFile(value: string) {
     this._repositoryKeyFile = value;
   }
   public resetRepositoryKeyFile() {
@@ -810,15 +829,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryKeyFileInput() {
-    return this._repositoryKeyFile
+    return this._repositoryKeyFile;
   }
 
   // repository_password - computed: false, optional: true, required: false
-  private _repositoryPassword?: string | undefined; 
+  private _repositoryPassword?: string; 
   public get repositoryPassword() {
     return this.getStringAttribute('repository_password');
   }
-  public set repositoryPassword(value: string | undefined) {
+  public set repositoryPassword(value: string) {
     this._repositoryPassword = value;
   }
   public resetRepositoryPassword() {
@@ -826,15 +845,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryPasswordInput() {
-    return this._repositoryPassword
+    return this._repositoryPassword;
   }
 
   // repository_username - computed: false, optional: true, required: false
-  private _repositoryUsername?: string | undefined; 
+  private _repositoryUsername?: string; 
   public get repositoryUsername() {
     return this.getStringAttribute('repository_username');
   }
-  public set repositoryUsername(value: string | undefined) {
+  public set repositoryUsername(value: string) {
     this._repositoryUsername = value;
   }
   public resetRepositoryUsername() {
@@ -842,15 +861,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryUsernameInput() {
-    return this._repositoryUsername
+    return this._repositoryUsername;
   }
 
   // reset_values - computed: false, optional: true, required: false
-  private _resetValues?: boolean | cdktf.IResolvable | undefined; 
+  private _resetValues?: boolean | cdktf.IResolvable; 
   public get resetValues() {
     return this.getBooleanAttribute('reset_values') as any;
   }
-  public set resetValues(value: boolean | cdktf.IResolvable | undefined) {
+  public set resetValues(value: boolean | cdktf.IResolvable) {
     this._resetValues = value;
   }
   public resetResetValues() {
@@ -858,15 +877,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get resetValuesInput() {
-    return this._resetValues
+    return this._resetValues;
   }
 
   // reuse_values - computed: false, optional: true, required: false
-  private _reuseValues?: boolean | cdktf.IResolvable | undefined; 
+  private _reuseValues?: boolean | cdktf.IResolvable; 
   public get reuseValues() {
     return this.getBooleanAttribute('reuse_values') as any;
   }
-  public set reuseValues(value: boolean | cdktf.IResolvable | undefined) {
+  public set reuseValues(value: boolean | cdktf.IResolvable) {
     this._reuseValues = value;
   }
   public resetReuseValues() {
@@ -874,15 +893,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get reuseValuesInput() {
-    return this._reuseValues
+    return this._reuseValues;
   }
 
   // show_only - computed: false, optional: true, required: false
-  private _showOnly?: string[] | undefined; 
+  private _showOnly?: string[]; 
   public get showOnly() {
     return this.getListAttribute('show_only');
   }
-  public set showOnly(value: string[] | undefined) {
+  public set showOnly(value: string[]) {
     this._showOnly = value;
   }
   public resetShowOnly() {
@@ -890,15 +909,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get showOnlyInput() {
-    return this._showOnly
+    return this._showOnly;
   }
 
   // skip_crds - computed: false, optional: true, required: false
-  private _skipCrds?: boolean | cdktf.IResolvable | undefined; 
+  private _skipCrds?: boolean | cdktf.IResolvable; 
   public get skipCrds() {
     return this.getBooleanAttribute('skip_crds') as any;
   }
-  public set skipCrds(value: boolean | cdktf.IResolvable | undefined) {
+  public set skipCrds(value: boolean | cdktf.IResolvable) {
     this._skipCrds = value;
   }
   public resetSkipCrds() {
@@ -906,15 +925,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get skipCrdsInput() {
-    return this._skipCrds
+    return this._skipCrds;
   }
 
   // skip_tests - computed: false, optional: true, required: false
-  private _skipTests?: boolean | cdktf.IResolvable | undefined; 
+  private _skipTests?: boolean | cdktf.IResolvable; 
   public get skipTests() {
     return this.getBooleanAttribute('skip_tests') as any;
   }
-  public set skipTests(value: boolean | cdktf.IResolvable | undefined) {
+  public set skipTests(value: boolean | cdktf.IResolvable) {
     this._skipTests = value;
   }
   public resetSkipTests() {
@@ -922,15 +941,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get skipTestsInput() {
-    return this._skipTests
+    return this._skipTests;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: number | undefined; 
+  private _timeout?: number; 
   public get timeout() {
     return this.getNumberAttribute('timeout');
   }
-  public set timeout(value: number | undefined) {
+  public set timeout(value: number) {
     this._timeout = value;
   }
   public resetTimeout() {
@@ -938,15 +957,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout;
   }
 
   // validate - computed: false, optional: true, required: false
-  private _validate?: boolean | cdktf.IResolvable | undefined; 
+  private _validate?: boolean | cdktf.IResolvable; 
   public get validate() {
     return this.getBooleanAttribute('validate') as any;
   }
-  public set validate(value: boolean | cdktf.IResolvable | undefined) {
+  public set validate(value: boolean | cdktf.IResolvable) {
     this._validate = value;
   }
   public resetValidate() {
@@ -954,15 +973,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get validateInput() {
-    return this._validate
+    return this._validate;
   }
 
   // values - computed: false, optional: true, required: false
-  private _values?: string[] | undefined; 
+  private _values?: string[]; 
   public get values() {
     return this.getListAttribute('values');
   }
-  public set values(value: string[] | undefined) {
+  public set values(value: string[]) {
     this._values = value;
   }
   public resetTfValues() {
@@ -970,15 +989,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 
   // verify - computed: false, optional: true, required: false
-  private _verify?: boolean | cdktf.IResolvable | undefined; 
+  private _verify?: boolean | cdktf.IResolvable; 
   public get verify() {
     return this.getBooleanAttribute('verify') as any;
   }
-  public set verify(value: boolean | cdktf.IResolvable | undefined) {
+  public set verify(value: boolean | cdktf.IResolvable) {
     this._verify = value;
   }
   public resetVerify() {
@@ -986,15 +1005,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get verifyInput() {
-    return this._verify
+    return this._verify;
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -1002,15 +1021,15 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // wait - computed: false, optional: true, required: false
-  private _wait?: boolean | cdktf.IResolvable | undefined; 
+  private _wait?: boolean | cdktf.IResolvable; 
   public get wait() {
     return this.getBooleanAttribute('wait') as any;
   }
-  public set wait(value: boolean | cdktf.IResolvable | undefined) {
+  public set wait(value: boolean | cdktf.IResolvable) {
     this._wait = value;
   }
   public resetWait() {
@@ -1018,33 +1037,32 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get waitInput() {
-    return this._wait
+    return this._wait;
   }
 
   // postrender - computed: false, optional: true, required: false
-  private _postrender?: DataHelmTemplatePostrender | undefined; 
-  private __postrenderOutput = new DataHelmTemplatePostrenderOutputReference(this as any, "postrender", true);
+  private _postrender = new DataHelmTemplatePostrenderOutputReference(this as any, "postrender", true);
   public get postrender() {
-    return this.__postrenderOutput;
+    return this._postrender;
   }
-  public putPostrender(value: DataHelmTemplatePostrender | undefined) {
-    this._postrender = value;
+  public putPostrender(value: DataHelmTemplatePostrender) {
+    this._postrender.internalValue = value;
   }
   public resetPostrender() {
-    this._postrender = undefined;
+    this._postrender.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get postrenderInput() {
-    return this._postrender
+    return this._postrender.internalValue;
   }
 
   // set - computed: false, optional: true, required: false
-  private _set?: DataHelmTemplateSet[] | undefined; 
+  private _set?: DataHelmTemplateSet[]; 
   public get set() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('set') as any;
   }
-  public set set(value: DataHelmTemplateSet[] | undefined) {
+  public set set(value: DataHelmTemplateSet[]) {
     this._set = value;
   }
   public resetSet() {
@@ -1052,16 +1070,16 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get setInput() {
-    return this._set
+    return this._set;
   }
 
   // set_sensitive - computed: false, optional: true, required: false
-  private _setSensitive?: DataHelmTemplateSetSensitive[] | undefined; 
+  private _setSensitive?: DataHelmTemplateSetSensitive[]; 
   public get setSensitive() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('set_sensitive') as any;
   }
-  public set setSensitive(value: DataHelmTemplateSetSensitive[] | undefined) {
+  public set setSensitive(value: DataHelmTemplateSetSensitive[]) {
     this._setSensitive = value;
   }
   public resetSetSensitive() {
@@ -1069,16 +1087,16 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get setSensitiveInput() {
-    return this._setSensitive
+    return this._setSensitive;
   }
 
   // set_string - computed: false, optional: true, required: false
-  private _setString?: DataHelmTemplateSetString[] | undefined; 
+  private _setString?: DataHelmTemplateSetString[]; 
   public get setString() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('set_string') as any;
   }
-  public set setString(value: DataHelmTemplateSetString[] | undefined) {
+  public set setString(value: DataHelmTemplateSetString[]) {
     this._setString = value;
   }
   public resetSetString() {
@@ -1086,7 +1104,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get setStringInput() {
-    return this._setString
+    return this._setString;
   }
 
   // =========
@@ -1131,7 +1149,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       verify: cdktf.booleanToTerraform(this._verify),
       version: cdktf.stringToTerraform(this._version),
       wait: cdktf.booleanToTerraform(this._wait),
-      postrender: dataHelmTemplatePostrenderToTerraform(this._postrender),
+      postrender: dataHelmTemplatePostrenderToTerraform(this._postrender.internalValue),
       set: cdktf.listMapper(dataHelmTemplateSetToTerraform)(this._set),
       set_sensitive: cdktf.listMapper(dataHelmTemplateSetSensitiveToTerraform)(this._setSensitive),
       set_string: cdktf.listMapper(dataHelmTemplateSetStringToTerraform)(this._setString),
