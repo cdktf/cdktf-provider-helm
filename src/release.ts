@@ -287,6 +287,8 @@ export function releasePostrenderToTerraform(struct?: ReleasePostrenderOutputRef
 }
 
 export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -297,7 +299,7 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ReleasePostrender | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._binaryPath) {
       hasAnyValues = true;
@@ -308,9 +310,11 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ReleasePostrender | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._binaryPath = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._binaryPath = value.binaryPath;
     }
   }

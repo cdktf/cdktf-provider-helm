@@ -268,6 +268,8 @@ export function dataHelmTemplatePostrenderToTerraform(struct?: DataHelmTemplateP
 }
 
 export class DataHelmTemplatePostrenderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -278,7 +280,7 @@ export class DataHelmTemplatePostrenderOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): DataHelmTemplatePostrender | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._binaryPath) {
       hasAnyValues = true;
@@ -289,9 +291,11 @@ export class DataHelmTemplatePostrenderOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: DataHelmTemplatePostrender | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._binaryPath = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._binaryPath = value.binaryPath;
     }
   }
