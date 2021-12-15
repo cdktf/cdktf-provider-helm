@@ -301,7 +301,7 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ReleasePostrender | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._binaryPath) {
+    if (this._binaryPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.binaryPath = this._binaryPath;
     }
