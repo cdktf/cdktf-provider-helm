@@ -282,7 +282,7 @@ export class DataHelmTemplatePostrenderOutputReference extends cdktf.ComplexObje
   public get internalValue(): DataHelmTemplatePostrender | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._binaryPath) {
+    if (this._binaryPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.binaryPath = this._binaryPath;
     }
