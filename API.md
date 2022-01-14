@@ -4,7 +4,7 @@
 
 ### DataHelmTemplate <a name="@cdktf/provider-helm.DataHelmTemplate"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/helm/d/template.html helm_template}.
+Represents a {@link https://www.terraform.io/docs/providers/helm/d/template helm_template}.
 
 #### Initializers <a name="@cdktf/provider-helm.DataHelmTemplate.Initializer"></a>
 
@@ -1386,7 +1386,7 @@ public readonly repositoryConfigPath: string;
 
 ### Release <a name="@cdktf/provider-helm.Release"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/helm/r/release.html helm_release}.
+Represents a {@link https://www.terraform.io/docs/providers/helm/r/release helm_release}.
 
 #### Initializers <a name="@cdktf/provider-helm.Release.Initializer"></a>
 
@@ -2499,7 +2499,7 @@ public readonly chart: string;
 
 Chart name to be installed. A path may be used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#chart DataHelmTemplate#chart}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#chart DataHelmTemplate#chart}
 
 ---
 
@@ -2513,7 +2513,7 @@ public readonly name: string;
 
 Release name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#name DataHelmTemplate#name}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#name DataHelmTemplate#name}
 
 ---
 
@@ -2527,7 +2527,7 @@ public readonly apiVersions: string[];
 
 Kubernetes api versions used for Capabilities.APIVersions.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#api_versions DataHelmTemplate#api_versions}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#api_versions DataHelmTemplate#api_versions}
 
 ---
 
@@ -2541,7 +2541,7 @@ public readonly atomic: boolean | IResolvable;
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#atomic DataHelmTemplate#atomic}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#atomic DataHelmTemplate#atomic}
 
 ---
 
@@ -2555,7 +2555,7 @@ public readonly createNamespace: boolean | IResolvable;
 
 Create the namespace if it does not exist.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#create_namespace DataHelmTemplate#create_namespace}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#create_namespace DataHelmTemplate#create_namespace}
 
 ---
 
@@ -2569,7 +2569,7 @@ public readonly dependencyUpdate: boolean | IResolvable;
 
 Run helm dependency update before installing the chart.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#dependency_update DataHelmTemplate#dependency_update}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#dependency_update DataHelmTemplate#dependency_update}
 
 ---
 
@@ -2583,7 +2583,7 @@ public readonly description: string;
 
 Add a custom description.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#description DataHelmTemplate#description}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#description DataHelmTemplate#description}
 
 ---
 
@@ -2597,7 +2597,7 @@ public readonly devel: boolean | IResolvable;
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#devel DataHelmTemplate#devel}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#devel DataHelmTemplate#devel}
 
 ---
 
@@ -2611,7 +2611,7 @@ public readonly disableOpenapiValidation: boolean | IResolvable;
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#disable_openapi_validation DataHelmTemplate#disable_openapi_validation}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#disable_openapi_validation DataHelmTemplate#disable_openapi_validation}
 
 ---
 
@@ -2625,7 +2625,7 @@ public readonly disableWebhooks: boolean | IResolvable;
 
 Prevent hooks from running.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#disable_webhooks DataHelmTemplate#disable_webhooks}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#disable_webhooks DataHelmTemplate#disable_webhooks}
 
 ---
 
@@ -2639,7 +2639,7 @@ public readonly includeCrds: boolean | IResolvable;
 
 Include CRDs in the templated output.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#include_crds DataHelmTemplate#include_crds}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#include_crds DataHelmTemplate#include_crds}
 
 ---
 
@@ -2653,7 +2653,7 @@ public readonly isUpgrade: boolean | IResolvable;
 
 Set .Release.IsUpgrade instead of .Release.IsInstall.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#is_upgrade DataHelmTemplate#is_upgrade}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#is_upgrade DataHelmTemplate#is_upgrade}
 
 ---
 
@@ -2667,7 +2667,7 @@ public readonly keyring: string;
 
 Location of public keys used for verification. Used only if `verify` is true.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#keyring DataHelmTemplate#keyring}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#keyring DataHelmTemplate#keyring}
 
 ---
 
@@ -2681,7 +2681,7 @@ public readonly manifest: string;
 
 Concatenated rendered chart templates. This corresponds to the output of the `helm template` command.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#manifest DataHelmTemplate#manifest}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#manifest DataHelmTemplate#manifest}
 
 ---
 
@@ -2695,7 +2695,7 @@ public readonly manifests: IResolvable | {[ key: string ]: string};
 
 Map of rendered chart templates indexed by the template name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#manifests DataHelmTemplate#manifests}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#manifests DataHelmTemplate#manifests}
 
 ---
 
@@ -2709,7 +2709,7 @@ public readonly namespace: string;
 
 Namespace to install the release into.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#namespace DataHelmTemplate#namespace}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#namespace DataHelmTemplate#namespace}
 
 ---
 
@@ -2723,7 +2723,7 @@ public readonly notes: string;
 
 Rendered notes if the chart contains a `NOTES.txt`.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#notes DataHelmTemplate#notes}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#notes DataHelmTemplate#notes}
 
 ---
 
@@ -2737,7 +2737,7 @@ public readonly postrender: DataHelmTemplatePostrender;
 
 postrender block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#postrender DataHelmTemplate#postrender}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#postrender DataHelmTemplate#postrender}
 
 ---
 
@@ -2751,7 +2751,7 @@ public readonly renderSubchartNotes: boolean | IResolvable;
 
 If set, render subchart notes along with the parent.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#render_subchart_notes DataHelmTemplate#render_subchart_notes}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#render_subchart_notes DataHelmTemplate#render_subchart_notes}
 
 ---
 
@@ -2765,7 +2765,7 @@ public readonly replace: boolean | IResolvable;
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#replace DataHelmTemplate#replace}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#replace DataHelmTemplate#replace}
 
 ---
 
@@ -2779,7 +2779,7 @@ public readonly repository: string;
 
 Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#repository DataHelmTemplate#repository}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#repository DataHelmTemplate#repository}
 
 ---
 
@@ -2793,7 +2793,7 @@ public readonly repositoryCaFile: string;
 
 The Repositories CA File.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#repository_ca_file DataHelmTemplate#repository_ca_file}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#repository_ca_file DataHelmTemplate#repository_ca_file}
 
 ---
 
@@ -2807,7 +2807,7 @@ public readonly repositoryCertFile: string;
 
 The repositories cert file.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#repository_cert_file DataHelmTemplate#repository_cert_file}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#repository_cert_file DataHelmTemplate#repository_cert_file}
 
 ---
 
@@ -2821,7 +2821,7 @@ public readonly repositoryKeyFile: string;
 
 The repositories cert key file.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#repository_key_file DataHelmTemplate#repository_key_file}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#repository_key_file DataHelmTemplate#repository_key_file}
 
 ---
 
@@ -2835,7 +2835,7 @@ public readonly repositoryPassword: string;
 
 Password for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#repository_password DataHelmTemplate#repository_password}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#repository_password DataHelmTemplate#repository_password}
 
 ---
 
@@ -2849,7 +2849,7 @@ public readonly repositoryUsername: string;
 
 Username for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#repository_username DataHelmTemplate#repository_username}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#repository_username DataHelmTemplate#repository_username}
 
 ---
 
@@ -2863,7 +2863,7 @@ public readonly resetValues: boolean | IResolvable;
 
 When upgrading, reset the values to the ones built into the chart.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#reset_values DataHelmTemplate#reset_values}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#reset_values DataHelmTemplate#reset_values}
 
 ---
 
@@ -2877,7 +2877,7 @@ public readonly reuseValues: boolean | IResolvable;
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#reuse_values DataHelmTemplate#reuse_values}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#reuse_values DataHelmTemplate#reuse_values}
 
 ---
 
@@ -2891,7 +2891,7 @@ public readonly set: DataHelmTemplateSet[];
 
 set block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#set DataHelmTemplate#set}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#set DataHelmTemplate#set}
 
 ---
 
@@ -2905,7 +2905,7 @@ public readonly setSensitive: DataHelmTemplateSetSensitive[];
 
 set_sensitive block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#set_sensitive DataHelmTemplate#set_sensitive}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#set_sensitive DataHelmTemplate#set_sensitive}
 
 ---
 
@@ -2919,7 +2919,7 @@ public readonly setString: DataHelmTemplateSetString[];
 
 set_string block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#set_string DataHelmTemplate#set_string}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#set_string DataHelmTemplate#set_string}
 
 ---
 
@@ -2933,7 +2933,7 @@ public readonly showOnly: string[];
 
 Only show manifests rendered from the given templates.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#show_only DataHelmTemplate#show_only}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#show_only DataHelmTemplate#show_only}
 
 ---
 
@@ -2947,7 +2947,7 @@ public readonly skipCrds: boolean | IResolvable;
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#skip_crds DataHelmTemplate#skip_crds}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#skip_crds DataHelmTemplate#skip_crds}
 
 ---
 
@@ -2961,7 +2961,7 @@ public readonly skipTests: boolean | IResolvable;
 
 If set, tests will not be rendered. By default, tests are rendered.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#skip_tests DataHelmTemplate#skip_tests}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#skip_tests DataHelmTemplate#skip_tests}
 
 ---
 
@@ -2975,7 +2975,7 @@ public readonly timeout: number;
 
 Time in seconds to wait for any individual kubernetes operation.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#timeout DataHelmTemplate#timeout}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#timeout DataHelmTemplate#timeout}
 
 ---
 
@@ -2991,7 +2991,7 @@ Validate your manifests against the Kubernetes cluster you are currently pointin
 
 This is the same validation performed on an install
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#validate DataHelmTemplate#validate}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#validate DataHelmTemplate#validate}
 
 ---
 
@@ -3005,7 +3005,7 @@ public readonly values: string[];
 
 List of values in raw yaml format to pass to helm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#values DataHelmTemplate#values}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#values DataHelmTemplate#values}
 
 ---
 
@@ -3019,7 +3019,7 @@ public readonly verify: boolean | IResolvable;
 
 Verify the package before installing it.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#verify DataHelmTemplate#verify}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#verify DataHelmTemplate#verify}
 
 ---
 
@@ -3033,7 +3033,7 @@ public readonly version: string;
 
 Specify the exact chart version to install. If this is not specified, the latest version is installed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#version DataHelmTemplate#version}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#version DataHelmTemplate#version}
 
 ---
 
@@ -3047,7 +3047,7 @@ public readonly wait: boolean | IResolvable;
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#wait DataHelmTemplate#wait}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#wait DataHelmTemplate#wait}
 
 ---
 
@@ -3071,7 +3071,7 @@ public readonly binaryPath: string;
 
 The command binary path.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#binary_path DataHelmTemplate#binary_path}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#binary_path DataHelmTemplate#binary_path}
 
 ---
 
@@ -3093,7 +3093,7 @@ public readonly name: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#name DataHelmTemplate#name}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#name DataHelmTemplate#name}.
 
 ---
 
@@ -3105,7 +3105,7 @@ public readonly value: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#value DataHelmTemplate#value}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#value DataHelmTemplate#value}.
 
 ---
 
@@ -3117,7 +3117,7 @@ public readonly type: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#type DataHelmTemplate#type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#type DataHelmTemplate#type}.
 
 ---
 
@@ -3139,7 +3139,7 @@ public readonly name: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#name DataHelmTemplate#name}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#name DataHelmTemplate#name}.
 
 ---
 
@@ -3151,7 +3151,7 @@ public readonly value: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#value DataHelmTemplate#value}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#value DataHelmTemplate#value}.
 
 ---
 
@@ -3163,7 +3163,7 @@ public readonly type: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#type DataHelmTemplate#type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#type DataHelmTemplate#type}.
 
 ---
 
@@ -3185,7 +3185,7 @@ public readonly name: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#name DataHelmTemplate#name}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#name DataHelmTemplate#name}.
 
 ---
 
@@ -3197,7 +3197,7 @@ public readonly value: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template.html#value DataHelmTemplate#value}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#value DataHelmTemplate#value}.
 
 ---
 
@@ -3679,7 +3679,7 @@ public readonly chart: string;
 
 Chart name to be installed. A path may be used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#chart Release#chart}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#chart Release#chart}
 
 ---
 
@@ -3693,7 +3693,7 @@ public readonly name: string;
 
 Release name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#name Release#name}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#name Release#name}
 
 ---
 
@@ -3707,7 +3707,7 @@ public readonly atomic: boolean | IResolvable;
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#atomic Release#atomic}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#atomic Release#atomic}
 
 ---
 
@@ -3721,7 +3721,7 @@ public readonly cleanupOnFail: boolean | IResolvable;
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#cleanup_on_fail Release#cleanup_on_fail}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#cleanup_on_fail Release#cleanup_on_fail}
 
 ---
 
@@ -3735,7 +3735,7 @@ public readonly createNamespace: boolean | IResolvable;
 
 Create the namespace if it does not exist.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#create_namespace Release#create_namespace}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#create_namespace Release#create_namespace}
 
 ---
 
@@ -3749,7 +3749,7 @@ public readonly dependencyUpdate: boolean | IResolvable;
 
 Run helm dependency update before installing the chart.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#dependency_update Release#dependency_update}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#dependency_update Release#dependency_update}
 
 ---
 
@@ -3763,7 +3763,7 @@ public readonly description: string;
 
 Add a custom description.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#description Release#description}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#description Release#description}
 
 ---
 
@@ -3777,7 +3777,7 @@ public readonly devel: boolean | IResolvable;
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#devel Release#devel}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#devel Release#devel}
 
 ---
 
@@ -3791,7 +3791,7 @@ public readonly disableCrdHooks: boolean | IResolvable;
 
 Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#disable_crd_hooks Release#disable_crd_hooks}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#disable_crd_hooks Release#disable_crd_hooks}
 
 ---
 
@@ -3805,7 +3805,7 @@ public readonly disableOpenapiValidation: boolean | IResolvable;
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#disable_openapi_validation Release#disable_openapi_validation}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#disable_openapi_validation Release#disable_openapi_validation}
 
 ---
 
@@ -3819,7 +3819,7 @@ public readonly disableWebhooks: boolean | IResolvable;
 
 Prevent hooks from running.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#disable_webhooks Release#disable_webhooks}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#disable_webhooks Release#disable_webhooks}
 
 ---
 
@@ -3833,7 +3833,7 @@ public readonly forceUpdate: boolean | IResolvable;
 
 Force resource update through delete/recreate if needed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#force_update Release#force_update}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#force_update Release#force_update}
 
 ---
 
@@ -3847,7 +3847,7 @@ public readonly keyring: string;
 
 Location of public keys used for verification. Used only if `verify` is true.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#keyring Release#keyring}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#keyring Release#keyring}
 
 ---
 
@@ -3861,7 +3861,7 @@ public readonly lint: boolean | IResolvable;
 
 Run helm lint when planning.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#lint Release#lint}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#lint Release#lint}
 
 ---
 
@@ -3875,7 +3875,7 @@ public readonly maxHistory: number;
 
 Limit the maximum number of revisions saved per release. Use 0 for no limit.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#max_history Release#max_history}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#max_history Release#max_history}
 
 ---
 
@@ -3889,7 +3889,7 @@ public readonly namespace: string;
 
 Namespace to install the release into.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#namespace Release#namespace}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#namespace Release#namespace}
 
 ---
 
@@ -3903,7 +3903,7 @@ public readonly postrender: ReleasePostrender;
 
 postrender block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#postrender Release#postrender}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#postrender Release#postrender}
 
 ---
 
@@ -3917,7 +3917,7 @@ public readonly recreatePods: boolean | IResolvable;
 
 Perform pods restart during upgrade/rollback.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#recreate_pods Release#recreate_pods}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#recreate_pods Release#recreate_pods}
 
 ---
 
@@ -3931,7 +3931,7 @@ public readonly renderSubchartNotes: boolean | IResolvable;
 
 If set, render subchart notes along with the parent.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#render_subchart_notes Release#render_subchart_notes}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#render_subchart_notes Release#render_subchart_notes}
 
 ---
 
@@ -3945,7 +3945,7 @@ public readonly replace: boolean | IResolvable;
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#replace Release#replace}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#replace Release#replace}
 
 ---
 
@@ -3959,7 +3959,7 @@ public readonly repository: string;
 
 Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#repository Release#repository}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#repository Release#repository}
 
 ---
 
@@ -3973,7 +3973,7 @@ public readonly repositoryCaFile: string;
 
 The Repositories CA File.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#repository_ca_file Release#repository_ca_file}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#repository_ca_file Release#repository_ca_file}
 
 ---
 
@@ -3987,7 +3987,7 @@ public readonly repositoryCertFile: string;
 
 The repositories cert file.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#repository_cert_file Release#repository_cert_file}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#repository_cert_file Release#repository_cert_file}
 
 ---
 
@@ -4001,7 +4001,7 @@ public readonly repositoryKeyFile: string;
 
 The repositories cert key file.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#repository_key_file Release#repository_key_file}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#repository_key_file Release#repository_key_file}
 
 ---
 
@@ -4015,7 +4015,7 @@ public readonly repositoryPassword: string;
 
 Password for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#repository_password Release#repository_password}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#repository_password Release#repository_password}
 
 ---
 
@@ -4029,7 +4029,7 @@ public readonly repositoryUsername: string;
 
 Username for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#repository_username Release#repository_username}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#repository_username Release#repository_username}
 
 ---
 
@@ -4043,7 +4043,7 @@ public readonly resetValues: boolean | IResolvable;
 
 When upgrading, reset the values to the ones built into the chart.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#reset_values Release#reset_values}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#reset_values Release#reset_values}
 
 ---
 
@@ -4057,7 +4057,7 @@ public readonly reuseValues: boolean | IResolvable;
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#reuse_values Release#reuse_values}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#reuse_values Release#reuse_values}
 
 ---
 
@@ -4071,7 +4071,7 @@ public readonly set: ReleaseSet[];
 
 set block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#set Release#set}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#set Release#set}
 
 ---
 
@@ -4085,7 +4085,7 @@ public readonly setSensitive: ReleaseSetSensitive[];
 
 set_sensitive block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#set_sensitive Release#set_sensitive}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#set_sensitive Release#set_sensitive}
 
 ---
 
@@ -4099,7 +4099,7 @@ public readonly skipCrds: boolean | IResolvable;
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#skip_crds Release#skip_crds}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#skip_crds Release#skip_crds}
 
 ---
 
@@ -4113,7 +4113,7 @@ public readonly timeout: number;
 
 Time in seconds to wait for any individual kubernetes operation.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#timeout Release#timeout}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#timeout Release#timeout}
 
 ---
 
@@ -4127,7 +4127,7 @@ public readonly values: string[];
 
 List of values in raw yaml format to pass to helm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#values Release#values}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#values Release#values}
 
 ---
 
@@ -4141,7 +4141,7 @@ public readonly verify: boolean | IResolvable;
 
 Verify the package before installing it.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#verify Release#verify}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#verify Release#verify}
 
 ---
 
@@ -4155,7 +4155,7 @@ public readonly version: string;
 
 Specify the exact chart version to install. If this is not specified, the latest version is installed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#version Release#version}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#version Release#version}
 
 ---
 
@@ -4169,7 +4169,7 @@ public readonly wait: boolean | IResolvable;
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#wait Release#wait}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#wait Release#wait}
 
 ---
 
@@ -4183,7 +4183,7 @@ public readonly waitForJobs: boolean | IResolvable;
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#wait_for_jobs Release#wait_for_jobs}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#wait_for_jobs Release#wait_for_jobs}
 
 ---
 
@@ -4207,7 +4207,7 @@ public readonly binaryPath: string;
 
 The command binary path.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#binary_path Release#binary_path}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#binary_path Release#binary_path}
 
 ---
 
@@ -4229,7 +4229,7 @@ public readonly name: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#name Release#name}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#name Release#name}.
 
 ---
 
@@ -4241,7 +4241,7 @@ public readonly value: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#value Release#value}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#value Release#value}.
 
 ---
 
@@ -4253,7 +4253,7 @@ public readonly type: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#type Release#type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#type Release#type}.
 
 ---
 
@@ -4275,7 +4275,7 @@ public readonly name: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#name Release#name}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#name Release#name}.
 
 ---
 
@@ -4287,7 +4287,7 @@ public readonly value: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#value Release#value}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#value Release#value}.
 
 ---
 
@@ -4299,7 +4299,7 @@ public readonly type: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release.html#type Release#type}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#type Release#type}.
 
 ---
 
