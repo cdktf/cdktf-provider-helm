@@ -436,10 +436,10 @@ public readonly manifestInput: string;
 ##### `manifestsInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.manifestsInput"></a>
 
 ```typescript
-public readonly manifestsInput: IResolvable | {[ key: string ]: string};
+public readonly manifestsInput: {[ key: string ]: string};
 ```
 
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | {[ key: string ]: `string`}
+- *Type:* {[ key: string ]: `string`}
 
 ---
 
@@ -586,30 +586,30 @@ public readonly reuseValuesInput: boolean | IResolvable;
 ##### `setInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setInput"></a>
 
 ```typescript
-public readonly setInput: DataHelmTemplateSet[];
+public readonly setInput: IResolvable | DataHelmTemplateSet[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
 
 ---
 
 ##### `setSensitiveInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setSensitiveInput"></a>
 
 ```typescript
-public readonly setSensitiveInput: DataHelmTemplateSetSensitive[];
+public readonly setSensitiveInput: IResolvable | DataHelmTemplateSetSensitive[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
 
 ---
 
 ##### `setStringInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setStringInput"></a>
 
 ```typescript
-public readonly setStringInput: DataHelmTemplateSetString[];
+public readonly setStringInput: IResolvable | DataHelmTemplateSetString[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
 
 ---
 
@@ -836,10 +836,10 @@ public readonly manifest: string;
 ##### `manifests`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.manifests"></a>
 
 ```typescript
-public readonly manifests: IResolvable | {[ key: string ]: string};
+public readonly manifests: {[ key: string ]: string};
 ```
 
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | {[ key: string ]: `string`}
+- *Type:* {[ key: string ]: `string`}
 
 ---
 
@@ -976,30 +976,30 @@ public readonly reuseValues: boolean | IResolvable;
 ##### `set`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.set"></a>
 
 ```typescript
-public readonly set: DataHelmTemplateSet[];
+public readonly set: IResolvable | DataHelmTemplateSet[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
 
 ---
 
 ##### `setSensitive`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setSensitive"></a>
 
 ```typescript
-public readonly setSensitive: DataHelmTemplateSetSensitive[];
+public readonly setSensitive: IResolvable | DataHelmTemplateSetSensitive[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
 
 ---
 
 ##### `setString`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setString"></a>
 
 ```typescript
-public readonly setString: DataHelmTemplateSetString[];
+public readonly setString: IResolvable | DataHelmTemplateSetString[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
 
 ---
 
@@ -1982,20 +1982,20 @@ public readonly reuseValuesInput: boolean | IResolvable;
 ##### `setInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.setInput"></a>
 
 ```typescript
-public readonly setInput: ReleaseSet[];
+public readonly setInput: IResolvable | ReleaseSet[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
 
 ---
 
 ##### `setSensitiveInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.setSensitiveInput"></a>
 
 ```typescript
-public readonly setSensitiveInput: ReleaseSetSensitive[];
+public readonly setSensitiveInput: IResolvable | ReleaseSetSensitive[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
 
 ---
 
@@ -2342,20 +2342,20 @@ public readonly reuseValues: boolean | IResolvable;
 ##### `set`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.set"></a>
 
 ```typescript
-public readonly set: ReleaseSet[];
+public readonly set: IResolvable | ReleaseSet[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
 
 ---
 
 ##### `setSensitive`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.setSensitive"></a>
 
 ```typescript
-public readonly setSensitive: ReleaseSetSensitive[];
+public readonly setSensitive: IResolvable | ReleaseSetSensitive[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
 
 ---
 
@@ -2452,10 +2452,10 @@ const dataHelmTemplateConfig: DataHelmTemplateConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -2688,10 +2688,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 ##### `manifests`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateConfig.property.manifests"></a>
 
 ```typescript
-public readonly manifests: IResolvable | {[ key: string ]: string};
+public readonly manifests: {[ key: string ]: string};
 ```
 
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | {[ key: string ]: `string`}
+- *Type:* {[ key: string ]: `string`}
 
 Map of rendered chart templates indexed by the template name.
 
@@ -2884,10 +2884,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 ##### `set`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateConfig.property.set"></a>
 
 ```typescript
-public readonly set: DataHelmTemplateSet[];
+public readonly set: IResolvable | DataHelmTemplateSet[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
 
 set block.
 
@@ -2898,10 +2898,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 ##### `setSensitive`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateConfig.property.setSensitive"></a>
 
 ```typescript
-public readonly setSensitive: DataHelmTemplateSetSensitive[];
+public readonly setSensitive: IResolvable | DataHelmTemplateSetSensitive[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
 
 set_sensitive block.
 
@@ -2912,10 +2912,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 ##### `setString`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateConfig.property.setString"></a>
 
 ```typescript
-public readonly setString: DataHelmTemplateSetString[];
+public readonly setString: IResolvable | DataHelmTemplateSetString[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
 
 set_string block.
 
@@ -3610,10 +3610,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#
 ##### `env`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetesExec.property.env"></a>
 
 ```typescript
-public readonly env: IResolvable | {[ key: string ]: string};
+public readonly env: {[ key: string ]: string};
 ```
 
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | {[ key: string ]: `string`}
+- *Type:* {[ key: string ]: `string`}
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#env HelmProvider#env}.
 
@@ -3632,10 +3632,10 @@ const releaseConfig: ReleaseConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -4064,10 +4064,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 ##### `set`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseConfig.property.set"></a>
 
 ```typescript
-public readonly set: ReleaseSet[];
+public readonly set: IResolvable | ReleaseSet[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
 
 set block.
 
@@ -4078,10 +4078,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 ##### `setSensitive`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseConfig.property.setSensitive"></a>
 
 ```typescript
-public readonly setSensitive: ReleaseSetSensitive[];
+public readonly setSensitive: IResolvable | ReleaseSetSensitive[];
 ```
 
-- *Type:* [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
 
 set_sensitive block.
 
@@ -4312,12 +4312,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 ```typescript
 import { DataHelmTemplatePostrenderOutputReference } from '@cdktf/provider-helm'
 
-new DataHelmTemplatePostrenderOutputReference(terraformResource: ITerraformResource, terraformAttribute: string, isSingleItem: boolean)
+new DataHelmTemplatePostrenderOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
 ```
 
 ##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplatePostrenderOutputReference.parameter.terraformResource"></a>
 
-- *Type:* [`cdktf.ITerraformResource`](#cdktf.ITerraformResource)
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
 
 The parent resource.
 
@@ -4381,12 +4381,12 @@ public readonly internalValue: DataHelmTemplatePostrender;
 ```typescript
 import { ReleaseMetadata } from '@cdktf/provider-helm'
 
-new ReleaseMetadata(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
+new ReleaseMetadata(terraformResource: IInterpolatingParent, terraformAttribute: string, complexComputedListIndex: string, wrapsSet?: boolean)
 ```
 
 ##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.parameter.terraformResource"></a>
 
-- *Type:* [`cdktf.ITerraformResource`](#cdktf.ITerraformResource)
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
 
 ---
 
@@ -4399,6 +4399,12 @@ new ReleaseMetadata(terraformResource: ITerraformResource, terraformAttribute: s
 ##### `complexComputedListIndex`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.parameter.complexComputedListIndex"></a>
 
 - *Type:* `string`
+
+---
+
+##### `wrapsSet`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
 
 ---
 
@@ -4484,12 +4490,12 @@ public readonly version: string;
 ```typescript
 import { ReleasePostrenderOutputReference } from '@cdktf/provider-helm'
 
-new ReleasePostrenderOutputReference(terraformResource: ITerraformResource, terraformAttribute: string, isSingleItem: boolean)
+new ReleasePostrenderOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
 ```
 
 ##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleasePostrenderOutputReference.parameter.terraformResource"></a>
 
-- *Type:* [`cdktf.ITerraformResource`](#cdktf.ITerraformResource)
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
 
 The parent resource.
 

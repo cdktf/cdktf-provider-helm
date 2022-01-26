@@ -72,7 +72,7 @@ export interface HelmProviderExperiments {
 }
 
 export function helmProviderExperimentsToTerraform(struct?: HelmProviderExperiments): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,11 +97,11 @@ export interface HelmProviderKubernetesExec {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#env HelmProvider#env}
   */
-  readonly env?: { [key: string]: string } | cdktf.IResolvable;
+  readonly env?: { [key: string]: string };
 }
 
 export function helmProviderKubernetesExecToTerraform(struct?: HelmProviderKubernetesExec): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -109,7 +109,7 @@ export function helmProviderKubernetesExecToTerraform(struct?: HelmProviderKuber
     api_version: cdktf.stringToTerraform(struct!.apiVersion),
     args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
     command: cdktf.stringToTerraform(struct!.command),
-    env: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.env),
+    env: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.env),
   }
 }
 
@@ -195,7 +195,7 @@ export interface HelmProviderKubernetes {
 }
 
 export function helmProviderKubernetesToTerraform(struct?: HelmProviderKubernetes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
