@@ -1422,18 +1422,6 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
-##### `metadata` <a name="@cdktf/provider-helm.Release.metadata"></a>
-
-```typescript
-public metadata(index: string)
-```
-
-###### `index`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.parameter.index"></a>
-
-- *Type:* `string`
-
----
-
 ##### `putPostrender` <a name="@cdktf/provider-helm.Release.putPostrender"></a>
 
 ```typescript
@@ -1676,6 +1664,16 @@ public readonly manifest: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `metadata`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.metadata"></a>
+
+```typescript
+public readonly metadata: ReleaseMetadataList;
+```
+
+- *Type:* [`@cdktf/provider-helm.ReleaseMetadataList`](#@cdktf/provider-helm.ReleaseMetadataList)
 
 ---
 
@@ -4187,6 +4185,16 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 
 ---
 
+### ReleaseMetadata <a name="@cdktf/provider-helm.ReleaseMetadata"></a>
+
+#### Initializer <a name="[object Object].Initializer"></a>
+
+```typescript
+import { ReleaseMetadata } from '@cdktf/provider-helm'
+
+const releaseMetadata: ReleaseMetadata = { ... }
+```
+
 ### ReleasePostrender <a name="@cdktf/provider-helm.ReleasePostrender"></a>
 
 #### Initializer <a name="[object Object].Initializer"></a>
@@ -4312,7 +4320,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 ```typescript
 import { DataHelmTemplatePostrenderOutputReference } from '@cdktf/provider-helm'
 
-new DataHelmTemplatePostrenderOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
+new DataHelmTemplatePostrenderOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
 ```
 
 ##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplatePostrenderOutputReference.parameter.terraformResource"></a>
@@ -4328,14 +4336,6 @@ The parent resource.
 - *Type:* `string`
 
 The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplatePostrenderOutputReference.parameter.isSingleItem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
 
 ---
 
@@ -4374,37 +4374,98 @@ public readonly internalValue: DataHelmTemplatePostrender;
 ---
 
 
-### ReleaseMetadata <a name="@cdktf/provider-helm.ReleaseMetadata"></a>
+### ReleaseMetadataList <a name="@cdktf/provider-helm.ReleaseMetadataList"></a>
 
-#### Initializers <a name="@cdktf/provider-helm.ReleaseMetadata.Initializer"></a>
+#### Initializers <a name="@cdktf/provider-helm.ReleaseMetadataList.Initializer"></a>
 
 ```typescript
-import { ReleaseMetadata } from '@cdktf/provider-helm'
+import { ReleaseMetadataList } from '@cdktf/provider-helm'
 
-new ReleaseMetadata(terraformResource: IInterpolatingParent, terraformAttribute: string, complexComputedListIndex: string, wrapsSet?: boolean)
+new ReleaseMetadataList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
 ```
 
-##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataList.parameter.terraformResource"></a>
 
 - *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
 
+The parent resource.
+
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataList.parameter.terraformAttribute"></a>
 
 - *Type:* `string`
 
----
-
-##### `complexComputedListIndex`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.parameter.complexComputedListIndex"></a>
-
-- *Type:* `string`
+The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `wrapsSet`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.parameter.wrapsSet"></a>
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataList.parameter.wrapsSet"></a>
 
 - *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-helm.ReleaseMetadataList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+
+
+### ReleaseMetadataOutputReference <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.Initializer"></a>
+
+```typescript
+import { ReleaseMetadataOutputReference } from '@cdktf/provider-helm'
+
+new ReleaseMetadataOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 
 ---
 
@@ -4412,7 +4473,7 @@ new ReleaseMetadata(terraformResource: IInterpolatingParent, terraformAttribute:
 
 #### Properties <a name="Properties"></a>
 
-##### `appVersion`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.property.appVersion"></a>
+##### `appVersion`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.property.appVersion"></a>
 
 ```typescript
 public readonly appVersion: string;
@@ -4422,7 +4483,7 @@ public readonly appVersion: string;
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.property.chart"></a>
+##### `chart`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.property.chart"></a>
 
 ```typescript
 public readonly chart: string;
@@ -4432,7 +4493,7 @@ public readonly chart: string;
 
 ---
 
-##### `name`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.property.name"></a>
+##### `name`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -4442,7 +4503,7 @@ public readonly name: string;
 
 ---
 
-##### `namespace`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.property.namespace"></a>
+##### `namespace`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.property.namespace"></a>
 
 ```typescript
 public readonly namespace: string;
@@ -4452,7 +4513,7 @@ public readonly namespace: string;
 
 ---
 
-##### `revision`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.property.revision"></a>
+##### `revision`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.property.revision"></a>
 
 ```typescript
 public readonly revision: number;
@@ -4462,7 +4523,7 @@ public readonly revision: number;
 
 ---
 
-##### `values`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.property.values"></a>
+##### `values`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.property.values"></a>
 
 ```typescript
 public readonly values: string;
@@ -4472,13 +4533,23 @@ public readonly values: string;
 
 ---
 
-##### `version`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadata.property.version"></a>
+##### `version`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.property.version"></a>
 
 ```typescript
 public readonly version: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseMetadataOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: ReleaseMetadata;
+```
+
+- *Type:* [`@cdktf/provider-helm.ReleaseMetadata`](#@cdktf/provider-helm.ReleaseMetadata)
 
 ---
 
@@ -4490,7 +4561,7 @@ public readonly version: string;
 ```typescript
 import { ReleasePostrenderOutputReference } from '@cdktf/provider-helm'
 
-new ReleasePostrenderOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean)
+new ReleasePostrenderOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
 ```
 
 ##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleasePostrenderOutputReference.parameter.terraformResource"></a>
@@ -4506,14 +4577,6 @@ The parent resource.
 - *Type:* `string`
 
 The attribute on the parent resource this class is referencing.
-
----
-
-##### `isSingleItem`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleasePostrenderOutputReference.parameter.isSingleItem"></a>
-
-- *Type:* `boolean`
-
-True if this is a block, false if it's a list.
 
 ---
 

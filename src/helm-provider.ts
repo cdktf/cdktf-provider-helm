@@ -226,7 +226,7 @@ export class HelmProvider extends cdktf.TerraformProvider {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "helm";
+  public static readonly tfResourceType = "helm";
 
   // ===========
   // INITIALIZER
@@ -244,6 +244,7 @@ export class HelmProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'helm',
       terraformGeneratorMetadata: {
         providerName: 'helm',
+        providerVersion: '2.5.0',
         providerVersionConstraint: '~> 2.3'
       },
       terraformProviderSource: 'helm'
