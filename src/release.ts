@@ -230,7 +230,45 @@ export interface ReleaseConfig extends cdktf.TerraformMetaArguments {
   */
   readonly setSensitive?: ReleaseSetSensitive[] | cdktf.IResolvable;
 }
-export class ReleaseMetadata extends cdktf.ComplexComputedList {
+export interface ReleaseMetadata {
+}
+
+export function releaseMetadataToTerraform(struct?: ReleaseMetadata): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class ReleaseMetadataOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ReleaseMetadata | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReleaseMetadata | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // app_version - computed: true, optional: false, required: false
   public get appVersion() {
@@ -267,6 +305,25 @@ export class ReleaseMetadata extends cdktf.ComplexComputedList {
     return this.getStringAttribute('version');
   }
 }
+
+export class ReleaseMetadataList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ReleaseMetadataOutputReference {
+    return new ReleaseMetadataOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ReleasePostrender {
   /**
   * The command binary path.
@@ -292,10 +349,9 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ReleasePostrender | undefined {
@@ -395,7 +451,7 @@ export class Release extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "helm_release";
+  public static readonly tfResourceType = "helm_release";
 
   // ===========
   // INITIALIZER
@@ -412,7 +468,9 @@ export class Release extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'helm_release',
       terraformGeneratorMetadata: {
-        providerName: 'helm'
+        providerName: 'helm',
+        providerVersion: '2.5.0',
+        providerVersionConstraint: '~> 2.3'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -694,8 +752,9 @@ export class Release extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: false, required: false
-  public metadata(index: string) {
-    return new ReleaseMetadata(this, 'metadata', index, false);
+  private _metadata = new ReleaseMetadataList(this, "metadata", false);
+  public get metadata() {
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1021,7 +1080,7 @@ export class Release extends cdktf.TerraformResource {
   }
 
   // postrender - computed: false, optional: true, required: false
-  private _postrender = new ReleasePostrenderOutputReference(this, "postrender", true);
+  private _postrender = new ReleasePostrenderOutputReference(this, "postrender");
   public get postrender() {
     return this._postrender;
   }

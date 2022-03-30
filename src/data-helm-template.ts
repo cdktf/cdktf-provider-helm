@@ -273,10 +273,9 @@ export class DataHelmTemplatePostrenderOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataHelmTemplatePostrender | undefined {
@@ -398,7 +397,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "helm_template";
+  public static readonly tfResourceType = "helm_template";
 
   // ===========
   // INITIALIZER
@@ -415,7 +414,9 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'helm_template',
       terraformGeneratorMetadata: {
-        providerName: 'helm'
+        providerName: 'helm',
+        providerVersion: '2.5.0',
+        providerVersionConstraint: '~> 2.3'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1044,7 +1045,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
 
   // postrender - computed: false, optional: true, required: false
-  private _postrender = new DataHelmTemplatePostrenderOutputReference(this, "postrender", true);
+  private _postrender = new DataHelmTemplatePostrenderOutputReference(this, "postrender");
   public get postrender() {
     return this._postrender;
   }
