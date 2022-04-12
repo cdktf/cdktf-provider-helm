@@ -244,7 +244,7 @@ export class HelmProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'helm',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.5.0',
+        providerVersion: '2.5.1',
         providerVersionConstraint: '~> 2.3'
       },
       terraformProviderSource: 'helm'
