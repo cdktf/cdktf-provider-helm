@@ -52,6 +52,42 @@ public putPostrender(value: DataHelmTemplatePostrender)
 
 ---
 
+##### `putSet` <a name="@cdktf/provider-helm.DataHelmTemplate.putSet"></a>
+
+```typescript
+public putSet(value: IResolvable | DataHelmTemplateSet[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.parameter.value"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
+
+---
+
+##### `putSetSensitive` <a name="@cdktf/provider-helm.DataHelmTemplate.putSetSensitive"></a>
+
+```typescript
+public putSetSensitive(value: IResolvable | DataHelmTemplateSetSensitive[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.parameter.value"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
+
+---
+
+##### `putSetString` <a name="@cdktf/provider-helm.DataHelmTemplate.putSetString"></a>
+
+```typescript
+public putSetString(value: IResolvable | DataHelmTemplateSetString[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.parameter.value"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
+
+---
+
 ##### `resetApiVersions` <a name="@cdktf/provider-helm.DataHelmTemplate.resetApiVersions"></a>
 
 ```typescript
@@ -98,6 +134,12 @@ public resetDisableOpenapiValidation()
 
 ```typescript
 public resetDisableWebhooks()
+```
+
+##### `resetId` <a name="@cdktf/provider-helm.DataHelmTemplate.resetId"></a>
+
+```typescript
+public resetId()
 ```
 
 ##### `resetIncludeCrds` <a name="@cdktf/provider-helm.DataHelmTemplate.resetIncludeCrds"></a>
@@ -283,16 +325,6 @@ public resetWait()
 
 #### Properties <a name="Properties"></a>
 
-##### `id`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.id"></a>
-
-```typescript
-public readonly id: string;
-```
-
-- *Type:* `string`
-
----
-
 ##### `postrender`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.postrender"></a>
 
 ```typescript
@@ -300,6 +332,36 @@ public readonly postrender: DataHelmTemplatePostrenderOutputReference;
 ```
 
 - *Type:* [`@cdktf/provider-helm.DataHelmTemplatePostrenderOutputReference`](#@cdktf/provider-helm.DataHelmTemplatePostrenderOutputReference)
+
+---
+
+##### `set`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.set"></a>
+
+```typescript
+public readonly set: DataHelmTemplateSetList;
+```
+
+- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetList`](#@cdktf/provider-helm.DataHelmTemplateSetList)
+
+---
+
+##### `setSensitive`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setSensitive"></a>
+
+```typescript
+public readonly setSensitive: DataHelmTemplateSetSensitiveList;
+```
+
+- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetSensitiveList`](#@cdktf/provider-helm.DataHelmTemplateSetSensitiveList)
+
+---
+
+##### `setString`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setString"></a>
+
+```typescript
+public readonly setString: DataHelmTemplateSetStringList;
+```
+
+- *Type:* [`@cdktf/provider-helm.DataHelmTemplateSetStringList`](#@cdktf/provider-helm.DataHelmTemplateSetStringList)
 
 ---
 
@@ -390,6 +452,16 @@ public readonly disableWebhooksInput: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `idInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.idInput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* `string`
 
 ---
 
@@ -793,6 +865,16 @@ public readonly disableWebhooks: boolean | IResolvable;
 
 ---
 
+##### `id`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `includeCrds`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.includeCrds"></a>
 
 ```typescript
@@ -970,36 +1052,6 @@ public readonly reuseValues: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `set`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.set"></a>
-
-```typescript
-public readonly set: IResolvable | DataHelmTemplateSet[];
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
-
----
-
-##### `setSensitive`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setSensitive"></a>
-
-```typescript
-public readonly setSensitive: IResolvable | DataHelmTemplateSetSensitive[];
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
-
----
-
-##### `setString`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.setString"></a>
-
-```typescript
-public readonly setString: IResolvable | DataHelmTemplateSetString[];
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
 
 ---
 
@@ -1434,6 +1486,30 @@ public putPostrender(value: ReleasePostrender)
 
 ---
 
+##### `putSet` <a name="@cdktf/provider-helm.Release.putSet"></a>
+
+```typescript
+public putSet(value: IResolvable | ReleaseSet[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.parameter.value"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
+
+---
+
+##### `putSetSensitive` <a name="@cdktf/provider-helm.Release.putSetSensitive"></a>
+
+```typescript
+public putSetSensitive(value: IResolvable | ReleaseSetSensitive[])
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.parameter.value"></a>
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
+
+---
+
 ##### `resetAtomic` <a name="@cdktf/provider-helm.Release.resetAtomic"></a>
 
 ```typescript
@@ -1492,6 +1568,12 @@ public resetDisableWebhooks()
 
 ```typescript
 public resetForceUpdate()
+```
+
+##### `resetId` <a name="@cdktf/provider-helm.Release.resetId"></a>
+
+```typescript
+public resetId()
 ```
 
 ##### `resetKeyring` <a name="@cdktf/provider-helm.Release.resetKeyring"></a>
@@ -1647,16 +1729,6 @@ public resetWaitForJobs()
 
 #### Properties <a name="Properties"></a>
 
-##### `id`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.id"></a>
-
-```typescript
-public readonly id: string;
-```
-
-- *Type:* `string`
-
----
-
 ##### `manifest`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.manifest"></a>
 
 ```typescript
@@ -1684,6 +1756,26 @@ public readonly postrender: ReleasePostrenderOutputReference;
 ```
 
 - *Type:* [`@cdktf/provider-helm.ReleasePostrenderOutputReference`](#@cdktf/provider-helm.ReleasePostrenderOutputReference)
+
+---
+
+##### `set`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.set"></a>
+
+```typescript
+public readonly set: ReleaseSetList;
+```
+
+- *Type:* [`@cdktf/provider-helm.ReleaseSetList`](#@cdktf/provider-helm.ReleaseSetList)
+
+---
+
+##### `setSensitive`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.setSensitive"></a>
+
+```typescript
+public readonly setSensitive: ReleaseSetSensitiveList;
+```
+
+- *Type:* [`@cdktf/provider-helm.ReleaseSetSensitiveList`](#@cdktf/provider-helm.ReleaseSetSensitiveList)
 
 ---
 
@@ -1804,6 +1896,16 @@ public readonly forceUpdateInput: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `idInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.idInput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* `string`
 
 ---
 
@@ -2177,6 +2279,16 @@ public readonly forceUpdate: boolean | IResolvable;
 
 ---
 
+##### `id`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `keyring`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.keyring"></a>
 
 ```typescript
@@ -2334,26 +2446,6 @@ public readonly reuseValues: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `set`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.set"></a>
-
-```typescript
-public readonly set: IResolvable | ReleaseSet[];
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
-
----
-
-##### `setSensitive`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.setSensitive"></a>
-
-```typescript
-public readonly setSensitive: IResolvable | ReleaseSetSensitive[];
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
 
 ---
 
@@ -2624,6 +2716,21 @@ public readonly disableWebhooks: boolean | IResolvable;
 Prevent hooks from running.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#disable_webhooks DataHelmTemplate#disable_webhooks}
+
+---
+
+##### `id`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateConfig.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#id DataHelmTemplate#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 
 ---
 
@@ -3835,6 +3942,21 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 
 ---
 
+##### `id`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseConfig.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* `string`
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#id Release#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
 ##### `keyring`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseConfig.property.keyring"></a>
 
 ```typescript
@@ -4374,6 +4496,543 @@ public readonly internalValue: DataHelmTemplatePostrender;
 ---
 
 
+### DataHelmTemplateSetList <a name="@cdktf/provider-helm.DataHelmTemplateSetList"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.DataHelmTemplateSetList.Initializer"></a>
+
+```typescript
+import { DataHelmTemplateSetList } from '@cdktf/provider-helm'
+
+new DataHelmTemplateSetList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-helm.DataHelmTemplateSetList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataHelmTemplateSet[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)[]
+
+---
+
+
+### DataHelmTemplateSetOutputReference <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.Initializer"></a>
+
+```typescript
+import { DataHelmTemplateSetOutputReference } from '@cdktf/provider-helm'
+
+new DataHelmTemplateSetOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `resetType` <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.resetType"></a>
+
+```typescript
+public resetType()
+```
+
+
+#### Properties <a name="Properties"></a>
+
+##### `nameInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.property.nameInput"></a>
+
+```typescript
+public readonly nameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `typeInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.property.typeInput"></a>
+
+```typescript
+public readonly typeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `valueInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.property.valueInput"></a>
+
+```typescript
+public readonly valueInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `name`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `type`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.property.value"></a>
+
+```typescript
+public readonly value: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataHelmTemplateSet;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSet`](#@cdktf/provider-helm.DataHelmTemplateSet)
+
+---
+
+
+### DataHelmTemplateSetSensitiveList <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveList"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveList.Initializer"></a>
+
+```typescript
+import { DataHelmTemplateSetSensitiveList } from '@cdktf/provider-helm'
+
+new DataHelmTemplateSetSensitiveList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataHelmTemplateSetSensitive[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)[]
+
+---
+
+
+### DataHelmTemplateSetSensitiveOutputReference <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.Initializer"></a>
+
+```typescript
+import { DataHelmTemplateSetSensitiveOutputReference } from '@cdktf/provider-helm'
+
+new DataHelmTemplateSetSensitiveOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `resetType` <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.resetType"></a>
+
+```typescript
+public resetType()
+```
+
+
+#### Properties <a name="Properties"></a>
+
+##### `nameInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.property.nameInput"></a>
+
+```typescript
+public readonly nameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `typeInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.property.typeInput"></a>
+
+```typescript
+public readonly typeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `valueInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.property.valueInput"></a>
+
+```typescript
+public readonly valueInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `name`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `type`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.property.value"></a>
+
+```typescript
+public readonly value: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetSensitiveOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataHelmTemplateSetSensitive;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetSensitive`](#@cdktf/provider-helm.DataHelmTemplateSetSensitive)
+
+---
+
+
+### DataHelmTemplateSetStringList <a name="@cdktf/provider-helm.DataHelmTemplateSetStringList"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.DataHelmTemplateSetStringList.Initializer"></a>
+
+```typescript
+import { DataHelmTemplateSetStringList } from '@cdktf/provider-helm'
+
+new DataHelmTemplateSetStringList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-helm.DataHelmTemplateSetStringList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataHelmTemplateSetString[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)[]
+
+---
+
+
+### DataHelmTemplateSetStringOutputReference <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.Initializer"></a>
+
+```typescript
+import { DataHelmTemplateSetStringOutputReference } from '@cdktf/provider-helm'
+
+new DataHelmTemplateSetStringOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+
+
+#### Properties <a name="Properties"></a>
+
+##### `nameInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.property.nameInput"></a>
+
+```typescript
+public readonly nameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `valueInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.property.valueInput"></a>
+
+```typescript
+public readonly valueInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `name`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.property.value"></a>
+
+```typescript
+public readonly value: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateSetStringOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | DataHelmTemplateSetString;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.DataHelmTemplateSetString`](#@cdktf/provider-helm.DataHelmTemplateSetString)
+
+---
+
+
 ### ReleaseMetadataList <a name="@cdktf/provider-helm.ReleaseMetadataList"></a>
 
 #### Initializers <a name="@cdktf/provider-helm.ReleaseMetadataList.Initializer"></a>
@@ -4611,6 +5270,382 @@ public readonly internalValue: ReleasePostrender;
 ```
 
 - *Type:* [`@cdktf/provider-helm.ReleasePostrender`](#@cdktf/provider-helm.ReleasePostrender)
+
+---
+
+
+### ReleaseSetList <a name="@cdktf/provider-helm.ReleaseSetList"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.ReleaseSetList.Initializer"></a>
+
+```typescript
+import { ReleaseSetList } from '@cdktf/provider-helm'
+
+new ReleaseSetList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-helm.ReleaseSetList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | ReleaseSet[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)[]
+
+---
+
+
+### ReleaseSetOutputReference <a name="@cdktf/provider-helm.ReleaseSetOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.ReleaseSetOutputReference.Initializer"></a>
+
+```typescript
+import { ReleaseSetOutputReference } from '@cdktf/provider-helm'
+
+new ReleaseSetOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `resetType` <a name="@cdktf/provider-helm.ReleaseSetOutputReference.resetType"></a>
+
+```typescript
+public resetType()
+```
+
+
+#### Properties <a name="Properties"></a>
+
+##### `nameInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.property.nameInput"></a>
+
+```typescript
+public readonly nameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `typeInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.property.typeInput"></a>
+
+```typescript
+public readonly typeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `valueInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.property.valueInput"></a>
+
+```typescript
+public readonly valueInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `name`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `type`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.property.value"></a>
+
+```typescript
+public readonly value: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | ReleaseSet;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSet`](#@cdktf/provider-helm.ReleaseSet)
+
+---
+
+
+### ReleaseSetSensitiveList <a name="@cdktf/provider-helm.ReleaseSetSensitiveList"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.ReleaseSetSensitiveList.Initializer"></a>
+
+```typescript
+import { ReleaseSetSensitiveList } from '@cdktf/provider-helm'
+
+new ReleaseSetSensitiveList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveList.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveList.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveList.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-helm.ReleaseSetSensitiveList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties"></a>
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | ReleaseSetSensitive[];
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)[]
+
+---
+
+
+### ReleaseSetSensitiveOutputReference <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.Initializer"></a>
+
+```typescript
+import { ReleaseSetSensitiveOutputReference } from '@cdktf/provider-helm'
+
+new ReleaseSetSensitiveOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `resetType` <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.resetType"></a>
+
+```typescript
+public resetType()
+```
+
+
+#### Properties <a name="Properties"></a>
+
+##### `nameInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.property.nameInput"></a>
+
+```typescript
+public readonly nameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `typeInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.property.typeInput"></a>
+
+```typescript
+public readonly typeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `valueInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.property.valueInput"></a>
+
+```typescript
+public readonly valueInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `name`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `type`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `value`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.property.value"></a>
+
+```typescript
+public readonly value: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseSetSensitiveOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | ReleaseSetSensitive;
+```
+
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-helm.ReleaseSetSensitive`](#@cdktf/provider-helm.ReleaseSetSensitive)
 
 ---
 

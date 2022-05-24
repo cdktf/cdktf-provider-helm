@@ -62,6 +62,13 @@ export interface DataHelmTemplateConfig extends cdktf.TerraformMetaArguments {
   */
   readonly disableWebhooks?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#id DataHelmTemplate#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Include CRDs in the templated output
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#include_crds DataHelmTemplate#include_crds}
@@ -339,6 +346,124 @@ export function dataHelmTemplateSetToTerraform(struct?: DataHelmTemplateSet | cd
   }
 }
 
+export class DataHelmTemplateSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataHelmTemplateSet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataHelmTemplateSet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class DataHelmTemplateSetList extends cdktf.ComplexList {
+  public internalValue? : DataHelmTemplateSet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataHelmTemplateSetOutputReference {
+    return new DataHelmTemplateSetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataHelmTemplateSetSensitive {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#name DataHelmTemplate#name}
@@ -366,6 +491,124 @@ export function dataHelmTemplateSetSensitiveToTerraform(struct?: DataHelmTemplat
   }
 }
 
+export class DataHelmTemplateSetSensitiveOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataHelmTemplateSetSensitive | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataHelmTemplateSetSensitive | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class DataHelmTemplateSetSensitiveList extends cdktf.ComplexList {
+  public internalValue? : DataHelmTemplateSetSensitive[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataHelmTemplateSetSensitiveOutputReference {
+    return new DataHelmTemplateSetSensitiveOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataHelmTemplateSetString {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#name DataHelmTemplate#name}
@@ -388,6 +631,102 @@ export function dataHelmTemplateSetStringToTerraform(struct?: DataHelmTemplateSe
   }
 }
 
+export class DataHelmTemplateSetStringOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataHelmTemplateSetString | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataHelmTemplateSetString | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class DataHelmTemplateSetStringList extends cdktf.ComplexList {
+  public internalValue? : DataHelmTemplateSetString[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataHelmTemplateSetStringOutputReference {
+    return new DataHelmTemplateSetStringOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/helm/d/template helm_template}
@@ -432,6 +771,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     this._devel = config.devel;
     this._disableOpenapiValidation = config.disableOpenapiValidation;
     this._disableWebhooks = config.disableWebhooks;
+    this._id = config.id;
     this._includeCrds = config.includeCrds;
     this._isUpgrade = config.isUpgrade;
     this._keyring = config.keyring;
@@ -460,9 +800,9 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     this._version = config.version;
     this._wait = config.wait;
     this._postrender.internalValue = config.postrender;
-    this._set = config.set;
-    this._setSensitive = config.setSensitive;
-    this._setString = config.setString;
+    this._set.internalValue = config.set;
+    this._setSensitive.internalValue = config.setSensitive;
+    this._setString.internalValue = config.setString;
   }
 
   // ==========
@@ -611,8 +951,19 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // include_crds - computed: false, optional: true, required: false
@@ -1061,54 +1412,51 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   }
 
   // set - computed: false, optional: true, required: false
-  private _set?: DataHelmTemplateSet[] | cdktf.IResolvable; 
+  private _set = new DataHelmTemplateSetList(this, "set", true);
   public get set() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('set')));
+    return this._set;
   }
-  public set set(value: DataHelmTemplateSet[] | cdktf.IResolvable) {
-    this._set = value;
+  public putSet(value: DataHelmTemplateSet[] | cdktf.IResolvable) {
+    this._set.internalValue = value;
   }
   public resetSet() {
-    this._set = undefined;
+    this._set.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get setInput() {
-    return this._set;
+    return this._set.internalValue;
   }
 
   // set_sensitive - computed: false, optional: true, required: false
-  private _setSensitive?: DataHelmTemplateSetSensitive[] | cdktf.IResolvable; 
+  private _setSensitive = new DataHelmTemplateSetSensitiveList(this, "set_sensitive", true);
   public get setSensitive() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('set_sensitive')));
+    return this._setSensitive;
   }
-  public set setSensitive(value: DataHelmTemplateSetSensitive[] | cdktf.IResolvable) {
-    this._setSensitive = value;
+  public putSetSensitive(value: DataHelmTemplateSetSensitive[] | cdktf.IResolvable) {
+    this._setSensitive.internalValue = value;
   }
   public resetSetSensitive() {
-    this._setSensitive = undefined;
+    this._setSensitive.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get setSensitiveInput() {
-    return this._setSensitive;
+    return this._setSensitive.internalValue;
   }
 
   // set_string - computed: false, optional: true, required: false
-  private _setString?: DataHelmTemplateSetString[] | cdktf.IResolvable; 
+  private _setString = new DataHelmTemplateSetStringList(this, "set_string", true);
   public get setString() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('set_string')));
+    return this._setString;
   }
-  public set setString(value: DataHelmTemplateSetString[] | cdktf.IResolvable) {
-    this._setString = value;
+  public putSetString(value: DataHelmTemplateSetString[] | cdktf.IResolvable) {
+    this._setString.internalValue = value;
   }
   public resetSetString() {
-    this._setString = undefined;
+    this._setString.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get setStringInput() {
-    return this._setString;
+    return this._setString.internalValue;
   }
 
   // =========
@@ -1126,6 +1474,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       devel: cdktf.booleanToTerraform(this._devel),
       disable_openapi_validation: cdktf.booleanToTerraform(this._disableOpenapiValidation),
       disable_webhooks: cdktf.booleanToTerraform(this._disableWebhooks),
+      id: cdktf.stringToTerraform(this._id),
       include_crds: cdktf.booleanToTerraform(this._includeCrds),
       is_upgrade: cdktf.booleanToTerraform(this._isUpgrade),
       keyring: cdktf.stringToTerraform(this._keyring),
@@ -1154,9 +1503,9 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       version: cdktf.stringToTerraform(this._version),
       wait: cdktf.booleanToTerraform(this._wait),
       postrender: dataHelmTemplatePostrenderToTerraform(this._postrender.internalValue),
-      set: cdktf.listMapper(dataHelmTemplateSetToTerraform)(this._set),
-      set_sensitive: cdktf.listMapper(dataHelmTemplateSetSensitiveToTerraform)(this._setSensitive),
-      set_string: cdktf.listMapper(dataHelmTemplateSetStringToTerraform)(this._setString),
+      set: cdktf.listMapper(dataHelmTemplateSetToTerraform)(this._set.internalValue),
+      set_sensitive: cdktf.listMapper(dataHelmTemplateSetSensitiveToTerraform)(this._setSensitive.internalValue),
+      set_string: cdktf.listMapper(dataHelmTemplateSetStringToTerraform)(this._setString.internalValue),
     };
   }
 }
