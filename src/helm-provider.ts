@@ -175,6 +175,12 @@ export interface HelmProviderKubernetes {
   */
   readonly password?: string;
   /**
+  * URL to the proxy to be used for all API requests
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#proxy_url HelmProvider#proxy_url}
+  */
+  readonly proxyUrl?: string;
+  /**
   * Token to authenticate an service account
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#token HelmProvider#token}
@@ -211,6 +217,7 @@ export function helmProviderKubernetesToTerraform(struct?: HelmProviderKubernete
     host: cdktf.stringToTerraform(struct!.host),
     insecure: cdktf.booleanToTerraform(struct!.insecure),
     password: cdktf.stringToTerraform(struct!.password),
+    proxy_url: cdktf.stringToTerraform(struct!.proxyUrl),
     token: cdktf.stringToTerraform(struct!.token),
     username: cdktf.stringToTerraform(struct!.username),
     exec: helmProviderKubernetesExecToTerraform(struct!.exec),
@@ -244,7 +251,7 @@ export class HelmProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'helm',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.5.1',
+        providerVersion: '2.6.0',
         providerVersionConstraint: '~> 2.3'
       },
       terraformProviderSource: 'helm'

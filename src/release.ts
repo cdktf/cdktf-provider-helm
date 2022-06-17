@@ -111,6 +111,12 @@ export interface ReleaseConfig extends cdktf.TerraformMetaArguments {
   */
   readonly namespace?: string;
   /**
+  * Pass credentials to all domains
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#pass_credentials Release#pass_credentials}
+  */
+  readonly passCredentials?: boolean | cdktf.IResolvable;
+  /**
   * Perform pods restart during upgrade/rollback
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#recreate_pods Release#recreate_pods}
@@ -333,6 +339,12 @@ export class ReleaseMetadataList extends cdktf.ComplexList {
 }
 export interface ReleasePostrender {
   /**
+  * an argument to the post-renderer (can specify multiple)
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#args Release#args}
+  */
+  readonly args?: string[];
+  /**
   * The command binary path.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#binary_path Release#binary_path}
@@ -346,6 +358,7 @@ export function releasePostrenderToTerraform(struct?: ReleasePostrenderOutputRef
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
     binary_path: cdktf.stringToTerraform(struct!.binaryPath),
   }
 }
@@ -364,6 +377,10 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ReleasePostrender | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._args !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.args = this._args;
+    }
     if (this._binaryPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.binaryPath = this._binaryPath;
@@ -374,12 +391,30 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
   public set internalValue(value: ReleasePostrender | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._args = undefined;
       this._binaryPath = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._args = value.args;
       this._binaryPath = value.binaryPath;
     }
+  }
+
+  // args - computed: false, optional: true, required: false
+  private _args?: string[]; 
+  public get args() {
+    return this.getListAttribute('args');
+  }
+  public set args(value: string[]) {
+    this._args = value;
+  }
+  public resetArgs() {
+    this._args = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get argsInput() {
+    return this._args;
   }
 
   // binary_path - computed: false, optional: false, required: true
@@ -712,7 +747,7 @@ export class Release extends cdktf.TerraformResource {
       terraformResourceType: 'helm_release',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.5.1',
+        providerVersion: '2.6.0',
         providerVersionConstraint: '~> 2.3'
       },
       provider: config.provider,
@@ -737,6 +772,7 @@ export class Release extends cdktf.TerraformResource {
     this._maxHistory = config.maxHistory;
     this._name = config.name;
     this._namespace = config.namespace;
+    this._passCredentials = config.passCredentials;
     this._recreatePods = config.recreatePods;
     this._renderSubchartNotes = config.renderSubchartNotes;
     this._replace = config.replace;
@@ -1039,6 +1075,22 @@ export class Release extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get namespaceInput() {
     return this._namespace;
+  }
+
+  // pass_credentials - computed: false, optional: true, required: false
+  private _passCredentials?: boolean | cdktf.IResolvable; 
+  public get passCredentials() {
+    return this.getBooleanAttribute('pass_credentials');
+  }
+  public set passCredentials(value: boolean | cdktf.IResolvable) {
+    this._passCredentials = value;
+  }
+  public resetPassCredentials() {
+    this._passCredentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passCredentialsInput() {
+    return this._passCredentials;
   }
 
   // recreate_pods - computed: false, optional: true, required: false
@@ -1405,6 +1457,7 @@ export class Release extends cdktf.TerraformResource {
       max_history: cdktf.numberToTerraform(this._maxHistory),
       name: cdktf.stringToTerraform(this._name),
       namespace: cdktf.stringToTerraform(this._namespace),
+      pass_credentials: cdktf.booleanToTerraform(this._passCredentials),
       recreate_pods: cdktf.booleanToTerraform(this._recreatePods),
       render_subchart_notes: cdktf.booleanToTerraform(this._renderSubchartNotes),
       replace: cdktf.booleanToTerraform(this._replace),

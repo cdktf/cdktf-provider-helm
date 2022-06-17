@@ -184,6 +184,12 @@ public resetNamespace()
 public resetNotes()
 ```
 
+##### `resetPassCredentials` <a name="@cdktf/provider-helm.DataHelmTemplate.resetPassCredentials"></a>
+
+```typescript
+public resetPassCredentials()
+```
+
 ##### `resetPostrender` <a name="@cdktf/provider-helm.DataHelmTemplate.resetPostrender"></a>
 
 ```typescript
@@ -542,6 +548,16 @@ public readonly notesInput: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `passCredentialsInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.passCredentialsInput"></a>
+
+```typescript
+public readonly passCredentialsInput: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -952,6 +968,16 @@ public readonly notes: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `passCredentials`<sup>Required</sup> <a name="@cdktf/provider-helm.DataHelmTemplate.property.passCredentials"></a>
+
+```typescript
+public readonly passCredentials: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -1600,6 +1626,12 @@ public resetMaxHistory()
 public resetNamespace()
 ```
 
+##### `resetPassCredentials` <a name="@cdktf/provider-helm.Release.resetPassCredentials"></a>
+
+```typescript
+public resetPassCredentials()
+```
+
 ##### `resetPostrender` <a name="@cdktf/provider-helm.Release.resetPostrender"></a>
 
 ```typescript
@@ -1956,6 +1988,16 @@ public readonly namespaceInput: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `passCredentialsInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.Release.property.passCredentialsInput"></a>
+
+```typescript
+public readonly passCredentialsInput: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -2336,6 +2378,16 @@ public readonly namespace: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `passCredentials`<sup>Required</sup> <a name="@cdktf/provider-helm.Release.property.passCredentials"></a>
+
+```typescript
+public readonly passCredentials: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -2829,6 +2881,20 @@ public readonly notes: string;
 Rendered notes if the chart contains a `NOTES.txt`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#notes DataHelmTemplate#notes}
+
+---
+
+##### `passCredentials`<sup>Optional</sup> <a name="@cdktf/provider-helm.DataHelmTemplateConfig.property.passCredentials"></a>
+
+```typescript
+public readonly passCredentials: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+Pass credentials to all domains.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#pass_credentials DataHelmTemplate#pass_credentials}
 
 ---
 
@@ -3638,6 +3704,20 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#
 
 ---
 
+##### `proxyUrl`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetes.property.proxyUrl"></a>
+
+```typescript
+public readonly proxyUrl: string;
+```
+
+- *Type:* `string`
+
+URL to the proxy to be used for all API requests.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#proxy_url HelmProvider#proxy_url}
+
+---
+
 ##### `token`<sup>Optional</sup> <a name="@cdktf/provider-helm.HelmProviderKubernetes.property.token"></a>
 
 ```typescript
@@ -4013,6 +4093,20 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/
 
 ---
 
+##### `passCredentials`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseConfig.property.passCredentials"></a>
+
+```typescript
+public readonly passCredentials: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+Pass credentials to all domains.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#pass_credentials Release#pass_credentials}
+
+---
+
 ##### `postrender`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleaseConfig.property.postrender"></a>
 
 ```typescript
@@ -4338,6 +4432,20 @@ public readonly binaryPath: string;
 The command binary path.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#binary_path Release#binary_path}
+
+---
+
+##### `args`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleasePostrender.property.args"></a>
+
+```typescript
+public readonly args: string[];
+```
+
+- *Type:* `string`[]
+
+an argument to the post-renderer (can specify multiple).
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/r/release#args Release#args}
 
 ---
 
@@ -5239,9 +5347,26 @@ The attribute on the parent resource this class is referencing.
 
 ---
 
+#### Methods <a name="Methods"></a>
+
+##### `resetArgs` <a name="@cdktf/provider-helm.ReleasePostrenderOutputReference.resetArgs"></a>
+
+```typescript
+public resetArgs()
+```
 
 
 #### Properties <a name="Properties"></a>
+
+##### `argsInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleasePostrenderOutputReference.property.argsInput"></a>
+
+```typescript
+public readonly argsInput: string[];
+```
+
+- *Type:* `string`[]
+
+---
 
 ##### `binaryPathInput`<sup>Optional</sup> <a name="@cdktf/provider-helm.ReleasePostrenderOutputReference.property.binaryPathInput"></a>
 
@@ -5250,6 +5375,16 @@ public readonly binaryPathInput: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `args`<sup>Required</sup> <a name="@cdktf/provider-helm.ReleasePostrenderOutputReference.property.args"></a>
+
+```typescript
+public readonly args: string[];
+```
+
+- *Type:* `string`[]
 
 ---
 

@@ -117,6 +117,12 @@ export interface DataHelmTemplateConfig extends cdktf.TerraformMetaArguments {
   */
   readonly notes?: string;
   /**
+  * Pass credentials to all domains
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#pass_credentials DataHelmTemplate#pass_credentials}
+  */
+  readonly passCredentials?: boolean | cdktf.IResolvable;
+  /**
   * If set, render subchart notes along with the parent
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#render_subchart_notes DataHelmTemplate#render_subchart_notes}
@@ -754,7 +760,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       terraformResourceType: 'helm_template',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.5.1',
+        providerVersion: '2.6.0',
         providerVersionConstraint: '~> 2.3'
       },
       provider: config.provider,
@@ -780,6 +786,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._namespace = config.namespace;
     this._notes = config.notes;
+    this._passCredentials = config.passCredentials;
     this._renderSubchartNotes = config.renderSubchartNotes;
     this._replace = config.replace;
     this._repository = config.repository;
@@ -1089,6 +1096,22 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get notesInput() {
     return this._notes;
+  }
+
+  // pass_credentials - computed: false, optional: true, required: false
+  private _passCredentials?: boolean | cdktf.IResolvable; 
+  public get passCredentials() {
+    return this.getBooleanAttribute('pass_credentials');
+  }
+  public set passCredentials(value: boolean | cdktf.IResolvable) {
+    this._passCredentials = value;
+  }
+  public resetPassCredentials() {
+    this._passCredentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passCredentialsInput() {
+    return this._passCredentials;
   }
 
   // render_subchart_notes - computed: false, optional: true, required: false
@@ -1483,6 +1506,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       namespace: cdktf.stringToTerraform(this._namespace),
       notes: cdktf.stringToTerraform(this._notes),
+      pass_credentials: cdktf.booleanToTerraform(this._passCredentials),
       render_subchart_notes: cdktf.booleanToTerraform(this._renderSubchartNotes),
       replace: cdktf.booleanToTerraform(this._replace),
       repository: cdktf.stringToTerraform(this._repository),
