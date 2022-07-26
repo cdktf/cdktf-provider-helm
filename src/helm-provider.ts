@@ -107,7 +107,7 @@ export function helmProviderKubernetesExecToTerraform(struct?: HelmProviderKuber
   }
   return {
     api_version: cdktf.stringToTerraform(struct!.apiVersion),
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
     command: cdktf.stringToTerraform(struct!.command),
     env: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.env),
   }
@@ -213,7 +213,7 @@ export function helmProviderKubernetesToTerraform(struct?: HelmProviderKubernete
     config_context_auth_info: cdktf.stringToTerraform(struct!.configContextAuthInfo),
     config_context_cluster: cdktf.stringToTerraform(struct!.configContextCluster),
     config_path: cdktf.stringToTerraform(struct!.configPath),
-    config_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.configPaths),
+    config_paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.configPaths),
     host: cdktf.stringToTerraform(struct!.host),
     insecure: cdktf.booleanToTerraform(struct!.insecure),
     password: cdktf.stringToTerraform(struct!.password),

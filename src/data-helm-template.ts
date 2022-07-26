@@ -766,7 +766,10 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiVersions = config.apiVersions;
     this._atomic = config.atomic;
@@ -1488,7 +1491,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_versions: cdktf.listMapper(cdktf.stringToTerraform)(this._apiVersions),
+      api_versions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._apiVersions),
       atomic: cdktf.booleanToTerraform(this._atomic),
       chart: cdktf.stringToTerraform(this._chart),
       create_namespace: cdktf.booleanToTerraform(this._createNamespace),
@@ -1517,19 +1520,19 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       repository_username: cdktf.stringToTerraform(this._repositoryUsername),
       reset_values: cdktf.booleanToTerraform(this._resetValues),
       reuse_values: cdktf.booleanToTerraform(this._reuseValues),
-      show_only: cdktf.listMapper(cdktf.stringToTerraform)(this._showOnly),
+      show_only: cdktf.listMapper(cdktf.stringToTerraform, false)(this._showOnly),
       skip_crds: cdktf.booleanToTerraform(this._skipCrds),
       skip_tests: cdktf.booleanToTerraform(this._skipTests),
       timeout: cdktf.numberToTerraform(this._timeout),
       validate: cdktf.booleanToTerraform(this._validate),
-      values: cdktf.listMapper(cdktf.stringToTerraform)(this._values),
+      values: cdktf.listMapper(cdktf.stringToTerraform, false)(this._values),
       verify: cdktf.booleanToTerraform(this._verify),
       version: cdktf.stringToTerraform(this._version),
       wait: cdktf.booleanToTerraform(this._wait),
       postrender: dataHelmTemplatePostrenderToTerraform(this._postrender.internalValue),
-      set: cdktf.listMapper(dataHelmTemplateSetToTerraform)(this._set.internalValue),
-      set_sensitive: cdktf.listMapper(dataHelmTemplateSetSensitiveToTerraform)(this._setSensitive.internalValue),
-      set_string: cdktf.listMapper(dataHelmTemplateSetStringToTerraform)(this._setString.internalValue),
+      set: cdktf.listMapper(dataHelmTemplateSetToTerraform, true)(this._set.internalValue),
+      set_sensitive: cdktf.listMapper(dataHelmTemplateSetSensitiveToTerraform, true)(this._setSensitive.internalValue),
+      set_string: cdktf.listMapper(dataHelmTemplateSetStringToTerraform, true)(this._setString.internalValue),
     };
   }
 }
