@@ -358,7 +358,7 @@ export function releasePostrenderToTerraform(struct?: ReleasePostrenderOutputRef
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
     binary_path: cdktf.stringToTerraform(struct!.binaryPath),
   }
 }
@@ -753,7 +753,10 @@ export class Release extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._atomic = config.atomic;
     this._chart = config.chart;
@@ -1471,14 +1474,14 @@ export class Release extends cdktf.TerraformResource {
       reuse_values: cdktf.booleanToTerraform(this._reuseValues),
       skip_crds: cdktf.booleanToTerraform(this._skipCrds),
       timeout: cdktf.numberToTerraform(this._timeout),
-      values: cdktf.listMapper(cdktf.stringToTerraform)(this._values),
+      values: cdktf.listMapper(cdktf.stringToTerraform, false)(this._values),
       verify: cdktf.booleanToTerraform(this._verify),
       version: cdktf.stringToTerraform(this._version),
       wait: cdktf.booleanToTerraform(this._wait),
       wait_for_jobs: cdktf.booleanToTerraform(this._waitForJobs),
       postrender: releasePostrenderToTerraform(this._postrender.internalValue),
-      set: cdktf.listMapper(releaseSetToTerraform)(this._set.internalValue),
-      set_sensitive: cdktf.listMapper(releaseSetSensitiveToTerraform)(this._setSensitive.internalValue),
+      set: cdktf.listMapper(releaseSetToTerraform, true)(this._set.internalValue),
+      set_sensitive: cdktf.listMapper(releaseSetSensitiveToTerraform, true)(this._setSensitive.internalValue),
     };
   }
 }
