@@ -760,7 +760,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       terraformResourceType: 'helm_template',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.6.0',
+        providerVersion: '2.7.0',
         providerVersionConstraint: '~> 2.3'
       },
       provider: config.provider,
