@@ -116,9 +116,9 @@
     jsii-srcmak "^0.1.686"
 
 "@cdktf/provider-project@^0.2.8":
-  version "0.2.75"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.2.75.tgz#aae8a782cd3b1b04364f35a1f00bc6359e0fe96e"
-  integrity sha512-jE565IFBIkvm10ie7hTedbIRq09saG0FdYuucMmqEgj61PgoT8TRGz9i9r4XdpAe3/RG7Hijri+kMVP8yCE9oA==
+  version "0.2.76"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.2.76.tgz#dfd4bd009099f38d419e6971a818de5e3a73b0fb"
+  integrity sha512-P6j9Tu3prPbuEeIiI6FUBfkaUJ/NdXTsc3zwY59VmKP2XdCkv7HPSPTG/izXW6vWarBDpfJEo1n0QzCvUug+CQ==
   dependencies:
     change-case "^4.1.2"
     fs-extra "^10.1.0"
@@ -3194,10 +3194,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.65.21:
-  version "0.65.21"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.65.21.tgz#dba5455842bcf1eaf045573567e51f6c9dbe891f"
-  integrity sha512-IkJCCa7G7x2JP5Ufc+i2edFIk7sMVB75cHDN7DkhuNakyvKm7e5Q6MW8wTLN2aDd8DJSNdO5muKGEyf7SCIDbA==
+projen@^0.65.23:
+  version "0.65.23"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.65.23.tgz#4db68aeb22bc55d39855d134b3386c17f67cc131"
+  integrity sha512-oUK+bxSAL4BGQ9D/FCxEgvoml8bbNY4Jucckw/mHgAe32YaeX6YIgmZ+87ZAxZ2EkAW2FXn9PogGQzp/StDvOg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
