@@ -87,6 +87,12 @@ export interface DataHelmTemplateConfig extends cdktf.TerraformMetaArguments {
   */
   readonly keyring?: string;
   /**
+  * Kubernetes version used for Capabilities.KubeVersion
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#kube_version DataHelmTemplate#kube_version}
+  */
+  readonly kubeVersion?: string;
+  /**
   * Concatenated rendered chart templates. This corresponds to the output of the `helm template` command.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#manifest DataHelmTemplate#manifest}
@@ -760,7 +766,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       terraformResourceType: 'helm_template',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.7.1',
+        providerVersion: '2.8.0',
         providerVersionConstraint: '~> 2.3'
       },
       provider: config.provider,
@@ -784,6 +790,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     this._includeCrds = config.includeCrds;
     this._isUpgrade = config.isUpgrade;
     this._keyring = config.keyring;
+    this._kubeVersion = config.kubeVersion;
     this._manifest = config.manifest;
     this._manifests = config.manifests;
     this._name = config.name;
@@ -1022,6 +1029,22 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get keyringInput() {
     return this._keyring;
+  }
+
+  // kube_version - computed: false, optional: true, required: false
+  private _kubeVersion?: string; 
+  public get kubeVersion() {
+    return this.getStringAttribute('kube_version');
+  }
+  public set kubeVersion(value: string) {
+    this._kubeVersion = value;
+  }
+  public resetKubeVersion() {
+    this._kubeVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kubeVersionInput() {
+    return this._kubeVersion;
   }
 
   // manifest - computed: true, optional: true, required: false
@@ -1504,6 +1527,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       include_crds: cdktf.booleanToTerraform(this._includeCrds),
       is_upgrade: cdktf.booleanToTerraform(this._isUpgrade),
       keyring: cdktf.stringToTerraform(this._keyring),
+      kube_version: cdktf.stringToTerraform(this._kubeVersion),
       manifest: cdktf.stringToTerraform(this._manifest),
       manifests: cdktf.hashMapper(cdktf.stringToTerraform)(this._manifests),
       name: cdktf.stringToTerraform(this._name),
