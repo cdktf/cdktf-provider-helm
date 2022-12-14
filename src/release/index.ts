@@ -747,7 +747,7 @@ export class Release extends cdktf.TerraformResource {
       terraformResourceType: 'helm_release',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.7.1',
+        providerVersion: '2.8.0',
         providerVersionConstraint: '~> 2.3'
       },
       provider: config.provider,
