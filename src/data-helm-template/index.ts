@@ -26,6 +26,12 @@ export interface DataHelmTemplateConfig extends cdktf.TerraformMetaArguments {
   */
   readonly chart: string;
   /**
+  * List of rendered CRDs from the chart.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#crds DataHelmTemplate#crds}
+  */
+  readonly crds?: string[];
+  /**
   * Create the namespace if it does not exist
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm/d/template#create_namespace DataHelmTemplate#create_namespace}
@@ -766,7 +772,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       terraformResourceType: 'helm_template',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.8.0',
+        providerVersion: '2.9.0',
         providerVersionConstraint: '~> 2.3'
       },
       provider: config.provider,
@@ -780,6 +786,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     this._apiVersions = config.apiVersions;
     this._atomic = config.atomic;
     this._chart = config.chart;
+    this._crds = config.crds;
     this._createNamespace = config.createNamespace;
     this._dependencyUpdate = config.dependencyUpdate;
     this._description = config.description;
@@ -869,6 +876,22 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get chartInput() {
     return this._chart;
+  }
+
+  // crds - computed: true, optional: true, required: false
+  private _crds?: string[]; 
+  public get crds() {
+    return this.getListAttribute('crds');
+  }
+  public set crds(value: string[]) {
+    this._crds = value;
+  }
+  public resetCrds() {
+    this._crds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crdsInput() {
+    return this._crds;
   }
 
   // create_namespace - computed: false, optional: true, required: false
@@ -1517,6 +1540,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       api_versions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._apiVersions),
       atomic: cdktf.booleanToTerraform(this._atomic),
       chart: cdktf.stringToTerraform(this._chart),
+      crds: cdktf.listMapper(cdktf.stringToTerraform, false)(this._crds),
       create_namespace: cdktf.booleanToTerraform(this._createNamespace),
       dependency_update: cdktf.booleanToTerraform(this._dependencyUpdate),
       description: cdktf.stringToTerraform(this._description),

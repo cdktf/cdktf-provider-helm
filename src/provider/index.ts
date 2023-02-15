@@ -8,6 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface HelmProviderConfig {
   /**
+  * Helm burst limit. Increase this if you have a cluster with many CRDs
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#burst_limit HelmProvider#burst_limit}
+  */
+  readonly burstLimit?: number;
+  /**
   * Debug indicates whether or not Helm is running in Debug mode.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/helm#debug HelmProvider#debug}
@@ -290,11 +296,12 @@ export class HelmProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'helm',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.8.0',
+        providerVersion: '2.9.0',
         providerVersionConstraint: '~> 2.3'
       },
       terraformProviderSource: 'helm'
     });
+    this._burstLimit = config.burstLimit;
     this._debug = config.debug;
     this._helmDriver = config.helmDriver;
     this._pluginsPath = config.pluginsPath;
@@ -310,6 +317,22 @@ export class HelmProvider extends cdktf.TerraformProvider {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // burst_limit - computed: false, optional: true, required: false
+  private _burstLimit?: number; 
+  public get burstLimit() {
+    return this._burstLimit;
+  }
+  public set burstLimit(value: number | undefined) {
+    this._burstLimit = value;
+  }
+  public resetBurstLimit() {
+    this._burstLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get burstLimitInput() {
+    return this._burstLimit;
+  }
 
   // debug - computed: false, optional: true, required: false
   private _debug?: boolean | cdktf.IResolvable; 
@@ -477,6 +500,7 @@ export class HelmProvider extends cdktf.TerraformProvider {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      burst_limit: cdktf.numberToTerraform(this._burstLimit),
       debug: cdktf.booleanToTerraform(this._debug),
       helm_driver: cdktf.stringToTerraform(this._helmDriver),
       plugins_path: cdktf.stringToTerraform(this._pluginsPath),
