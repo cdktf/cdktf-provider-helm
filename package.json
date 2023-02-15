@@ -149,7 +149,7 @@
   "cdktf": {
     "provider": {
       "name": "registry.terraform.io/hashicorp/helm",
-      "version": "2.8.0"
+      "version": "2.9.0"
     }
   },
   "resolutions": {
