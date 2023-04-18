@@ -1,3 +1,7 @@
+# `provider`
+
+Refer to the Terraform Registory for docs: [`helm`](https://www.terraform.io/docs/providers/helm).
+
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-helm.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
