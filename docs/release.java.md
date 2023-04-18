@@ -1,3 +1,7 @@
+# `helm_release`
+
+Refer to the Terraform Registory for docs: [`helm_release`](https://www.terraform.io/docs/providers/helm/r/release).
+
 # `release` Submodule <a name="`release` Submodule" id="@cdktf/provider-helm.release"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
