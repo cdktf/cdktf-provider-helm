@@ -1,6 +1,6 @@
 # `helm_release`
 
-Refer to the Terraform Registory for docs: [`helm_release`](https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release).
+Refer to the Terraform Registory for docs: [`helm_release`](https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release).
 
 # `release` Submodule <a name="`release` Submodule" id="@cdktf/provider-helm.release"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`helm_release`](https://registry.ter
 
 ### Release <a name="Release" id="@cdktf/provider-helm.release.Release"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release helm_release}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release helm_release}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.Release.Initializer"></a>
 
@@ -56,6 +56,7 @@ release.Release(
   reset_values: typing.Union[bool, IResolvable] = None,
   reuse_values: typing.Union[bool, IResolvable] = None,
   set: typing.Union[IResolvable, typing.List[ReleaseSet]] = None,
+  set_list: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]] = None,
   set_sensitive: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]] = None,
   skip_crds: typing.Union[bool, IResolvable] = None,
   timeout: typing.Union[int, float] = None,
@@ -90,7 +91,7 @@ release.Release(
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableOpenapiValidation">disable_openapi_validation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableWebhooks">disable_webhooks</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Prevent hooks from running. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.forceUpdate">force_update</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Force resource update through delete/recreate if needed. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#id Release#id}. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#id Release#id}. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.keyring">keyring</a></code> | <code>str</code> | Location of public keys used for verification. Used only if `verify` is true. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.lint">lint</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Run helm lint when planning. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.maxHistory">max_history</a></code> | <code>typing.Union[int, float]</code> | Limit the maximum number of revisions saved per release. Use 0 for no limit. |
@@ -109,6 +110,7 @@ release.Release(
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.resetValues">reset_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When upgrading, reset the values to the ones built into the chart. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.reuseValues">reuse_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.set">set</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]</code> | set block. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setList">set_list</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]</code> | set_list block. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setSensitive">set_sensitive</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]</code> | set_sensitive block. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.skipCrds">skip_crds</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | Time in seconds to wait for any individual kubernetes operation. |
@@ -186,7 +188,7 @@ Must be unique amongst siblings in the same scope
 
 Chart name to be installed. A path may be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#chart Release#chart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#chart Release#chart}
 
 ---
 
@@ -196,7 +198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Release name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#name Release#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#name Release#name}
 
 ---
 
@@ -206,7 +208,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#atomic Release#atomic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#atomic Release#atomic}
 
 ---
 
@@ -216,7 +218,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
 
 ---
 
@@ -226,7 +228,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Create the namespace if it does not exist.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#create_namespace Release#create_namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#create_namespace Release#create_namespace}
 
 ---
 
@@ -236,7 +238,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Run helm dependency update before installing the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#dependency_update Release#dependency_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#dependency_update Release#dependency_update}
 
 ---
 
@@ -246,7 +248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Add a custom description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#description Release#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#description Release#description}
 
 ---
 
@@ -256,7 +258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#devel Release#devel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#devel Release#devel}
 
 ---
 
@@ -266,7 +268,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
 
 ---
 
@@ -276,7 +278,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
 
 ---
 
@@ -286,7 +288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Prevent hooks from running.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#disable_webhooks Release#disable_webhooks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#disable_webhooks Release#disable_webhooks}
 
 ---
 
@@ -296,7 +298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Force resource update through delete/recreate if needed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#force_update Release#force_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#force_update Release#force_update}
 
 ---
 
@@ -304,7 +306,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#id Release#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#id Release#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -317,7 +319,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Location of public keys used for verification. Used only if `verify` is true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#keyring Release#keyring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#keyring Release#keyring}
 
 ---
 
@@ -327,7 +329,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Run helm lint when planning.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#lint Release#lint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#lint Release#lint}
 
 ---
 
@@ -337,7 +339,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Limit the maximum number of revisions saved per release. Use 0 for no limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#max_history Release#max_history}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#max_history Release#max_history}
 
 ---
 
@@ -347,7 +349,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Namespace to install the release into.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#namespace Release#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#namespace Release#namespace}
 
 ---
 
@@ -357,7 +359,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Pass credentials to all domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#pass_credentials Release#pass_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#pass_credentials Release#pass_credentials}
 
 ---
 
@@ -367,7 +369,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 postrender block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#postrender Release#postrender}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#postrender Release#postrender}
 
 ---
 
@@ -377,7 +379,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Perform pods restart during upgrade/rollback.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#recreate_pods Release#recreate_pods}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#recreate_pods Release#recreate_pods}
 
 ---
 
@@ -387,7 +389,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 If set, render subchart notes along with the parent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
 
 ---
 
@@ -397,7 +399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#replace Release#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#replace Release#replace}
 
 ---
 
@@ -407,7 +409,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository Release#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository Release#repository}
 
 ---
 
@@ -417,7 +419,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Repositories CA File.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_ca_file Release#repository_ca_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_ca_file Release#repository_ca_file}
 
 ---
 
@@ -427,7 +429,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The repositories cert file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_cert_file Release#repository_cert_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_cert_file Release#repository_cert_file}
 
 ---
 
@@ -437,7 +439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The repositories cert key file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_key_file Release#repository_key_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_key_file Release#repository_key_file}
 
 ---
 
@@ -447,7 +449,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Password for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_password Release#repository_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_password Release#repository_password}
 
 ---
 
@@ -457,7 +459,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Username for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_username Release#repository_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_username Release#repository_username}
 
 ---
 
@@ -467,7 +469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 When upgrading, reset the values to the ones built into the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#reset_values Release#reset_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#reset_values Release#reset_values}
 
 ---
 
@@ -477,7 +479,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#reuse_values Release#reuse_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#reuse_values Release#reuse_values}
 
 ---
 
@@ -487,7 +489,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 set block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#set Release#set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#set Release#set}
+
+---
+
+##### `set_list`<sup>Optional</sup> <a name="set_list" id="@cdktf/provider-helm.release.Release.Initializer.parameter.setList"></a>
+
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
+
+set_list block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#set_list Release#set_list}
 
 ---
 
@@ -497,7 +509,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 set_sensitive block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#set_sensitive Release#set_sensitive}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#set_sensitive Release#set_sensitive}
 
 ---
 
@@ -507,7 +519,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#skip_crds Release#skip_crds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#skip_crds Release#skip_crds}
 
 ---
 
@@ -517,7 +529,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Time in seconds to wait for any individual kubernetes operation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#timeout Release#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#timeout Release#timeout}
 
 ---
 
@@ -527,7 +539,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 List of values in raw yaml format to pass to helm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#values Release#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#values Release#values}
 
 ---
 
@@ -537,7 +549,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Verify the package before installing it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#verify Release#verify}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#verify Release#verify}
 
 ---
 
@@ -547,7 +559,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Specify the exact chart version to install. If this is not specified, the latest version is installed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#version Release#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#version Release#version}
 
 ---
 
@@ -557,7 +569,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#wait Release#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#wait Release#wait}
 
 ---
 
@@ -567,7 +579,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
 
 ---
 
@@ -593,6 +605,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-helm.release.Release.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.putPostrender">put_postrender</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.putSet">put_set</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.putSetList">put_set_list</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.putSetSensitive">put_set_sensitive</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.resetAtomic">reset_atomic</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.resetCleanupOnFail">reset_cleanup_on_fail</a></code> | *No description.* |
@@ -623,6 +636,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-helm.release.Release.resetResetValues">reset_reset_values</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.resetReuseValues">reset_reuse_values</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.resetSet">reset_set</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.resetSetList">reset_set_list</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.resetSetSensitive">reset_set_sensitive</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.resetSkipCrds">reset_skip_crds</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.resetTfValues">reset_tf_values</a></code> | *No description.* |
@@ -858,7 +872,7 @@ def put_postrender(
 
 The command binary path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#binary_path Release#binary_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#binary_path Release#binary_path}
 
 ---
 
@@ -868,7 +882,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 an argument to the post-renderer (can specify multiple).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#args Release#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#args Release#args}
 
 ---
 
@@ -883,6 +897,20 @@ def put_set(
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSet.parameter.value"></a>
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]
+
+---
+
+##### `put_set_list` <a name="put_set_list" id="@cdktf/provider-helm.release.Release.putSetList"></a>
+
+```python
+def put_set_list(
+  value: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]]
+) -> None
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSetList.parameter.value"></a>
+
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
 
 ---
 
@@ -1074,6 +1102,12 @@ def reset_reuse_values() -> None
 def reset_set() -> None
 ```
 
+##### `reset_set_list` <a name="reset_set_list" id="@cdktf/provider-helm.release.Release.resetSetList"></a>
+
+```python
+def reset_set_list() -> None
+```
+
 ##### `reset_set_sensitive` <a name="reset_set_sensitive" id="@cdktf/provider-helm.release.Release.resetSetSensitive"></a>
 
 ```python
@@ -1220,6 +1254,7 @@ release.Release.is_terraform_resource(
 | <code><a href="#@cdktf/provider-helm.release.Release.property.metadata">metadata</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseMetadataList">ReleaseMetadataList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.postrender">postrender</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference">ReleasePostrenderOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.set">set</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetList">ReleaseSetList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setList">set_list</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList">ReleaseSetListStructList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitive">set_sensitive</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList">ReleaseSetSensitiveList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.status">status</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.atomicInput">atomic_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
@@ -1253,6 +1288,7 @@ release.Release.is_terraform_resource(
 | <code><a href="#@cdktf/provider-helm.release.Release.property.resetValuesInput">reset_values_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValuesInput">reuse_values_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setInput">set_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setListInput">set_list_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitiveInput">set_sensitive_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrdsInput">skip_crds_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.timeoutInput">timeout_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -1479,6 +1515,16 @@ set: ReleaseSetList
 ```
 
 - *Type:* <a href="#@cdktf/provider-helm.release.ReleaseSetList">ReleaseSetList</a>
+
+---
+
+##### `set_list`<sup>Required</sup> <a name="set_list" id="@cdktf/provider-helm.release.Release.property.setList"></a>
+
+```python
+set_list: ReleaseSetListStructList
+```
+
+- *Type:* <a href="#@cdktf/provider-helm.release.ReleaseSetListStructList">ReleaseSetListStructList</a>
 
 ---
 
@@ -1809,6 +1855,16 @@ set_input: typing.Union[IResolvable, typing.List[ReleaseSet]]
 ```
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]
+
+---
+
+##### `set_list_input`<sup>Optional</sup> <a name="set_list_input" id="@cdktf/provider-helm.release.Release.property.setListInput"></a>
+
+```python
+set_list_input: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]]
+```
+
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
 
 ---
 
@@ -2318,6 +2374,7 @@ release.ReleaseConfig(
   reset_values: typing.Union[bool, IResolvable] = None,
   reuse_values: typing.Union[bool, IResolvable] = None,
   set: typing.Union[IResolvable, typing.List[ReleaseSet]] = None,
+  set_list: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]] = None,
   set_sensitive: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]] = None,
   skip_crds: typing.Union[bool, IResolvable] = None,
   timeout: typing.Union[int, float] = None,
@@ -2352,7 +2409,7 @@ release.ReleaseConfig(
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation">disable_openapi_validation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks">disable_webhooks</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Prevent hooks from running. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate">force_update</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Force resource update through delete/recreate if needed. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#id Release#id}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#id Release#id}. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.keyring">keyring</a></code> | <code>str</code> | Location of public keys used for verification. Used only if `verify` is true. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lint">lint</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Run helm lint when planning. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.maxHistory">max_history</a></code> | <code>typing.Union[int, float]</code> | Limit the maximum number of revisions saved per release. Use 0 for no limit. |
@@ -2371,6 +2428,7 @@ release.ReleaseConfig(
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.resetValues">reset_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When upgrading, reset the values to the ones built into the chart. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues">reuse_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.set">set</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]</code> | set block. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setList">set_list</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]</code> | set_list block. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive">set_sensitive</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]</code> | set_sensitive block. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds">skip_crds</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | Time in seconds to wait for any individual kubernetes operation. |
@@ -2462,7 +2520,7 @@ chart: str
 
 Chart name to be installed. A path may be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#chart Release#chart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#chart Release#chart}
 
 ---
 
@@ -2476,7 +2534,7 @@ name: str
 
 Release name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#name Release#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#name Release#name}
 
 ---
 
@@ -2490,7 +2548,7 @@ atomic: typing.Union[bool, IResolvable]
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#atomic Release#atomic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#atomic Release#atomic}
 
 ---
 
@@ -2504,7 +2562,7 @@ cleanup_on_fail: typing.Union[bool, IResolvable]
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
 
 ---
 
@@ -2518,7 +2576,7 @@ create_namespace: typing.Union[bool, IResolvable]
 
 Create the namespace if it does not exist.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#create_namespace Release#create_namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#create_namespace Release#create_namespace}
 
 ---
 
@@ -2532,7 +2590,7 @@ dependency_update: typing.Union[bool, IResolvable]
 
 Run helm dependency update before installing the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#dependency_update Release#dependency_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#dependency_update Release#dependency_update}
 
 ---
 
@@ -2546,7 +2604,7 @@ description: str
 
 Add a custom description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#description Release#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#description Release#description}
 
 ---
 
@@ -2560,7 +2618,7 @@ devel: typing.Union[bool, IResolvable]
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#devel Release#devel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#devel Release#devel}
 
 ---
 
@@ -2574,7 +2632,7 @@ disable_crd_hooks: typing.Union[bool, IResolvable]
 
 Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
 
 ---
 
@@ -2588,7 +2646,7 @@ disable_openapi_validation: typing.Union[bool, IResolvable]
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
 
 ---
 
@@ -2602,7 +2660,7 @@ disable_webhooks: typing.Union[bool, IResolvable]
 
 Prevent hooks from running.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#disable_webhooks Release#disable_webhooks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#disable_webhooks Release#disable_webhooks}
 
 ---
 
@@ -2616,7 +2674,7 @@ force_update: typing.Union[bool, IResolvable]
 
 Force resource update through delete/recreate if needed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#force_update Release#force_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#force_update Release#force_update}
 
 ---
 
@@ -2628,7 +2686,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#id Release#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#id Release#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2645,7 +2703,7 @@ keyring: str
 
 Location of public keys used for verification. Used only if `verify` is true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#keyring Release#keyring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#keyring Release#keyring}
 
 ---
 
@@ -2659,7 +2717,7 @@ lint: typing.Union[bool, IResolvable]
 
 Run helm lint when planning.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#lint Release#lint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#lint Release#lint}
 
 ---
 
@@ -2673,7 +2731,7 @@ max_history: typing.Union[int, float]
 
 Limit the maximum number of revisions saved per release. Use 0 for no limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#max_history Release#max_history}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#max_history Release#max_history}
 
 ---
 
@@ -2687,7 +2745,7 @@ namespace: str
 
 Namespace to install the release into.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#namespace Release#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#namespace Release#namespace}
 
 ---
 
@@ -2701,7 +2759,7 @@ pass_credentials: typing.Union[bool, IResolvable]
 
 Pass credentials to all domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#pass_credentials Release#pass_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#pass_credentials Release#pass_credentials}
 
 ---
 
@@ -2715,7 +2773,7 @@ postrender: ReleasePostrender
 
 postrender block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#postrender Release#postrender}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#postrender Release#postrender}
 
 ---
 
@@ -2729,7 +2787,7 @@ recreate_pods: typing.Union[bool, IResolvable]
 
 Perform pods restart during upgrade/rollback.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#recreate_pods Release#recreate_pods}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#recreate_pods Release#recreate_pods}
 
 ---
 
@@ -2743,7 +2801,7 @@ render_subchart_notes: typing.Union[bool, IResolvable]
 
 If set, render subchart notes along with the parent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
 
 ---
 
@@ -2757,7 +2815,7 @@ replace: typing.Union[bool, IResolvable]
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#replace Release#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#replace Release#replace}
 
 ---
 
@@ -2771,7 +2829,7 @@ repository: str
 
 Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository Release#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository Release#repository}
 
 ---
 
@@ -2785,7 +2843,7 @@ repository_ca_file: str
 
 The Repositories CA File.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_ca_file Release#repository_ca_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_ca_file Release#repository_ca_file}
 
 ---
 
@@ -2799,7 +2857,7 @@ repository_cert_file: str
 
 The repositories cert file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_cert_file Release#repository_cert_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_cert_file Release#repository_cert_file}
 
 ---
 
@@ -2813,7 +2871,7 @@ repository_key_file: str
 
 The repositories cert key file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_key_file Release#repository_key_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_key_file Release#repository_key_file}
 
 ---
 
@@ -2827,7 +2885,7 @@ repository_password: str
 
 Password for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_password Release#repository_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_password Release#repository_password}
 
 ---
 
@@ -2841,7 +2899,7 @@ repository_username: str
 
 Username for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#repository_username Release#repository_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#repository_username Release#repository_username}
 
 ---
 
@@ -2855,7 +2913,7 @@ reset_values: typing.Union[bool, IResolvable]
 
 When upgrading, reset the values to the ones built into the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#reset_values Release#reset_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#reset_values Release#reset_values}
 
 ---
 
@@ -2869,7 +2927,7 @@ reuse_values: typing.Union[bool, IResolvable]
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#reuse_values Release#reuse_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#reuse_values Release#reuse_values}
 
 ---
 
@@ -2883,7 +2941,21 @@ set: typing.Union[IResolvable, typing.List[ReleaseSet]]
 
 set block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#set Release#set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#set Release#set}
+
+---
+
+##### `set_list`<sup>Optional</sup> <a name="set_list" id="@cdktf/provider-helm.release.ReleaseConfig.property.setList"></a>
+
+```python
+set_list: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]]
+```
+
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
+
+set_list block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#set_list Release#set_list}
 
 ---
 
@@ -2897,7 +2969,7 @@ set_sensitive: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]]
 
 set_sensitive block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#set_sensitive Release#set_sensitive}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#set_sensitive Release#set_sensitive}
 
 ---
 
@@ -2911,7 +2983,7 @@ skip_crds: typing.Union[bool, IResolvable]
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#skip_crds Release#skip_crds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#skip_crds Release#skip_crds}
 
 ---
 
@@ -2925,7 +2997,7 @@ timeout: typing.Union[int, float]
 
 Time in seconds to wait for any individual kubernetes operation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#timeout Release#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#timeout Release#timeout}
 
 ---
 
@@ -2939,7 +3011,7 @@ values: typing.List[str]
 
 List of values in raw yaml format to pass to helm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#values Release#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#values Release#values}
 
 ---
 
@@ -2953,7 +3025,7 @@ verify: typing.Union[bool, IResolvable]
 
 Verify the package before installing it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#verify Release#verify}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#verify Release#verify}
 
 ---
 
@@ -2967,7 +3039,7 @@ version: str
 
 Specify the exact chart version to install. If this is not specified, the latest version is installed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#version Release#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#version Release#version}
 
 ---
 
@@ -2981,7 +3053,7 @@ wait: typing.Union[bool, IResolvable]
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#wait Release#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#wait Release#wait}
 
 ---
 
@@ -2995,7 +3067,7 @@ wait_for_jobs: typing.Union[bool, IResolvable]
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
 
 ---
 
@@ -3042,7 +3114,7 @@ binary_path: str
 
 The command binary path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#binary_path Release#binary_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#binary_path Release#binary_path}
 
 ---
 
@@ -3056,7 +3128,7 @@ args: typing.List[str]
 
 an argument to the post-renderer (can specify multiple).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#args Release#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#args Release#args}
 
 ---
 
@@ -3078,9 +3150,9 @@ release.ReleaseSet(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#name Release#name}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.value">value</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#value Release#value}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#type Release#type}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#name Release#name}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.value">value</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#value Release#value}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#type Release#type}. |
 
 ---
 
@@ -3092,7 +3164,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#name Release#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#name Release#name}.
 
 ---
 
@@ -3104,7 +3176,7 @@ value: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#value Release#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#value Release#value}.
 
 ---
 
@@ -3116,7 +3188,53 @@ type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#type Release#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#type Release#type}.
+
+---
+
+### ReleaseSetListStruct <a name="ReleaseSetListStruct" id="@cdktf/provider-helm.release.ReleaseSetListStruct"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-helm.release.ReleaseSetListStruct.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_helm import release
+
+release.ReleaseSetListStruct(
+  name: str,
+  value: typing.List[str]
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStruct.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#name Release#name}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStruct.property.value">value</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#value Release#value}. |
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-helm.release.ReleaseSetListStruct.property.name"></a>
+
+```python
+name: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#name Release#name}.
+
+---
+
+##### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.ReleaseSetListStruct.property.value"></a>
+
+```python
+value: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#value Release#value}.
 
 ---
 
@@ -3138,9 +3256,9 @@ release.ReleaseSetSensitive(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#name Release#name}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.value">value</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#value Release#value}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#type Release#type}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#name Release#name}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.value">value</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#value Release#value}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#type Release#type}. |
 
 ---
 
@@ -3152,7 +3270,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#name Release#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#name Release#name}.
 
 ---
 
@@ -3164,7 +3282,7 @@ value: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#value Release#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#value Release#value}.
 
 ---
 
@@ -3176,7 +3294,7 @@ type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.9.0/docs/resources/release#type Release#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.0/docs/resources/release#type Release#type}.
 
 ---
 
@@ -4165,6 +4283,495 @@ internal_value: typing.Union[IResolvable, typing.List[ReleaseSet]]
 ```
 
 - *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]
+
+---
+
+
+### ReleaseSetListStructList <a name="ReleaseSetListStructList" id="@cdktf/provider-helm.release.ReleaseSetListStructList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseSetListStructList.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_helm import release
+
+release.ReleaseSetListStructList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-helm.release.ReleaseSetListStructList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="@cdktf/provider-helm.release.ReleaseSetListStructList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.get">get</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-helm.release.ReleaseSetListStructList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-helm.release.ReleaseSetListStructList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-helm.release.ReleaseSetListStructList.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-helm.release.ReleaseSetListStructList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-helm.release.ReleaseSetListStructList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> ReleaseSetListStructOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-helm.release.ReleaseSetListStructList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-helm.release.ReleaseSetListStructList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-helm.release.ReleaseSetListStructList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue"></a>
+
+```python
+internal_value: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]]
+```
+
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
+
+---
+
+
+### ReleaseSetListStructOutputReference <a name="ReleaseSetListStructOutputReference" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_helm import release
+
+release.ReleaseSetListStructOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.valueInput">value_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.value">value</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>, cdktf.IResolvable]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `name_input`<sup>Optional</sup> <a name="name_input" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.nameInput"></a>
+
+```python
+name_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `value_input`<sup>Optional</sup> <a name="value_input" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.valueInput"></a>
+
+```python
+value_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.name"></a>
+
+```python
+name: str
+```
+
+- *Type:* str
+
+---
+
+##### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.value"></a>
+
+```python
+value: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue"></a>
+
+```python
+internal_value: typing.Union[ReleaseSetListStruct, IResolvable]
+```
+
+- *Type:* typing.Union[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>, cdktf.IResolvable]
 
 ---
 
