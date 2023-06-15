@@ -4697,7 +4697,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.valueInput">value_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.value">value</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]</code> | *No description.* |
 
 ---
 
@@ -4768,10 +4768,10 @@ value: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ReleaseSetListStruct, IResolvable]
+internal_value: typing.Union[IResolvable, ReleaseSetListStruct]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]
 
 ---
 
@@ -5044,7 +5044,7 @@ def reset_type() -> None
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]</code> | *No description.* |
 
 ---
 
@@ -5135,10 +5135,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ReleaseSet, IResolvable]
+internal_value: typing.Union[IResolvable, ReleaseSet]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]
 
 ---
 
@@ -5562,7 +5562,7 @@ def reset_type() -> None
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]</code> | *No description.* |
 
 ---
 
@@ -5653,10 +5653,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ReleaseSetSensitive, IResolvable]
+internal_value: typing.Union[IResolvable, ReleaseSetSensitive]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]
 
 ---
 
