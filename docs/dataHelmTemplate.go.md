@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplate(scope Construct, id *string, config DataHelmTemplateConfig) DataHelmTemplate
 ```
@@ -636,7 +636,7 @@ func ResetWait()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.DataHelmTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -668,7 +668,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.DataHelmTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -682,7 +682,7 @@ datahelmtemplate.DataHelmTemplate_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.DataHelmTemplate_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -1849,7 +1849,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 &datahelmtemplate.DataHelmTemplateConfig {
 	Connection: interface{},
@@ -1880,7 +1880,7 @@ import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
 	Namespace: *string,
 	Notes: *string,
 	PassCredentials: interface{},
-	Postrender: github.com/cdktf/cdktf-provider-helm-go/helm.dataHelmTemplate.DataHelmTemplatePostrender,
+	Postrender: github.com/cdktf/cdktf-provider-helm-go/helm/v7.dataHelmTemplate.DataHelmTemplatePostrender,
 	RenderSubchartNotes: interface{},
 	Replace: interface{},
 	Repository: *string,
@@ -2674,7 +2674,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 &datahelmtemplate.DataHelmTemplatePostrender {
 	BinaryPath: *string,
@@ -2708,7 +2708,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 &datahelmtemplate.DataHelmTemplateSet {
 	Name: *string,
@@ -2768,7 +2768,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 &datahelmtemplate.DataHelmTemplateSetListStruct {
 	Name: *string,
@@ -2814,7 +2814,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitive.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 &datahelmtemplate.DataHelmTemplateSetSensitive {
 	Name: *string,
@@ -2874,7 +2874,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 &datahelmtemplate.DataHelmTemplateSetString {
 	Name: *string,
@@ -2922,7 +2922,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplatePostrenderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataHelmTemplatePostrenderOutputReference
 ```
@@ -3193,7 +3193,7 @@ func InternalValue() DataHelmTemplatePostrender
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplateSetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataHelmTemplateSetList
 ```
@@ -3336,7 +3336,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStructList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplateSetListStructList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataHelmTemplateSetListStructList
 ```
@@ -3479,7 +3479,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplateSetListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataHelmTemplateSetListStructOutputReference
 ```
@@ -3790,7 +3790,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplateSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataHelmTemplateSetOutputReference
 ```
@@ -4130,7 +4130,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitiveList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplateSetSensitiveList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataHelmTemplateSetSensitiveList
 ```
@@ -4273,7 +4273,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitiveOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplateSetSensitiveOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataHelmTemplateSetSensitiveOutputReference
 ```
@@ -4613,7 +4613,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplateSetStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataHelmTemplateSetStringList
 ```
@@ -4756,7 +4756,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/datahelmtemplate"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v7/datahelmtemplate"
 
 datahelmtemplate.NewDataHelmTemplateSetStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataHelmTemplateSetStringOutputReference
 ```
