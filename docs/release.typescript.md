@@ -3945,7 +3945,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.valueInput">valueInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.value">value</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a></code> | *No description.* |
 
 ---
 
@@ -4016,10 +4016,10 @@ public readonly value: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ReleaseSetListStruct | IResolvable;
+public readonly internalValue: IResolvable | ReleaseSetListStruct;
 ```
 
-- *Type:* <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>
 
 ---
 
@@ -4265,7 +4265,7 @@ public resetType(): void
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.value">value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a></code> | *No description.* |
 
 ---
 
@@ -4356,10 +4356,10 @@ public readonly value: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ReleaseSet | IResolvable;
+public readonly internalValue: IResolvable | ReleaseSet;
 ```
 
-- *Type:* <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>
 
 ---
 
@@ -4748,7 +4748,7 @@ public resetType(): void
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.type">type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.value">value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a></code> | *No description.* |
 
 ---
 
@@ -4839,10 +4839,10 @@ public readonly value: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ReleaseSetSensitive | IResolvable;
+public readonly internalValue: IResolvable | ReleaseSetSensitive;
 ```
 
-- *Type:* <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>
 
 ---
 
