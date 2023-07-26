@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release
 // generated from terraform resource schema
 
@@ -14,67 +9,67 @@ import * as cdktf from 'cdktf';
 export interface ReleaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#atomic Release#atomic}
   */
   readonly atomic?: boolean | cdktf.IResolvable;
   /**
   * Chart name to be installed. A path may be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#chart Release#chart}
   */
   readonly chart: string;
   /**
   * Allow deletion of new resources created in this upgrade when upgrade fails
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
   */
   readonly cleanupOnFail?: boolean | cdktf.IResolvable;
   /**
   * Create the namespace if it does not exist
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#create_namespace Release#create_namespace}
   */
   readonly createNamespace?: boolean | cdktf.IResolvable;
   /**
   * Run helm dependency update before installing the chart
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#dependency_update Release#dependency_update}
   */
   readonly dependencyUpdate?: boolean | cdktf.IResolvable;
   /**
   * Add a custom description
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#description Release#description}
   */
   readonly description?: string;
   /**
   * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#devel Release#devel}
   */
   readonly devel?: boolean | cdktf.IResolvable;
   /**
   * Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
   */
   readonly disableCrdHooks?: boolean | cdktf.IResolvable;
   /**
   * If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
   */
   readonly disableOpenapiValidation?: boolean | cdktf.IResolvable;
   /**
   * Prevent hooks from running.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#disable_webhooks Release#disable_webhooks}
   */
   readonly disableWebhooks?: boolean | cdktf.IResolvable;
   /**
   * Force resource update through delete/recreate if needed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#force_update Release#force_update}
   */
   readonly forceUpdate?: boolean | cdktf.IResolvable;
@@ -87,169 +82,169 @@ export interface ReleaseConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Location of public keys used for verification. Used only if `verify` is true
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#keyring Release#keyring}
   */
   readonly keyring?: string;
   /**
   * Run helm lint when planning
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#lint Release#lint}
   */
   readonly lint?: boolean | cdktf.IResolvable;
   /**
   * Limit the maximum number of revisions saved per release. Use 0 for no limit
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#max_history Release#max_history}
   */
   readonly maxHistory?: number;
   /**
   * Release name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#name Release#name}
   */
   readonly name: string;
   /**
   * Namespace to install the release into.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#namespace Release#namespace}
   */
   readonly namespace?: string;
   /**
   * Pass credentials to all domains
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#pass_credentials Release#pass_credentials}
   */
   readonly passCredentials?: boolean | cdktf.IResolvable;
   /**
   * Perform pods restart during upgrade/rollback
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#recreate_pods Release#recreate_pods}
   */
   readonly recreatePods?: boolean | cdktf.IResolvable;
   /**
   * If set, render subchart notes along with the parent
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
   */
   readonly renderSubchartNotes?: boolean | cdktf.IResolvable;
   /**
   * Re-use the given name, even if that name is already used. This is unsafe in production
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#replace Release#replace}
   */
   readonly replace?: boolean | cdktf.IResolvable;
   /**
   * Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#repository Release#repository}
   */
   readonly repository?: string;
   /**
   * The Repositories CA File
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#repository_ca_file Release#repository_ca_file}
   */
   readonly repositoryCaFile?: string;
   /**
   * The repositories cert file
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#repository_cert_file Release#repository_cert_file}
   */
   readonly repositoryCertFile?: string;
   /**
   * The repositories cert key file
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#repository_key_file Release#repository_key_file}
   */
   readonly repositoryKeyFile?: string;
   /**
   * Password for HTTP basic authentication
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#repository_password Release#repository_password}
   */
   readonly repositoryPassword?: string;
   /**
   * Username for HTTP basic authentication
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#repository_username Release#repository_username}
   */
   readonly repositoryUsername?: string;
   /**
   * When upgrading, reset the values to the ones built into the chart
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#reset_values Release#reset_values}
   */
   readonly resetValues?: boolean | cdktf.IResolvable;
   /**
   * When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#reuse_values Release#reuse_values}
   */
   readonly reuseValues?: boolean | cdktf.IResolvable;
   /**
   * If set, no CRDs will be installed. By default, CRDs are installed if not already present
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#skip_crds Release#skip_crds}
   */
   readonly skipCrds?: boolean | cdktf.IResolvable;
   /**
   * Time in seconds to wait for any individual kubernetes operation.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#timeout Release#timeout}
   */
   readonly timeout?: number;
   /**
   * List of values in raw yaml format to pass to helm.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#values Release#values}
   */
   readonly values?: string[];
   /**
   * Verify the package before installing it.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#verify Release#verify}
   */
   readonly verify?: boolean | cdktf.IResolvable;
   /**
   * Specify the exact chart version to install. If this is not specified, the latest version is installed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#version Release#version}
   */
   readonly version?: string;
   /**
   * Will wait until all resources are in a ready state before marking the release as successful.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#wait Release#wait}
   */
   readonly wait?: boolean | cdktf.IResolvable;
   /**
   * If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
   */
   readonly waitForJobs?: boolean | cdktf.IResolvable;
   /**
   * postrender block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#postrender Release#postrender}
   */
   readonly postrender?: ReleasePostrender;
   /**
   * set block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#set Release#set}
   */
   readonly set?: ReleaseSet[] | cdktf.IResolvable;
   /**
   * set_list block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#set_list Release#set_list}
   */
   readonly setList?: ReleaseSetListStruct[] | cdktf.IResolvable;
   /**
   * set_sensitive block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#set_sensitive Release#set_sensitive}
   */
   readonly setSensitive?: ReleaseSetSensitive[] | cdktf.IResolvable;
@@ -351,13 +346,13 @@ export class ReleaseMetadataList extends cdktf.ComplexList {
 export interface ReleasePostrender {
   /**
   * an argument to the post-renderer (can specify multiple)
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#args Release#args}
   */
   readonly args?: string[];
   /**
   * The command binary path.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release#binary_path Release#binary_path}
   */
   readonly binaryPath: string;
