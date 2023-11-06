@@ -1,7 +1,9 @@
 
-# Terraform CDK helm Provider ~> 2.3
+# Terraform CDK helm Provider tracks ~> 2.3
 
 This repo builds and publishes the Terraform helm Provider bindings for [CDK for Terraform](https://cdk.tf).
+
+Is based directly on helm 2.11.0
 
 ## Available Packages
 
@@ -61,7 +63,7 @@ This project is explicitly not tracking the Terraform helm Provider version 1:1.
 These are the upstream dependencies:
 
 - [Terraform CDK](https://cdk.tf)
-- [Terraform helm Provider](https://registry.terraform.io/providers/hashicorp/helm/2.3.0)
+- [Terraform helm Provider](https://registry.terraform.io/providers/hashicorp/helm/2.11.0)
     - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-helm/releases)
 - [Terraform Engine](https://terraform.io)
 
