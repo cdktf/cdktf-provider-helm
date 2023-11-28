@@ -1,7 +1,3 @@
-# `data_helm_template`
-
-Refer to the Terraform Registory for docs: [`data_helm_template`](https://registry.terraform.io/providers/hashicorp/helm/2.12.0/docs/data-sources/template).
-
 # `dataHelmTemplate` Submodule <a name="`dataHelmTemplate` Submodule" id="@cdktf/provider-helm.dataHelmTemplate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

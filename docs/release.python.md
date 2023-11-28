@@ -1,7 +1,3 @@
-# `helm_release`
-
-Refer to the Terraform Registory for docs: [`helm_release`](https://registry.terraform.io/providers/hashicorp/helm/2.12.0/docs/resources/release).
-
 # `release` Submodule <a name="`release` Submodule" id="@cdktf/provider-helm.release"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
