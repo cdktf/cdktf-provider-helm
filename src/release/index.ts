@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs/resources/release
 // generated from terraform resource schema
 
@@ -266,6 +261,17 @@ export function releaseMetadataToTerraform(struct?: ReleaseMetadata): any {
   }
 }
 
+
+export function releaseMetadataToHclTerraform(struct?: ReleaseMetadata): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class ReleaseMetadataOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -374,6 +380,31 @@ export function releasePostrenderToTerraform(struct?: ReleasePostrenderOutputRef
   }
 }
 
+
+export function releasePostrenderToHclTerraform(struct?: ReleasePostrenderOutputReference | ReleasePostrender): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    args: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.args),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    binary_path: {
+      value: cdktf.stringToHclTerraform(struct!.binaryPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -466,6 +497,37 @@ export function releaseSetToTerraform(struct?: ReleaseSet | cdktf.IResolvable): 
     type: cdktf.stringToTerraform(struct!.type),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function releaseSetToHclTerraform(struct?: ReleaseSet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ReleaseSetOutputReference extends cdktf.ComplexObject {
@@ -608,6 +670,31 @@ export function releaseSetListStructToTerraform(struct?: ReleaseSetListStruct | 
   }
 }
 
+
+export function releaseSetListStructToHclTerraform(struct?: ReleaseSetListStruct | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.value),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ReleaseSetListStructOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -729,6 +816,37 @@ export function releaseSetSensitiveToTerraform(struct?: ReleaseSetSensitive | cd
     type: cdktf.stringToTerraform(struct!.type),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function releaseSetSensitiveToHclTerraform(struct?: ReleaseSetSensitive | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ReleaseSetSensitiveOutputReference extends cdktf.ComplexObject {
@@ -1644,5 +1762,253 @@ export class Release extends cdktf.TerraformResource {
       set_list: cdktf.listMapper(releaseSetListStructToTerraform, true)(this._setList.internalValue),
       set_sensitive: cdktf.listMapper(releaseSetSensitiveToTerraform, true)(this._setSensitive.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      atomic: {
+        value: cdktf.booleanToHclTerraform(this._atomic),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      chart: {
+        value: cdktf.stringToHclTerraform(this._chart),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cleanup_on_fail: {
+        value: cdktf.booleanToHclTerraform(this._cleanupOnFail),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      create_namespace: {
+        value: cdktf.booleanToHclTerraform(this._createNamespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      dependency_update: {
+        value: cdktf.booleanToHclTerraform(this._dependencyUpdate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      devel: {
+        value: cdktf.booleanToHclTerraform(this._devel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disable_crd_hooks: {
+        value: cdktf.booleanToHclTerraform(this._disableCrdHooks),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disable_openapi_validation: {
+        value: cdktf.booleanToHclTerraform(this._disableOpenapiValidation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disable_webhooks: {
+        value: cdktf.booleanToHclTerraform(this._disableWebhooks),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      force_update: {
+        value: cdktf.booleanToHclTerraform(this._forceUpdate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      keyring: {
+        value: cdktf.stringToHclTerraform(this._keyring),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lint: {
+        value: cdktf.booleanToHclTerraform(this._lint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      max_history: {
+        value: cdktf.numberToHclTerraform(this._maxHistory),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      namespace: {
+        value: cdktf.stringToHclTerraform(this._namespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pass_credentials: {
+        value: cdktf.booleanToHclTerraform(this._passCredentials),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      recreate_pods: {
+        value: cdktf.booleanToHclTerraform(this._recreatePods),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      render_subchart_notes: {
+        value: cdktf.booleanToHclTerraform(this._renderSubchartNotes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      replace: {
+        value: cdktf.booleanToHclTerraform(this._replace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      repository: {
+        value: cdktf.stringToHclTerraform(this._repository),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository_ca_file: {
+        value: cdktf.stringToHclTerraform(this._repositoryCaFile),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository_cert_file: {
+        value: cdktf.stringToHclTerraform(this._repositoryCertFile),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository_key_file: {
+        value: cdktf.stringToHclTerraform(this._repositoryKeyFile),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository_password: {
+        value: cdktf.stringToHclTerraform(this._repositoryPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository_username: {
+        value: cdktf.stringToHclTerraform(this._repositoryUsername),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      reset_values: {
+        value: cdktf.booleanToHclTerraform(this._resetValues),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      reuse_values: {
+        value: cdktf.booleanToHclTerraform(this._reuseValues),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      skip_crds: {
+        value: cdktf.booleanToHclTerraform(this._skipCrds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      timeout: {
+        value: cdktf.numberToHclTerraform(this._timeout),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      values: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._values),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      verify: {
+        value: cdktf.booleanToHclTerraform(this._verify),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      version: {
+        value: cdktf.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      wait: {
+        value: cdktf.booleanToHclTerraform(this._wait),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      wait_for_jobs: {
+        value: cdktf.booleanToHclTerraform(this._waitForJobs),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      postrender: {
+        value: releasePostrenderToHclTerraform(this._postrender.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ReleasePostrenderList",
+      },
+      set: {
+        value: cdktf.listMapperHcl(releaseSetToHclTerraform, true)(this._set.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ReleaseSetList",
+      },
+      set_list: {
+        value: cdktf.listMapperHcl(releaseSetListStructToHclTerraform, true)(this._setList.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ReleaseSetListStructList",
+      },
+      set_sensitive: {
+        value: cdktf.listMapperHcl(releaseSetSensitiveToHclTerraform, true)(this._setSensitive.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ReleaseSetSensitiveList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

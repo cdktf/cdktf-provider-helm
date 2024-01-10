@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs
 // generated from terraform resource schema
 
@@ -98,6 +93,25 @@ export function helmProviderExperimentsToTerraform(struct?: HelmProviderExperime
   }
 }
 
+
+export function helmProviderExperimentsToHclTerraform(struct?: HelmProviderExperiments): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    manifest: {
+      value: cdktf.booleanToHclTerraform(struct!.manifest),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface HelmProviderKubernetesExec {
   /**
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#api_version HelmProvider#api_version}
@@ -128,6 +142,43 @@ export function helmProviderKubernetesExecToTerraform(struct?: HelmProviderKuber
     command: cdktf.stringToTerraform(struct!.command),
     env: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.env),
   }
+}
+
+
+export function helmProviderKubernetesExecToHclTerraform(struct?: HelmProviderKubernetesExec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    api_version: {
+      value: cdktf.stringToHclTerraform(struct!.apiVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    args: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.args),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    command: {
+      value: cdktf.stringToHclTerraform(struct!.command),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    env: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.env),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export interface HelmProviderKubernetes {
@@ -248,6 +299,115 @@ export function helmProviderKubernetesToTerraform(struct?: HelmProviderKubernete
   }
 }
 
+
+export function helmProviderKubernetesToHclTerraform(struct?: HelmProviderKubernetes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    client_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.clientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_key: {
+      value: cdktf.stringToHclTerraform(struct!.clientKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cluster_ca_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.clusterCaCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    config_context: {
+      value: cdktf.stringToHclTerraform(struct!.configContext),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    config_context_auth_info: {
+      value: cdktf.stringToHclTerraform(struct!.configContextAuthInfo),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    config_context_cluster: {
+      value: cdktf.stringToHclTerraform(struct!.configContextCluster),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    config_path: {
+      value: cdktf.stringToHclTerraform(struct!.configPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    config_paths: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.configPaths),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    host: {
+      value: cdktf.stringToHclTerraform(struct!.host),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    insecure: {
+      value: cdktf.booleanToHclTerraform(struct!.insecure),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    proxy_url: {
+      value: cdktf.stringToHclTerraform(struct!.proxyUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tls_server_name: {
+      value: cdktf.stringToHclTerraform(struct!.tlsServerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    token: {
+      value: cdktf.stringToHclTerraform(struct!.token),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    exec: {
+      value: helmProviderKubernetesExecToHclTerraform(struct!.exec),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HelmProviderKubernetesExecList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export interface HelmProviderRegistry {
   /**
   * The password to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint.
@@ -279,6 +439,37 @@ export function helmProviderRegistryToTerraform(struct?: HelmProviderRegistry | 
     url: cdktf.stringToTerraform(struct!.url),
     username: cdktf.stringToTerraform(struct!.username),
   }
+}
+
+
+export function helmProviderRegistryToHclTerraform(struct?: HelmProviderRegistry | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 
@@ -538,5 +729,79 @@ export class HelmProvider extends cdktf.TerraformProvider {
       kubernetes: helmProviderKubernetesToTerraform(this._kubernetes),
       registry: cdktf.listMapper(helmProviderRegistryToTerraform, true)(this._registry),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      burst_limit: {
+        value: cdktf.numberToHclTerraform(this._burstLimit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      debug: {
+        value: cdktf.booleanToHclTerraform(this._debug),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      helm_driver: {
+        value: cdktf.stringToHclTerraform(this._helmDriver),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      plugins_path: {
+        value: cdktf.stringToHclTerraform(this._pluginsPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      registry_config_path: {
+        value: cdktf.stringToHclTerraform(this._registryConfigPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository_cache: {
+        value: cdktf.stringToHclTerraform(this._repositoryCache),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository_config_path: {
+        value: cdktf.stringToHclTerraform(this._repositoryConfigPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      alias: {
+        value: cdktf.stringToHclTerraform(this._alias),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      experiments: {
+        value: helmProviderExperimentsToHclTerraform(this._experiments),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HelmProviderExperimentsList",
+      },
+      kubernetes: {
+        value: helmProviderKubernetesToHclTerraform(this._kubernetes),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HelmProviderKubernetesList",
+      },
+      registry: {
+        value: cdktf.listMapperHcl(helmProviderRegistryToHclTerraform, true)(this._registry),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HelmProviderRegistryList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
