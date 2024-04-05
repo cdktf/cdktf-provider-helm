@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs
+// https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,67 +10,67 @@ export interface HelmProviderConfig {
   /**
   * Helm burst limit. Increase this if you have a cluster with many CRDs
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#burst_limit HelmProvider#burst_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#burst_limit HelmProvider#burst_limit}
   */
   readonly burstLimit?: number;
   /**
   * Debug indicates whether or not Helm is running in Debug mode.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#debug HelmProvider#debug}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#debug HelmProvider#debug}
   */
   readonly debug?: boolean | cdktf.IResolvable;
   /**
   * The backend storage driver. Values are: configmap, secret, memory, sql
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#helm_driver HelmProvider#helm_driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#helm_driver HelmProvider#helm_driver}
   */
   readonly helmDriver?: string;
   /**
   * The path to the helm plugins directory
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#plugins_path HelmProvider#plugins_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#plugins_path HelmProvider#plugins_path}
   */
   readonly pluginsPath?: string;
   /**
   * The path to the registry config file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#registry_config_path HelmProvider#registry_config_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#registry_config_path HelmProvider#registry_config_path}
   */
   readonly registryConfigPath?: string;
   /**
   * The path to the file containing cached repository indexes
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#repository_cache HelmProvider#repository_cache}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#repository_cache HelmProvider#repository_cache}
   */
   readonly repositoryCache?: string;
   /**
   * The path to the file containing repository names and URLs
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#repository_config_path HelmProvider#repository_config_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#repository_config_path HelmProvider#repository_config_path}
   */
   readonly repositoryConfigPath?: string;
   /**
   * Alias name
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#alias HelmProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#alias HelmProvider#alias}
   */
   readonly alias?: string;
   /**
   * experiments block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#experiments HelmProvider#experiments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#experiments HelmProvider#experiments}
   */
   readonly experiments?: HelmProviderExperiments;
   /**
   * kubernetes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#kubernetes HelmProvider#kubernetes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#kubernetes HelmProvider#kubernetes}
   */
   readonly kubernetes?: HelmProviderKubernetes;
   /**
   * registry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#registry HelmProvider#registry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#registry HelmProvider#registry}
   */
   readonly registry?: HelmProviderRegistry[] | cdktf.IResolvable;
 }
@@ -83,7 +78,7 @@ export interface HelmProviderExperiments {
   /**
   * Enable full diff by storing the rendered manifest in the state. This has similar limitations as when using helm install --dry-run. See https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#install-a-crd-declaration-before-using-the-resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#manifest HelmProvider#manifest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#manifest HelmProvider#manifest}
   */
   readonly manifest?: boolean | cdktf.IResolvable;
 }
@@ -119,19 +114,19 @@ export function helmProviderExperimentsToHclTerraform(struct?: HelmProviderExper
 
 export interface HelmProviderKubernetesExec {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#api_version HelmProvider#api_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#api_version HelmProvider#api_version}
   */
   readonly apiVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#args HelmProvider#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#args HelmProvider#args}
   */
   readonly args?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#command HelmProvider#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#command HelmProvider#command}
   */
   readonly command: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#env HelmProvider#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#env HelmProvider#env}
   */
   readonly env?: { [key: string]: string };
 }
@@ -190,91 +185,91 @@ export interface HelmProviderKubernetes {
   /**
   * PEM-encoded client certificate for TLS authentication.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#client_certificate HelmProvider#client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#client_certificate HelmProvider#client_certificate}
   */
   readonly clientCertificate?: string;
   /**
   * PEM-encoded client certificate key for TLS authentication.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#client_key HelmProvider#client_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#client_key HelmProvider#client_key}
   */
   readonly clientKey?: string;
   /**
   * PEM-encoded root certificates bundle for TLS authentication.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#cluster_ca_certificate HelmProvider#cluster_ca_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#cluster_ca_certificate HelmProvider#cluster_ca_certificate}
   */
   readonly clusterCaCertificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#config_context HelmProvider#config_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#config_context HelmProvider#config_context}
   */
   readonly configContext?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#config_context_auth_info HelmProvider#config_context_auth_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#config_context_auth_info HelmProvider#config_context_auth_info}
   */
   readonly configContextAuthInfo?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#config_context_cluster HelmProvider#config_context_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#config_context_cluster HelmProvider#config_context_cluster}
   */
   readonly configContextCluster?: string;
   /**
   * Path to the kube config file. Can be set with KUBE_CONFIG_PATH.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#config_path HelmProvider#config_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#config_path HelmProvider#config_path}
   */
   readonly configPath?: string;
   /**
   * A list of paths to kube config files. Can be set with KUBE_CONFIG_PATHS environment variable.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#config_paths HelmProvider#config_paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#config_paths HelmProvider#config_paths}
   */
   readonly configPaths?: string[];
   /**
   * The hostname (in form of URI) of Kubernetes master.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#host HelmProvider#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#host HelmProvider#host}
   */
   readonly host?: string;
   /**
   * Whether server should be accessed without verifying the TLS certificate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#insecure HelmProvider#insecure}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#insecure HelmProvider#insecure}
   */
   readonly insecure?: boolean | cdktf.IResolvable;
   /**
   * The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#password HelmProvider#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#password HelmProvider#password}
   */
   readonly password?: string;
   /**
   * URL to the proxy to be used for all API requests
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#proxy_url HelmProvider#proxy_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#proxy_url HelmProvider#proxy_url}
   */
   readonly proxyUrl?: string;
   /**
   * Server name passed to the server for SNI and is used in the client to check server certificates against.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#tls_server_name HelmProvider#tls_server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#tls_server_name HelmProvider#tls_server_name}
   */
   readonly tlsServerName?: string;
   /**
   * Token to authenticate an service account
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#token HelmProvider#token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#token HelmProvider#token}
   */
   readonly token?: string;
   /**
   * The username to use for HTTP basic authentication when accessing the Kubernetes master endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#username HelmProvider#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#username HelmProvider#username}
   */
   readonly username?: string;
   /**
   * exec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#exec HelmProvider#exec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#exec HelmProvider#exec}
   */
   readonly exec?: HelmProviderKubernetesExec;
 }
@@ -417,19 +412,19 @@ export interface HelmProviderRegistry {
   /**
   * The password to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#password HelmProvider#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#password HelmProvider#password}
   */
   readonly password: string;
   /**
   * OCI URL in form of oci://host:port or oci://host
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#url HelmProvider#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#url HelmProvider#url}
   */
   readonly url: string;
   /**
   * The username to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#username HelmProvider#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#username HelmProvider#username}
   */
   readonly username: string;
 }
@@ -479,7 +474,7 @@ export function helmProviderRegistryToHclTerraform(struct?: HelmProviderRegistry
 
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs helm}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs helm}
 */
 export class HelmProvider extends cdktf.TerraformProvider {
 
@@ -495,7 +490,7 @@ export class HelmProvider extends cdktf.TerraformProvider {
   * Generates CDKTF code for importing a HelmProvider resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the HelmProvider to import
-  * @param importFromId The id of the existing HelmProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing HelmProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the HelmProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -507,7 +502,7 @@ export class HelmProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs helm} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.13.0/docs helm} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -518,7 +513,7 @@ export class HelmProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'helm',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.12.1',
+        providerVersion: '2.13.0',
         providerVersionConstraint: '~> 2.3'
       },
       terraformProviderSource: 'helm'
