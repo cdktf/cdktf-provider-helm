@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.15.
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.Release.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewRelease(scope Construct, id *string, config ReleaseConfig) Release
 ```
@@ -703,7 +703,7 @@ func ResetWaitForJobs()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-helm.release.Release.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.Release_IsConstruct(x interface{}) *bool
 ```
@@ -735,7 +735,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-helm.release.Release.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.Release_IsTerraformElement(x interface{}) *bool
 ```
@@ -749,7 +749,7 @@ release.Release_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-helm.release.Release.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.Release_IsTerraformResource(x interface{}) *bool
 ```
@@ -763,7 +763,7 @@ release.Release_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-helm.release.Release.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.Release_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1927,7 +1927,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.release.ReleaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 &release.ReleaseConfig {
 	Connection: interface{},
@@ -1955,7 +1955,7 @@ import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
 	MaxHistory: *f64,
 	Namespace: *string,
 	PassCredentials: interface{},
-	Postrender: github.com/cdktf/cdktf-provider-helm-go/helm.release.ReleasePostrender,
+	Postrender: github.com/cdktf/cdktf-provider-helm-go/helm/v10.release.ReleasePostrender,
 	RecreatePods: interface{},
 	RenderSubchartNotes: interface{},
 	Replace: interface{},
@@ -2696,7 +2696,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.release.ReleaseMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 &release.ReleaseMetadata {
 
@@ -2709,7 +2709,7 @@ import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.release.ReleasePostrender.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 &release.ReleasePostrender {
 	BinaryPath: *string,
@@ -2759,7 +2759,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.release.ReleaseSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 &release.ReleaseSet {
 	Name: *string,
@@ -2819,7 +2819,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.release.ReleaseSetListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 &release.ReleaseSetListStruct {
 	Name: *string,
@@ -2865,7 +2865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.release.ReleaseSetSensitive.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 &release.ReleaseSetSensitive {
 	Name: *string,
@@ -2927,7 +2927,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseMetadataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleaseMetadataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ReleaseMetadataList
 ```
@@ -3076,7 +3076,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleaseMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ReleaseMetadataOutputReference
 ```
@@ -3453,7 +3453,7 @@ func InternalValue() ReleaseMetadata
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleasePostrenderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleasePostrenderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ReleasePostrenderOutputReference
 ```
@@ -3753,7 +3753,7 @@ func InternalValue() ReleasePostrender
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseSetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleaseSetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ReleaseSetList
 ```
@@ -3913,7 +3913,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseSetListStructList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleaseSetListStructList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ReleaseSetListStructList
 ```
@@ -4073,7 +4073,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleaseSetListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ReleaseSetListStructOutputReference
 ```
@@ -4384,7 +4384,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleaseSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ReleaseSetOutputReference
 ```
@@ -4724,7 +4724,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseSetSensitiveList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleaseSetSensitiveList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ReleaseSetSensitiveList
 ```
@@ -4884,7 +4884,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/release"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/v10/release"
 
 release.NewReleaseSetSensitiveOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ReleaseSetSensitiveOutputReference
 ```
