@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release
+// https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,252 +13,251 @@ import * as cdktf from 'cdktf';
 
 export interface ReleaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. Defaults to `false`.
+  * If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#atomic Release#atomic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#atomic Release#atomic}
   */
   readonly atomic?: boolean | cdktf.IResolvable;
   /**
-  * Chart name to be installed. A path may be used.
+  * Chart name to be installed. A path may be used
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#chart Release#chart}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#chart Release#chart}
   */
   readonly chart: string;
   /**
-  * Allow deletion of new resources created in this upgrade when upgrade fails. Defaults to `false`.
+  * Allow deletion of new resources created in this upgrade when upgrade fails
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
   */
   readonly cleanupOnFail?: boolean | cdktf.IResolvable;
   /**
-  * Create the namespace if it does not exist. Defaults to `false`.
+  * Create the namespace if it does not exist
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#create_namespace Release#create_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#create_namespace Release#create_namespace}
   */
   readonly createNamespace?: boolean | cdktf.IResolvable;
   /**
-  * Run helm dependency update before installing the chart. Defaults to `false`.
+  * Run helm dependency update before installing the chart
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#dependency_update Release#dependency_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#dependency_update Release#dependency_update}
   */
   readonly dependencyUpdate?: boolean | cdktf.IResolvable;
   /**
   * Add a custom description
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#description Release#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#description Release#description}
   */
   readonly description?: string;
   /**
-  * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored
+  * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#devel Release#devel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#devel Release#devel}
   */
   readonly devel?: boolean | cdktf.IResolvable;
   /**
-  * Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+  * Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
   */
   readonly disableCrdHooks?: boolean | cdktf.IResolvable;
   /**
-  * If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. Defaults to `false`.
+  * If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
   */
   readonly disableOpenapiValidation?: boolean | cdktf.IResolvable;
   /**
-  * Prevent hooks from running.Defaults to `false`.
+  * Prevent hooks from running
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#disable_webhooks Release#disable_webhooks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#disable_webhooks Release#disable_webhooks}
   */
   readonly disableWebhooks?: boolean | cdktf.IResolvable;
   /**
-  * Force resource update through delete/recreate if needed. Defaults to `false`.
+  * Force resource update through delete/recreate if needed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#force_update Release#force_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#force_update Release#force_update}
   */
   readonly forceUpdate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#id Release#id}
+  * Location of public keys used for verification, Used only if 'verify is true'
   *
-  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-  */
-  readonly id?: string;
-  /**
-  * Location of public keys used for verification. Used only if `verify` is true. Defaults to `/.gnupg/pubring.gpg` in the location set by `home`.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#keyring Release#keyring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#keyring Release#keyring}
   */
   readonly keyring?: string;
   /**
-  * Run helm lint when planning. Defaults to `false`.
+  * Run helm lint when planning
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#lint Release#lint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#lint Release#lint}
   */
   readonly lint?: boolean | cdktf.IResolvable;
   /**
-  * Limit the maximum number of revisions saved per release. Use 0 for no limit. Defaults to 0 (no limit).
+  * Limit the maximum number of revisions saved per release. Use 0 for no limit
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#max_history Release#max_history}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#max_history Release#max_history}
   */
   readonly maxHistory?: number;
   /**
-  * Release name. The length must not be longer than 53 characters.
+  * Release name. The length must not be longer than 53 characters
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#name Release#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#name Release#name}
   */
   readonly name: string;
   /**
-  * Namespace to install the release into. Defaults to `default`.
+  * Namespace to install the release into
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#namespace Release#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#namespace Release#namespace}
   */
   readonly namespace?: string;
   /**
-  * Pass credentials to all domains. Defaults to `false`.
+  * Pass credentials to all domains
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#pass_credentials Release#pass_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#pass_credentials Release#pass_credentials}
   */
   readonly passCredentials?: boolean | cdktf.IResolvable;
   /**
-  * Perform pods restart during upgrade/rollback. Defaults to `false`.
+  * Postrender command config
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#recreate_pods Release#recreate_pods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#postrender Release#postrender}
+  */
+  readonly postrender?: ReleasePostrender;
+  /**
+  * Perform pods restart during upgrade/rollback
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#recreate_pods Release#recreate_pods}
   */
   readonly recreatePods?: boolean | cdktf.IResolvable;
   /**
-  * If set, render subchart notes along with the parent. Defaults to `true`.
+  * If set, render subchart notes along with the parent
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
   */
   readonly renderSubchartNotes?: boolean | cdktf.IResolvable;
   /**
-  * Re-use the given name, even if that name is already used. This is unsafe in production. Defaults to `false`.
+  * Re-use the given name, even if that name is already used. This is unsafe in production
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#replace Release#replace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#replace Release#replace}
   */
   readonly replace?: boolean | cdktf.IResolvable;
   /**
-  * Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
+  * Repository where to locate the requested chart. If it is a URL, the chart is installed without installing the repository
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#repository Release#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#repository Release#repository}
   */
   readonly repository?: string;
   /**
-  * The Repositories CA File
+  * The Repositories CA file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#repository_ca_file Release#repository_ca_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#repository_ca_file Release#repository_ca_file}
   */
   readonly repositoryCaFile?: string;
   /**
   * The repositories cert file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#repository_cert_file Release#repository_cert_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#repository_cert_file Release#repository_cert_file}
   */
   readonly repositoryCertFile?: string;
   /**
   * The repositories cert key file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#repository_key_file Release#repository_key_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#repository_key_file Release#repository_key_file}
   */
   readonly repositoryKeyFile?: string;
   /**
   * Password for HTTP basic authentication
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#repository_password Release#repository_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#repository_password Release#repository_password}
   */
   readonly repositoryPassword?: string;
   /**
   * Username for HTTP basic authentication
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#repository_username Release#repository_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#repository_username Release#repository_username}
   */
   readonly repositoryUsername?: string;
   /**
-  * When upgrading, reset the values to the ones built into the chart. Defaults to `false`.
+  * When upgrading, reset the values to the ones built into the chart
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#reset_values Release#reset_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#reset_values Release#reset_values}
   */
   readonly resetValues?: boolean | cdktf.IResolvable;
   /**
-  * When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. Defaults to `false`.
+  * When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#reuse_values Release#reuse_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#reuse_values Release#reuse_values}
   */
   readonly reuseValues?: boolean | cdktf.IResolvable;
   /**
-  * If set, no CRDs will be installed. By default, CRDs are installed if not already present. Defaults to `false`.
+  * Custom values to be merged with the values
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#skip_crds Release#skip_crds}
-  */
-  readonly skipCrds?: boolean | cdktf.IResolvable;
-  /**
-  * Time in seconds to wait for any individual kubernetes operation. Defaults to 300 seconds.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#timeout Release#timeout}
-  */
-  readonly timeout?: number;
-  /**
-  * If true, the provider will install the release at the specified version even if a release not controlled by the provider is present: this is equivalent to running 'helm upgrade --install' with the Helm CLI. WARNING: this may not be suitable for production use -- see the 'Upgrade Mode' note in the provider documentation. Defaults to `false`.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#upgrade_install Release#upgrade_install}
-  */
-  readonly upgradeInstall?: boolean | cdktf.IResolvable;
-  /**
-  * List of values in raw yaml format to pass to helm.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#values Release#values}
-  */
-  readonly values?: string[];
-  /**
-  * Verify the package before installing it.Defaults to `false`.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#verify Release#verify}
-  */
-  readonly verify?: boolean | cdktf.IResolvable;
-  /**
-  * Specify the exact chart version to install. If this is not specified, the latest version is installed.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#version Release#version}
-  */
-  readonly version?: string;
-  /**
-  * Will wait until all resources are in a ready state before marking the release as successful. Defaults to `true`.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#wait Release#wait}
-  */
-  readonly wait?: boolean | cdktf.IResolvable;
-  /**
-  * If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. Defaults to `false``.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
-  */
-  readonly waitForJobs?: boolean | cdktf.IResolvable;
-  /**
-  * postrender block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#postrender Release#postrender}
-  */
-  readonly postrender?: ReleasePostrender;
-  /**
-  * set block
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#set Release#set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#set Release#set}
   */
   readonly set?: ReleaseSet[] | cdktf.IResolvable;
   /**
-  * set_list block
+  * Custom sensitive values to be merged with the values
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#set_list Release#set_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#set_list Release#set_list}
   */
   readonly setList?: ReleaseSetListStruct[] | cdktf.IResolvable;
   /**
-  * set_sensitive block
+  * Custom sensitive values to be merged with the values
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#set_sensitive Release#set_sensitive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#set_sensitive Release#set_sensitive}
   */
   readonly setSensitive?: ReleaseSetSensitive[] | cdktf.IResolvable;
+  /**
+  * Custom values to be merged with the values
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#set_wo Release#set_wo}
+  */
+  readonly setWo?: ReleaseSetWo[] | cdktf.IResolvable;
+  /**
+  * The current revision of the write-only "set_wo" attribute. Incrementing this integer value will cause Terraform to update the write-only value.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#set_wo_revision Release#set_wo_revision}
+  */
+  readonly setWoRevision?: number;
+  /**
+  * If set, no CRDs will be installed. By default, CRDs are installed if not already present
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#skip_crds Release#skip_crds}
+  */
+  readonly skipCrds?: boolean | cdktf.IResolvable;
+  /**
+  * Time in seconds to wait for any individual kubernetes operation
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#timeout Release#timeout}
+  */
+  readonly timeout?: number;
+  /**
+  * List of values in raw YAML format to pass to helm
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#values Release#values}
+  */
+  readonly values?: string[];
+  /**
+  * Verify the package before installing it.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#verify Release#verify}
+  */
+  readonly verify?: boolean | cdktf.IResolvable;
+  /**
+  * Specify the exact chart version to install. If this is not specified, the latest version is installed
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#version Release#version}
+  */
+  readonly version?: string;
+  /**
+  * Will wait until all resources are in a ready state before marking the release as successful.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#wait Release#wait}
+  */
+  readonly wait?: boolean | cdktf.IResolvable;
+  /**
+  * If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
+  */
+  readonly waitForJobs?: boolean | cdktf.IResolvable;
 }
 export interface ReleaseMetadata {
 }
@@ -289,11 +288,9 @@ export class ReleaseMetadataOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ReleaseMetadata | undefined {
@@ -361,41 +358,22 @@ export class ReleaseMetadataOutputReference extends cdktf.ComplexObject {
     return this.getStringAttribute('version');
   }
 }
-
-export class ReleaseMetadataList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): ReleaseMetadataOutputReference {
-    return new ReleaseMetadataOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
 export interface ReleasePostrender {
   /**
-  * an argument to the post-renderer (can specify multiple)
+  * An argument to the post-renderer (can specify multiple)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#args Release#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#args Release#args}
   */
   readonly args?: string[];
   /**
-  * The command binary path.
+  * The common binary path
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#binary_path Release#binary_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#binary_path Release#binary_path}
   */
   readonly binaryPath: string;
 }
 
-export function releasePostrenderToTerraform(struct?: ReleasePostrenderOutputReference | ReleasePostrender): any {
+export function releasePostrenderToTerraform(struct?: ReleasePostrender | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -407,7 +385,7 @@ export function releasePostrenderToTerraform(struct?: ReleasePostrenderOutputRef
 }
 
 
-export function releasePostrenderToHclTerraform(struct?: ReleasePostrenderOutputReference | ReleasePostrender): any {
+export function releasePostrenderToHclTerraform(struct?: ReleasePostrender | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -433,16 +411,20 @@ export function releasePostrenderToHclTerraform(struct?: ReleasePostrenderOutput
 
 export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
-  public get internalValue(): ReleasePostrender | undefined {
+  public get internalValue(): ReleasePostrender | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._args !== undefined) {
@@ -456,14 +438,20 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ReleasePostrender | undefined) {
+  public set internalValue(value: ReleasePostrender | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._args = undefined;
       this._binaryPath = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._args = value.args;
       this._binaryPath = value.binaryPath;
     }
@@ -500,17 +488,17 @@ export class ReleasePostrenderOutputReference extends cdktf.ComplexObject {
 }
 export interface ReleaseSet {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#name Release#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#name Release#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#type Release#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#type Release#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#value Release#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#value Release#value}
   */
-  readonly value: string;
+  readonly value?: string;
 }
 
 export function releaseSetToTerraform(struct?: ReleaseSet | cdktf.IResolvable): any {
@@ -625,7 +613,7 @@ export class ReleaseSetOutputReference extends cdktf.ComplexObject {
     return this._name;
   }
 
-  // type - computed: false, optional: true, required: false
+  // type - computed: true, optional: true, required: false
   private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
@@ -641,13 +629,16 @@ export class ReleaseSetOutputReference extends cdktf.ComplexObject {
     return this._type;
   }
 
-  // value - computed: false, optional: false, required: true
+  // value - computed: false, optional: true, required: false
   private _value?: string; 
   public get value() {
     return this.getStringAttribute('value');
   }
   public set value(value: string) {
     this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
@@ -676,11 +667,11 @@ export class ReleaseSetList extends cdktf.ComplexList {
 }
 export interface ReleaseSetListStruct {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#name Release#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#name Release#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#value Release#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#value Release#value}
   */
   readonly value: string[];
 }
@@ -819,15 +810,15 @@ export class ReleaseSetListStructList extends cdktf.ComplexList {
 }
 export interface ReleaseSetSensitive {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#name Release#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#name Release#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#type Release#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#type Release#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#value Release#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#value Release#value}
   */
   readonly value: string;
 }
@@ -993,9 +984,185 @@ export class ReleaseSetSensitiveList extends cdktf.ComplexList {
     return new ReleaseSetSensitiveOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ReleaseSetWo {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#name Release#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#type Release#type}
+  */
+  readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#value Release#value}
+  */
+  readonly value: string;
+}
+
+export function releaseSetWoToTerraform(struct?: ReleaseSetWo | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    type: cdktf.stringToTerraform(struct!.type),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function releaseSetWoToHclTerraform(struct?: ReleaseSetWo | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ReleaseSetWoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ReleaseSetWo | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ReleaseSetWo | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ReleaseSetWoList extends cdktf.ComplexList {
+  public internalValue? : ReleaseSetWo[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ReleaseSetWoOutputReference {
+    return new ReleaseSetWoOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release helm_release}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release helm_release}
 */
 export class Release extends cdktf.TerraformResource {
 
@@ -1011,7 +1178,7 @@ export class Release extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Release resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Release to import
-  * @param importFromId The id of the existing Release that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Release that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Release to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1023,7 +1190,7 @@ export class Release extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/resources/release helm_release} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/resources/release helm_release} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1034,8 +1201,8 @@ export class Release extends cdktf.TerraformResource {
       terraformResourceType: 'helm_release',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '2.17.0',
-        providerVersionConstraint: '~> 2.3'
+        providerVersion: '3.0.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1056,13 +1223,13 @@ export class Release extends cdktf.TerraformResource {
     this._disableOpenapiValidation = config.disableOpenapiValidation;
     this._disableWebhooks = config.disableWebhooks;
     this._forceUpdate = config.forceUpdate;
-    this._id = config.id;
     this._keyring = config.keyring;
     this._lint = config.lint;
     this._maxHistory = config.maxHistory;
     this._name = config.name;
     this._namespace = config.namespace;
     this._passCredentials = config.passCredentials;
+    this._postrender.internalValue = config.postrender;
     this._recreatePods = config.recreatePods;
     this._renderSubchartNotes = config.renderSubchartNotes;
     this._replace = config.replace;
@@ -1074,25 +1241,25 @@ export class Release extends cdktf.TerraformResource {
     this._repositoryUsername = config.repositoryUsername;
     this._resetValues = config.resetValues;
     this._reuseValues = config.reuseValues;
+    this._set.internalValue = config.set;
+    this._setList.internalValue = config.setList;
+    this._setSensitive.internalValue = config.setSensitive;
+    this._setWo.internalValue = config.setWo;
+    this._setWoRevision = config.setWoRevision;
     this._skipCrds = config.skipCrds;
     this._timeout = config.timeout;
-    this._upgradeInstall = config.upgradeInstall;
     this._values = config.values;
     this._verify = config.verify;
     this._version = config.version;
     this._wait = config.wait;
     this._waitForJobs = config.waitForJobs;
-    this._postrender.internalValue = config.postrender;
-    this._set.internalValue = config.set;
-    this._setList.internalValue = config.setList;
-    this._setSensitive.internalValue = config.setSensitive;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
 
-  // atomic - computed: false, optional: true, required: false
+  // atomic - computed: true, optional: true, required: false
   private _atomic?: boolean | cdktf.IResolvable; 
   public get atomic() {
     return this.getBooleanAttribute('atomic');
@@ -1121,7 +1288,7 @@ export class Release extends cdktf.TerraformResource {
     return this._chart;
   }
 
-  // cleanup_on_fail - computed: false, optional: true, required: false
+  // cleanup_on_fail - computed: true, optional: true, required: false
   private _cleanupOnFail?: boolean | cdktf.IResolvable; 
   public get cleanupOnFail() {
     return this.getBooleanAttribute('cleanup_on_fail');
@@ -1137,7 +1304,7 @@ export class Release extends cdktf.TerraformResource {
     return this._cleanupOnFail;
   }
 
-  // create_namespace - computed: false, optional: true, required: false
+  // create_namespace - computed: true, optional: true, required: false
   private _createNamespace?: boolean | cdktf.IResolvable; 
   public get createNamespace() {
     return this.getBooleanAttribute('create_namespace');
@@ -1153,7 +1320,7 @@ export class Release extends cdktf.TerraformResource {
     return this._createNamespace;
   }
 
-  // dependency_update - computed: false, optional: true, required: false
+  // dependency_update - computed: true, optional: true, required: false
   private _dependencyUpdate?: boolean | cdktf.IResolvable; 
   public get dependencyUpdate() {
     return this.getBooleanAttribute('dependency_update');
@@ -1201,7 +1368,7 @@ export class Release extends cdktf.TerraformResource {
     return this._devel;
   }
 
-  // disable_crd_hooks - computed: false, optional: true, required: false
+  // disable_crd_hooks - computed: true, optional: true, required: false
   private _disableCrdHooks?: boolean | cdktf.IResolvable; 
   public get disableCrdHooks() {
     return this.getBooleanAttribute('disable_crd_hooks');
@@ -1217,7 +1384,7 @@ export class Release extends cdktf.TerraformResource {
     return this._disableCrdHooks;
   }
 
-  // disable_openapi_validation - computed: false, optional: true, required: false
+  // disable_openapi_validation - computed: true, optional: true, required: false
   private _disableOpenapiValidation?: boolean | cdktf.IResolvable; 
   public get disableOpenapiValidation() {
     return this.getBooleanAttribute('disable_openapi_validation');
@@ -1233,7 +1400,7 @@ export class Release extends cdktf.TerraformResource {
     return this._disableOpenapiValidation;
   }
 
-  // disable_webhooks - computed: false, optional: true, required: false
+  // disable_webhooks - computed: true, optional: true, required: false
   private _disableWebhooks?: boolean | cdktf.IResolvable; 
   public get disableWebhooks() {
     return this.getBooleanAttribute('disable_webhooks');
@@ -1249,7 +1416,7 @@ export class Release extends cdktf.TerraformResource {
     return this._disableWebhooks;
   }
 
-  // force_update - computed: false, optional: true, required: false
+  // force_update - computed: true, optional: true, required: false
   private _forceUpdate?: boolean | cdktf.IResolvable; 
   public get forceUpdate() {
     return this.getBooleanAttribute('force_update');
@@ -1265,20 +1432,9 @@ export class Release extends cdktf.TerraformResource {
     return this._forceUpdate;
   }
 
-  // id - computed: true, optional: true, required: false
-  private _id?: string; 
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
-  }
-  public set id(value: string) {
-    this._id = value;
-  }
-  public resetId() {
-    this._id = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get idInput() {
-    return this._id;
   }
 
   // keyring - computed: false, optional: true, required: false
@@ -1297,7 +1453,7 @@ export class Release extends cdktf.TerraformResource {
     return this._keyring;
   }
 
-  // lint - computed: false, optional: true, required: false
+  // lint - computed: true, optional: true, required: false
   private _lint?: boolean | cdktf.IResolvable; 
   public get lint() {
     return this.getBooleanAttribute('lint');
@@ -1318,7 +1474,7 @@ export class Release extends cdktf.TerraformResource {
     return this.getStringAttribute('manifest');
   }
 
-  // max_history - computed: false, optional: true, required: false
+  // max_history - computed: true, optional: true, required: false
   private _maxHistory?: number; 
   public get maxHistory() {
     return this.getNumberAttribute('max_history');
@@ -1335,7 +1491,7 @@ export class Release extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: false, required: false
-  private _metadata = new ReleaseMetadataList(this, "metadata", false);
+  private _metadata = new ReleaseMetadataOutputReference(this, "metadata");
   public get metadata() {
     return this._metadata;
   }
@@ -1353,7 +1509,7 @@ export class Release extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace - computed: false, optional: true, required: false
+  // namespace - computed: true, optional: true, required: false
   private _namespace?: string; 
   public get namespace() {
     return this.getStringAttribute('namespace');
@@ -1369,7 +1525,7 @@ export class Release extends cdktf.TerraformResource {
     return this._namespace;
   }
 
-  // pass_credentials - computed: false, optional: true, required: false
+  // pass_credentials - computed: true, optional: true, required: false
   private _passCredentials?: boolean | cdktf.IResolvable; 
   public get passCredentials() {
     return this.getBooleanAttribute('pass_credentials');
@@ -1385,7 +1541,23 @@ export class Release extends cdktf.TerraformResource {
     return this._passCredentials;
   }
 
-  // recreate_pods - computed: false, optional: true, required: false
+  // postrender - computed: false, optional: true, required: false
+  private _postrender = new ReleasePostrenderOutputReference(this, "postrender");
+  public get postrender() {
+    return this._postrender;
+  }
+  public putPostrender(value: ReleasePostrender) {
+    this._postrender.internalValue = value;
+  }
+  public resetPostrender() {
+    this._postrender.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postrenderInput() {
+    return this._postrender.internalValue;
+  }
+
+  // recreate_pods - computed: true, optional: true, required: false
   private _recreatePods?: boolean | cdktf.IResolvable; 
   public get recreatePods() {
     return this.getBooleanAttribute('recreate_pods');
@@ -1401,7 +1573,7 @@ export class Release extends cdktf.TerraformResource {
     return this._recreatePods;
   }
 
-  // render_subchart_notes - computed: false, optional: true, required: false
+  // render_subchart_notes - computed: true, optional: true, required: false
   private _renderSubchartNotes?: boolean | cdktf.IResolvable; 
   public get renderSubchartNotes() {
     return this.getBooleanAttribute('render_subchart_notes');
@@ -1417,7 +1589,7 @@ export class Release extends cdktf.TerraformResource {
     return this._renderSubchartNotes;
   }
 
-  // replace - computed: false, optional: true, required: false
+  // replace - computed: true, optional: true, required: false
   private _replace?: boolean | cdktf.IResolvable; 
   public get replace() {
     return this.getBooleanAttribute('replace');
@@ -1529,7 +1701,7 @@ export class Release extends cdktf.TerraformResource {
     return this._repositoryUsername;
   }
 
-  // reset_values - computed: false, optional: true, required: false
+  // reset_values - computed: true, optional: true, required: false
   private _resetValues?: boolean | cdktf.IResolvable; 
   public get resetValues() {
     return this.getBooleanAttribute('reset_values');
@@ -1545,7 +1717,7 @@ export class Release extends cdktf.TerraformResource {
     return this._resetValues;
   }
 
-  // reuse_values - computed: false, optional: true, required: false
+  // reuse_values - computed: true, optional: true, required: false
   private _reuseValues?: boolean | cdktf.IResolvable; 
   public get reuseValues() {
     return this.getBooleanAttribute('reuse_values');
@@ -1561,157 +1733,8 @@ export class Release extends cdktf.TerraformResource {
     return this._reuseValues;
   }
 
-  // skip_crds - computed: false, optional: true, required: false
-  private _skipCrds?: boolean | cdktf.IResolvable; 
-  public get skipCrds() {
-    return this.getBooleanAttribute('skip_crds');
-  }
-  public set skipCrds(value: boolean | cdktf.IResolvable) {
-    this._skipCrds = value;
-  }
-  public resetSkipCrds() {
-    this._skipCrds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get skipCrdsInput() {
-    return this._skipCrds;
-  }
-
-  // status - computed: true, optional: false, required: false
-  public get status() {
-    return this.getStringAttribute('status');
-  }
-
-  // timeout - computed: false, optional: true, required: false
-  private _timeout?: number; 
-  public get timeout() {
-    return this.getNumberAttribute('timeout');
-  }
-  public set timeout(value: number) {
-    this._timeout = value;
-  }
-  public resetTimeout() {
-    this._timeout = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get timeoutInput() {
-    return this._timeout;
-  }
-
-  // upgrade_install - computed: false, optional: true, required: false
-  private _upgradeInstall?: boolean | cdktf.IResolvable; 
-  public get upgradeInstall() {
-    return this.getBooleanAttribute('upgrade_install');
-  }
-  public set upgradeInstall(value: boolean | cdktf.IResolvable) {
-    this._upgradeInstall = value;
-  }
-  public resetUpgradeInstall() {
-    this._upgradeInstall = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get upgradeInstallInput() {
-    return this._upgradeInstall;
-  }
-
-  // values - computed: false, optional: true, required: false
-  private _values?: string[]; 
-  public get values() {
-    return this.getListAttribute('values');
-  }
-  public set values(value: string[]) {
-    this._values = value;
-  }
-  public resetTfValues() {
-    this._values = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get valuesInput() {
-    return this._values;
-  }
-
-  // verify - computed: false, optional: true, required: false
-  private _verify?: boolean | cdktf.IResolvable; 
-  public get verify() {
-    return this.getBooleanAttribute('verify');
-  }
-  public set verify(value: boolean | cdktf.IResolvable) {
-    this._verify = value;
-  }
-  public resetVerify() {
-    this._verify = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get verifyInput() {
-    return this._verify;
-  }
-
-  // version - computed: true, optional: true, required: false
-  private _version?: string; 
-  public get version() {
-    return this.getStringAttribute('version');
-  }
-  public set version(value: string) {
-    this._version = value;
-  }
-  public resetVersion() {
-    this._version = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get versionInput() {
-    return this._version;
-  }
-
-  // wait - computed: false, optional: true, required: false
-  private _wait?: boolean | cdktf.IResolvable; 
-  public get wait() {
-    return this.getBooleanAttribute('wait');
-  }
-  public set wait(value: boolean | cdktf.IResolvable) {
-    this._wait = value;
-  }
-  public resetWait() {
-    this._wait = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get waitInput() {
-    return this._wait;
-  }
-
-  // wait_for_jobs - computed: false, optional: true, required: false
-  private _waitForJobs?: boolean | cdktf.IResolvable; 
-  public get waitForJobs() {
-    return this.getBooleanAttribute('wait_for_jobs');
-  }
-  public set waitForJobs(value: boolean | cdktf.IResolvable) {
-    this._waitForJobs = value;
-  }
-  public resetWaitForJobs() {
-    this._waitForJobs = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get waitForJobsInput() {
-    return this._waitForJobs;
-  }
-
-  // postrender - computed: false, optional: true, required: false
-  private _postrender = new ReleasePostrenderOutputReference(this, "postrender");
-  public get postrender() {
-    return this._postrender;
-  }
-  public putPostrender(value: ReleasePostrender) {
-    this._postrender.internalValue = value;
-  }
-  public resetPostrender() {
-    this._postrender.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get postrenderInput() {
-    return this._postrender.internalValue;
-  }
-
   // set - computed: false, optional: true, required: false
-  private _set = new ReleaseSetList(this, "set", true);
+  private _set = new ReleaseSetList(this, "set", false);
   public get set() {
     return this._set;
   }
@@ -1743,7 +1766,7 @@ export class Release extends cdktf.TerraformResource {
   }
 
   // set_sensitive - computed: false, optional: true, required: false
-  private _setSensitive = new ReleaseSetSensitiveList(this, "set_sensitive", true);
+  private _setSensitive = new ReleaseSetSensitiveList(this, "set_sensitive", false);
   public get setSensitive() {
     return this._setSensitive;
   }
@@ -1756,6 +1779,155 @@ export class Release extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get setSensitiveInput() {
     return this._setSensitive.internalValue;
+  }
+
+  // set_wo - computed: false, optional: true, required: false
+  private _setWo = new ReleaseSetWoList(this, "set_wo", false);
+  public get setWo() {
+    return this._setWo;
+  }
+  public putSetWo(value: ReleaseSetWo[] | cdktf.IResolvable) {
+    this._setWo.internalValue = value;
+  }
+  public resetSetWo() {
+    this._setWo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get setWoInput() {
+    return this._setWo.internalValue;
+  }
+
+  // set_wo_revision - computed: false, optional: true, required: false
+  private _setWoRevision?: number; 
+  public get setWoRevision() {
+    return this.getNumberAttribute('set_wo_revision');
+  }
+  public set setWoRevision(value: number) {
+    this._setWoRevision = value;
+  }
+  public resetSetWoRevision() {
+    this._setWoRevision = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get setWoRevisionInput() {
+    return this._setWoRevision;
+  }
+
+  // skip_crds - computed: true, optional: true, required: false
+  private _skipCrds?: boolean | cdktf.IResolvable; 
+  public get skipCrds() {
+    return this.getBooleanAttribute('skip_crds');
+  }
+  public set skipCrds(value: boolean | cdktf.IResolvable) {
+    this._skipCrds = value;
+  }
+  public resetSkipCrds() {
+    this._skipCrds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipCrdsInput() {
+    return this._skipCrds;
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+
+  // timeout - computed: true, optional: true, required: false
+  private _timeout?: number; 
+  public get timeout() {
+    return this.getNumberAttribute('timeout');
+  }
+  public set timeout(value: number) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
+  }
+
+  // values - computed: false, optional: true, required: false
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  public resetTfValues() {
+    this._values = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+
+  // verify - computed: true, optional: true, required: false
+  private _verify?: boolean | cdktf.IResolvable; 
+  public get verify() {
+    return this.getBooleanAttribute('verify');
+  }
+  public set verify(value: boolean | cdktf.IResolvable) {
+    this._verify = value;
+  }
+  public resetVerify() {
+    this._verify = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verifyInput() {
+    return this._verify;
+  }
+
+  // version - computed: true, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+
+  // wait - computed: true, optional: true, required: false
+  private _wait?: boolean | cdktf.IResolvable; 
+  public get wait() {
+    return this.getBooleanAttribute('wait');
+  }
+  public set wait(value: boolean | cdktf.IResolvable) {
+    this._wait = value;
+  }
+  public resetWait() {
+    this._wait = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitInput() {
+    return this._wait;
+  }
+
+  // wait_for_jobs - computed: true, optional: true, required: false
+  private _waitForJobs?: boolean | cdktf.IResolvable; 
+  public get waitForJobs() {
+    return this.getBooleanAttribute('wait_for_jobs');
+  }
+  public set waitForJobs(value: boolean | cdktf.IResolvable) {
+    this._waitForJobs = value;
+  }
+  public resetWaitForJobs() {
+    this._waitForJobs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitForJobsInput() {
+    return this._waitForJobs;
   }
 
   // =========
@@ -1775,13 +1947,13 @@ export class Release extends cdktf.TerraformResource {
       disable_openapi_validation: cdktf.booleanToTerraform(this._disableOpenapiValidation),
       disable_webhooks: cdktf.booleanToTerraform(this._disableWebhooks),
       force_update: cdktf.booleanToTerraform(this._forceUpdate),
-      id: cdktf.stringToTerraform(this._id),
       keyring: cdktf.stringToTerraform(this._keyring),
       lint: cdktf.booleanToTerraform(this._lint),
       max_history: cdktf.numberToTerraform(this._maxHistory),
       name: cdktf.stringToTerraform(this._name),
       namespace: cdktf.stringToTerraform(this._namespace),
       pass_credentials: cdktf.booleanToTerraform(this._passCredentials),
+      postrender: releasePostrenderToTerraform(this._postrender.internalValue),
       recreate_pods: cdktf.booleanToTerraform(this._recreatePods),
       render_subchart_notes: cdktf.booleanToTerraform(this._renderSubchartNotes),
       replace: cdktf.booleanToTerraform(this._replace),
@@ -1793,18 +1965,18 @@ export class Release extends cdktf.TerraformResource {
       repository_username: cdktf.stringToTerraform(this._repositoryUsername),
       reset_values: cdktf.booleanToTerraform(this._resetValues),
       reuse_values: cdktf.booleanToTerraform(this._reuseValues),
+      set: cdktf.listMapper(releaseSetToTerraform, false)(this._set.internalValue),
+      set_list: cdktf.listMapper(releaseSetListStructToTerraform, false)(this._setList.internalValue),
+      set_sensitive: cdktf.listMapper(releaseSetSensitiveToTerraform, false)(this._setSensitive.internalValue),
+      set_wo: cdktf.listMapper(releaseSetWoToTerraform, false)(this._setWo.internalValue),
+      set_wo_revision: cdktf.numberToTerraform(this._setWoRevision),
       skip_crds: cdktf.booleanToTerraform(this._skipCrds),
       timeout: cdktf.numberToTerraform(this._timeout),
-      upgrade_install: cdktf.booleanToTerraform(this._upgradeInstall),
       values: cdktf.listMapper(cdktf.stringToTerraform, false)(this._values),
       verify: cdktf.booleanToTerraform(this._verify),
       version: cdktf.stringToTerraform(this._version),
       wait: cdktf.booleanToTerraform(this._wait),
       wait_for_jobs: cdktf.booleanToTerraform(this._waitForJobs),
-      postrender: releasePostrenderToTerraform(this._postrender.internalValue),
-      set: cdktf.listMapper(releaseSetToTerraform, true)(this._set.internalValue),
-      set_list: cdktf.listMapper(releaseSetListStructToTerraform, true)(this._setList.internalValue),
-      set_sensitive: cdktf.listMapper(releaseSetSensitiveToTerraform, true)(this._setSensitive.internalValue),
     };
   }
 
@@ -1876,12 +2048,6 @@ export class Release extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "boolean",
       },
-      id: {
-        value: cdktf.stringToHclTerraform(this._id),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
       keyring: {
         value: cdktf.stringToHclTerraform(this._keyring),
         isBlock: false,
@@ -1917,6 +2083,12 @@ export class Release extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
+      },
+      postrender: {
+        value: releasePostrenderToHclTerraform(this._postrender.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ReleasePostrender",
       },
       recreate_pods: {
         value: cdktf.booleanToHclTerraform(this._recreatePods),
@@ -1984,6 +2156,36 @@ export class Release extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "boolean",
       },
+      set: {
+        value: cdktf.listMapperHcl(releaseSetToHclTerraform, false)(this._set.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ReleaseSetList",
+      },
+      set_list: {
+        value: cdktf.listMapperHcl(releaseSetListStructToHclTerraform, false)(this._setList.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ReleaseSetListStructList",
+      },
+      set_sensitive: {
+        value: cdktf.listMapperHcl(releaseSetSensitiveToHclTerraform, false)(this._setSensitive.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ReleaseSetSensitiveList",
+      },
+      set_wo: {
+        value: cdktf.listMapperHcl(releaseSetWoToHclTerraform, false)(this._setWo.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ReleaseSetWoList",
+      },
+      set_wo_revision: {
+        value: cdktf.numberToHclTerraform(this._setWoRevision),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
       skip_crds: {
         value: cdktf.booleanToHclTerraform(this._skipCrds),
         isBlock: false,
@@ -1995,12 +2197,6 @@ export class Release extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "number",
-      },
-      upgrade_install: {
-        value: cdktf.booleanToHclTerraform(this._upgradeInstall),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "boolean",
       },
       values: {
         value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._values),
@@ -2031,30 +2227,6 @@ export class Release extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
-      },
-      postrender: {
-        value: releasePostrenderToHclTerraform(this._postrender.internalValue),
-        isBlock: true,
-        type: "list",
-        storageClassType: "ReleasePostrenderList",
-      },
-      set: {
-        value: cdktf.listMapperHcl(releaseSetToHclTerraform, true)(this._set.internalValue),
-        isBlock: true,
-        type: "set",
-        storageClassType: "ReleaseSetList",
-      },
-      set_list: {
-        value: cdktf.listMapperHcl(releaseSetListStructToHclTerraform, true)(this._setList.internalValue),
-        isBlock: true,
-        type: "list",
-        storageClassType: "ReleaseSetListStructList",
-      },
-      set_sensitive: {
-        value: cdktf.listMapperHcl(releaseSetSensitiveToHclTerraform, true)(this._setSensitive.internalValue),
-        isBlock: true,
-        type: "set",
-        storageClassType: "ReleaseSetSensitiveList",
       },
     };
 
