@@ -4,7 +4,7 @@
 
 ### DataHelmTemplate <a name="DataHelmTemplate" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template helm_template}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template helm_template}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.Initializer"></a>
 
@@ -71,7 +71,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.putSet">PutSet</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.putSetList">PutSetList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.putSetSensitive">PutSetSensitive</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.putSetString">PutSetString</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetApiVersions">ResetApiVersions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetAtomic">ResetAtomic</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetCrds">ResetCrds</a></code> | *No description.* |
@@ -81,7 +80,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetDevel">ResetDevel</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetDisableOpenapiValidation">ResetDisableOpenapiValidation</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetDisableWebhooks">ResetDisableWebhooks</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetIncludeCrds">ResetIncludeCrds</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetIsUpgrade">ResetIsUpgrade</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetKeyring">ResetKeyring</a></code> | *No description.* |
@@ -105,7 +103,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetSet">ResetSet</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetSetList">ResetSetList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetSetSensitive">ResetSetSensitive</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetSetString">ResetSetString</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetShowOnly">ResetShowOnly</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetSkipCrds">ResetSkipCrds</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetSkipTests">ResetSkipTests</a></code> | *No description.* |
@@ -358,18 +355,6 @@ private void PutSetSensitive(object Value)
 
 ---
 
-##### `PutSetString` <a name="PutSetString" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.putSetString"></a>
-
-```csharp
-private void PutSetString(object Value)
-```
-
-###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.putSetString.parameter.value"></a>
-
-- *Type:* object
-
----
-
 ##### `ResetApiVersions` <a name="ResetApiVersions" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetApiVersions"></a>
 
 ```csharp
@@ -422,12 +407,6 @@ private void ResetDisableOpenapiValidation()
 
 ```csharp
 private void ResetDisableWebhooks()
-```
-
-##### `ResetId` <a name="ResetId" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetId"></a>
-
-```csharp
-private void ResetId()
 ```
 
 ##### `ResetIncludeCrds` <a name="ResetIncludeCrds" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetIncludeCrds"></a>
@@ -566,12 +545,6 @@ private void ResetSetList()
 
 ```csharp
 private void ResetSetSensitive()
-```
-
-##### `ResetSetString` <a name="ResetSetString" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetSetString"></a>
-
-```csharp
-private void ResetSetString()
 ```
 
 ##### `ResetShowOnly` <a name="ResetShowOnly" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.resetShowOnly"></a>
@@ -731,7 +704,7 @@ The construct id used in the generated config for the DataHelmTemplate to import
 
 The id of the existing DataHelmTemplate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -759,11 +732,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.postrender">Postrender</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference">DataHelmTemplatePostrenderOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.set">Set</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetList">DataHelmTemplateSetList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setList">SetList</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStructList">DataHelmTemplateSetListStructList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setSensitive">SetSensitive</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitiveList">DataHelmTemplateSetSensitiveList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setString">SetString</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList">DataHelmTemplateSetStringList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.apiVersionsInput">ApiVersionsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.atomicInput">AtomicInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.chartInput">ChartInput</a></code> | <code>string</code> | *No description.* |
@@ -774,7 +747,6 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.develInput">DevelInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.disableOpenapiValidationInput">DisableOpenapiValidationInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.disableWebhooksInput">DisableWebhooksInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.includeCrdsInput">IncludeCrdsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.isUpgradeInput">IsUpgradeInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.keyringInput">KeyringInput</a></code> | <code>string</code> | *No description.* |
@@ -785,7 +757,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.namespaceInput">NamespaceInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.notesInput">NotesInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.passCredentialsInput">PassCredentialsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.postrenderInput">PostrenderInput</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender">DataHelmTemplatePostrender</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.postrenderInput">PostrenderInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.renderSubchartNotesInput">RenderSubchartNotesInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.replaceInput">ReplaceInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.repositoryCaFileInput">RepositoryCaFileInput</a></code> | <code>string</code> | *No description.* |
@@ -799,7 +771,6 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setInput">SetInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setListInput">SetListInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setSensitiveInput">SetSensitiveInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setStringInput">SetStringInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.showOnlyInput">ShowOnlyInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.skipCrdsInput">SkipCrdsInput</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.skipTestsInput">SkipTestsInput</a></code> | <code>object</code> | *No description.* |
@@ -819,7 +790,6 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.devel">Devel</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.disableOpenapiValidation">DisableOpenapiValidation</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.disableWebhooks">DisableWebhooks</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.includeCrds">IncludeCrds</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.isUpgrade">IsUpgrade</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.keyring">Keyring</a></code> | <code>string</code> | *No description.* |
@@ -974,6 +944,16 @@ public TerraformProvider Provider { get; }
 
 ---
 
+##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.id"></a>
+
+```csharp
+public string Id { get; }
+```
+
+- *Type:* string
+
+---
+
 ##### `Postrender`<sup>Required</sup> <a name="Postrender" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.postrender"></a>
 
 ```csharp
@@ -1011,16 +991,6 @@ public DataHelmTemplateSetSensitiveList SetSensitive { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitiveList">DataHelmTemplateSetSensitiveList</a>
-
----
-
-##### `SetString`<sup>Required</sup> <a name="SetString" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setString"></a>
-
-```csharp
-public DataHelmTemplateSetStringList SetString { get; }
-```
-
-- *Type:* <a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList">DataHelmTemplateSetStringList</a>
 
 ---
 
@@ -1121,16 +1091,6 @@ public object DisableWebhooksInput { get; }
 ```
 
 - *Type:* object
-
----
-
-##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.idInput"></a>
-
-```csharp
-public string IdInput { get; }
-```
-
-- *Type:* string
 
 ---
 
@@ -1237,10 +1197,10 @@ public object PassCredentialsInput { get; }
 ##### `PostrenderInput`<sup>Optional</sup> <a name="PostrenderInput" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.postrenderInput"></a>
 
 ```csharp
-public DataHelmTemplatePostrender PostrenderInput { get; }
+public object PostrenderInput { get; }
 ```
 
-- *Type:* <a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender">DataHelmTemplatePostrender</a>
+- *Type:* object
 
 ---
 
@@ -1368,16 +1328,6 @@ public object SetListInput { get; }
 
 ```csharp
 public object SetSensitiveInput { get; }
-```
-
-- *Type:* object
-
----
-
-##### `SetStringInput`<sup>Optional</sup> <a name="SetStringInput" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.setStringInput"></a>
-
-```csharp
-public object SetStringInput { get; }
 ```
 
 - *Type:* object
@@ -1571,16 +1521,6 @@ public object DisableWebhooks { get; }
 ```
 
 - *Type:* object
-
----
-
-##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplate.property.id"></a>
-
-```csharp
-public string Id { get; }
-```
-
-- *Type:* string
 
 ---
 
@@ -1920,7 +1860,6 @@ new DataHelmTemplateConfig {
     object Devel = null,
     object DisableOpenapiValidation = null,
     object DisableWebhooks = null,
-    string Id = null,
     object IncludeCrds = null,
     object IsUpgrade = null,
     string Keyring = null,
@@ -1944,7 +1883,6 @@ new DataHelmTemplateConfig {
     object Set = null,
     object SetList = null,
     object SetSensitive = null,
-    object SetString = null,
     string[] ShowOnly = null,
     object SkipCrds = null,
     object SkipTests = null,
@@ -1971,48 +1909,46 @@ new DataHelmTemplateConfig {
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.chart">Chart</a></code> | <code>string</code> | Chart name to be installed. A path may be used. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.name">Name</a></code> | <code>string</code> | Release name. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.apiVersions">ApiVersions</a></code> | <code>string[]</code> | Kubernetes api versions used for Capabilities.APIVersions. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.atomic">Atomic</a></code> | <code>object</code> | If set, installation process purges chart on fail. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.atomic">Atomic</a></code> | <code>object</code> | If set, the installation process purges the chart on fail. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.crds">Crds</a></code> | <code>string[]</code> | List of rendered CRDs from the chart. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.createNamespace">CreateNamespace</a></code> | <code>object</code> | Create the namespace if it does not exist. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.dependencyUpdate">DependencyUpdate</a></code> | <code>object</code> | Run helm dependency update before installing the chart. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.createNamespace">CreateNamespace</a></code> | <code>object</code> | Create the namespace if it does not exist. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.dependencyUpdate">DependencyUpdate</a></code> | <code>object</code> | Run helm dependency update before installing the chart. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.description">Description</a></code> | <code>string</code> | Add a custom description. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.devel">Devel</a></code> | <code>object</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.disableOpenapiValidation">DisableOpenapiValidation</a></code> | <code>object</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.Defaults to `false`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.disableWebhooks">DisableWebhooks</a></code> | <code>object</code> | Prevent hooks from running.Defaults to `300` seconds. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#id DataHelmTemplate#id}. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.disableOpenapiValidation">DisableOpenapiValidation</a></code> | <code>object</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.disableWebhooks">DisableWebhooks</a></code> | <code>object</code> | Prevent hooks from running. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.includeCrds">IncludeCrds</a></code> | <code>object</code> | Include CRDs in the templated output. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.isUpgrade">IsUpgrade</a></code> | <code>object</code> | Set .Release.IsUpgrade instead of .Release.IsInstall. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.keyring">Keyring</a></code> | <code>string</code> | Location of public keys used for verification. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.keyring">Keyring</a></code> | <code>string</code> | Location of public keys used for verification. Used only if `verify` is true. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.kubeVersion">KubeVersion</a></code> | <code>string</code> | Kubernetes version used for Capabilities.KubeVersion. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.manifest">Manifest</a></code> | <code>string</code> | Concatenated rendered chart templates. This corresponds to the output of the `helm template` command. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.manifests">Manifests</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Map of rendered chart templates indexed by the template name. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.namespace">Namespace</a></code> | <code>string</code> | Namespace to install the release into. Defaults to `default`. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.namespace">Namespace</a></code> | <code>string</code> | Namespace to install the release into. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.notes">Notes</a></code> | <code>string</code> | Rendered notes if the chart contains a `NOTES.txt`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.passCredentials">PassCredentials</a></code> | <code>object</code> | Pass credentials to all domains. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.postrender">Postrender</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender">DataHelmTemplatePostrender</a></code> | postrender block. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.renderSubchartNotes">RenderSubchartNotes</a></code> | <code>object</code> | If set, render subchart notes along with the parent. Defaults to `true`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.replace">Replace</a></code> | <code>object</code> | Re-use the given name, even if that name is already used. This is unsafe in production. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repository">Repository</a></code> | <code>string</code> | Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repositoryCaFile">RepositoryCaFile</a></code> | <code>string</code> | The Repositories CA File. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repositoryCertFile">RepositoryCertFile</a></code> | <code>string</code> | The repositories cert file. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repositoryKeyFile">RepositoryKeyFile</a></code> | <code>string</code> | The repositories cert key file. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.passCredentials">PassCredentials</a></code> | <code>object</code> | Pass credentials to all domains. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.postrender">Postrender</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender">DataHelmTemplatePostrender</a></code> | Postrender command config. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.renderSubchartNotes">RenderSubchartNotes</a></code> | <code>object</code> | If set, render subchart notes along with the parent. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.replace">Replace</a></code> | <code>object</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repository">Repository</a></code> | <code>string</code> | Repository where to locate the requested chart. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repositoryCaFile">RepositoryCaFile</a></code> | <code>string</code> | The repository's CA file. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repositoryCertFile">RepositoryCertFile</a></code> | <code>string</code> | The repository's cert file. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repositoryKeyFile">RepositoryKeyFile</a></code> | <code>string</code> | The repository's cert key file. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repositoryPassword">RepositoryPassword</a></code> | <code>string</code> | Password for HTTP basic authentication. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.repositoryUsername">RepositoryUsername</a></code> | <code>string</code> | Username for HTTP basic authentication. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.resetValues">ResetValues</a></code> | <code>object</code> | When upgrading, reset the values to the ones built into the chart.Defaults to `false`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.reuseValues">ReuseValues</a></code> | <code>object</code> | When upgrading, reuse the last release's values and merge in any overrides. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.set">Set</a></code> | <code>object</code> | set block. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.setList">SetList</a></code> | <code>object</code> | set_list block. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.setSensitive">SetSensitive</a></code> | <code>object</code> | set_sensitive block. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.setString">SetString</a></code> | <code>object</code> | set_string block. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.resetValues">ResetValues</a></code> | <code>object</code> | When upgrading, reset the values to the ones built into the chart. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.reuseValues">ReuseValues</a></code> | <code>object</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.set">Set</a></code> | <code>object</code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.setList">SetList</a></code> | <code>object</code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.setSensitive">SetSensitive</a></code> | <code>object</code> | Custom sensitive values to be merged with the values. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.showOnly">ShowOnly</a></code> | <code>string[]</code> | Only show manifests rendered from the given templates. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.skipCrds">SkipCrds</a></code> | <code>object</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.skipTests">SkipTests</a></code> | <code>object</code> | If set, tests will not be rendered. By default, tests are rendered. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.timeout">Timeout</a></code> | <code>double</code> | Time in seconds to wait for any individual kubernetes operation. Defaults to `300` seconds. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.skipCrds">SkipCrds</a></code> | <code>object</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.skipTests">SkipTests</a></code> | <code>object</code> | If set, tests will not be rendered. By default, tests are rendered. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.timeout">Timeout</a></code> | <code>double</code> | Time in seconds to wait for any individual Kubernetes operation. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.validate">Validate</a></code> | <code>object</code> | Validate your manifests against the Kubernetes cluster you are currently pointing at. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.values">Values</a></code> | <code>string[]</code> | List of values in raw yaml format to pass to helm. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.verify">Verify</a></code> | <code>object</code> | Verify the package before installing it.Defaults to `false`. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.verify">Verify</a></code> | <code>object</code> | Verify the package before installing it. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.version">Version</a></code> | <code>string</code> | Specify the exact chart version to install. If this is not specified, the latest version is installed. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.wait">Wait</a></code> | <code>object</code> | Will wait until all resources are in a ready state before marking the release as successful.Defaults to `true`. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.wait">Wait</a></code> | <code>object</code> | Will wait until all resources are in a ready state before marking the release as successful. |
 
 ---
 
@@ -2096,7 +2032,7 @@ public string Chart { get; set; }
 
 Chart name to be installed. A path may be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#chart DataHelmTemplate#chart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#chart DataHelmTemplate#chart}
 
 ---
 
@@ -2110,7 +2046,7 @@ public string Name { get; set; }
 
 Release name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#name DataHelmTemplate#name}
 
 ---
 
@@ -2124,7 +2060,7 @@ public string[] ApiVersions { get; set; }
 
 Kubernetes api versions used for Capabilities.APIVersions.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#api_versions DataHelmTemplate#api_versions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#api_versions DataHelmTemplate#api_versions}
 
 ---
 
@@ -2136,11 +2072,11 @@ public object Atomic { get; set; }
 
 - *Type:* object
 
-If set, installation process purges chart on fail.
+If set, the installation process purges the chart on fail.
 
-The wait flag will be set automatically if atomic is used. Defaults to `false`.
+The 'wait' flag will be set automatically if 'atomic' is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#atomic DataHelmTemplate#atomic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#atomic DataHelmTemplate#atomic}
 
 ---
 
@@ -2154,7 +2090,7 @@ public string[] Crds { get; set; }
 
 List of rendered CRDs from the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#crds DataHelmTemplate#crds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#crds DataHelmTemplate#crds}
 
 ---
 
@@ -2166,9 +2102,9 @@ public object CreateNamespace { get; set; }
 
 - *Type:* object
 
-Create the namespace if it does not exist. Defaults to `false`.
+Create the namespace if it does not exist.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#create_namespace DataHelmTemplate#create_namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#create_namespace DataHelmTemplate#create_namespace}
 
 ---
 
@@ -2180,9 +2116,9 @@ public object DependencyUpdate { get; set; }
 
 - *Type:* object
 
-Run helm dependency update before installing the chart. Defaults to `false`.
+Run helm dependency update before installing the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#dependency_update DataHelmTemplate#dependency_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#dependency_update DataHelmTemplate#dependency_update}
 
 ---
 
@@ -2196,7 +2132,7 @@ public string Description { get; set; }
 
 Add a custom description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#description DataHelmTemplate#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#description DataHelmTemplate#description}
 
 ---
 
@@ -2210,7 +2146,7 @@ public object Devel { get; set; }
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#devel DataHelmTemplate#devel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#devel DataHelmTemplate#devel}
 
 ---
 
@@ -2222,9 +2158,9 @@ public object DisableOpenapiValidation { get; set; }
 
 - *Type:* object
 
-If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.Defaults to `false`.
+If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#disable_openapi_validation DataHelmTemplate#disable_openapi_validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#disable_openapi_validation DataHelmTemplate#disable_openapi_validation}
 
 ---
 
@@ -2236,24 +2172,9 @@ public object DisableWebhooks { get; set; }
 
 - *Type:* object
 
-Prevent hooks from running.Defaults to `300` seconds.
+Prevent hooks from running.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#disable_webhooks DataHelmTemplate#disable_webhooks}
-
----
-
-##### `Id`<sup>Optional</sup> <a name="Id" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.id"></a>
-
-```csharp
-public string Id { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#id DataHelmTemplate#id}.
-
-Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#disable_webhooks DataHelmTemplate#disable_webhooks}
 
 ---
 
@@ -2267,7 +2188,7 @@ public object IncludeCrds { get; set; }
 
 Include CRDs in the templated output.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#include_crds DataHelmTemplate#include_crds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#include_crds DataHelmTemplate#include_crds}
 
 ---
 
@@ -2281,7 +2202,7 @@ public object IsUpgrade { get; set; }
 
 Set .Release.IsUpgrade instead of .Release.IsInstall.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#is_upgrade DataHelmTemplate#is_upgrade}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#is_upgrade DataHelmTemplate#is_upgrade}
 
 ---
 
@@ -2293,11 +2214,9 @@ public string Keyring { get; set; }
 
 - *Type:* string
 
-Location of public keys used for verification.
+Location of public keys used for verification. Used only if `verify` is true.
 
-Used only if `verify` is true. Defaults to `/.gnupg/pubring.gpg` in the location set by `home`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#keyring DataHelmTemplate#keyring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#keyring DataHelmTemplate#keyring}
 
 ---
 
@@ -2311,7 +2230,7 @@ public string KubeVersion { get; set; }
 
 Kubernetes version used for Capabilities.KubeVersion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#kube_version DataHelmTemplate#kube_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#kube_version DataHelmTemplate#kube_version}
 
 ---
 
@@ -2325,7 +2244,7 @@ public string Manifest { get; set; }
 
 Concatenated rendered chart templates. This corresponds to the output of the `helm template` command.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#manifest DataHelmTemplate#manifest}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#manifest DataHelmTemplate#manifest}
 
 ---
 
@@ -2339,7 +2258,7 @@ public System.Collections.Generic.IDictionary<string, string> Manifests { get; s
 
 Map of rendered chart templates indexed by the template name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#manifests DataHelmTemplate#manifests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#manifests DataHelmTemplate#manifests}
 
 ---
 
@@ -2351,9 +2270,9 @@ public string Namespace { get; set; }
 
 - *Type:* string
 
-Namespace to install the release into. Defaults to `default`.
+Namespace to install the release into.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#namespace DataHelmTemplate#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#namespace DataHelmTemplate#namespace}
 
 ---
 
@@ -2367,7 +2286,7 @@ public string Notes { get; set; }
 
 Rendered notes if the chart contains a `NOTES.txt`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#notes DataHelmTemplate#notes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#notes DataHelmTemplate#notes}
 
 ---
 
@@ -2379,9 +2298,9 @@ public object PassCredentials { get; set; }
 
 - *Type:* object
 
-Pass credentials to all domains. Defaults to `false`.
+Pass credentials to all domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#pass_credentials DataHelmTemplate#pass_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#pass_credentials DataHelmTemplate#pass_credentials}
 
 ---
 
@@ -2393,9 +2312,9 @@ public DataHelmTemplatePostrender Postrender { get; set; }
 
 - *Type:* <a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender">DataHelmTemplatePostrender</a>
 
-postrender block.
+Postrender command config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#postrender DataHelmTemplate#postrender}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#postrender DataHelmTemplate#postrender}
 
 ---
 
@@ -2407,9 +2326,9 @@ public object RenderSubchartNotes { get; set; }
 
 - *Type:* object
 
-If set, render subchart notes along with the parent. Defaults to `true`.
+If set, render subchart notes along with the parent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#render_subchart_notes DataHelmTemplate#render_subchart_notes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#render_subchart_notes DataHelmTemplate#render_subchart_notes}
 
 ---
 
@@ -2421,9 +2340,9 @@ public object Replace { get; set; }
 
 - *Type:* object
 
-Re-use the given name, even if that name is already used. This is unsafe in production. Defaults to `false`.
+Re-use the given name, even if that name is already used. This is unsafe in production.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#replace DataHelmTemplate#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#replace DataHelmTemplate#replace}
 
 ---
 
@@ -2435,9 +2354,11 @@ public string Repository { get; set; }
 
 - *Type:* string
 
-Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
+Repository where to locate the requested chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#repository DataHelmTemplate#repository}
+If it is a URL the chart is installed without installing the repository.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#repository DataHelmTemplate#repository}
 
 ---
 
@@ -2449,9 +2370,9 @@ public string RepositoryCaFile { get; set; }
 
 - *Type:* string
 
-The Repositories CA File.
+The repository's CA file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#repository_ca_file DataHelmTemplate#repository_ca_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#repository_ca_file DataHelmTemplate#repository_ca_file}
 
 ---
 
@@ -2463,9 +2384,9 @@ public string RepositoryCertFile { get; set; }
 
 - *Type:* string
 
-The repositories cert file.
+The repository's cert file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#repository_cert_file DataHelmTemplate#repository_cert_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#repository_cert_file DataHelmTemplate#repository_cert_file}
 
 ---
 
@@ -2477,9 +2398,9 @@ public string RepositoryKeyFile { get; set; }
 
 - *Type:* string
 
-The repositories cert key file.
+The repository's cert key file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#repository_key_file DataHelmTemplate#repository_key_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#repository_key_file DataHelmTemplate#repository_key_file}
 
 ---
 
@@ -2493,7 +2414,7 @@ public string RepositoryPassword { get; set; }
 
 Password for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#repository_password DataHelmTemplate#repository_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#repository_password DataHelmTemplate#repository_password}
 
 ---
 
@@ -2507,7 +2428,7 @@ public string RepositoryUsername { get; set; }
 
 Username for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#repository_username DataHelmTemplate#repository_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#repository_username DataHelmTemplate#repository_username}
 
 ---
 
@@ -2519,9 +2440,9 @@ public object ResetValues { get; set; }
 
 - *Type:* object
 
-When upgrading, reset the values to the ones built into the chart.Defaults to `false`.
+When upgrading, reset the values to the ones built into the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#reset_values DataHelmTemplate#reset_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#reset_values DataHelmTemplate#reset_values}
 
 ---
 
@@ -2533,11 +2454,9 @@ public object ReuseValues { get; set; }
 
 - *Type:* object
 
-When upgrading, reuse the last release's values and merge in any overrides.
+When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
-If 'reset_values' is specified, this is ignored. Defaults to `false`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#reuse_values DataHelmTemplate#reuse_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#reuse_values DataHelmTemplate#reuse_values}
 
 ---
 
@@ -2549,9 +2468,9 @@ public object Set { get; set; }
 
 - *Type:* object
 
-set block.
+Custom values to be merged with the values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#set DataHelmTemplate#set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#set DataHelmTemplate#set}
 
 ---
 
@@ -2563,9 +2482,9 @@ public object SetList { get; set; }
 
 - *Type:* object
 
-set_list block.
+Custom sensitive values to be merged with the values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#set_list DataHelmTemplate#set_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#set_list DataHelmTemplate#set_list}
 
 ---
 
@@ -2577,23 +2496,9 @@ public object SetSensitive { get; set; }
 
 - *Type:* object
 
-set_sensitive block.
+Custom sensitive values to be merged with the values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#set_sensitive DataHelmTemplate#set_sensitive}
-
----
-
-##### `SetString`<sup>Optional</sup> <a name="SetString" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateConfig.property.setString"></a>
-
-```csharp
-public object SetString { get; set; }
-```
-
-- *Type:* object
-
-set_string block.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#set_string DataHelmTemplate#set_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#set_sensitive DataHelmTemplate#set_sensitive}
 
 ---
 
@@ -2607,7 +2512,7 @@ public string[] ShowOnly { get; set; }
 
 Only show manifests rendered from the given templates.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#show_only DataHelmTemplate#show_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#show_only DataHelmTemplate#show_only}
 
 ---
 
@@ -2619,9 +2524,9 @@ public object SkipCrds { get; set; }
 
 - *Type:* object
 
-If set, no CRDs will be installed. By default, CRDs are installed if not already present. Defaults to `false`.
+If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#skip_crds DataHelmTemplate#skip_crds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#skip_crds DataHelmTemplate#skip_crds}
 
 ---
 
@@ -2633,9 +2538,9 @@ public object SkipTests { get; set; }
 
 - *Type:* object
 
-If set, tests will not be rendered. By default, tests are rendered. Defaults to `false`.
+If set, tests will not be rendered. By default, tests are rendered.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#skip_tests DataHelmTemplate#skip_tests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#skip_tests DataHelmTemplate#skip_tests}
 
 ---
 
@@ -2647,9 +2552,9 @@ public double Timeout { get; set; }
 
 - *Type:* double
 
-Time in seconds to wait for any individual kubernetes operation. Defaults to `300` seconds.
+Time in seconds to wait for any individual Kubernetes operation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#timeout DataHelmTemplate#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#timeout DataHelmTemplate#timeout}
 
 ---
 
@@ -2663,9 +2568,9 @@ public object Validate { get; set; }
 
 Validate your manifests against the Kubernetes cluster you are currently pointing at.
 
-This is the same validation performed on an install
+This is the same validation performed on an install.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#validate DataHelmTemplate#validate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#validate DataHelmTemplate#validate}
 
 ---
 
@@ -2679,7 +2584,7 @@ public string[] Values { get; set; }
 
 List of values in raw yaml format to pass to helm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#values DataHelmTemplate#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#values DataHelmTemplate#values}
 
 ---
 
@@ -2691,9 +2596,9 @@ public object Verify { get; set; }
 
 - *Type:* object
 
-Verify the package before installing it.Defaults to `false`.
+Verify the package before installing it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#verify DataHelmTemplate#verify}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#verify DataHelmTemplate#verify}
 
 ---
 
@@ -2707,7 +2612,7 @@ public string Version { get; set; }
 
 Specify the exact chart version to install. If this is not specified, the latest version is installed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#version DataHelmTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#version DataHelmTemplate#version}
 
 ---
 
@@ -2719,9 +2624,9 @@ public object Wait { get; set; }
 
 - *Type:* object
 
-Will wait until all resources are in a ready state before marking the release as successful.Defaults to `true`.
+Will wait until all resources are in a ready state before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#wait DataHelmTemplate#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#wait DataHelmTemplate#wait}
 
 ---
 
@@ -2733,7 +2638,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Helm;
 
 new DataHelmTemplatePostrender {
-    string BinaryPath
+    string BinaryPath,
+    string[] Args = null
 };
 ```
 
@@ -2741,7 +2647,8 @@ new DataHelmTemplatePostrender {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender.property.binaryPath">BinaryPath</a></code> | <code>string</code> | The command binary path. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender.property.binaryPath">BinaryPath</a></code> | <code>string</code> | The common binary path. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender.property.args">Args</a></code> | <code>string[]</code> | An argument to the post-renderer (can specify multiple). |
 
 ---
 
@@ -2753,9 +2660,23 @@ public string BinaryPath { get; set; }
 
 - *Type:* string
 
-The command binary path.
+The common binary path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#binary_path DataHelmTemplate#binary_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#binary_path DataHelmTemplate#binary_path}
+
+---
+
+##### `Args`<sup>Optional</sup> <a name="Args" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender.property.args"></a>
+
+```csharp
+public string[] Args { get; set; }
+```
+
+- *Type:* string[]
+
+An argument to the post-renderer (can specify multiple).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#args DataHelmTemplate#args}
 
 ---
 
@@ -2768,8 +2689,8 @@ using HashiCorp.Cdktf.Providers.Helm;
 
 new DataHelmTemplateSet {
     string Name,
-    string Value,
-    string Type = null
+    string Type = null,
+    string Value = null
 };
 ```
 
@@ -2777,9 +2698,9 @@ new DataHelmTemplateSet {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#value DataHelmTemplate#value}. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#type DataHelmTemplate#type}. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#name DataHelmTemplate#name}. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#type DataHelmTemplate#type}. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#value DataHelmTemplate#value}. |
 
 ---
 
@@ -2791,19 +2712,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}.
-
----
-
-##### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.property.value"></a>
-
-```csharp
-public string Value { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#value DataHelmTemplate#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#name DataHelmTemplate#name}.
 
 ---
 
@@ -2815,7 +2724,19 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#type DataHelmTemplate#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#type DataHelmTemplate#type}.
+
+---
+
+##### `Value`<sup>Optional</sup> <a name="Value" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSet.property.value"></a>
+
+```csharp
+public string Value { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#value DataHelmTemplate#value}.
 
 ---
 
@@ -2827,8 +2748,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Helm;
 
 new DataHelmTemplateSetListStruct {
-    string Name,
-    string[] Value
+    string[] Value,
+    string Name = null
 };
 ```
 
@@ -2836,20 +2757,8 @@ new DataHelmTemplateSetListStruct {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStruct.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStruct.property.value">Value</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#value DataHelmTemplate#value}. |
-
----
-
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStruct.property.name"></a>
-
-```csharp
-public string Name { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}.
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStruct.property.value">Value</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#value DataHelmTemplate#value}. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStruct.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#name DataHelmTemplate#name}. |
 
 ---
 
@@ -2861,7 +2770,19 @@ public string[] Value { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#value DataHelmTemplate#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#value DataHelmTemplate#value}.
+
+---
+
+##### `Name`<sup>Optional</sup> <a name="Name" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStruct.property.name"></a>
+
+```csharp
+public string Name { get; set; }
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#name DataHelmTemplate#name}.
 
 ---
 
@@ -2883,9 +2804,9 @@ new DataHelmTemplateSetSensitive {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitive.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitive.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#value DataHelmTemplate#value}. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitive.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#type DataHelmTemplate#type}. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitive.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#name DataHelmTemplate#name}. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitive.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#value DataHelmTemplate#value}. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitive.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#type DataHelmTemplate#type}. |
 
 ---
 
@@ -2897,7 +2818,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#name DataHelmTemplate#name}.
 
 ---
 
@@ -2909,7 +2830,7 @@ public string Value { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#value DataHelmTemplate#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#value DataHelmTemplate#value}.
 
 ---
 
@@ -2921,53 +2842,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#type DataHelmTemplate#type}.
-
----
-
-### DataHelmTemplateSetString <a name="DataHelmTemplateSetString" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetString"></a>
-
-#### Initializer <a name="Initializer" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetString.Initializer"></a>
-
-```csharp
-using HashiCorp.Cdktf.Providers.Helm;
-
-new DataHelmTemplateSetString {
-    string Name,
-    string Value
-};
-```
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetString.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetString.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#value DataHelmTemplate#value}. |
-
----
-
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetString.property.name"></a>
-
-```csharp
-public string Name { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#name DataHelmTemplate#name}.
-
----
-
-##### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetString.property.value"></a>
-
-```csharp
-public string Value { get; set; }
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs/data-sources/template#value DataHelmTemplate#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs/data-sources/template#type DataHelmTemplate#type}.
 
 ---
 
@@ -3023,6 +2898,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.resetArgs">ResetArgs</a></code> | *No description.* |
 
 ---
 
@@ -3176,6 +3052,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetArgs` <a name="ResetArgs" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.resetArgs"></a>
+
+```csharp
+private void ResetArgs()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -3183,9 +3065,11 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.argsInput">ArgsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.binaryPathInput">BinaryPathInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.args">Args</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.binaryPath">BinaryPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender">DataHelmTemplatePostrender</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
 
 ---
 
@@ -3213,6 +3097,16 @@ public string Fqn { get; }
 
 ---
 
+##### `ArgsInput`<sup>Optional</sup> <a name="ArgsInput" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.argsInput"></a>
+
+```csharp
+public string[] ArgsInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
 ##### `BinaryPathInput`<sup>Optional</sup> <a name="BinaryPathInput" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.binaryPathInput"></a>
 
 ```csharp
@@ -3220,6 +3114,16 @@ public string BinaryPathInput { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `Args`<sup>Required</sup> <a name="Args" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.args"></a>
+
+```csharp
+public string[] Args { get; }
+```
+
+- *Type:* string[]
 
 ---
 
@@ -3236,10 +3140,10 @@ public string BinaryPath { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrenderOutputReference.property.internalValue"></a>
 
 ```csharp
-public DataHelmTemplatePostrender InternalValue { get; }
+public object InternalValue { get; }
 ```
 
-- *Type:* <a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplatePostrender">DataHelmTemplatePostrender</a>
+- *Type:* object
 
 ---
 
@@ -3632,6 +3536,7 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStructOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStructOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStructOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStructOutputReference.resetName">ResetName</a></code> | *No description.* |
 
 ---
 
@@ -3784,6 +3689,12 @@ private string ToString()
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `ResetName` <a name="ResetName" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetListStructOutputReference.resetName"></a>
+
+```csharp
+private void ResetName()
+```
 
 
 #### Properties <a name="Properties" id="Properties"></a>
@@ -3944,6 +3855,7 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetOutputReference.resetType">ResetType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetOutputReference.resetValue">ResetValue</a></code> | *No description.* |
 
 ---
 
@@ -4101,6 +4013,12 @@ Returns a reversible string representation.
 
 ```csharp
 private void ResetType()
+```
+
+##### `ResetValue` <a name="ResetValue" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetOutputReference.resetValue"></a>
+
+```csharp
+private void ResetValue()
 ```
 
 
@@ -4705,477 +4623,6 @@ public string Value { get; }
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetSensitiveOutputReference.property.internalValue"></a>
-
-```csharp
-public object InternalValue { get; }
-```
-
-- *Type:* object
-
----
-
-
-### DataHelmTemplateSetStringList <a name="DataHelmTemplateSetStringList" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList"></a>
-
-#### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.Initializer"></a>
-
-```csharp
-using HashiCorp.Cdktf.Providers.Helm;
-
-new DataHelmTemplateSetStringList(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
-```
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
-
----
-
-##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.Initializer.parameter.terraformResource"></a>
-
-- *Type:* HashiCorp.Cdktf.IInterpolatingParent
-
-The parent resource.
-
----
-
-##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.Initializer.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.Initializer.parameter.wrapsSet"></a>
-
-- *Type:* bool
-
-whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
-
----
-
-#### Methods <a name="Methods" id="Methods"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.get">Get</a></code> | *No description.* |
-
----
-
-##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.allWithMapKey"></a>
-
-```csharp
-private DynamicListTerraformIterator AllWithMapKey(string MapKeyAttributeName)
-```
-
-Creating an iterator for this complex list.
-
-The list will be converted into a map with the mapKeyAttributeName as the key.
-
-###### `MapKeyAttributeName`<sup>Required</sup> <a name="MapKeyAttributeName" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.allWithMapKey.parameter.mapKeyAttributeName"></a>
-
-- *Type:* string
-
----
-
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.computeFqn"></a>
-
-```csharp
-private string ComputeFqn()
-```
-
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.resolve"></a>
-
-```csharp
-private object Resolve(IResolveContext Context)
-```
-
-Produce the Token's value at resolution time.
-
-###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.resolve.parameter._context"></a>
-
-- *Type:* HashiCorp.Cdktf.IResolveContext
-
----
-
-##### `ToString` <a name="ToString" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.toString"></a>
-
-```csharp
-private string ToString()
-```
-
-Return a string representation of this resolvable object.
-
-Returns a reversible string representation.
-
-##### `Get` <a name="Get" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.get"></a>
-
-```csharp
-private DataHelmTemplateSetStringOutputReference Get(double Index)
-```
-
-###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.get.parameter.index"></a>
-
-- *Type:* double
-
-the index of the item to return.
-
----
-
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
-
----
-
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.property.creationStack"></a>
-
-```csharp
-public string[] CreationStack { get; }
-```
-
-- *Type:* string[]
-
-The creation stack of this resolvable which will be appended to errors thrown during resolution.
-
-If this returns an empty array the stack will not be attached.
-
----
-
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.property.fqn"></a>
-
-```csharp
-public string Fqn { get; }
-```
-
-- *Type:* string
-
----
-
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringList.property.internalValue"></a>
-
-```csharp
-public object InternalValue { get; }
-```
-
-- *Type:* object
-
----
-
-
-### DataHelmTemplateSetStringOutputReference <a name="DataHelmTemplateSetStringOutputReference" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference"></a>
-
-#### Initializers <a name="Initializers" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer"></a>
-
-```csharp
-using HashiCorp.Cdktf.Providers.Helm;
-
-new DataHelmTemplateSetStringOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
-```
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
-
----
-
-##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer.parameter.terraformResource"></a>
-
-- *Type:* HashiCorp.Cdktf.IInterpolatingParent
-
-The parent resource.
-
----
-
-##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
-The attribute on the parent resource this class is referencing.
-
----
-
-##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer.parameter.complexObjectIndex"></a>
-
-- *Type:* double
-
-the index of this item in the list.
-
----
-
-##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
-
-- *Type:* bool
-
-whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
-
----
-
-#### Methods <a name="Methods" id="Methods"></a>
-
-| **Name** | **Description** |
-| --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
-
----
-
-##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.computeFqn"></a>
-
-```csharp
-private string ComputeFqn()
-```
-
-##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getAnyMapAttribute"></a>
-
-```csharp
-private System.Collections.Generic.IDictionary<string, object> GetAnyMapAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getBooleanAttribute"></a>
-
-```csharp
-private IResolvable GetBooleanAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getBooleanMapAttribute"></a>
-
-```csharp
-private System.Collections.Generic.IDictionary<string, bool> GetBooleanMapAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getListAttribute"></a>
-
-```csharp
-private string[] GetListAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getListAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberAttribute"></a>
-
-```csharp
-private double GetNumberAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberListAttribute"></a>
-
-```csharp
-private double[] GetNumberListAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberMapAttribute"></a>
-
-```csharp
-private System.Collections.Generic.IDictionary<string, double> GetNumberMapAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getStringAttribute"></a>
-
-```csharp
-private string GetStringAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getStringMapAttribute"></a>
-
-```csharp
-private System.Collections.Generic.IDictionary<string, string> GetStringMapAttribute(string TerraformAttribute)
-```
-
-###### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
-
-- *Type:* string
-
----
-
-##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.interpolationForAttribute"></a>
-
-```csharp
-private IResolvable InterpolationForAttribute(string Property)
-```
-
-###### `Property`<sup>Required</sup> <a name="Property" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.interpolationForAttribute.parameter.property"></a>
-
-- *Type:* string
-
----
-
-##### `Resolve` <a name="Resolve" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.resolve"></a>
-
-```csharp
-private object Resolve(IResolveContext Context)
-```
-
-Produce the Token's value at resolution time.
-
-###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.resolve.parameter._context"></a>
-
-- *Type:* HashiCorp.Cdktf.IResolveContext
-
----
-
-##### `ToString` <a name="ToString" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.toString"></a>
-
-```csharp
-private string ToString()
-```
-
-Return a string representation of this resolvable object.
-
-Returns a reversible string representation.
-
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.valueInput">ValueInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
-
----
-
-##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.creationStack"></a>
-
-```csharp
-public string[] CreationStack { get; }
-```
-
-- *Type:* string[]
-
-The creation stack of this resolvable which will be appended to errors thrown during resolution.
-
-If this returns an empty array the stack will not be attached.
-
----
-
-##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.fqn"></a>
-
-```csharp
-public string Fqn { get; }
-```
-
-- *Type:* string
-
----
-
-##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.nameInput"></a>
-
-```csharp
-public string NameInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `ValueInput`<sup>Optional</sup> <a name="ValueInput" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.valueInput"></a>
-
-```csharp
-public string ValueInput { get; }
-```
-
-- *Type:* string
-
----
-
-##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.name"></a>
-
-```csharp
-public string Name { get; }
-```
-
-- *Type:* string
-
----
-
-##### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.value"></a>
-
-```csharp
-public string Value { get; }
-```
-
-- *Type:* string
-
----
-
-##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.dataHelmTemplate.DataHelmTemplateSetStringOutputReference.property.internalValue"></a>
 
 ```csharp
 public object InternalValue { get; }

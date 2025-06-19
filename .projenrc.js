@@ -7,7 +7,7 @@ const { CdktfProviderProject } = require("@cdktf/provider-project");
 
 const project = new CdktfProviderProject({
   useCustomGithubRunner: false,
-  terraformProvider: "helm@~> 2.3",
+  terraformProvider: "helm@~> 3.0",
   cdktfVersion: "^0.21.0",
   constructsVersion: "^10.4.2",
   minNodeVersion: "20.9.0",

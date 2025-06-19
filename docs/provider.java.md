@@ -4,7 +4,7 @@
 
 ### HelmProvider <a name="HelmProvider" id="@cdktf/provider-helm.provider.HelmProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs helm}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs helm}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.provider.HelmProvider.Initializer"></a>
 
@@ -20,8 +20,8 @@ HelmProvider.Builder.create(Construct scope, java.lang.String id)
 //  .helmDriver(java.lang.String)
 //  .kubernetes(HelmProviderKubernetes)
 //  .pluginsPath(java.lang.String)
-//  .registry(IResolvable)
-//  .registry(java.util.List<HelmProviderRegistry>)
+//  .registries(IResolvable)
+//  .registries(java.util.List<HelmProviderRegistries>)
 //  .registryConfigPath(java.lang.String)
 //  .repositoryCache(java.lang.String)
 //  .repositoryConfigPath(java.lang.String)
@@ -35,11 +35,11 @@ HelmProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.burstLimit">burstLimit</a></code> | <code>java.lang.Number</code> | Helm burst limit. Increase this if you have a cluster with many CRDs. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.debug">debug</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | experiments block. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | Enable and disable experimental features. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.helmDriver">helmDriver</a></code> | <code>java.lang.String</code> | The backend storage driver. Values are: configmap, secret, memory, sql. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | kubernetes block. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | Kubernetes Configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.pluginsPath">pluginsPath</a></code> | <code>java.lang.String</code> | The path to the helm plugins directory. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registry">registry</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistry">HelmProviderRegistry</a>></code> | registry block. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | RegistryClient configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registryConfigPath">registryConfigPath</a></code> | <code>java.lang.String</code> | The path to the registry config file. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.repositoryCache">repositoryCache</a></code> | <code>java.lang.String</code> | The path to the file containing cached repository indexes. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.repositoryConfigPath">repositoryConfigPath</a></code> | <code>java.lang.String</code> | The path to the file containing repository names and URLs. |
@@ -70,7 +70,7 @@ Must be unique amongst siblings in the same scope
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#alias HelmProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#alias HelmProvider#alias}
 
 ---
 
@@ -80,7 +80,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Helm burst limit. Increase this if you have a cluster with many CRDs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#burst_limit HelmProvider#burst_limit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#burst_limit HelmProvider#burst_limit}
 
 ---
 
@@ -90,7 +90,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Debug indicates whether or not Helm is running in Debug mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#debug HelmProvider#debug}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#debug HelmProvider#debug}
 
 ---
 
@@ -98,9 +98,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* <a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a>
 
-experiments block.
+Enable and disable experimental features.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#experiments HelmProvider#experiments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#experiments HelmProvider#experiments}
 
 ---
 
@@ -110,7 +110,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The backend storage driver. Values are: configmap, secret, memory, sql.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#helm_driver HelmProvider#helm_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#helm_driver HelmProvider#helm_driver}
 
 ---
 
@@ -118,9 +118,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* <a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a>
 
-kubernetes block.
+Kubernetes Configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#kubernetes HelmProvider#kubernetes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#kubernetes HelmProvider#kubernetes}
 
 ---
 
@@ -130,17 +130,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The path to the helm plugins directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#plugins_path HelmProvider#plugins_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#plugins_path HelmProvider#plugins_path}
 
 ---
 
-##### `registry`<sup>Optional</sup> <a name="registry" id="@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registry"></a>
+##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registries"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistry">HelmProviderRegistry</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
 
-registry block.
+RegistryClient configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#registry HelmProvider#registry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#registries HelmProvider#registries}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The path to the registry config file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#registry_config_path HelmProvider#registry_config_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#registry_config_path HelmProvider#registry_config_path}
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The path to the file containing cached repository indexes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#repository_cache HelmProvider#repository_cache}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#repository_cache HelmProvider#repository_cache}
 
 ---
 
@@ -170,7 +170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The path to the file containing repository names and URLs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#repository_config_path HelmProvider#repository_config_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#repository_config_path HelmProvider#repository_config_path}
 
 ---
 
@@ -192,7 +192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.resetHelmDriver">resetHelmDriver</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.resetKubernetes">resetKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.resetPluginsPath">resetPluginsPath</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.resetRegistry">resetRegistry</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.resetRegistries">resetRegistries</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.resetRegistryConfigPath">resetRegistryConfigPath</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.resetRepositoryCache">resetRepositoryCache</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.resetRepositoryConfigPath">resetRepositoryConfigPath</a></code> | *No description.* |
@@ -311,10 +311,10 @@ public void resetKubernetes()
 public void resetPluginsPath()
 ```
 
-##### `resetRegistry` <a name="resetRegistry" id="@cdktf/provider-helm.provider.HelmProvider.resetRegistry"></a>
+##### `resetRegistries` <a name="resetRegistries" id="@cdktf/provider-helm.provider.HelmProvider.resetRegistries"></a>
 
 ```java
-public void resetRegistry()
+public void resetRegistries()
 ```
 
 ##### `resetRegistryConfigPath` <a name="resetRegistryConfigPath" id="@cdktf/provider-helm.provider.HelmProvider.resetRegistryConfigPath"></a>
@@ -438,7 +438,7 @@ The construct id used in the generated config for the HelmProvider to import.
 
 The id of the existing HelmProvider that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -470,8 +470,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.helmDriverInput">helmDriverInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.kubernetesInput">kubernetesInput</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.pluginsPathInput">pluginsPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registriesInput">registriesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPathInput">registryConfigPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryInput">registryInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistry">HelmProviderRegistry</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryCacheInput">repositoryCacheInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryConfigPathInput">repositoryConfigPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.burstLimit">burstLimit</a></code> | <code>java.lang.Number</code> | *No description.* |
@@ -480,7 +480,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.helmDriver">helmDriver</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.pluginsPath">pluginsPath</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registry">registry</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistry">HelmProviderRegistry</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPath">registryConfigPath</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryCache">repositoryCache</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryConfigPath">repositoryConfigPath</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -649,6 +649,16 @@ public java.lang.String getPluginsPathInput();
 
 ---
 
+##### `registriesInput`<sup>Optional</sup> <a name="registriesInput" id="@cdktf/provider-helm.provider.HelmProvider.property.registriesInput"></a>
+
+```java
+public java.lang.Object getRegistriesInput();
+```
+
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
+
+---
+
 ##### `registryConfigPathInput`<sup>Optional</sup> <a name="registryConfigPathInput" id="@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPathInput"></a>
 
 ```java
@@ -656,16 +666,6 @@ public java.lang.String getRegistryConfigPathInput();
 ```
 
 - *Type:* java.lang.String
-
----
-
-##### `registryInput`<sup>Optional</sup> <a name="registryInput" id="@cdktf/provider-helm.provider.HelmProvider.property.registryInput"></a>
-
-```java
-public java.lang.Object getRegistryInput();
-```
-
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistry">HelmProviderRegistry</a>>
 
 ---
 
@@ -749,13 +749,13 @@ public java.lang.String getPluginsPath();
 
 ---
 
-##### `registry`<sup>Optional</sup> <a name="registry" id="@cdktf/provider-helm.provider.HelmProvider.property.registry"></a>
+##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProvider.property.registries"></a>
 
 ```java
-public java.lang.Object getRegistry();
+public java.lang.Object getRegistries();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistry">HelmProviderRegistry</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
 
 ---
 
@@ -825,8 +825,8 @@ HelmProviderConfig.builder()
 //  .helmDriver(java.lang.String)
 //  .kubernetes(HelmProviderKubernetes)
 //  .pluginsPath(java.lang.String)
-//  .registry(IResolvable)
-//  .registry(java.util.List<HelmProviderRegistry>)
+//  .registries(IResolvable)
+//  .registries(java.util.List<HelmProviderRegistries>)
 //  .registryConfigPath(java.lang.String)
 //  .repositoryCache(java.lang.String)
 //  .repositoryConfigPath(java.lang.String)
@@ -840,11 +840,11 @@ HelmProviderConfig.builder()
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.burstLimit">burstLimit</a></code> | <code>java.lang.Number</code> | Helm burst limit. Increase this if you have a cluster with many CRDs. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.debug">debug</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | experiments block. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | Enable and disable experimental features. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.helmDriver">helmDriver</a></code> | <code>java.lang.String</code> | The backend storage driver. Values are: configmap, secret, memory, sql. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | kubernetes block. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | Kubernetes Configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.pluginsPath">pluginsPath</a></code> | <code>java.lang.String</code> | The path to the helm plugins directory. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registry">registry</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistry">HelmProviderRegistry</a>></code> | registry block. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | RegistryClient configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registryConfigPath">registryConfigPath</a></code> | <code>java.lang.String</code> | The path to the registry config file. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.repositoryCache">repositoryCache</a></code> | <code>java.lang.String</code> | The path to the file containing cached repository indexes. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.repositoryConfigPath">repositoryConfigPath</a></code> | <code>java.lang.String</code> | The path to the file containing repository names and URLs. |
@@ -861,7 +861,7 @@ public java.lang.String getAlias();
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#alias HelmProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#alias HelmProvider#alias}
 
 ---
 
@@ -875,7 +875,7 @@ public java.lang.Number getBurstLimit();
 
 Helm burst limit. Increase this if you have a cluster with many CRDs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#burst_limit HelmProvider#burst_limit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#burst_limit HelmProvider#burst_limit}
 
 ---
 
@@ -889,7 +889,7 @@ public java.lang.Object getDebug();
 
 Debug indicates whether or not Helm is running in Debug mode.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#debug HelmProvider#debug}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#debug HelmProvider#debug}
 
 ---
 
@@ -901,9 +901,9 @@ public HelmProviderExperiments getExperiments();
 
 - *Type:* <a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a>
 
-experiments block.
+Enable and disable experimental features.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#experiments HelmProvider#experiments}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#experiments HelmProvider#experiments}
 
 ---
 
@@ -917,7 +917,7 @@ public java.lang.String getHelmDriver();
 
 The backend storage driver. Values are: configmap, secret, memory, sql.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#helm_driver HelmProvider#helm_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#helm_driver HelmProvider#helm_driver}
 
 ---
 
@@ -929,9 +929,9 @@ public HelmProviderKubernetes getKubernetes();
 
 - *Type:* <a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a>
 
-kubernetes block.
+Kubernetes Configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#kubernetes HelmProvider#kubernetes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#kubernetes HelmProvider#kubernetes}
 
 ---
 
@@ -945,21 +945,21 @@ public java.lang.String getPluginsPath();
 
 The path to the helm plugins directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#plugins_path HelmProvider#plugins_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#plugins_path HelmProvider#plugins_path}
 
 ---
 
-##### `registry`<sup>Optional</sup> <a name="registry" id="@cdktf/provider-helm.provider.HelmProviderConfig.property.registry"></a>
+##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProviderConfig.property.registries"></a>
 
 ```java
-public java.lang.Object getRegistry();
+public java.lang.Object getRegistries();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistry">HelmProviderRegistry</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
 
-registry block.
+RegistryClient configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#registry HelmProvider#registry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#registries HelmProvider#registries}
 
 ---
 
@@ -973,7 +973,7 @@ public java.lang.String getRegistryConfigPath();
 
 The path to the registry config file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#registry_config_path HelmProvider#registry_config_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#registry_config_path HelmProvider#registry_config_path}
 
 ---
 
@@ -987,7 +987,7 @@ public java.lang.String getRepositoryCache();
 
 The path to the file containing cached repository indexes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#repository_cache HelmProvider#repository_cache}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#repository_cache HelmProvider#repository_cache}
 
 ---
 
@@ -1001,7 +1001,7 @@ public java.lang.String getRepositoryConfigPath();
 
 The path to the file containing repository names and URLs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#repository_config_path HelmProvider#repository_config_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#repository_config_path HelmProvider#repository_config_path}
 
 ---
 
@@ -1036,9 +1036,7 @@ public java.lang.Object getManifest();
 
 Enable full diff by storing the rendered manifest in the state.
 
-This has similar limitations as when using helm install --dry-run. See https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#install-a-crd-declaration-before-using-the-resource
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#manifest HelmProvider#manifest}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#manifest HelmProvider#manifest}
 
 ---
 
@@ -1077,18 +1075,18 @@ HelmProviderKubernetes.builder()
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.clientCertificate">clientCertificate</a></code> | <code>java.lang.String</code> | PEM-encoded client certificate for TLS authentication. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.clientKey">clientKey</a></code> | <code>java.lang.String</code> | PEM-encoded client certificate key for TLS authentication. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.clusterCaCertificate">clusterCaCertificate</a></code> | <code>java.lang.String</code> | PEM-encoded root certificates bundle for TLS authentication. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configContext">configContext</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#config_context HelmProvider#config_context}. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configContextAuthInfo">configContextAuthInfo</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#config_context_auth_info HelmProvider#config_context_auth_info}. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configContextCluster">configContextCluster</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#config_context_cluster HelmProvider#config_context_cluster}. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configContext">configContext</a></code> | <code>java.lang.String</code> | Context to choose from the config file. Can be sourced from KUBE_CTX. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configContextAuthInfo">configContextAuthInfo</a></code> | <code>java.lang.String</code> | Authentication info context of the kube config (name of the kubeconfig user, --user flag in kubectl). |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configContextCluster">configContextCluster</a></code> | <code>java.lang.String</code> | Cluster context of the kube config (name of the kubeconfig cluster, --cluster flag in kubectl). |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configPath">configPath</a></code> | <code>java.lang.String</code> | Path to the kube config file. Can be set with KUBE_CONFIG_PATH. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configPaths">configPaths</a></code> | <code>java.util.List<java.lang.String></code> | A list of paths to kube config files. Can be set with KUBE_CONFIG_PATHS environment variable. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.exec">exec</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec">HelmProviderKubernetesExec</a></code> | exec block. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.host">host</a></code> | <code>java.lang.String</code> | The hostname (in form of URI) of Kubernetes master. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.exec">exec</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec">HelmProviderKubernetesExec</a></code> | Exec configuration for Kubernetes authentication. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.host">host</a></code> | <code>java.lang.String</code> | The hostname (in form of URI) of kubernetes master. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure">insecure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether server should be accessed without verifying the TLS certificate. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.password">password</a></code> | <code>java.lang.String</code> | The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.proxyUrl">proxyUrl</a></code> | <code>java.lang.String</code> | URL to the proxy to be used for all API requests. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.tlsServerName">tlsServerName</a></code> | <code>java.lang.String</code> | Server name passed to the server for SNI and is used in the client to check server certificates against. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.token">token</a></code> | <code>java.lang.String</code> | Token to authenticate an service account. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.token">token</a></code> | <code>java.lang.String</code> | Token to authenticate a service account. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.username">username</a></code> | <code>java.lang.String</code> | The username to use for HTTP basic authentication when accessing the Kubernetes master endpoint. |
 
 ---
@@ -1103,7 +1101,7 @@ public java.lang.String getClientCertificate();
 
 PEM-encoded client certificate for TLS authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#client_certificate HelmProvider#client_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#client_certificate HelmProvider#client_certificate}
 
 ---
 
@@ -1117,7 +1115,7 @@ public java.lang.String getClientKey();
 
 PEM-encoded client certificate key for TLS authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#client_key HelmProvider#client_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#client_key HelmProvider#client_key}
 
 ---
 
@@ -1131,7 +1129,7 @@ public java.lang.String getClusterCaCertificate();
 
 PEM-encoded root certificates bundle for TLS authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#cluster_ca_certificate HelmProvider#cluster_ca_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#cluster_ca_certificate HelmProvider#cluster_ca_certificate}
 
 ---
 
@@ -1143,7 +1141,9 @@ public java.lang.String getConfigContext();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#config_context HelmProvider#config_context}.
+Context to choose from the config file. Can be sourced from KUBE_CTX.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#config_context HelmProvider#config_context}
 
 ---
 
@@ -1155,7 +1155,11 @@ public java.lang.String getConfigContextAuthInfo();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#config_context_auth_info HelmProvider#config_context_auth_info}.
+Authentication info context of the kube config (name of the kubeconfig user, --user flag in kubectl).
+
+Can be sourced from KUBE_CTX_AUTH_INFO.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#config_context_auth_info HelmProvider#config_context_auth_info}
 
 ---
 
@@ -1167,7 +1171,11 @@ public java.lang.String getConfigContextCluster();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#config_context_cluster HelmProvider#config_context_cluster}.
+Cluster context of the kube config (name of the kubeconfig cluster, --cluster flag in kubectl).
+
+Can be sourced from KUBE_CTX_CLUSTER.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#config_context_cluster HelmProvider#config_context_cluster}
 
 ---
 
@@ -1181,7 +1189,7 @@ public java.lang.String getConfigPath();
 
 Path to the kube config file. Can be set with KUBE_CONFIG_PATH.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#config_path HelmProvider#config_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#config_path HelmProvider#config_path}
 
 ---
 
@@ -1195,7 +1203,7 @@ public java.util.List<java.lang.String> getConfigPaths();
 
 A list of paths to kube config files. Can be set with KUBE_CONFIG_PATHS environment variable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#config_paths HelmProvider#config_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#config_paths HelmProvider#config_paths}
 
 ---
 
@@ -1207,9 +1215,9 @@ public HelmProviderKubernetesExec getExec();
 
 - *Type:* <a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec">HelmProviderKubernetesExec</a>
 
-exec block.
+Exec configuration for Kubernetes authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#exec HelmProvider#exec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#exec HelmProvider#exec}
 
 ---
 
@@ -1221,9 +1229,9 @@ public java.lang.String getHost();
 
 - *Type:* java.lang.String
 
-The hostname (in form of URI) of Kubernetes master.
+The hostname (in form of URI) of kubernetes master.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#host HelmProvider#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#host HelmProvider#host}
 
 ---
 
@@ -1237,7 +1245,7 @@ public java.lang.Object getInsecure();
 
 Whether server should be accessed without verifying the TLS certificate.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#insecure HelmProvider#insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#insecure HelmProvider#insecure}
 
 ---
 
@@ -1251,7 +1259,7 @@ public java.lang.String getPassword();
 
 The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#password HelmProvider#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#password HelmProvider#password}
 
 ---
 
@@ -1265,7 +1273,7 @@ public java.lang.String getProxyUrl();
 
 URL to the proxy to be used for all API requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#proxy_url HelmProvider#proxy_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#proxy_url HelmProvider#proxy_url}
 
 ---
 
@@ -1279,7 +1287,7 @@ public java.lang.String getTlsServerName();
 
 Server name passed to the server for SNI and is used in the client to check server certificates against.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#tls_server_name HelmProvider#tls_server_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#tls_server_name HelmProvider#tls_server_name}
 
 ---
 
@@ -1291,9 +1299,9 @@ public java.lang.String getToken();
 
 - *Type:* java.lang.String
 
-Token to authenticate an service account.
+Token to authenticate a service account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#token HelmProvider#token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#token HelmProvider#token}
 
 ---
 
@@ -1307,7 +1315,7 @@ public java.lang.String getUsername();
 
 The username to use for HTTP basic authentication when accessing the Kubernetes master endpoint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#username HelmProvider#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#username HelmProvider#username}
 
 ---
 
@@ -1330,10 +1338,10 @@ HelmProviderKubernetesExec.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec.property.apiVersion">apiVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#api_version HelmProvider#api_version}. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec.property.command">command</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#command HelmProvider#command}. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec.property.args">args</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#args HelmProvider#args}. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec.property.env">env</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#env HelmProvider#env}. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec.property.apiVersion">apiVersion</a></code> | <code>java.lang.String</code> | API version for the exec plugin. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec.property.command">command</a></code> | <code>java.lang.String</code> | Command to run for Kubernetes exec plugin. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec.property.args">args</a></code> | <code>java.util.List<java.lang.String></code> | Arguments for the exec plugin. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec.property.env">env</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Environment variables for the exec plugin. |
 
 ---
 
@@ -1345,7 +1353,9 @@ public java.lang.String getApiVersion();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#api_version HelmProvider#api_version}.
+API version for the exec plugin.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#api_version HelmProvider#api_version}
 
 ---
 
@@ -1357,7 +1367,9 @@ public java.lang.String getCommand();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#command HelmProvider#command}.
+Command to run for Kubernetes exec plugin.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#command HelmProvider#command}
 
 ---
 
@@ -1369,7 +1381,9 @@ public java.util.List<java.lang.String> getArgs();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#args HelmProvider#args}.
+Arguments for the exec plugin.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#args HelmProvider#args}
 
 ---
 
@@ -1381,18 +1395,20 @@ public java.util.Map<java.lang.String, java.lang.String> getEnv();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#env HelmProvider#env}.
+Environment variables for the exec plugin.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#env HelmProvider#env}
 
 ---
 
-### HelmProviderRegistry <a name="HelmProviderRegistry" id="@cdktf/provider-helm.provider.HelmProviderRegistry"></a>
+### HelmProviderRegistries <a name="HelmProviderRegistries" id="@cdktf/provider-helm.provider.HelmProviderRegistries"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-helm.provider.HelmProviderRegistry.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-helm.provider.HelmProviderRegistries.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.helm.provider.HelmProviderRegistry;
+import com.hashicorp.cdktf.providers.helm.provider.HelmProviderRegistries;
 
-HelmProviderRegistry.builder()
+HelmProviderRegistries.builder()
     .password(java.lang.String)
     .url(java.lang.String)
     .username(java.lang.String)
@@ -1403,13 +1419,13 @@ HelmProviderRegistry.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderRegistry.property.password">password</a></code> | <code>java.lang.String</code> | The password to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderRegistry.property.url">url</a></code> | <code>java.lang.String</code> | OCI URL in form of oci://host:port or oci://host. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderRegistry.property.username">username</a></code> | <code>java.lang.String</code> | The username to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderRegistries.property.password">password</a></code> | <code>java.lang.String</code> | The password to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderRegistries.property.url">url</a></code> | <code>java.lang.String</code> | OCI URL in form of oci://host:port or oci://host. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderRegistries.property.username">username</a></code> | <code>java.lang.String</code> | The username to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint. |
 
 ---
 
-##### `password`<sup>Required</sup> <a name="password" id="@cdktf/provider-helm.provider.HelmProviderRegistry.property.password"></a>
+##### `password`<sup>Required</sup> <a name="password" id="@cdktf/provider-helm.provider.HelmProviderRegistries.property.password"></a>
 
 ```java
 public java.lang.String getPassword();
@@ -1419,11 +1435,11 @@ public java.lang.String getPassword();
 
 The password to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#password HelmProvider#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#password HelmProvider#password}
 
 ---
 
-##### `url`<sup>Required</sup> <a name="url" id="@cdktf/provider-helm.provider.HelmProviderRegistry.property.url"></a>
+##### `url`<sup>Required</sup> <a name="url" id="@cdktf/provider-helm.provider.HelmProviderRegistries.property.url"></a>
 
 ```java
 public java.lang.String getUrl();
@@ -1433,11 +1449,11 @@ public java.lang.String getUrl();
 
 OCI URL in form of oci://host:port or oci://host.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#url HelmProvider#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#url HelmProvider#url}
 
 ---
 
-##### `username`<sup>Required</sup> <a name="username" id="@cdktf/provider-helm.provider.HelmProviderRegistry.property.username"></a>
+##### `username`<sup>Required</sup> <a name="username" id="@cdktf/provider-helm.provider.HelmProviderRegistries.property.username"></a>
 
 ```java
 public java.lang.String getUsername();
@@ -1447,7 +1463,7 @@ public java.lang.String getUsername();
 
 The username to use for the OCI HTTP basic authentication when accessing the Kubernetes master endpoint.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs#username HelmProvider#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs#username HelmProvider#username}
 
 ---
 

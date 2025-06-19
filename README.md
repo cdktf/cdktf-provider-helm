@@ -1,7 +1,7 @@
 
-# CDKTF prebuilt bindings for hashicorp/helm provider version 2.17.0
+# CDKTF prebuilt bindings for hashicorp/helm provider version 3.0.1
 
-This repo builds and publishes the [Terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/2.17.0/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/3.0.1/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Available Packages
 
@@ -58,12 +58,12 @@ You can also visit a hosted version of the documentation on [constructs.dev](htt
 
 ## Versioning
 
-This project is explicitly not tracking the Terraform helm provider version 1:1. In fact, it always tracks `latest` of `~> 2.3` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by [generating the provider constructs manually](https://cdk.tf/imports).
+This project is explicitly not tracking the Terraform helm provider version 1:1. In fact, it always tracks `latest` of `~> 3.0` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by [generating the provider constructs manually](https://cdk.tf/imports).
 
 These are the upstream dependencies:
 
 - [CDK for Terraform](https://cdk.tf)
-- [Terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/2.17.0)
+- [Terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/3.0.1)
 - [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
