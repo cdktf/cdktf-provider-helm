@@ -14,14 +14,12 @@ import com.hashicorp.cdktf.providers.helm.provider.HelmProvider;
 HelmProvider.Builder.create(Construct scope, java.lang.String id)
 //  .alias(java.lang.String)
 //  .burstLimit(java.lang.Number)
-//  .debug(java.lang.Boolean)
-//  .debug(IResolvable)
+//  .debug(java.lang.Boolean|IResolvable)
 //  .experiments(HelmProviderExperiments)
 //  .helmDriver(java.lang.String)
 //  .kubernetes(HelmProviderKubernetes)
 //  .pluginsPath(java.lang.String)
-//  .registries(IResolvable)
-//  .registries(java.util.List<HelmProviderRegistries>)
+//  .registries(IResolvable|java.util.List<HelmProviderRegistries>)
 //  .registryConfigPath(java.lang.String)
 //  .repositoryCache(java.lang.String)
 //  .repositoryConfigPath(java.lang.String)
@@ -34,12 +32,12 @@ HelmProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.burstLimit">burstLimit</a></code> | <code>java.lang.Number</code> | Helm burst limit. Increase this if you have a cluster with many CRDs. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.debug">debug</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.debug">debug</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | Enable and disable experimental features. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.helmDriver">helmDriver</a></code> | <code>java.lang.String</code> | The backend storage driver. Values are: configmap, secret, memory, sql. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | Kubernetes Configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.pluginsPath">pluginsPath</a></code> | <code>java.lang.String</code> | The path to the helm plugins directory. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | RegistryClient configuration. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | RegistryClient configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registryConfigPath">registryConfigPath</a></code> | <code>java.lang.String</code> | The path to the registry config file. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.repositoryCache">repositoryCache</a></code> | <code>java.lang.String</code> | The path to the file containing cached repository indexes. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.repositoryConfigPath">repositoryConfigPath</a></code> | <code>java.lang.String</code> | The path to the file containing repository names and URLs. |
@@ -86,7 +84,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `debug`<sup>Optional</sup> <a name="debug" id="@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.debug"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Debug indicates whether or not Helm is running in Debug mode.
 
@@ -136,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registries"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
 
 RegistryClient configuration.
 
@@ -465,22 +463,22 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.alias">alias</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.aliasInput">aliasInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.burstLimitInput">burstLimitInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debugInput">debugInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debugInput">debugInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.experimentsInput">experimentsInput</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.helmDriverInput">helmDriverInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.kubernetesInput">kubernetesInput</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.pluginsPathInput">pluginsPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registriesInput">registriesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registriesInput">registriesInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPathInput">registryConfigPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryCacheInput">repositoryCacheInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryConfigPathInput">repositoryConfigPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.burstLimit">burstLimit</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debug">debug</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debug">debug</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.helmDriver">helmDriver</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.pluginsPath">pluginsPath</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPath">registryConfigPath</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryCache">repositoryCache</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryConfigPath">repositoryConfigPath</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -602,10 +600,10 @@ public java.lang.Number getBurstLimitInput();
 ##### `debugInput`<sup>Optional</sup> <a name="debugInput" id="@cdktf/provider-helm.provider.HelmProvider.property.debugInput"></a>
 
 ```java
-public java.lang.Object getDebugInput();
+public java.lang.Boolean|IResolvable getDebugInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -652,10 +650,10 @@ public java.lang.String getPluginsPathInput();
 ##### `registriesInput`<sup>Optional</sup> <a name="registriesInput" id="@cdktf/provider-helm.provider.HelmProvider.property.registriesInput"></a>
 
 ```java
-public java.lang.Object getRegistriesInput();
+public IResolvable|java.util.List<HelmProviderRegistries> getRegistriesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
 
 ---
 
@@ -702,10 +700,10 @@ public java.lang.Number getBurstLimit();
 ##### `debug`<sup>Optional</sup> <a name="debug" id="@cdktf/provider-helm.provider.HelmProvider.property.debug"></a>
 
 ```java
-public java.lang.Object getDebug();
+public java.lang.Boolean|IResolvable getDebug();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -752,10 +750,10 @@ public java.lang.String getPluginsPath();
 ##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProvider.property.registries"></a>
 
 ```java
-public java.lang.Object getRegistries();
+public IResolvable|java.util.List<HelmProviderRegistries> getRegistries();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
 
 ---
 
@@ -819,14 +817,12 @@ import com.hashicorp.cdktf.providers.helm.provider.HelmProviderConfig;
 HelmProviderConfig.builder()
 //  .alias(java.lang.String)
 //  .burstLimit(java.lang.Number)
-//  .debug(java.lang.Boolean)
-//  .debug(IResolvable)
+//  .debug(java.lang.Boolean|IResolvable)
 //  .experiments(HelmProviderExperiments)
 //  .helmDriver(java.lang.String)
 //  .kubernetes(HelmProviderKubernetes)
 //  .pluginsPath(java.lang.String)
-//  .registries(IResolvable)
-//  .registries(java.util.List<HelmProviderRegistries>)
+//  .registries(IResolvable|java.util.List<HelmProviderRegistries>)
 //  .registryConfigPath(java.lang.String)
 //  .repositoryCache(java.lang.String)
 //  .repositoryConfigPath(java.lang.String)
@@ -839,12 +835,12 @@ HelmProviderConfig.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.burstLimit">burstLimit</a></code> | <code>java.lang.Number</code> | Helm burst limit. Increase this if you have a cluster with many CRDs. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.debug">debug</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.debug">debug</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | Enable and disable experimental features. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.helmDriver">helmDriver</a></code> | <code>java.lang.String</code> | The backend storage driver. Values are: configmap, secret, memory, sql. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | Kubernetes Configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.pluginsPath">pluginsPath</a></code> | <code>java.lang.String</code> | The path to the helm plugins directory. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | RegistryClient configuration. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registries">registries</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>></code> | RegistryClient configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registryConfigPath">registryConfigPath</a></code> | <code>java.lang.String</code> | The path to the registry config file. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.repositoryCache">repositoryCache</a></code> | <code>java.lang.String</code> | The path to the file containing cached repository indexes. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.repositoryConfigPath">repositoryConfigPath</a></code> | <code>java.lang.String</code> | The path to the file containing repository names and URLs. |
@@ -882,10 +878,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `debug`<sup>Optional</sup> <a name="debug" id="@cdktf/provider-helm.provider.HelmProviderConfig.property.debug"></a>
 
 ```java
-public java.lang.Object getDebug();
+public java.lang.Boolean|IResolvable getDebug();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Debug indicates whether or not Helm is running in Debug mode.
 
@@ -952,10 +948,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProviderConfig.property.registries"></a>
 
 ```java
-public java.lang.Object getRegistries();
+public IResolvable|java.util.List<HelmProviderRegistries> getRegistries();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>>
 
 RegistryClient configuration.
 
@@ -1013,8 +1009,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.helm.provider.HelmProviderExperiments;
 
 HelmProviderExperiments.builder()
-//  .manifest(java.lang.Boolean)
-//  .manifest(IResolvable)
+//  .manifest(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -1022,17 +1017,17 @@ HelmProviderExperiments.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest">manifest</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Enable full diff by storing the rendered manifest in the state. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest">manifest</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Enable full diff by storing the rendered manifest in the state. |
 
 ---
 
 ##### `manifest`<sup>Optional</sup> <a name="manifest" id="@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest"></a>
 
 ```java
-public java.lang.Object getManifest();
+public java.lang.Boolean|IResolvable getManifest();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Enable full diff by storing the rendered manifest in the state.
 
@@ -1058,8 +1053,7 @@ HelmProviderKubernetes.builder()
 //  .configPaths(java.util.List<java.lang.String>)
 //  .exec(HelmProviderKubernetesExec)
 //  .host(java.lang.String)
-//  .insecure(java.lang.Boolean)
-//  .insecure(IResolvable)
+//  .insecure(java.lang.Boolean|IResolvable)
 //  .password(java.lang.String)
 //  .proxyUrl(java.lang.String)
 //  .tlsServerName(java.lang.String)
@@ -1082,7 +1076,7 @@ HelmProviderKubernetes.builder()
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configPaths">configPaths</a></code> | <code>java.util.List<java.lang.String></code> | A list of paths to kube config files. Can be set with KUBE_CONFIG_PATHS environment variable. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.exec">exec</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec">HelmProviderKubernetesExec</a></code> | Exec configuration for Kubernetes authentication. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.host">host</a></code> | <code>java.lang.String</code> | The hostname (in form of URI) of kubernetes master. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure">insecure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether server should be accessed without verifying the TLS certificate. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure">insecure</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Whether server should be accessed without verifying the TLS certificate. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.password">password</a></code> | <code>java.lang.String</code> | The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.proxyUrl">proxyUrl</a></code> | <code>java.lang.String</code> | URL to the proxy to be used for all API requests. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.tlsServerName">tlsServerName</a></code> | <code>java.lang.String</code> | Server name passed to the server for SNI and is used in the client to check server certificates against. |
@@ -1238,10 +1232,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `insecure`<sup>Optional</sup> <a name="insecure" id="@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure"></a>
 
 ```java
-public java.lang.Object getInsecure();
+public java.lang.Boolean|IResolvable getInsecure();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Whether server should be accessed without verifying the TLS certificate.
 

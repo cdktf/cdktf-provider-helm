@@ -317,7 +317,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-helm.release.Release.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-helm.release.Release.importFrom"></a>
@@ -371,7 +371,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-helm.release.Release.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -386,7 +386,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-helm.release.Release.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -423,48 +423,48 @@ private void PutPostrender(ReleasePostrender Value)
 ##### `PutSet` <a name="PutSet" id="@cdktf/provider-helm.release.Release.putSet"></a>
 
 ```csharp
-private void PutSet(object Value)
+private void PutSet(IResolvable|ReleaseSet[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-helm.release.Release.putSet.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>[]
 
 ---
 
 ##### `PutSetList` <a name="PutSetList" id="@cdktf/provider-helm.release.Release.putSetList"></a>
 
 ```csharp
-private void PutSetList(object Value)
+private void PutSetList(IResolvable|ReleaseSetListStruct[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-helm.release.Release.putSetList.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>[]
 
 ---
 
 ##### `PutSetSensitive` <a name="PutSetSensitive" id="@cdktf/provider-helm.release.Release.putSetSensitive"></a>
 
 ```csharp
-private void PutSetSensitive(object Value)
+private void PutSetSensitive(IResolvable|ReleaseSetSensitive[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-helm.release.Release.putSetSensitive.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>[]
 
 ---
 
 ##### `PutSetWo` <a name="PutSetWo" id="@cdktf/provider-helm.release.Release.putSetWo"></a>
 
 ```csharp
-private void PutSetWo(object Value)
+private void PutSetWo(IResolvable|ReleaseSetWo[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-helm.release.Release.putSetWo.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>[]
 
 ---
 
@@ -828,13 +828,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.manifest">Manifest</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.metadata">Metadata</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseMetadataOutputReference">ReleaseMetadataOutputReference</a></code> | *No description.* |
@@ -844,83 +844,83 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitive">SetSensitive</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList">ReleaseSetSensitiveList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWo">SetWo</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList">ReleaseSetWoList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.status">Status</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.atomicInput">AtomicInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.atomicInput">AtomicInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.chartInput">ChartInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFailInput">CleanupOnFailInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespaceInput">CreateNamespaceInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdateInput">DependencyUpdateInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFailInput">CleanupOnFailInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespaceInput">CreateNamespaceInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdateInput">DependencyUpdateInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.develInput">DevelInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooksInput">DisableCrdHooksInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput">DisableOpenapiValidationInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooksInput">DisableWebhooksInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdateInput">ForceUpdateInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.develInput">DevelInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooksInput">DisableCrdHooksInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput">DisableOpenapiValidationInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooksInput">DisableWebhooksInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdateInput">ForceUpdateInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.keyringInput">KeyringInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.lintInput">LintInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.lintInput">LintInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.maxHistoryInput">MaxHistoryInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.namespaceInput">NamespaceInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentialsInput">PassCredentialsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.postrenderInput">PostrenderInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePodsInput">RecreatePodsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput">RenderSubchartNotesInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.replaceInput">ReplaceInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentialsInput">PassCredentialsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.postrenderInput">PostrenderInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePodsInput">RecreatePodsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput">RenderSubchartNotesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.replaceInput">ReplaceInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCaFileInput">RepositoryCaFileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCertFileInput">RepositoryCertFileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryInput">RepositoryInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryKeyFileInput">RepositoryKeyFileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryPasswordInput">RepositoryPasswordInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryUsernameInput">RepositoryUsernameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValuesInput">ResetValuesInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValuesInput">ReuseValuesInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setInput">SetInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setListInput">SetListInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitiveInput">SetSensitiveInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setWoInput">SetWoInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValuesInput">ResetValuesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValuesInput">ReuseValuesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setInput">SetInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setListInput">SetListInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitiveInput">SetSensitiveInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setWoInput">SetWoInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWoRevisionInput">SetWoRevisionInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrdsInput">SkipCrdsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrdsInput">SkipCrdsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.timeoutInput">TimeoutInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.valuesInput">ValuesInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.verifyInput">VerifyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.verifyInput">VerifyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.versionInput">VersionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobsInput">WaitForJobsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitInput">WaitInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.atomic">Atomic</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobsInput">WaitForJobsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitInput">WaitInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.atomic">Atomic</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.chart">Chart</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFail">CleanupOnFail</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespace">CreateNamespace</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdate">DependencyUpdate</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFail">CleanupOnFail</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespace">CreateNamespace</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdate">DependencyUpdate</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.description">Description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.devel">Devel</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooks">DisableCrdHooks</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidation">DisableOpenapiValidation</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooks">DisableWebhooks</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdate">ForceUpdate</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.devel">Devel</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooks">DisableCrdHooks</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidation">DisableOpenapiValidation</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooks">DisableWebhooks</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdate">ForceUpdate</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.keyring">Keyring</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.lint">Lint</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.lint">Lint</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.maxHistory">MaxHistory</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.namespace">Namespace</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentials">PassCredentials</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePods">RecreatePods</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotes">RenderSubchartNotes</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.replace">Replace</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentials">PassCredentials</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePods">RecreatePods</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotes">RenderSubchartNotes</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.replace">Replace</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repository">Repository</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCaFile">RepositoryCaFile</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCertFile">RepositoryCertFile</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryKeyFile">RepositoryKeyFile</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryPassword">RepositoryPassword</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryUsername">RepositoryUsername</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValues">ResetValues</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValues">ReuseValues</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValues">ResetValues</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValues">ReuseValues</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWoRevision">SetWoRevision</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrds">SkipCrds</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrds">SkipCrds</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.timeout">Timeout</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.values">Values</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.verify">Verify</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.verify">Verify</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.version">Version</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.wait">Wait</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobs">WaitForJobs</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.wait">Wait</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobs">WaitForJobs</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -999,20 +999,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-helm.release.Release.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-helm.release.Release.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1059,10 +1059,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-helm.release.Release.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1159,10 +1159,10 @@ public string Status { get; }
 ##### `AtomicInput`<sup>Optional</sup> <a name="AtomicInput" id="@cdktf/provider-helm.release.Release.property.atomicInput"></a>
 
 ```csharp
-public object AtomicInput { get; }
+public bool|IResolvable AtomicInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1179,30 +1179,30 @@ public string ChartInput { get; }
 ##### `CleanupOnFailInput`<sup>Optional</sup> <a name="CleanupOnFailInput" id="@cdktf/provider-helm.release.Release.property.cleanupOnFailInput"></a>
 
 ```csharp
-public object CleanupOnFailInput { get; }
+public bool|IResolvable CleanupOnFailInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `CreateNamespaceInput`<sup>Optional</sup> <a name="CreateNamespaceInput" id="@cdktf/provider-helm.release.Release.property.createNamespaceInput"></a>
 
 ```csharp
-public object CreateNamespaceInput { get; }
+public bool|IResolvable CreateNamespaceInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DependencyUpdateInput`<sup>Optional</sup> <a name="DependencyUpdateInput" id="@cdktf/provider-helm.release.Release.property.dependencyUpdateInput"></a>
 
 ```csharp
-public object DependencyUpdateInput { get; }
+public bool|IResolvable DependencyUpdateInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1219,50 +1219,50 @@ public string DescriptionInput { get; }
 ##### `DevelInput`<sup>Optional</sup> <a name="DevelInput" id="@cdktf/provider-helm.release.Release.property.develInput"></a>
 
 ```csharp
-public object DevelInput { get; }
+public bool|IResolvable DevelInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DisableCrdHooksInput`<sup>Optional</sup> <a name="DisableCrdHooksInput" id="@cdktf/provider-helm.release.Release.property.disableCrdHooksInput"></a>
 
 ```csharp
-public object DisableCrdHooksInput { get; }
+public bool|IResolvable DisableCrdHooksInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DisableOpenapiValidationInput`<sup>Optional</sup> <a name="DisableOpenapiValidationInput" id="@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput"></a>
 
 ```csharp
-public object DisableOpenapiValidationInput { get; }
+public bool|IResolvable DisableOpenapiValidationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DisableWebhooksInput`<sup>Optional</sup> <a name="DisableWebhooksInput" id="@cdktf/provider-helm.release.Release.property.disableWebhooksInput"></a>
 
 ```csharp
-public object DisableWebhooksInput { get; }
+public bool|IResolvable DisableWebhooksInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ForceUpdateInput`<sup>Optional</sup> <a name="ForceUpdateInput" id="@cdktf/provider-helm.release.Release.property.forceUpdateInput"></a>
 
 ```csharp
-public object ForceUpdateInput { get; }
+public bool|IResolvable ForceUpdateInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1279,10 +1279,10 @@ public string KeyringInput { get; }
 ##### `LintInput`<sup>Optional</sup> <a name="LintInput" id="@cdktf/provider-helm.release.Release.property.lintInput"></a>
 
 ```csharp
-public object LintInput { get; }
+public bool|IResolvable LintInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1319,50 +1319,50 @@ public string NamespaceInput { get; }
 ##### `PassCredentialsInput`<sup>Optional</sup> <a name="PassCredentialsInput" id="@cdktf/provider-helm.release.Release.property.passCredentialsInput"></a>
 
 ```csharp
-public object PassCredentialsInput { get; }
+public bool|IResolvable PassCredentialsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `PostrenderInput`<sup>Optional</sup> <a name="PostrenderInput" id="@cdktf/provider-helm.release.Release.property.postrenderInput"></a>
 
 ```csharp
-public object PostrenderInput { get; }
+public IResolvable|ReleasePostrender PostrenderInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>
 
 ---
 
 ##### `RecreatePodsInput`<sup>Optional</sup> <a name="RecreatePodsInput" id="@cdktf/provider-helm.release.Release.property.recreatePodsInput"></a>
 
 ```csharp
-public object RecreatePodsInput { get; }
+public bool|IResolvable RecreatePodsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `RenderSubchartNotesInput`<sup>Optional</sup> <a name="RenderSubchartNotesInput" id="@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput"></a>
 
 ```csharp
-public object RenderSubchartNotesInput { get; }
+public bool|IResolvable RenderSubchartNotesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ReplaceInput`<sup>Optional</sup> <a name="ReplaceInput" id="@cdktf/provider-helm.release.Release.property.replaceInput"></a>
 
 ```csharp
-public object ReplaceInput { get; }
+public bool|IResolvable ReplaceInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1429,60 +1429,60 @@ public string RepositoryUsernameInput { get; }
 ##### `ResetValuesInput`<sup>Optional</sup> <a name="ResetValuesInput" id="@cdktf/provider-helm.release.Release.property.resetValuesInput"></a>
 
 ```csharp
-public object ResetValuesInput { get; }
+public bool|IResolvable ResetValuesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ReuseValuesInput`<sup>Optional</sup> <a name="ReuseValuesInput" id="@cdktf/provider-helm.release.Release.property.reuseValuesInput"></a>
 
 ```csharp
-public object ReuseValuesInput { get; }
+public bool|IResolvable ReuseValuesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SetInput`<sup>Optional</sup> <a name="SetInput" id="@cdktf/provider-helm.release.Release.property.setInput"></a>
 
 ```csharp
-public object SetInput { get; }
+public IResolvable|ReleaseSet[] SetInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>[]
 
 ---
 
 ##### `SetListInput`<sup>Optional</sup> <a name="SetListInput" id="@cdktf/provider-helm.release.Release.property.setListInput"></a>
 
 ```csharp
-public object SetListInput { get; }
+public IResolvable|ReleaseSetListStruct[] SetListInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>[]
 
 ---
 
 ##### `SetSensitiveInput`<sup>Optional</sup> <a name="SetSensitiveInput" id="@cdktf/provider-helm.release.Release.property.setSensitiveInput"></a>
 
 ```csharp
-public object SetSensitiveInput { get; }
+public IResolvable|ReleaseSetSensitive[] SetSensitiveInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>[]
 
 ---
 
 ##### `SetWoInput`<sup>Optional</sup> <a name="SetWoInput" id="@cdktf/provider-helm.release.Release.property.setWoInput"></a>
 
 ```csharp
-public object SetWoInput { get; }
+public IResolvable|ReleaseSetWo[] SetWoInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>[]
 
 ---
 
@@ -1499,10 +1499,10 @@ public double SetWoRevisionInput { get; }
 ##### `SkipCrdsInput`<sup>Optional</sup> <a name="SkipCrdsInput" id="@cdktf/provider-helm.release.Release.property.skipCrdsInput"></a>
 
 ```csharp
-public object SkipCrdsInput { get; }
+public bool|IResolvable SkipCrdsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1529,10 +1529,10 @@ public string[] ValuesInput { get; }
 ##### `VerifyInput`<sup>Optional</sup> <a name="VerifyInput" id="@cdktf/provider-helm.release.Release.property.verifyInput"></a>
 
 ```csharp
-public object VerifyInput { get; }
+public bool|IResolvable VerifyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1549,30 +1549,30 @@ public string VersionInput { get; }
 ##### `WaitForJobsInput`<sup>Optional</sup> <a name="WaitForJobsInput" id="@cdktf/provider-helm.release.Release.property.waitForJobsInput"></a>
 
 ```csharp
-public object WaitForJobsInput { get; }
+public bool|IResolvable WaitForJobsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `WaitInput`<sup>Optional</sup> <a name="WaitInput" id="@cdktf/provider-helm.release.Release.property.waitInput"></a>
 
 ```csharp
-public object WaitInput { get; }
+public bool|IResolvable WaitInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `Atomic`<sup>Required</sup> <a name="Atomic" id="@cdktf/provider-helm.release.Release.property.atomic"></a>
 
 ```csharp
-public object Atomic { get; }
+public bool|IResolvable Atomic { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1589,30 +1589,30 @@ public string Chart { get; }
 ##### `CleanupOnFail`<sup>Required</sup> <a name="CleanupOnFail" id="@cdktf/provider-helm.release.Release.property.cleanupOnFail"></a>
 
 ```csharp
-public object CleanupOnFail { get; }
+public bool|IResolvable CleanupOnFail { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `CreateNamespace`<sup>Required</sup> <a name="CreateNamespace" id="@cdktf/provider-helm.release.Release.property.createNamespace"></a>
 
 ```csharp
-public object CreateNamespace { get; }
+public bool|IResolvable CreateNamespace { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DependencyUpdate`<sup>Required</sup> <a name="DependencyUpdate" id="@cdktf/provider-helm.release.Release.property.dependencyUpdate"></a>
 
 ```csharp
-public object DependencyUpdate { get; }
+public bool|IResolvable DependencyUpdate { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1629,50 +1629,50 @@ public string Description { get; }
 ##### `Devel`<sup>Required</sup> <a name="Devel" id="@cdktf/provider-helm.release.Release.property.devel"></a>
 
 ```csharp
-public object Devel { get; }
+public bool|IResolvable Devel { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DisableCrdHooks`<sup>Required</sup> <a name="DisableCrdHooks" id="@cdktf/provider-helm.release.Release.property.disableCrdHooks"></a>
 
 ```csharp
-public object DisableCrdHooks { get; }
+public bool|IResolvable DisableCrdHooks { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DisableOpenapiValidation`<sup>Required</sup> <a name="DisableOpenapiValidation" id="@cdktf/provider-helm.release.Release.property.disableOpenapiValidation"></a>
 
 ```csharp
-public object DisableOpenapiValidation { get; }
+public bool|IResolvable DisableOpenapiValidation { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DisableWebhooks`<sup>Required</sup> <a name="DisableWebhooks" id="@cdktf/provider-helm.release.Release.property.disableWebhooks"></a>
 
 ```csharp
-public object DisableWebhooks { get; }
+public bool|IResolvable DisableWebhooks { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ForceUpdate`<sup>Required</sup> <a name="ForceUpdate" id="@cdktf/provider-helm.release.Release.property.forceUpdate"></a>
 
 ```csharp
-public object ForceUpdate { get; }
+public bool|IResolvable ForceUpdate { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1689,10 +1689,10 @@ public string Keyring { get; }
 ##### `Lint`<sup>Required</sup> <a name="Lint" id="@cdktf/provider-helm.release.Release.property.lint"></a>
 
 ```csharp
-public object Lint { get; }
+public bool|IResolvable Lint { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1729,40 +1729,40 @@ public string Namespace { get; }
 ##### `PassCredentials`<sup>Required</sup> <a name="PassCredentials" id="@cdktf/provider-helm.release.Release.property.passCredentials"></a>
 
 ```csharp
-public object PassCredentials { get; }
+public bool|IResolvable PassCredentials { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `RecreatePods`<sup>Required</sup> <a name="RecreatePods" id="@cdktf/provider-helm.release.Release.property.recreatePods"></a>
 
 ```csharp
-public object RecreatePods { get; }
+public bool|IResolvable RecreatePods { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `RenderSubchartNotes`<sup>Required</sup> <a name="RenderSubchartNotes" id="@cdktf/provider-helm.release.Release.property.renderSubchartNotes"></a>
 
 ```csharp
-public object RenderSubchartNotes { get; }
+public bool|IResolvable RenderSubchartNotes { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `Replace`<sup>Required</sup> <a name="Replace" id="@cdktf/provider-helm.release.Release.property.replace"></a>
 
 ```csharp
-public object Replace { get; }
+public bool|IResolvable Replace { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1829,20 +1829,20 @@ public string RepositoryUsername { get; }
 ##### `ResetValues`<sup>Required</sup> <a name="ResetValues" id="@cdktf/provider-helm.release.Release.property.resetValues"></a>
 
 ```csharp
-public object ResetValues { get; }
+public bool|IResolvable ResetValues { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ReuseValues`<sup>Required</sup> <a name="ReuseValues" id="@cdktf/provider-helm.release.Release.property.reuseValues"></a>
 
 ```csharp
-public object ReuseValues { get; }
+public bool|IResolvable ReuseValues { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1859,10 +1859,10 @@ public double SetWoRevision { get; }
 ##### `SkipCrds`<sup>Required</sup> <a name="SkipCrds" id="@cdktf/provider-helm.release.Release.property.skipCrds"></a>
 
 ```csharp
-public object SkipCrds { get; }
+public bool|IResolvable SkipCrds { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1889,10 +1889,10 @@ public string[] Values { get; }
 ##### `Verify`<sup>Required</sup> <a name="Verify" id="@cdktf/provider-helm.release.Release.property.verify"></a>
 
 ```csharp
-public object Verify { get; }
+public bool|IResolvable Verify { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1909,20 +1909,20 @@ public string Version { get; }
 ##### `Wait`<sup>Required</sup> <a name="Wait" id="@cdktf/provider-helm.release.Release.property.wait"></a>
 
 ```csharp
-public object Wait { get; }
+public bool|IResolvable Wait { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `WaitForJobs`<sup>Required</sup> <a name="WaitForJobs" id="@cdktf/provider-helm.release.Release.property.waitForJobs"></a>
 
 ```csharp
-public object WaitForJobs { get; }
+public bool|IResolvable WaitForJobs { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1954,54 +1954,54 @@ public string TfResourceType { get; }
 using HashiCorp.Cdktf.Providers.Helm;
 
 new ReleaseConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Chart,
     string Name,
-    object Atomic = null,
-    object CleanupOnFail = null,
-    object CreateNamespace = null,
-    object DependencyUpdate = null,
+    bool|IResolvable Atomic = null,
+    bool|IResolvable CleanupOnFail = null,
+    bool|IResolvable CreateNamespace = null,
+    bool|IResolvable DependencyUpdate = null,
     string Description = null,
-    object Devel = null,
-    object DisableCrdHooks = null,
-    object DisableOpenapiValidation = null,
-    object DisableWebhooks = null,
-    object ForceUpdate = null,
+    bool|IResolvable Devel = null,
+    bool|IResolvable DisableCrdHooks = null,
+    bool|IResolvable DisableOpenapiValidation = null,
+    bool|IResolvable DisableWebhooks = null,
+    bool|IResolvable ForceUpdate = null,
     string Keyring = null,
-    object Lint = null,
+    bool|IResolvable Lint = null,
     double MaxHistory = null,
     string Namespace = null,
-    object PassCredentials = null,
+    bool|IResolvable PassCredentials = null,
     ReleasePostrender Postrender = null,
-    object RecreatePods = null,
-    object RenderSubchartNotes = null,
-    object Replace = null,
+    bool|IResolvable RecreatePods = null,
+    bool|IResolvable RenderSubchartNotes = null,
+    bool|IResolvable Replace = null,
     string Repository = null,
     string RepositoryCaFile = null,
     string RepositoryCertFile = null,
     string RepositoryKeyFile = null,
     string RepositoryPassword = null,
     string RepositoryUsername = null,
-    object ResetValues = null,
-    object ReuseValues = null,
-    object Set = null,
-    object SetList = null,
-    object SetSensitive = null,
-    object SetWo = null,
+    bool|IResolvable ResetValues = null,
+    bool|IResolvable ReuseValues = null,
+    IResolvable|ReleaseSet[] Set = null,
+    IResolvable|ReleaseSetListStruct[] SetList = null,
+    IResolvable|ReleaseSetSensitive[] SetSensitive = null,
+    IResolvable|ReleaseSetWo[] SetWo = null,
     double SetWoRevision = null,
-    object SkipCrds = null,
+    bool|IResolvable SkipCrds = null,
     double Timeout = null,
     string[] Values = null,
-    object Verify = null,
+    bool|IResolvable Verify = null,
     string Version = null,
-    object Wait = null,
-    object WaitForJobs = null
+    bool|IResolvable Wait = null,
+    bool|IResolvable WaitForJobs = null
 };
 ```
 
@@ -2009,74 +2009,74 @@ new ReleaseConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.chart">Chart</a></code> | <code>string</code> | Chart name to be installed. A path may be used. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.name">Name</a></code> | <code>string</code> | Release name. The length must not be longer than 53 characters. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.atomic">Atomic</a></code> | <code>object</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail">CleanupOnFail</a></code> | <code>object</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace">CreateNamespace</a></code> | <code>object</code> | Create the namespace if it does not exist. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate">DependencyUpdate</a></code> | <code>object</code> | Run helm dependency update before installing the chart. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.atomic">Atomic</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail">CleanupOnFail</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace">CreateNamespace</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Create the namespace if it does not exist. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate">DependencyUpdate</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Run helm dependency update before installing the chart. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.description">Description</a></code> | <code>string</code> | Add a custom description. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.devel">Devel</a></code> | <code>object</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks">DisableCrdHooks</a></code> | <code>object</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation">DisableOpenapiValidation</a></code> | <code>object</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks">DisableWebhooks</a></code> | <code>object</code> | Prevent hooks from running. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate">ForceUpdate</a></code> | <code>object</code> | Force resource update through delete/recreate if needed. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.devel">Devel</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks">DisableCrdHooks</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation">DisableOpenapiValidation</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks">DisableWebhooks</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Prevent hooks from running. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate">ForceUpdate</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Force resource update through delete/recreate if needed. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.keyring">Keyring</a></code> | <code>string</code> | Location of public keys used for verification, Used only if 'verify is true'. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lint">Lint</a></code> | <code>object</code> | Run helm lint when planning. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lint">Lint</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Run helm lint when planning. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.maxHistory">MaxHistory</a></code> | <code>double</code> | Limit the maximum number of revisions saved per release. Use 0 for no limit. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.namespace">Namespace</a></code> | <code>string</code> | Namespace to install the release into. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials">PassCredentials</a></code> | <code>object</code> | Pass credentials to all domains. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials">PassCredentials</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Pass credentials to all domains. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.postrender">Postrender</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | Postrender command config. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods">RecreatePods</a></code> | <code>object</code> | Perform pods restart during upgrade/rollback. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes">RenderSubchartNotes</a></code> | <code>object</code> | If set, render subchart notes along with the parent. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.replace">Replace</a></code> | <code>object</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods">RecreatePods</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Perform pods restart during upgrade/rollback. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes">RenderSubchartNotes</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set, render subchart notes along with the parent. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.replace">Replace</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repository">Repository</a></code> | <code>string</code> | Repository where to locate the requested chart. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryCaFile">RepositoryCaFile</a></code> | <code>string</code> | The Repositories CA file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryCertFile">RepositoryCertFile</a></code> | <code>string</code> | The repositories cert file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryKeyFile">RepositoryKeyFile</a></code> | <code>string</code> | The repositories cert key file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryPassword">RepositoryPassword</a></code> | <code>string</code> | Password for HTTP basic authentication. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryUsername">RepositoryUsername</a></code> | <code>string</code> | Username for HTTP basic authentication. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.resetValues">ResetValues</a></code> | <code>object</code> | When upgrading, reset the values to the ones built into the chart. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues">ReuseValues</a></code> | <code>object</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.set">Set</a></code> | <code>object</code> | Custom values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setList">SetList</a></code> | <code>object</code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive">SetSensitive</a></code> | <code>object</code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWo">SetWo</a></code> | <code>object</code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.resetValues">ResetValues</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | When upgrading, reset the values to the ones built into the chart. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues">ReuseValues</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.set">Set</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>[]</code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setList">SetList</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>[]</code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive">SetSensitive</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>[]</code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWo">SetWo</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>[]</code> | Custom values to be merged with the values. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWoRevision">SetWoRevision</a></code> | <code>double</code> | The current revision of the write-only "set_wo" attribute. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds">SkipCrds</a></code> | <code>object</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds">SkipCrds</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.timeout">Timeout</a></code> | <code>double</code> | Time in seconds to wait for any individual kubernetes operation. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.values">Values</a></code> | <code>string[]</code> | List of values in raw YAML format to pass to helm. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.verify">Verify</a></code> | <code>object</code> | Verify the package before installing it. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.verify">Verify</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Verify the package before installing it. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.version">Version</a></code> | <code>string</code> | Specify the exact chart version to install. If this is not specified, the latest version is installed. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.wait">Wait</a></code> | <code>object</code> | Will wait until all resources are in a ready state before marking the release as successful. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs">WaitForJobs</a></code> | <code>object</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.wait">Wait</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Will wait until all resources are in a ready state before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs">WaitForJobs</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
 
 ---
 
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-helm.release.ReleaseConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-helm.release.ReleaseConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -2123,10 +2123,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-helm.release.ReleaseConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -2161,10 +2161,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Atomic`<sup>Optional</sup> <a name="Atomic" id="@cdktf/provider-helm.release.ReleaseConfig.property.atomic"></a>
 
 ```csharp
-public object Atomic { get; set; }
+public bool|IResolvable Atomic { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
@@ -2175,10 +2175,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CleanupOnFail`<sup>Optional</sup> <a name="CleanupOnFail" id="@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail"></a>
 
 ```csharp
-public object CleanupOnFail { get; set; }
+public bool|IResolvable CleanupOnFail { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
@@ -2189,10 +2189,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CreateNamespace`<sup>Optional</sup> <a name="CreateNamespace" id="@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace"></a>
 
 ```csharp
-public object CreateNamespace { get; set; }
+public bool|IResolvable CreateNamespace { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Create the namespace if it does not exist.
 
@@ -2203,10 +2203,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DependencyUpdate`<sup>Optional</sup> <a name="DependencyUpdate" id="@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate"></a>
 
 ```csharp
-public object DependencyUpdate { get; set; }
+public bool|IResolvable DependencyUpdate { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Run helm dependency update before installing the chart.
 
@@ -2231,10 +2231,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Devel`<sup>Optional</sup> <a name="Devel" id="@cdktf/provider-helm.release.ReleaseConfig.property.devel"></a>
 
 ```csharp
-public object Devel { get; set; }
+public bool|IResolvable Devel { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored.
 
@@ -2245,10 +2245,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DisableCrdHooks`<sup>Optional</sup> <a name="DisableCrdHooks" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks"></a>
 
 ```csharp
-public object DisableCrdHooks { get; set; }
+public bool|IResolvable DisableCrdHooks { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook.
 
@@ -2259,10 +2259,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DisableOpenapiValidation`<sup>Optional</sup> <a name="DisableOpenapiValidation" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation"></a>
 
 ```csharp
-public object DisableOpenapiValidation { get; set; }
+public bool|IResolvable DisableOpenapiValidation { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
@@ -2273,10 +2273,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DisableWebhooks`<sup>Optional</sup> <a name="DisableWebhooks" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks"></a>
 
 ```csharp
-public object DisableWebhooks { get; set; }
+public bool|IResolvable DisableWebhooks { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Prevent hooks from running.
 
@@ -2287,10 +2287,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ForceUpdate`<sup>Optional</sup> <a name="ForceUpdate" id="@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate"></a>
 
 ```csharp
-public object ForceUpdate { get; set; }
+public bool|IResolvable ForceUpdate { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Force resource update through delete/recreate if needed.
 
@@ -2315,10 +2315,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Lint`<sup>Optional</sup> <a name="Lint" id="@cdktf/provider-helm.release.ReleaseConfig.property.lint"></a>
 
 ```csharp
-public object Lint { get; set; }
+public bool|IResolvable Lint { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Run helm lint when planning.
 
@@ -2357,10 +2357,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PassCredentials`<sup>Optional</sup> <a name="PassCredentials" id="@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials"></a>
 
 ```csharp
-public object PassCredentials { get; set; }
+public bool|IResolvable PassCredentials { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Pass credentials to all domains.
 
@@ -2385,10 +2385,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RecreatePods`<sup>Optional</sup> <a name="RecreatePods" id="@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods"></a>
 
 ```csharp
-public object RecreatePods { get; set; }
+public bool|IResolvable RecreatePods { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Perform pods restart during upgrade/rollback.
 
@@ -2399,10 +2399,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RenderSubchartNotes`<sup>Optional</sup> <a name="RenderSubchartNotes" id="@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes"></a>
 
 ```csharp
-public object RenderSubchartNotes { get; set; }
+public bool|IResolvable RenderSubchartNotes { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If set, render subchart notes along with the parent.
 
@@ -2413,10 +2413,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Replace`<sup>Optional</sup> <a name="Replace" id="@cdktf/provider-helm.release.ReleaseConfig.property.replace"></a>
 
 ```csharp
-public object Replace { get; set; }
+public bool|IResolvable Replace { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
@@ -2513,10 +2513,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ResetValues`<sup>Optional</sup> <a name="ResetValues" id="@cdktf/provider-helm.release.ReleaseConfig.property.resetValues"></a>
 
 ```csharp
-public object ResetValues { get; set; }
+public bool|IResolvable ResetValues { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 When upgrading, reset the values to the ones built into the chart.
 
@@ -2527,10 +2527,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ReuseValues`<sup>Optional</sup> <a name="ReuseValues" id="@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues"></a>
 
 ```csharp
-public object ReuseValues { get; set; }
+public bool|IResolvable ReuseValues { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
@@ -2541,10 +2541,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Set`<sup>Optional</sup> <a name="Set" id="@cdktf/provider-helm.release.ReleaseConfig.property.set"></a>
 
 ```csharp
-public object Set { get; set; }
+public IResolvable|ReleaseSet[] Set { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>[]
 
 Custom values to be merged with the values.
 
@@ -2555,10 +2555,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SetList`<sup>Optional</sup> <a name="SetList" id="@cdktf/provider-helm.release.ReleaseConfig.property.setList"></a>
 
 ```csharp
-public object SetList { get; set; }
+public IResolvable|ReleaseSetListStruct[] SetList { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>[]
 
 Custom sensitive values to be merged with the values.
 
@@ -2569,10 +2569,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SetSensitive`<sup>Optional</sup> <a name="SetSensitive" id="@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive"></a>
 
 ```csharp
-public object SetSensitive { get; set; }
+public IResolvable|ReleaseSetSensitive[] SetSensitive { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>[]
 
 Custom sensitive values to be merged with the values.
 
@@ -2583,10 +2583,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SetWo`<sup>Optional</sup> <a name="SetWo" id="@cdktf/provider-helm.release.ReleaseConfig.property.setWo"></a>
 
 ```csharp
-public object SetWo { get; set; }
+public IResolvable|ReleaseSetWo[] SetWo { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>[]
 
 Custom values to be merged with the values.
 
@@ -2613,10 +2613,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SkipCrds`<sup>Optional</sup> <a name="SkipCrds" id="@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds"></a>
 
 ```csharp
-public object SkipCrds { get; set; }
+public bool|IResolvable SkipCrds { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
@@ -2655,10 +2655,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Verify`<sup>Optional</sup> <a name="Verify" id="@cdktf/provider-helm.release.ReleaseConfig.property.verify"></a>
 
 ```csharp
-public object Verify { get; set; }
+public bool|IResolvable Verify { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Verify the package before installing it.
 
@@ -2683,10 +2683,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Wait`<sup>Optional</sup> <a name="Wait" id="@cdktf/provider-helm.release.ReleaseConfig.property.wait"></a>
 
 ```csharp
-public object Wait { get; set; }
+public bool|IResolvable Wait { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
@@ -2697,10 +2697,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `WaitForJobs`<sup>Optional</sup> <a name="WaitForJobs" id="@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs"></a>
 
 ```csharp
-public object WaitForJobs { get; set; }
+public bool|IResolvable WaitForJobs { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
@@ -3579,7 +3579,7 @@ private void ResetArgs()
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.binaryPathInput">BinaryPathInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.args">Args</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.binaryPath">BinaryPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | *No description.* |
 
 ---
 
@@ -3650,10 +3650,10 @@ public string BinaryPath { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleasePostrender InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>
 
 ---
 
@@ -3779,7 +3779,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>[]</code> | *No description.* |
 
 ---
 
@@ -3810,10 +3810,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleaseSetList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleaseSet[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>[]
 
 ---
 
@@ -3939,7 +3939,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>[]</code> | *No description.* |
 
 ---
 
@@ -3970,10 +3970,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleaseSetListStruct[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>[]
 
 ---
 
@@ -4210,7 +4210,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.valueInput">ValueInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.value">Value</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a></code> | *No description.* |
 
 ---
 
@@ -4281,10 +4281,10 @@ public string[] Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleaseSetListStruct InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>
 
 ---
 
@@ -4537,7 +4537,7 @@ private void ResetValue()
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a></code> | *No description.* |
 
 ---
 
@@ -4628,10 +4628,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleaseSet InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>
 
 ---
 
@@ -4757,7 +4757,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>[]</code> | *No description.* |
 
 ---
 
@@ -4788,10 +4788,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleaseSetSensitive[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>[]
 
 ---
 
@@ -5037,7 +5037,7 @@ private void ResetType()
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a></code> | *No description.* |
 
 ---
 
@@ -5128,10 +5128,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleaseSetSensitive InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>
 
 ---
 
@@ -5257,7 +5257,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>[]</code> | *No description.* |
 
 ---
 
@@ -5288,10 +5288,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleaseSetWo[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>[]
 
 ---
 
@@ -5537,7 +5537,7 @@ private void ResetType()
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a></code> | *No description.* |
 
 ---
 
@@ -5628,10 +5628,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ReleaseSetWo InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>
 
 ---
 

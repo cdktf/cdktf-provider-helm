@@ -12,82 +12,54 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 import com.hashicorp.cdktf.providers.helm.release.Release;
 
 Release.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .chart(java.lang.String)
     .name(java.lang.String)
-//  .atomic(java.lang.Boolean)
-//  .atomic(IResolvable)
-//  .cleanupOnFail(java.lang.Boolean)
-//  .cleanupOnFail(IResolvable)
-//  .createNamespace(java.lang.Boolean)
-//  .createNamespace(IResolvable)
-//  .dependencyUpdate(java.lang.Boolean)
-//  .dependencyUpdate(IResolvable)
+//  .atomic(java.lang.Boolean|IResolvable)
+//  .cleanupOnFail(java.lang.Boolean|IResolvable)
+//  .createNamespace(java.lang.Boolean|IResolvable)
+//  .dependencyUpdate(java.lang.Boolean|IResolvable)
 //  .description(java.lang.String)
-//  .devel(java.lang.Boolean)
-//  .devel(IResolvable)
-//  .disableCrdHooks(java.lang.Boolean)
-//  .disableCrdHooks(IResolvable)
-//  .disableOpenapiValidation(java.lang.Boolean)
-//  .disableOpenapiValidation(IResolvable)
-//  .disableWebhooks(java.lang.Boolean)
-//  .disableWebhooks(IResolvable)
-//  .forceUpdate(java.lang.Boolean)
-//  .forceUpdate(IResolvable)
+//  .devel(java.lang.Boolean|IResolvable)
+//  .disableCrdHooks(java.lang.Boolean|IResolvable)
+//  .disableOpenapiValidation(java.lang.Boolean|IResolvable)
+//  .disableWebhooks(java.lang.Boolean|IResolvable)
+//  .forceUpdate(java.lang.Boolean|IResolvable)
 //  .keyring(java.lang.String)
-//  .lint(java.lang.Boolean)
-//  .lint(IResolvable)
+//  .lint(java.lang.Boolean|IResolvable)
 //  .maxHistory(java.lang.Number)
 //  .namespace(java.lang.String)
-//  .passCredentials(java.lang.Boolean)
-//  .passCredentials(IResolvable)
+//  .passCredentials(java.lang.Boolean|IResolvable)
 //  .postrender(ReleasePostrender)
-//  .recreatePods(java.lang.Boolean)
-//  .recreatePods(IResolvable)
-//  .renderSubchartNotes(java.lang.Boolean)
-//  .renderSubchartNotes(IResolvable)
-//  .replace(java.lang.Boolean)
-//  .replace(IResolvable)
+//  .recreatePods(java.lang.Boolean|IResolvable)
+//  .renderSubchartNotes(java.lang.Boolean|IResolvable)
+//  .replace(java.lang.Boolean|IResolvable)
 //  .repository(java.lang.String)
 //  .repositoryCaFile(java.lang.String)
 //  .repositoryCertFile(java.lang.String)
 //  .repositoryKeyFile(java.lang.String)
 //  .repositoryPassword(java.lang.String)
 //  .repositoryUsername(java.lang.String)
-//  .resetValues(java.lang.Boolean)
-//  .resetValues(IResolvable)
-//  .reuseValues(java.lang.Boolean)
-//  .reuseValues(IResolvable)
-//  .set(IResolvable)
-//  .set(java.util.List<ReleaseSet>)
-//  .setList(IResolvable)
-//  .setList(java.util.List<ReleaseSetListStruct>)
-//  .setSensitive(IResolvable)
-//  .setSensitive(java.util.List<ReleaseSetSensitive>)
-//  .setWo(IResolvable)
-//  .setWo(java.util.List<ReleaseSetWo>)
+//  .resetValues(java.lang.Boolean|IResolvable)
+//  .reuseValues(java.lang.Boolean|IResolvable)
+//  .set(IResolvable|java.util.List<ReleaseSet>)
+//  .setList(IResolvable|java.util.List<ReleaseSetListStruct>)
+//  .setSensitive(IResolvable|java.util.List<ReleaseSetSensitive>)
+//  .setWo(IResolvable|java.util.List<ReleaseSetWo>)
 //  .setWoRevision(java.lang.Number)
-//  .skipCrds(java.lang.Boolean)
-//  .skipCrds(IResolvable)
+//  .skipCrds(java.lang.Boolean|IResolvable)
 //  .timeout(java.lang.Number)
 //  .values(java.util.List<java.lang.String>)
-//  .verify(java.lang.Boolean)
-//  .verify(IResolvable)
+//  .verify(java.lang.Boolean|IResolvable)
 //  .version(java.lang.String)
-//  .wait(java.lang.Boolean)
-//  .wait(IResolvable)
-//  .waitForJobs(java.lang.Boolean)
-//  .waitForJobs(IResolvable)
+//  .wait(java.lang.Boolean|IResolvable)
+//  .waitForJobs(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -95,54 +67,54 @@ Release.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.chart">chart</a></code> | <code>java.lang.String</code> | Chart name to be installed. A path may be used. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Release name. The length must not be longer than 53 characters. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.atomic">atomic</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.cleanupOnFail">cleanupOnFail</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.createNamespace">createNamespace</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Create the namespace if it does not exist. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.dependencyUpdate">dependencyUpdate</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Run helm dependency update before installing the chart. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.atomic">atomic</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.cleanupOnFail">cleanupOnFail</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.createNamespace">createNamespace</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Create the namespace if it does not exist. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.dependencyUpdate">dependencyUpdate</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Run helm dependency update before installing the chart. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | Add a custom description. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.devel">devel</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableCrdHooks">disableCrdHooks</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableOpenapiValidation">disableOpenapiValidation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableWebhooks">disableWebhooks</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Prevent hooks from running. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.forceUpdate">forceUpdate</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Force resource update through delete/recreate if needed. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.devel">devel</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableCrdHooks">disableCrdHooks</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableOpenapiValidation">disableOpenapiValidation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableWebhooks">disableWebhooks</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Prevent hooks from running. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.forceUpdate">forceUpdate</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Force resource update through delete/recreate if needed. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.keyring">keyring</a></code> | <code>java.lang.String</code> | Location of public keys used for verification, Used only if 'verify is true'. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.lint">lint</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Run helm lint when planning. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.lint">lint</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Run helm lint when planning. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.maxHistory">maxHistory</a></code> | <code>java.lang.Number</code> | Limit the maximum number of revisions saved per release. Use 0 for no limit. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.namespace">namespace</a></code> | <code>java.lang.String</code> | Namespace to install the release into. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.passCredentials">passCredentials</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Pass credentials to all domains. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.passCredentials">passCredentials</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Pass credentials to all domains. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.postrender">postrender</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | Postrender command config. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.recreatePods">recreatePods</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Perform pods restart during upgrade/rollback. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.renderSubchartNotes">renderSubchartNotes</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set, render subchart notes along with the parent. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.replace">replace</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.recreatePods">recreatePods</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Perform pods restart during upgrade/rollback. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.renderSubchartNotes">renderSubchartNotes</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If set, render subchart notes along with the parent. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.replace">replace</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repository">repository</a></code> | <code>java.lang.String</code> | Repository where to locate the requested chart. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryCaFile">repositoryCaFile</a></code> | <code>java.lang.String</code> | The Repositories CA file. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryCertFile">repositoryCertFile</a></code> | <code>java.lang.String</code> | The repositories cert file. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryKeyFile">repositoryKeyFile</a></code> | <code>java.lang.String</code> | The repositories cert key file. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryPassword">repositoryPassword</a></code> | <code>java.lang.String</code> | Password for HTTP basic authentication. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryUsername">repositoryUsername</a></code> | <code>java.lang.String</code> | Username for HTTP basic authentication. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.resetValues">resetValues</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When upgrading, reset the values to the ones built into the chart. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.reuseValues">reuseValues</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.set">set</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>></code> | Custom values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setList">setList</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>></code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setSensitive">setSensitive</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>></code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setWo">setWo</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>></code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.resetValues">resetValues</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When upgrading, reset the values to the ones built into the chart. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.reuseValues">reuseValues</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.set">set</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>></code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setList">setList</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>></code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setSensitive">setSensitive</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>></code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setWo">setWo</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>></code> | Custom values to be merged with the values. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setWoRevision">setWoRevision</a></code> | <code>java.lang.Number</code> | The current revision of the write-only "set_wo" attribute. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.skipCrds">skipCrds</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.skipCrds">skipCrds</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.timeout">timeout</a></code> | <code>java.lang.Number</code> | Time in seconds to wait for any individual kubernetes operation. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.values">values</a></code> | <code>java.util.List<java.lang.String></code> | List of values in raw YAML format to pass to helm. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.verify">verify</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Verify the package before installing it. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.verify">verify</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Verify the package before installing it. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.version">version</a></code> | <code>java.lang.String</code> | Specify the exact chart version to install. If this is not specified, the latest version is installed. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.wait">wait</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Will wait until all resources are in a ready state before marking the release as successful. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.waitForJobs">waitForJobs</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.wait">wait</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Will wait until all resources are in a ready state before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.waitForJobs">waitForJobs</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
 
 ---
 
@@ -166,13 +138,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-helm.release.Release.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-helm.release.Release.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -202,7 +174,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-helm.release.Release.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -228,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `atomic`<sup>Optional</sup> <a name="atomic" id="@cdktf/provider-helm.release.Release.Initializer.parameter.atomic"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
@@ -238,7 +210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `cleanupOnFail`<sup>Optional</sup> <a name="cleanupOnFail" id="@cdktf/provider-helm.release.Release.Initializer.parameter.cleanupOnFail"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
@@ -248,7 +220,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `createNamespace`<sup>Optional</sup> <a name="createNamespace" id="@cdktf/provider-helm.release.Release.Initializer.parameter.createNamespace"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Create the namespace if it does not exist.
 
@@ -258,7 +230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `dependencyUpdate`<sup>Optional</sup> <a name="dependencyUpdate" id="@cdktf/provider-helm.release.Release.Initializer.parameter.dependencyUpdate"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Run helm dependency update before installing the chart.
 
@@ -278,7 +250,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `devel`<sup>Optional</sup> <a name="devel" id="@cdktf/provider-helm.release.Release.Initializer.parameter.devel"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored.
 
@@ -288,7 +260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disableCrdHooks`<sup>Optional</sup> <a name="disableCrdHooks" id="@cdktf/provider-helm.release.Release.Initializer.parameter.disableCrdHooks"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook.
 
@@ -298,7 +270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disableOpenapiValidation`<sup>Optional</sup> <a name="disableOpenapiValidation" id="@cdktf/provider-helm.release.Release.Initializer.parameter.disableOpenapiValidation"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
@@ -308,7 +280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disableWebhooks`<sup>Optional</sup> <a name="disableWebhooks" id="@cdktf/provider-helm.release.Release.Initializer.parameter.disableWebhooks"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Prevent hooks from running.
 
@@ -318,7 +290,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `forceUpdate`<sup>Optional</sup> <a name="forceUpdate" id="@cdktf/provider-helm.release.Release.Initializer.parameter.forceUpdate"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Force resource update through delete/recreate if needed.
 
@@ -338,7 +310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `lint`<sup>Optional</sup> <a name="lint" id="@cdktf/provider-helm.release.Release.Initializer.parameter.lint"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Run helm lint when planning.
 
@@ -368,7 +340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `passCredentials`<sup>Optional</sup> <a name="passCredentials" id="@cdktf/provider-helm.release.Release.Initializer.parameter.passCredentials"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Pass credentials to all domains.
 
@@ -388,7 +360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `recreatePods`<sup>Optional</sup> <a name="recreatePods" id="@cdktf/provider-helm.release.Release.Initializer.parameter.recreatePods"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Perform pods restart during upgrade/rollback.
 
@@ -398,7 +370,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `renderSubchartNotes`<sup>Optional</sup> <a name="renderSubchartNotes" id="@cdktf/provider-helm.release.Release.Initializer.parameter.renderSubchartNotes"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If set, render subchart notes along with the parent.
 
@@ -408,7 +380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `replace`<sup>Optional</sup> <a name="replace" id="@cdktf/provider-helm.release.Release.Initializer.parameter.replace"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
@@ -480,7 +452,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `resetValues`<sup>Optional</sup> <a name="resetValues" id="@cdktf/provider-helm.release.Release.Initializer.parameter.resetValues"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When upgrading, reset the values to the ones built into the chart.
 
@@ -490,7 +462,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `reuseValues`<sup>Optional</sup> <a name="reuseValues" id="@cdktf/provider-helm.release.Release.Initializer.parameter.reuseValues"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
@@ -500,7 +472,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `set`<sup>Optional</sup> <a name="set" id="@cdktf/provider-helm.release.Release.Initializer.parameter.set"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
 
 Custom values to be merged with the values.
 
@@ -510,7 +482,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `setList`<sup>Optional</sup> <a name="setList" id="@cdktf/provider-helm.release.Release.Initializer.parameter.setList"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
 
 Custom sensitive values to be merged with the values.
 
@@ -520,7 +492,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `setSensitive`<sup>Optional</sup> <a name="setSensitive" id="@cdktf/provider-helm.release.Release.Initializer.parameter.setSensitive"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
 
 Custom sensitive values to be merged with the values.
 
@@ -530,7 +502,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `setWo`<sup>Optional</sup> <a name="setWo" id="@cdktf/provider-helm.release.Release.Initializer.parameter.setWo"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
 
 Custom values to be merged with the values.
 
@@ -552,7 +524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `skipCrds`<sup>Optional</sup> <a name="skipCrds" id="@cdktf/provider-helm.release.Release.Initializer.parameter.skipCrds"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
@@ -582,7 +554,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `verify`<sup>Optional</sup> <a name="verify" id="@cdktf/provider-helm.release.Release.Initializer.parameter.verify"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Verify the package before installing it.
 
@@ -602,7 +574,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `wait`<sup>Optional</sup> <a name="wait" id="@cdktf/provider-helm.release.Release.Initializer.parameter.wait"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
@@ -612,7 +584,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `waitForJobs`<sup>Optional</sup> <a name="waitForJobs" id="@cdktf/provider-helm.release.Release.Initializer.parameter.waitForJobs"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
@@ -891,7 +863,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-helm.release.Release.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-helm.release.Release.importFrom"></a>
@@ -947,7 +919,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -962,7 +934,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-helm.release.Release.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -999,48 +971,48 @@ public void putPostrender(ReleasePostrender value)
 ##### `putSet` <a name="putSet" id="@cdktf/provider-helm.release.Release.putSet"></a>
 
 ```java
-public void putSet(IResolvable OR java.util.List<ReleaseSet> value)
+public void putSet(IResolvable|java.util.List<ReleaseSet> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSet.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
 
 ---
 
 ##### `putSetList` <a name="putSetList" id="@cdktf/provider-helm.release.Release.putSetList"></a>
 
 ```java
-public void putSetList(IResolvable OR java.util.List<ReleaseSetListStruct> value)
+public void putSetList(IResolvable|java.util.List<ReleaseSetListStruct> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSetList.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
 
 ---
 
 ##### `putSetSensitive` <a name="putSetSensitive" id="@cdktf/provider-helm.release.Release.putSetSensitive"></a>
 
 ```java
-public void putSetSensitive(IResolvable OR java.util.List<ReleaseSetSensitive> value)
+public void putSetSensitive(IResolvable|java.util.List<ReleaseSetSensitive> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSetSensitive.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
 
 ---
 
 ##### `putSetWo` <a name="putSetWo" id="@cdktf/provider-helm.release.Release.putSetWo"></a>
 
 ```java
-public void putSetWo(IResolvable OR java.util.List<ReleaseSetWo> value)
+public void putSetWo(IResolvable|java.util.List<ReleaseSetWo> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSetWo.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
 
 ---
 
@@ -1404,13 +1376,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.manifest">manifest</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.metadata">metadata</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseMetadataOutputReference">ReleaseMetadataOutputReference</a></code> | *No description.* |
@@ -1420,83 +1392,83 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitive">setSensitive</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList">ReleaseSetSensitiveList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWo">setWo</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList">ReleaseSetWoList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.status">status</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.atomicInput">atomicInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.atomicInput">atomicInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.chartInput">chartInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFailInput">cleanupOnFailInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespaceInput">createNamespaceInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdateInput">dependencyUpdateInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFailInput">cleanupOnFailInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespaceInput">createNamespaceInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdateInput">dependencyUpdateInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.descriptionInput">descriptionInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.develInput">develInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooksInput">disableCrdHooksInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput">disableOpenapiValidationInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooksInput">disableWebhooksInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdateInput">forceUpdateInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.develInput">develInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooksInput">disableCrdHooksInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput">disableOpenapiValidationInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooksInput">disableWebhooksInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdateInput">forceUpdateInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.keyringInput">keyringInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.lintInput">lintInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.lintInput">lintInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.maxHistoryInput">maxHistoryInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.namespaceInput">namespaceInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentialsInput">passCredentialsInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.postrenderInput">postrenderInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePodsInput">recreatePodsInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput">renderSubchartNotesInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.replaceInput">replaceInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentialsInput">passCredentialsInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.postrenderInput">postrenderInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePodsInput">recreatePodsInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput">renderSubchartNotesInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.replaceInput">replaceInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCaFileInput">repositoryCaFileInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCertFileInput">repositoryCertFileInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryInput">repositoryInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryKeyFileInput">repositoryKeyFileInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryPasswordInput">repositoryPasswordInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryUsernameInput">repositoryUsernameInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValuesInput">resetValuesInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValuesInput">reuseValuesInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setInput">setInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setListInput">setListInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitiveInput">setSensitiveInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setWoInput">setWoInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValuesInput">resetValuesInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValuesInput">reuseValuesInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setInput">setInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setListInput">setListInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitiveInput">setSensitiveInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setWoInput">setWoInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWoRevisionInput">setWoRevisionInput</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrdsInput">skipCrdsInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrdsInput">skipCrdsInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.timeoutInput">timeoutInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.valuesInput">valuesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.verifyInput">verifyInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.verifyInput">verifyInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.versionInput">versionInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobsInput">waitForJobsInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitInput">waitInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.atomic">atomic</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobsInput">waitForJobsInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitInput">waitInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.atomic">atomic</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.chart">chart</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFail">cleanupOnFail</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespace">createNamespace</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdate">dependencyUpdate</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFail">cleanupOnFail</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespace">createNamespace</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdate">dependencyUpdate</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.description">description</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.devel">devel</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooks">disableCrdHooks</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidation">disableOpenapiValidation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooks">disableWebhooks</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdate">forceUpdate</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.devel">devel</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooks">disableCrdHooks</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidation">disableOpenapiValidation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooks">disableWebhooks</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdate">forceUpdate</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.keyring">keyring</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.lint">lint</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.lint">lint</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.maxHistory">maxHistory</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.namespace">namespace</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentials">passCredentials</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePods">recreatePods</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotes">renderSubchartNotes</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.replace">replace</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentials">passCredentials</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePods">recreatePods</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotes">renderSubchartNotes</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.replace">replace</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repository">repository</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCaFile">repositoryCaFile</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCertFile">repositoryCertFile</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryKeyFile">repositoryKeyFile</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryPassword">repositoryPassword</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryUsername">repositoryUsername</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValues">resetValues</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValues">reuseValues</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValues">resetValues</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValues">reuseValues</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWoRevision">setWoRevision</a></code> | <code>java.lang.Number</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrds">skipCrds</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrds">skipCrds</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.timeout">timeout</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.values">values</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.verify">verify</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.verify">verify</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.version">version</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.wait">wait</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobs">waitForJobs</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.wait">wait</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobs">waitForJobs</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1575,20 +1547,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-helm.release.Release.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-helm.release.Release.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1635,10 +1607,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-helm.release.Release.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1735,10 +1707,10 @@ public java.lang.String getStatus();
 ##### `atomicInput`<sup>Optional</sup> <a name="atomicInput" id="@cdktf/provider-helm.release.Release.property.atomicInput"></a>
 
 ```java
-public java.lang.Object getAtomicInput();
+public java.lang.Boolean|IResolvable getAtomicInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1755,30 +1727,30 @@ public java.lang.String getChartInput();
 ##### `cleanupOnFailInput`<sup>Optional</sup> <a name="cleanupOnFailInput" id="@cdktf/provider-helm.release.Release.property.cleanupOnFailInput"></a>
 
 ```java
-public java.lang.Object getCleanupOnFailInput();
+public java.lang.Boolean|IResolvable getCleanupOnFailInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `createNamespaceInput`<sup>Optional</sup> <a name="createNamespaceInput" id="@cdktf/provider-helm.release.Release.property.createNamespaceInput"></a>
 
 ```java
-public java.lang.Object getCreateNamespaceInput();
+public java.lang.Boolean|IResolvable getCreateNamespaceInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `dependencyUpdateInput`<sup>Optional</sup> <a name="dependencyUpdateInput" id="@cdktf/provider-helm.release.Release.property.dependencyUpdateInput"></a>
 
 ```java
-public java.lang.Object getDependencyUpdateInput();
+public java.lang.Boolean|IResolvable getDependencyUpdateInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1795,50 +1767,50 @@ public java.lang.String getDescriptionInput();
 ##### `develInput`<sup>Optional</sup> <a name="develInput" id="@cdktf/provider-helm.release.Release.property.develInput"></a>
 
 ```java
-public java.lang.Object getDevelInput();
+public java.lang.Boolean|IResolvable getDevelInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disableCrdHooksInput`<sup>Optional</sup> <a name="disableCrdHooksInput" id="@cdktf/provider-helm.release.Release.property.disableCrdHooksInput"></a>
 
 ```java
-public java.lang.Object getDisableCrdHooksInput();
+public java.lang.Boolean|IResolvable getDisableCrdHooksInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disableOpenapiValidationInput`<sup>Optional</sup> <a name="disableOpenapiValidationInput" id="@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput"></a>
 
 ```java
-public java.lang.Object getDisableOpenapiValidationInput();
+public java.lang.Boolean|IResolvable getDisableOpenapiValidationInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disableWebhooksInput`<sup>Optional</sup> <a name="disableWebhooksInput" id="@cdktf/provider-helm.release.Release.property.disableWebhooksInput"></a>
 
 ```java
-public java.lang.Object getDisableWebhooksInput();
+public java.lang.Boolean|IResolvable getDisableWebhooksInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `forceUpdateInput`<sup>Optional</sup> <a name="forceUpdateInput" id="@cdktf/provider-helm.release.Release.property.forceUpdateInput"></a>
 
 ```java
-public java.lang.Object getForceUpdateInput();
+public java.lang.Boolean|IResolvable getForceUpdateInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1855,10 +1827,10 @@ public java.lang.String getKeyringInput();
 ##### `lintInput`<sup>Optional</sup> <a name="lintInput" id="@cdktf/provider-helm.release.Release.property.lintInput"></a>
 
 ```java
-public java.lang.Object getLintInput();
+public java.lang.Boolean|IResolvable getLintInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1895,50 +1867,50 @@ public java.lang.String getNamespaceInput();
 ##### `passCredentialsInput`<sup>Optional</sup> <a name="passCredentialsInput" id="@cdktf/provider-helm.release.Release.property.passCredentialsInput"></a>
 
 ```java
-public java.lang.Object getPassCredentialsInput();
+public java.lang.Boolean|IResolvable getPassCredentialsInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `postrenderInput`<sup>Optional</sup> <a name="postrenderInput" id="@cdktf/provider-helm.release.Release.property.postrenderInput"></a>
 
 ```java
-public java.lang.Object getPostrenderInput();
+public IResolvable|ReleasePostrender getPostrenderInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>
 
 ---
 
 ##### `recreatePodsInput`<sup>Optional</sup> <a name="recreatePodsInput" id="@cdktf/provider-helm.release.Release.property.recreatePodsInput"></a>
 
 ```java
-public java.lang.Object getRecreatePodsInput();
+public java.lang.Boolean|IResolvable getRecreatePodsInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `renderSubchartNotesInput`<sup>Optional</sup> <a name="renderSubchartNotesInput" id="@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput"></a>
 
 ```java
-public java.lang.Object getRenderSubchartNotesInput();
+public java.lang.Boolean|IResolvable getRenderSubchartNotesInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `replaceInput`<sup>Optional</sup> <a name="replaceInput" id="@cdktf/provider-helm.release.Release.property.replaceInput"></a>
 
 ```java
-public java.lang.Object getReplaceInput();
+public java.lang.Boolean|IResolvable getReplaceInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2005,60 +1977,60 @@ public java.lang.String getRepositoryUsernameInput();
 ##### `resetValuesInput`<sup>Optional</sup> <a name="resetValuesInput" id="@cdktf/provider-helm.release.Release.property.resetValuesInput"></a>
 
 ```java
-public java.lang.Object getResetValuesInput();
+public java.lang.Boolean|IResolvable getResetValuesInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `reuseValuesInput`<sup>Optional</sup> <a name="reuseValuesInput" id="@cdktf/provider-helm.release.Release.property.reuseValuesInput"></a>
 
 ```java
-public java.lang.Object getReuseValuesInput();
+public java.lang.Boolean|IResolvable getReuseValuesInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `setInput`<sup>Optional</sup> <a name="setInput" id="@cdktf/provider-helm.release.Release.property.setInput"></a>
 
 ```java
-public java.lang.Object getSetInput();
+public IResolvable|java.util.List<ReleaseSet> getSetInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
 
 ---
 
 ##### `setListInput`<sup>Optional</sup> <a name="setListInput" id="@cdktf/provider-helm.release.Release.property.setListInput"></a>
 
 ```java
-public java.lang.Object getSetListInput();
+public IResolvable|java.util.List<ReleaseSetListStruct> getSetListInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
 
 ---
 
 ##### `setSensitiveInput`<sup>Optional</sup> <a name="setSensitiveInput" id="@cdktf/provider-helm.release.Release.property.setSensitiveInput"></a>
 
 ```java
-public java.lang.Object getSetSensitiveInput();
+public IResolvable|java.util.List<ReleaseSetSensitive> getSetSensitiveInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
 
 ---
 
 ##### `setWoInput`<sup>Optional</sup> <a name="setWoInput" id="@cdktf/provider-helm.release.Release.property.setWoInput"></a>
 
 ```java
-public java.lang.Object getSetWoInput();
+public IResolvable|java.util.List<ReleaseSetWo> getSetWoInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
 
 ---
 
@@ -2075,10 +2047,10 @@ public java.lang.Number getSetWoRevisionInput();
 ##### `skipCrdsInput`<sup>Optional</sup> <a name="skipCrdsInput" id="@cdktf/provider-helm.release.Release.property.skipCrdsInput"></a>
 
 ```java
-public java.lang.Object getSkipCrdsInput();
+public java.lang.Boolean|IResolvable getSkipCrdsInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2105,10 +2077,10 @@ public java.util.List<java.lang.String> getValuesInput();
 ##### `verifyInput`<sup>Optional</sup> <a name="verifyInput" id="@cdktf/provider-helm.release.Release.property.verifyInput"></a>
 
 ```java
-public java.lang.Object getVerifyInput();
+public java.lang.Boolean|IResolvable getVerifyInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2125,30 +2097,30 @@ public java.lang.String getVersionInput();
 ##### `waitForJobsInput`<sup>Optional</sup> <a name="waitForJobsInput" id="@cdktf/provider-helm.release.Release.property.waitForJobsInput"></a>
 
 ```java
-public java.lang.Object getWaitForJobsInput();
+public java.lang.Boolean|IResolvable getWaitForJobsInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `waitInput`<sup>Optional</sup> <a name="waitInput" id="@cdktf/provider-helm.release.Release.property.waitInput"></a>
 
 ```java
-public java.lang.Object getWaitInput();
+public java.lang.Boolean|IResolvable getWaitInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `atomic`<sup>Required</sup> <a name="atomic" id="@cdktf/provider-helm.release.Release.property.atomic"></a>
 
 ```java
-public java.lang.Object getAtomic();
+public java.lang.Boolean|IResolvable getAtomic();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2165,30 +2137,30 @@ public java.lang.String getChart();
 ##### `cleanupOnFail`<sup>Required</sup> <a name="cleanupOnFail" id="@cdktf/provider-helm.release.Release.property.cleanupOnFail"></a>
 
 ```java
-public java.lang.Object getCleanupOnFail();
+public java.lang.Boolean|IResolvable getCleanupOnFail();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `createNamespace`<sup>Required</sup> <a name="createNamespace" id="@cdktf/provider-helm.release.Release.property.createNamespace"></a>
 
 ```java
-public java.lang.Object getCreateNamespace();
+public java.lang.Boolean|IResolvable getCreateNamespace();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `dependencyUpdate`<sup>Required</sup> <a name="dependencyUpdate" id="@cdktf/provider-helm.release.Release.property.dependencyUpdate"></a>
 
 ```java
-public java.lang.Object getDependencyUpdate();
+public java.lang.Boolean|IResolvable getDependencyUpdate();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2205,50 +2177,50 @@ public java.lang.String getDescription();
 ##### `devel`<sup>Required</sup> <a name="devel" id="@cdktf/provider-helm.release.Release.property.devel"></a>
 
 ```java
-public java.lang.Object getDevel();
+public java.lang.Boolean|IResolvable getDevel();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disableCrdHooks`<sup>Required</sup> <a name="disableCrdHooks" id="@cdktf/provider-helm.release.Release.property.disableCrdHooks"></a>
 
 ```java
-public java.lang.Object getDisableCrdHooks();
+public java.lang.Boolean|IResolvable getDisableCrdHooks();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disableOpenapiValidation`<sup>Required</sup> <a name="disableOpenapiValidation" id="@cdktf/provider-helm.release.Release.property.disableOpenapiValidation"></a>
 
 ```java
-public java.lang.Object getDisableOpenapiValidation();
+public java.lang.Boolean|IResolvable getDisableOpenapiValidation();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disableWebhooks`<sup>Required</sup> <a name="disableWebhooks" id="@cdktf/provider-helm.release.Release.property.disableWebhooks"></a>
 
 ```java
-public java.lang.Object getDisableWebhooks();
+public java.lang.Boolean|IResolvable getDisableWebhooks();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `forceUpdate`<sup>Required</sup> <a name="forceUpdate" id="@cdktf/provider-helm.release.Release.property.forceUpdate"></a>
 
 ```java
-public java.lang.Object getForceUpdate();
+public java.lang.Boolean|IResolvable getForceUpdate();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2265,10 +2237,10 @@ public java.lang.String getKeyring();
 ##### `lint`<sup>Required</sup> <a name="lint" id="@cdktf/provider-helm.release.Release.property.lint"></a>
 
 ```java
-public java.lang.Object getLint();
+public java.lang.Boolean|IResolvable getLint();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2305,40 +2277,40 @@ public java.lang.String getNamespace();
 ##### `passCredentials`<sup>Required</sup> <a name="passCredentials" id="@cdktf/provider-helm.release.Release.property.passCredentials"></a>
 
 ```java
-public java.lang.Object getPassCredentials();
+public java.lang.Boolean|IResolvable getPassCredentials();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `recreatePods`<sup>Required</sup> <a name="recreatePods" id="@cdktf/provider-helm.release.Release.property.recreatePods"></a>
 
 ```java
-public java.lang.Object getRecreatePods();
+public java.lang.Boolean|IResolvable getRecreatePods();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `renderSubchartNotes`<sup>Required</sup> <a name="renderSubchartNotes" id="@cdktf/provider-helm.release.Release.property.renderSubchartNotes"></a>
 
 ```java
-public java.lang.Object getRenderSubchartNotes();
+public java.lang.Boolean|IResolvable getRenderSubchartNotes();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `replace`<sup>Required</sup> <a name="replace" id="@cdktf/provider-helm.release.Release.property.replace"></a>
 
 ```java
-public java.lang.Object getReplace();
+public java.lang.Boolean|IResolvable getReplace();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2405,20 +2377,20 @@ public java.lang.String getRepositoryUsername();
 ##### `resetValues`<sup>Required</sup> <a name="resetValues" id="@cdktf/provider-helm.release.Release.property.resetValues"></a>
 
 ```java
-public java.lang.Object getResetValues();
+public java.lang.Boolean|IResolvable getResetValues();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `reuseValues`<sup>Required</sup> <a name="reuseValues" id="@cdktf/provider-helm.release.Release.property.reuseValues"></a>
 
 ```java
-public java.lang.Object getReuseValues();
+public java.lang.Boolean|IResolvable getReuseValues();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2435,10 +2407,10 @@ public java.lang.Number getSetWoRevision();
 ##### `skipCrds`<sup>Required</sup> <a name="skipCrds" id="@cdktf/provider-helm.release.Release.property.skipCrds"></a>
 
 ```java
-public java.lang.Object getSkipCrds();
+public java.lang.Boolean|IResolvable getSkipCrds();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2465,10 +2437,10 @@ public java.util.List<java.lang.String> getValues();
 ##### `verify`<sup>Required</sup> <a name="verify" id="@cdktf/provider-helm.release.Release.property.verify"></a>
 
 ```java
-public java.lang.Object getVerify();
+public java.lang.Boolean|IResolvable getVerify();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2485,20 +2457,20 @@ public java.lang.String getVersion();
 ##### `wait`<sup>Required</sup> <a name="wait" id="@cdktf/provider-helm.release.Release.property.wait"></a>
 
 ```java
-public java.lang.Object getWait();
+public java.lang.Boolean|IResolvable getWait();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `waitForJobs`<sup>Required</sup> <a name="waitForJobs" id="@cdktf/provider-helm.release.Release.property.waitForJobs"></a>
 
 ```java
-public java.lang.Object getWaitForJobs();
+public java.lang.Boolean|IResolvable getWaitForJobs();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -2530,82 +2502,54 @@ public java.lang.String getTfResourceType();
 import com.hashicorp.cdktf.providers.helm.release.ReleaseConfig;
 
 ReleaseConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .chart(java.lang.String)
     .name(java.lang.String)
-//  .atomic(java.lang.Boolean)
-//  .atomic(IResolvable)
-//  .cleanupOnFail(java.lang.Boolean)
-//  .cleanupOnFail(IResolvable)
-//  .createNamespace(java.lang.Boolean)
-//  .createNamespace(IResolvable)
-//  .dependencyUpdate(java.lang.Boolean)
-//  .dependencyUpdate(IResolvable)
+//  .atomic(java.lang.Boolean|IResolvable)
+//  .cleanupOnFail(java.lang.Boolean|IResolvable)
+//  .createNamespace(java.lang.Boolean|IResolvable)
+//  .dependencyUpdate(java.lang.Boolean|IResolvable)
 //  .description(java.lang.String)
-//  .devel(java.lang.Boolean)
-//  .devel(IResolvable)
-//  .disableCrdHooks(java.lang.Boolean)
-//  .disableCrdHooks(IResolvable)
-//  .disableOpenapiValidation(java.lang.Boolean)
-//  .disableOpenapiValidation(IResolvable)
-//  .disableWebhooks(java.lang.Boolean)
-//  .disableWebhooks(IResolvable)
-//  .forceUpdate(java.lang.Boolean)
-//  .forceUpdate(IResolvable)
+//  .devel(java.lang.Boolean|IResolvable)
+//  .disableCrdHooks(java.lang.Boolean|IResolvable)
+//  .disableOpenapiValidation(java.lang.Boolean|IResolvable)
+//  .disableWebhooks(java.lang.Boolean|IResolvable)
+//  .forceUpdate(java.lang.Boolean|IResolvable)
 //  .keyring(java.lang.String)
-//  .lint(java.lang.Boolean)
-//  .lint(IResolvable)
+//  .lint(java.lang.Boolean|IResolvable)
 //  .maxHistory(java.lang.Number)
 //  .namespace(java.lang.String)
-//  .passCredentials(java.lang.Boolean)
-//  .passCredentials(IResolvable)
+//  .passCredentials(java.lang.Boolean|IResolvable)
 //  .postrender(ReleasePostrender)
-//  .recreatePods(java.lang.Boolean)
-//  .recreatePods(IResolvable)
-//  .renderSubchartNotes(java.lang.Boolean)
-//  .renderSubchartNotes(IResolvable)
-//  .replace(java.lang.Boolean)
-//  .replace(IResolvable)
+//  .recreatePods(java.lang.Boolean|IResolvable)
+//  .renderSubchartNotes(java.lang.Boolean|IResolvable)
+//  .replace(java.lang.Boolean|IResolvable)
 //  .repository(java.lang.String)
 //  .repositoryCaFile(java.lang.String)
 //  .repositoryCertFile(java.lang.String)
 //  .repositoryKeyFile(java.lang.String)
 //  .repositoryPassword(java.lang.String)
 //  .repositoryUsername(java.lang.String)
-//  .resetValues(java.lang.Boolean)
-//  .resetValues(IResolvable)
-//  .reuseValues(java.lang.Boolean)
-//  .reuseValues(IResolvable)
-//  .set(IResolvable)
-//  .set(java.util.List<ReleaseSet>)
-//  .setList(IResolvable)
-//  .setList(java.util.List<ReleaseSetListStruct>)
-//  .setSensitive(IResolvable)
-//  .setSensitive(java.util.List<ReleaseSetSensitive>)
-//  .setWo(IResolvable)
-//  .setWo(java.util.List<ReleaseSetWo>)
+//  .resetValues(java.lang.Boolean|IResolvable)
+//  .reuseValues(java.lang.Boolean|IResolvable)
+//  .set(IResolvable|java.util.List<ReleaseSet>)
+//  .setList(IResolvable|java.util.List<ReleaseSetListStruct>)
+//  .setSensitive(IResolvable|java.util.List<ReleaseSetSensitive>)
+//  .setWo(IResolvable|java.util.List<ReleaseSetWo>)
 //  .setWoRevision(java.lang.Number)
-//  .skipCrds(java.lang.Boolean)
-//  .skipCrds(IResolvable)
+//  .skipCrds(java.lang.Boolean|IResolvable)
 //  .timeout(java.lang.Number)
 //  .values(java.util.List<java.lang.String>)
-//  .verify(java.lang.Boolean)
-//  .verify(IResolvable)
+//  .verify(java.lang.Boolean|IResolvable)
 //  .version(java.lang.String)
-//  .wait(java.lang.Boolean)
-//  .wait(IResolvable)
-//  .waitForJobs(java.lang.Boolean)
-//  .waitForJobs(IResolvable)
+//  .wait(java.lang.Boolean|IResolvable)
+//  .waitForJobs(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2613,74 +2557,74 @@ ReleaseConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.chart">chart</a></code> | <code>java.lang.String</code> | Chart name to be installed. A path may be used. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.name">name</a></code> | <code>java.lang.String</code> | Release name. The length must not be longer than 53 characters. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.atomic">atomic</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail">cleanupOnFail</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace">createNamespace</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Create the namespace if it does not exist. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate">dependencyUpdate</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Run helm dependency update before installing the chart. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.atomic">atomic</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail">cleanupOnFail</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace">createNamespace</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Create the namespace if it does not exist. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate">dependencyUpdate</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Run helm dependency update before installing the chart. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.description">description</a></code> | <code>java.lang.String</code> | Add a custom description. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.devel">devel</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks">disableCrdHooks</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation">disableOpenapiValidation</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks">disableWebhooks</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Prevent hooks from running. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate">forceUpdate</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Force resource update through delete/recreate if needed. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.devel">devel</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks">disableCrdHooks</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation">disableOpenapiValidation</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks">disableWebhooks</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Prevent hooks from running. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate">forceUpdate</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Force resource update through delete/recreate if needed. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.keyring">keyring</a></code> | <code>java.lang.String</code> | Location of public keys used for verification, Used only if 'verify is true'. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lint">lint</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Run helm lint when planning. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lint">lint</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Run helm lint when planning. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.maxHistory">maxHistory</a></code> | <code>java.lang.Number</code> | Limit the maximum number of revisions saved per release. Use 0 for no limit. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.namespace">namespace</a></code> | <code>java.lang.String</code> | Namespace to install the release into. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials">passCredentials</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Pass credentials to all domains. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials">passCredentials</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Pass credentials to all domains. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.postrender">postrender</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | Postrender command config. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods">recreatePods</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Perform pods restart during upgrade/rollback. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes">renderSubchartNotes</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set, render subchart notes along with the parent. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.replace">replace</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods">recreatePods</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Perform pods restart during upgrade/rollback. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes">renderSubchartNotes</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If set, render subchart notes along with the parent. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.replace">replace</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repository">repository</a></code> | <code>java.lang.String</code> | Repository where to locate the requested chart. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryCaFile">repositoryCaFile</a></code> | <code>java.lang.String</code> | The Repositories CA file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryCertFile">repositoryCertFile</a></code> | <code>java.lang.String</code> | The repositories cert file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryKeyFile">repositoryKeyFile</a></code> | <code>java.lang.String</code> | The repositories cert key file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryPassword">repositoryPassword</a></code> | <code>java.lang.String</code> | Password for HTTP basic authentication. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryUsername">repositoryUsername</a></code> | <code>java.lang.String</code> | Username for HTTP basic authentication. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.resetValues">resetValues</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When upgrading, reset the values to the ones built into the chart. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues">reuseValues</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.set">set</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>></code> | Custom values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setList">setList</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>></code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive">setSensitive</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>></code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWo">setWo</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>></code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.resetValues">resetValues</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When upgrading, reset the values to the ones built into the chart. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues">reuseValues</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.set">set</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>></code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setList">setList</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>></code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive">setSensitive</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>></code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWo">setWo</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>></code> | Custom values to be merged with the values. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWoRevision">setWoRevision</a></code> | <code>java.lang.Number</code> | The current revision of the write-only "set_wo" attribute. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds">skipCrds</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds">skipCrds</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.timeout">timeout</a></code> | <code>java.lang.Number</code> | Time in seconds to wait for any individual kubernetes operation. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.values">values</a></code> | <code>java.util.List<java.lang.String></code> | List of values in raw YAML format to pass to helm. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.verify">verify</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Verify the package before installing it. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.verify">verify</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Verify the package before installing it. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.version">version</a></code> | <code>java.lang.String</code> | Specify the exact chart version to install. If this is not specified, the latest version is installed. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.wait">wait</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Will wait until all resources are in a ready state before marking the release as successful. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs">waitForJobs</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.wait">wait</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Will wait until all resources are in a ready state before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs">waitForJobs</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
 
 ---
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-helm.release.ReleaseConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-helm.release.ReleaseConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -2727,10 +2671,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-helm.release.ReleaseConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -2765,10 +2709,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `atomic`<sup>Optional</sup> <a name="atomic" id="@cdktf/provider-helm.release.ReleaseConfig.property.atomic"></a>
 
 ```java
-public java.lang.Object getAtomic();
+public java.lang.Boolean|IResolvable getAtomic();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
@@ -2779,10 +2723,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `cleanupOnFail`<sup>Optional</sup> <a name="cleanupOnFail" id="@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail"></a>
 
 ```java
-public java.lang.Object getCleanupOnFail();
+public java.lang.Boolean|IResolvable getCleanupOnFail();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
@@ -2793,10 +2737,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `createNamespace`<sup>Optional</sup> <a name="createNamespace" id="@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace"></a>
 
 ```java
-public java.lang.Object getCreateNamespace();
+public java.lang.Boolean|IResolvable getCreateNamespace();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Create the namespace if it does not exist.
 
@@ -2807,10 +2751,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `dependencyUpdate`<sup>Optional</sup> <a name="dependencyUpdate" id="@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate"></a>
 
 ```java
-public java.lang.Object getDependencyUpdate();
+public java.lang.Boolean|IResolvable getDependencyUpdate();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Run helm dependency update before installing the chart.
 
@@ -2835,10 +2779,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `devel`<sup>Optional</sup> <a name="devel" id="@cdktf/provider-helm.release.ReleaseConfig.property.devel"></a>
 
 ```java
-public java.lang.Object getDevel();
+public java.lang.Boolean|IResolvable getDevel();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored.
 
@@ -2849,10 +2793,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disableCrdHooks`<sup>Optional</sup> <a name="disableCrdHooks" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks"></a>
 
 ```java
-public java.lang.Object getDisableCrdHooks();
+public java.lang.Boolean|IResolvable getDisableCrdHooks();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook.
 
@@ -2863,10 +2807,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disableOpenapiValidation`<sup>Optional</sup> <a name="disableOpenapiValidation" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation"></a>
 
 ```java
-public java.lang.Object getDisableOpenapiValidation();
+public java.lang.Boolean|IResolvable getDisableOpenapiValidation();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
@@ -2877,10 +2821,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disableWebhooks`<sup>Optional</sup> <a name="disableWebhooks" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks"></a>
 
 ```java
-public java.lang.Object getDisableWebhooks();
+public java.lang.Boolean|IResolvable getDisableWebhooks();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Prevent hooks from running.
 
@@ -2891,10 +2835,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `forceUpdate`<sup>Optional</sup> <a name="forceUpdate" id="@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate"></a>
 
 ```java
-public java.lang.Object getForceUpdate();
+public java.lang.Boolean|IResolvable getForceUpdate();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Force resource update through delete/recreate if needed.
 
@@ -2919,10 +2863,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `lint`<sup>Optional</sup> <a name="lint" id="@cdktf/provider-helm.release.ReleaseConfig.property.lint"></a>
 
 ```java
-public java.lang.Object getLint();
+public java.lang.Boolean|IResolvable getLint();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Run helm lint when planning.
 
@@ -2961,10 +2905,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `passCredentials`<sup>Optional</sup> <a name="passCredentials" id="@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials"></a>
 
 ```java
-public java.lang.Object getPassCredentials();
+public java.lang.Boolean|IResolvable getPassCredentials();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Pass credentials to all domains.
 
@@ -2989,10 +2933,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recreatePods`<sup>Optional</sup> <a name="recreatePods" id="@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods"></a>
 
 ```java
-public java.lang.Object getRecreatePods();
+public java.lang.Boolean|IResolvable getRecreatePods();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Perform pods restart during upgrade/rollback.
 
@@ -3003,10 +2947,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `renderSubchartNotes`<sup>Optional</sup> <a name="renderSubchartNotes" id="@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes"></a>
 
 ```java
-public java.lang.Object getRenderSubchartNotes();
+public java.lang.Boolean|IResolvable getRenderSubchartNotes();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If set, render subchart notes along with the parent.
 
@@ -3017,10 +2961,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `replace`<sup>Optional</sup> <a name="replace" id="@cdktf/provider-helm.release.ReleaseConfig.property.replace"></a>
 
 ```java
-public java.lang.Object getReplace();
+public java.lang.Boolean|IResolvable getReplace();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
@@ -3117,10 +3061,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `resetValues`<sup>Optional</sup> <a name="resetValues" id="@cdktf/provider-helm.release.ReleaseConfig.property.resetValues"></a>
 
 ```java
-public java.lang.Object getResetValues();
+public java.lang.Boolean|IResolvable getResetValues();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When upgrading, reset the values to the ones built into the chart.
 
@@ -3131,10 +3075,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `reuseValues`<sup>Optional</sup> <a name="reuseValues" id="@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues"></a>
 
 ```java
-public java.lang.Object getReuseValues();
+public java.lang.Boolean|IResolvable getReuseValues();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
@@ -3145,10 +3089,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set`<sup>Optional</sup> <a name="set" id="@cdktf/provider-helm.release.ReleaseConfig.property.set"></a>
 
 ```java
-public java.lang.Object getSet();
+public IResolvable|java.util.List<ReleaseSet> getSet();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
 
 Custom values to be merged with the values.
 
@@ -3159,10 +3103,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `setList`<sup>Optional</sup> <a name="setList" id="@cdktf/provider-helm.release.ReleaseConfig.property.setList"></a>
 
 ```java
-public java.lang.Object getSetList();
+public IResolvable|java.util.List<ReleaseSetListStruct> getSetList();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
 
 Custom sensitive values to be merged with the values.
 
@@ -3173,10 +3117,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `setSensitive`<sup>Optional</sup> <a name="setSensitive" id="@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive"></a>
 
 ```java
-public java.lang.Object getSetSensitive();
+public IResolvable|java.util.List<ReleaseSetSensitive> getSetSensitive();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
 
 Custom sensitive values to be merged with the values.
 
@@ -3187,10 +3131,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `setWo`<sup>Optional</sup> <a name="setWo" id="@cdktf/provider-helm.release.ReleaseConfig.property.setWo"></a>
 
 ```java
-public java.lang.Object getSetWo();
+public IResolvable|java.util.List<ReleaseSetWo> getSetWo();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
 
 Custom values to be merged with the values.
 
@@ -3217,10 +3161,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `skipCrds`<sup>Optional</sup> <a name="skipCrds" id="@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds"></a>
 
 ```java
-public java.lang.Object getSkipCrds();
+public java.lang.Boolean|IResolvable getSkipCrds();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
@@ -3259,10 +3203,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `verify`<sup>Optional</sup> <a name="verify" id="@cdktf/provider-helm.release.ReleaseConfig.property.verify"></a>
 
 ```java
-public java.lang.Object getVerify();
+public java.lang.Boolean|IResolvable getVerify();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Verify the package before installing it.
 
@@ -3287,10 +3231,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `wait`<sup>Optional</sup> <a name="wait" id="@cdktf/provider-helm.release.ReleaseConfig.property.wait"></a>
 
 ```java
-public java.lang.Object getWait();
+public java.lang.Boolean|IResolvable getWait();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
@@ -3301,10 +3245,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `waitForJobs`<sup>Optional</sup> <a name="waitForJobs" id="@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs"></a>
 
 ```java
-public java.lang.Object getWaitForJobs();
+public java.lang.Boolean|IResolvable getWaitForJobs();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
@@ -4182,7 +4126,7 @@ public void resetArgs()
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.binaryPathInput">binaryPathInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.args">args</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.binaryPath">binaryPath</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | *No description.* |
 
 ---
 
@@ -4253,10 +4197,10 @@ public java.lang.String getBinaryPath();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ReleasePostrender getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>
 
 ---
 
@@ -4382,7 +4326,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>></code> | *No description.* |
 
 ---
 
@@ -4413,10 +4357,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ReleaseSet> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>>
 
 ---
 
@@ -4542,7 +4486,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>></code> | *No description.* |
 
 ---
 
@@ -4573,10 +4517,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ReleaseSetListStruct> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>>
 
 ---
 
@@ -4813,7 +4757,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.valueInput">valueInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.value">value</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a></code> | *No description.* |
 
 ---
 
@@ -4884,10 +4828,10 @@ public java.util.List<java.lang.String> getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ReleaseSetListStruct getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>
 
 ---
 
@@ -5140,7 +5084,7 @@ public void resetValue()
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a></code> | *No description.* |
 
 ---
 
@@ -5231,10 +5175,10 @@ public java.lang.String getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ReleaseSet getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>
 
 ---
 
@@ -5360,7 +5304,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>></code> | *No description.* |
 
 ---
 
@@ -5391,10 +5335,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ReleaseSetSensitive> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>>
 
 ---
 
@@ -5640,7 +5584,7 @@ public void resetType()
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a></code> | *No description.* |
 
 ---
 
@@ -5731,10 +5675,10 @@ public java.lang.String getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ReleaseSetSensitive getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>
 
 ---
 
@@ -5860,7 +5804,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>></code> | *No description.* |
 
 ---
 
@@ -5891,10 +5835,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<ReleaseSetWo> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>>
 
 ---
 
@@ -6140,7 +6084,7 @@ public void resetType()
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.value">value</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a></code> | *No description.* |
 
 ---
 
@@ -6231,10 +6175,10 @@ public java.lang.String getValue();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|ReleaseSetWo getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>
 
 ---
 

@@ -16,12 +16,12 @@ provider.HelmProvider(
   id: str,
   alias: str = None,
   burst_limit: typing.Union[int, float] = None,
-  debug: typing.Union[bool, IResolvable] = None,
+  debug: bool | IResolvable = None,
   experiments: HelmProviderExperiments = None,
   helm_driver: str = None,
   kubernetes: HelmProviderKubernetes = None,
   plugins_path: str = None,
-  registries: typing.Union[IResolvable, typing.List[HelmProviderRegistries]] = None,
+  registries: IResolvable | typing.List[HelmProviderRegistries] = None,
   registry_config_path: str = None,
   repository_cache: str = None,
   repository_config_path: str = None
@@ -34,12 +34,12 @@ provider.HelmProvider(
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.alias">alias</a></code> | <code>str</code> | Alias name. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.burstLimit">burst_limit</a></code> | <code>typing.Union[int, float]</code> | Helm burst limit. Increase this if you have a cluster with many CRDs. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.debug">debug</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Debug indicates whether or not Helm is running in Debug mode. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.debug">debug</a></code> | <code>bool \| cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | Enable and disable experimental features. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.helmDriver">helm_driver</a></code> | <code>str</code> | The backend storage driver. Values are: configmap, secret, memory, sql. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | Kubernetes Configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.pluginsPath">plugins_path</a></code> | <code>str</code> | The path to the helm plugins directory. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registries">registries</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]]</code> | RegistryClient configuration. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registries">registries</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]</code> | RegistryClient configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registryConfigPath">registry_config_path</a></code> | <code>str</code> | The path to the registry config file. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.repositoryCache">repository_cache</a></code> | <code>str</code> | The path to the file containing cached repository indexes. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.repositoryConfigPath">repository_config_path</a></code> | <code>str</code> | The path to the file containing repository names and URLs. |
@@ -86,7 +86,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `debug`<sup>Optional</sup> <a name="debug" id="@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.debug"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Debug indicates whether or not Helm is running in Debug mode.
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProvider.Initializer.parameter.registries"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]
 
 RegistryClient configuration.
 
@@ -481,22 +481,22 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.alias">alias</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.aliasInput">alias_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.burstLimitInput">burst_limit_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debugInput">debug_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debugInput">debug_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.experimentsInput">experiments_input</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.helmDriverInput">helm_driver_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.kubernetesInput">kubernetes_input</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.pluginsPathInput">plugins_path_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registriesInput">registries_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registriesInput">registries_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPathInput">registry_config_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryCacheInput">repository_cache_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryConfigPathInput">repository_config_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.burstLimit">burst_limit</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debug">debug</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debug">debug</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.helmDriver">helm_driver</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.pluginsPath">plugins_path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registries">registries</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registries">registries</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPath">registry_config_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryCache">repository_cache</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryConfigPath">repository_config_path</a></code> | <code>str</code> | *No description.* |
@@ -618,10 +618,10 @@ burst_limit_input: typing.Union[int, float]
 ##### `debug_input`<sup>Optional</sup> <a name="debug_input" id="@cdktf/provider-helm.provider.HelmProvider.property.debugInput"></a>
 
 ```python
-debug_input: typing.Union[bool, IResolvable]
+debug_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -668,10 +668,10 @@ plugins_path_input: str
 ##### `registries_input`<sup>Optional</sup> <a name="registries_input" id="@cdktf/provider-helm.provider.HelmProvider.property.registriesInput"></a>
 
 ```python
-registries_input: typing.Union[IResolvable, typing.List[HelmProviderRegistries]]
+registries_input: IResolvable | typing.List[HelmProviderRegistries]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]
 
 ---
 
@@ -718,10 +718,10 @@ burst_limit: typing.Union[int, float]
 ##### `debug`<sup>Optional</sup> <a name="debug" id="@cdktf/provider-helm.provider.HelmProvider.property.debug"></a>
 
 ```python
-debug: typing.Union[bool, IResolvable]
+debug: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -768,10 +768,10 @@ plugins_path: str
 ##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProvider.property.registries"></a>
 
 ```python
-registries: typing.Union[IResolvable, typing.List[HelmProviderRegistries]]
+registries: IResolvable | typing.List[HelmProviderRegistries]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]
 
 ---
 
@@ -835,12 +835,12 @@ from cdktf_cdktf_provider_helm import provider
 provider.HelmProviderConfig(
   alias: str = None,
   burst_limit: typing.Union[int, float] = None,
-  debug: typing.Union[bool, IResolvable] = None,
+  debug: bool | IResolvable = None,
   experiments: HelmProviderExperiments = None,
   helm_driver: str = None,
   kubernetes: HelmProviderKubernetes = None,
   plugins_path: str = None,
-  registries: typing.Union[IResolvable, typing.List[HelmProviderRegistries]] = None,
+  registries: IResolvable | typing.List[HelmProviderRegistries] = None,
   registry_config_path: str = None,
   repository_cache: str = None,
   repository_config_path: str = None
@@ -853,12 +853,12 @@ provider.HelmProviderConfig(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.alias">alias</a></code> | <code>str</code> | Alias name. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.burstLimit">burst_limit</a></code> | <code>typing.Union[int, float]</code> | Helm burst limit. Increase this if you have a cluster with many CRDs. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.debug">debug</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Debug indicates whether or not Helm is running in Debug mode. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.debug">debug</a></code> | <code>bool \| cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.experiments">experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | Enable and disable experimental features. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.helmDriver">helm_driver</a></code> | <code>str</code> | The backend storage driver. Values are: configmap, secret, memory, sql. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.kubernetes">kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | Kubernetes Configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.pluginsPath">plugins_path</a></code> | <code>str</code> | The path to the helm plugins directory. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registries">registries</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]]</code> | RegistryClient configuration. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registries">registries</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]</code> | RegistryClient configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registryConfigPath">registry_config_path</a></code> | <code>str</code> | The path to the registry config file. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.repositoryCache">repository_cache</a></code> | <code>str</code> | The path to the file containing cached repository indexes. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.repositoryConfigPath">repository_config_path</a></code> | <code>str</code> | The path to the file containing repository names and URLs. |
@@ -896,10 +896,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `debug`<sup>Optional</sup> <a name="debug" id="@cdktf/provider-helm.provider.HelmProviderConfig.property.debug"></a>
 
 ```python
-debug: typing.Union[bool, IResolvable]
+debug: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Debug indicates whether or not Helm is running in Debug mode.
 
@@ -966,10 +966,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `registries`<sup>Optional</sup> <a name="registries" id="@cdktf/provider-helm.provider.HelmProviderConfig.property.registries"></a>
 
 ```python
-registries: typing.Union[IResolvable, typing.List[HelmProviderRegistries]]
+registries: IResolvable | typing.List[HelmProviderRegistries]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>]
 
 RegistryClient configuration.
 
@@ -1027,7 +1027,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_helm import provider
 
 provider.HelmProviderExperiments(
-  manifest: typing.Union[bool, IResolvable] = None
+  manifest: bool | IResolvable = None
 )
 ```
 
@@ -1035,17 +1035,17 @@ provider.HelmProviderExperiments(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest">manifest</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Enable full diff by storing the rendered manifest in the state. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest">manifest</a></code> | <code>bool \| cdktf.IResolvable</code> | Enable full diff by storing the rendered manifest in the state. |
 
 ---
 
 ##### `manifest`<sup>Optional</sup> <a name="manifest" id="@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest"></a>
 
 ```python
-manifest: typing.Union[bool, IResolvable]
+manifest: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Enable full diff by storing the rendered manifest in the state.
 
@@ -1071,7 +1071,7 @@ provider.HelmProviderKubernetes(
   config_paths: typing.List[str] = None,
   exec: HelmProviderKubernetesExec = None,
   host: str = None,
-  insecure: typing.Union[bool, IResolvable] = None,
+  insecure: bool | IResolvable = None,
   password: str = None,
   proxy_url: str = None,
   tls_server_name: str = None,
@@ -1094,7 +1094,7 @@ provider.HelmProviderKubernetes(
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configPaths">config_paths</a></code> | <code>typing.List[str]</code> | A list of paths to kube config files. Can be set with KUBE_CONFIG_PATHS environment variable. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.exec">exec</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec">HelmProviderKubernetesExec</a></code> | Exec configuration for Kubernetes authentication. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.host">host</a></code> | <code>str</code> | The hostname (in form of URI) of kubernetes master. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure">insecure</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether server should be accessed without verifying the TLS certificate. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure">insecure</a></code> | <code>bool \| cdktf.IResolvable</code> | Whether server should be accessed without verifying the TLS certificate. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.password">password</a></code> | <code>str</code> | The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.proxyUrl">proxy_url</a></code> | <code>str</code> | URL to the proxy to be used for all API requests. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.tlsServerName">tls_server_name</a></code> | <code>str</code> | Server name passed to the server for SNI and is used in the client to check server certificates against. |
@@ -1250,10 +1250,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `insecure`<sup>Optional</sup> <a name="insecure" id="@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure"></a>
 
 ```python
-insecure: typing.Union[bool, IResolvable]
+insecure: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Whether server should be accessed without verifying the TLS certificate.
 
