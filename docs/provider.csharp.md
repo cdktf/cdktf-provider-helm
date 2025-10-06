@@ -337,22 +337,22 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.alias">Alias</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.aliasInput">AliasInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.burstLimitInput">BurstLimitInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debugInput">DebugInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debugInput">DebugInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.experimentsInput">ExperimentsInput</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.helmDriverInput">HelmDriverInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.kubernetesInput">KubernetesInput</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.pluginsPathInput">PluginsPathInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registriesInput">RegistriesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registriesInput">RegistriesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPathInput">RegistryConfigPathInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryCacheInput">RepositoryCacheInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryConfigPathInput">RepositoryConfigPathInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.burstLimit">BurstLimit</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debug">Debug</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.debug">Debug</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.experiments">Experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.helmDriver">HelmDriver</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.kubernetes">Kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.pluginsPath">PluginsPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registries">Registries</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registries">Registries</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.registryConfigPath">RegistryConfigPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryCache">RepositoryCache</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProvider.property.repositoryConfigPath">RepositoryConfigPath</a></code> | <code>string</code> | *No description.* |
@@ -474,10 +474,10 @@ public double BurstLimitInput { get; }
 ##### `DebugInput`<sup>Optional</sup> <a name="DebugInput" id="@cdktf/provider-helm.provider.HelmProvider.property.debugInput"></a>
 
 ```csharp
-public object DebugInput { get; }
+public bool|IResolvable DebugInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -524,10 +524,10 @@ public string PluginsPathInput { get; }
 ##### `RegistriesInput`<sup>Optional</sup> <a name="RegistriesInput" id="@cdktf/provider-helm.provider.HelmProvider.property.registriesInput"></a>
 
 ```csharp
-public object RegistriesInput { get; }
+public IResolvable|HelmProviderRegistries[] RegistriesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>[]
 
 ---
 
@@ -574,10 +574,10 @@ public double BurstLimit { get; }
 ##### `Debug`<sup>Optional</sup> <a name="Debug" id="@cdktf/provider-helm.provider.HelmProvider.property.debug"></a>
 
 ```csharp
-public object Debug { get; }
+public bool|IResolvable Debug { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -624,10 +624,10 @@ public string PluginsPath { get; }
 ##### `Registries`<sup>Optional</sup> <a name="Registries" id="@cdktf/provider-helm.provider.HelmProvider.property.registries"></a>
 
 ```csharp
-public object Registries { get; }
+public IResolvable|HelmProviderRegistries[] Registries { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>[]
 
 ---
 
@@ -691,12 +691,12 @@ using HashiCorp.Cdktf.Providers.Helm;
 new HelmProviderConfig {
     string Alias = null,
     double BurstLimit = null,
-    object Debug = null,
+    bool|IResolvable Debug = null,
     HelmProviderExperiments Experiments = null,
     string HelmDriver = null,
     HelmProviderKubernetes Kubernetes = null,
     string PluginsPath = null,
-    object Registries = null,
+    IResolvable|HelmProviderRegistries[] Registries = null,
     string RegistryConfigPath = null,
     string RepositoryCache = null,
     string RepositoryConfigPath = null
@@ -709,12 +709,12 @@ new HelmProviderConfig {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.alias">Alias</a></code> | <code>string</code> | Alias name. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.burstLimit">BurstLimit</a></code> | <code>double</code> | Helm burst limit. Increase this if you have a cluster with many CRDs. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.debug">Debug</a></code> | <code>object</code> | Debug indicates whether or not Helm is running in Debug mode. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.debug">Debug</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Debug indicates whether or not Helm is running in Debug mode. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.experiments">Experiments</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments">HelmProviderExperiments</a></code> | Enable and disable experimental features. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.helmDriver">HelmDriver</a></code> | <code>string</code> | The backend storage driver. Values are: configmap, secret, memory, sql. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.kubernetes">Kubernetes</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes">HelmProviderKubernetes</a></code> | Kubernetes Configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.pluginsPath">PluginsPath</a></code> | <code>string</code> | The path to the helm plugins directory. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registries">Registries</a></code> | <code>object</code> | RegistryClient configuration. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registries">Registries</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>[]</code> | RegistryClient configuration. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.registryConfigPath">RegistryConfigPath</a></code> | <code>string</code> | The path to the registry config file. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.repositoryCache">RepositoryCache</a></code> | <code>string</code> | The path to the file containing cached repository indexes. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderConfig.property.repositoryConfigPath">RepositoryConfigPath</a></code> | <code>string</code> | The path to the file containing repository names and URLs. |
@@ -752,10 +752,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Debug`<sup>Optional</sup> <a name="Debug" id="@cdktf/provider-helm.provider.HelmProviderConfig.property.debug"></a>
 
 ```csharp
-public object Debug { get; set; }
+public bool|IResolvable Debug { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Debug indicates whether or not Helm is running in Debug mode.
 
@@ -822,10 +822,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Registries`<sup>Optional</sup> <a name="Registries" id="@cdktf/provider-helm.provider.HelmProviderConfig.property.registries"></a>
 
 ```csharp
-public object Registries { get; set; }
+public IResolvable|HelmProviderRegistries[] Registries { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-helm.provider.HelmProviderRegistries">HelmProviderRegistries</a>[]
 
 RegistryClient configuration.
 
@@ -883,7 +883,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Helm;
 
 new HelmProviderExperiments {
-    object Manifest = null
+    bool|IResolvable Manifest = null
 };
 ```
 
@@ -891,17 +891,17 @@ new HelmProviderExperiments {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest">Manifest</a></code> | <code>object</code> | Enable full diff by storing the rendered manifest in the state. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest">Manifest</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Enable full diff by storing the rendered manifest in the state. |
 
 ---
 
 ##### `Manifest`<sup>Optional</sup> <a name="Manifest" id="@cdktf/provider-helm.provider.HelmProviderExperiments.property.manifest"></a>
 
 ```csharp
-public object Manifest { get; set; }
+public bool|IResolvable Manifest { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Enable full diff by storing the rendered manifest in the state.
 
@@ -927,7 +927,7 @@ new HelmProviderKubernetes {
     string[] ConfigPaths = null,
     HelmProviderKubernetesExec Exec = null,
     string Host = null,
-    object Insecure = null,
+    bool|IResolvable Insecure = null,
     string Password = null,
     string ProxyUrl = null,
     string TlsServerName = null,
@@ -950,7 +950,7 @@ new HelmProviderKubernetes {
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.configPaths">ConfigPaths</a></code> | <code>string[]</code> | A list of paths to kube config files. Can be set with KUBE_CONFIG_PATHS environment variable. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.exec">Exec</a></code> | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetesExec">HelmProviderKubernetesExec</a></code> | Exec configuration for Kubernetes authentication. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.host">Host</a></code> | <code>string</code> | The hostname (in form of URI) of kubernetes master. |
-| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure">Insecure</a></code> | <code>object</code> | Whether server should be accessed without verifying the TLS certificate. |
+| <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure">Insecure</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Whether server should be accessed without verifying the TLS certificate. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.password">Password</a></code> | <code>string</code> | The password to use for HTTP basic authentication when accessing the Kubernetes master endpoint. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.proxyUrl">ProxyUrl</a></code> | <code>string</code> | URL to the proxy to be used for all API requests. |
 | <code><a href="#@cdktf/provider-helm.provider.HelmProviderKubernetes.property.tlsServerName">TlsServerName</a></code> | <code>string</code> | Server name passed to the server for SNI and is used in the client to check server certificates against. |
@@ -1106,10 +1106,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Insecure`<sup>Optional</sup> <a name="Insecure" id="@cdktf/provider-helm.provider.HelmProviderKubernetes.property.insecure"></a>
 
 ```csharp
-public object Insecure { get; set; }
+public bool|IResolvable Insecure { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Whether server should be accessed without verifying the TLS certificate.
 

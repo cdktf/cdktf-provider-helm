@@ -14,54 +14,54 @@ from cdktf_cdktf_provider_helm import release
 release.Release(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   chart: str,
   name: str,
-  atomic: typing.Union[bool, IResolvable] = None,
-  cleanup_on_fail: typing.Union[bool, IResolvable] = None,
-  create_namespace: typing.Union[bool, IResolvable] = None,
-  dependency_update: typing.Union[bool, IResolvable] = None,
+  atomic: bool | IResolvable = None,
+  cleanup_on_fail: bool | IResolvable = None,
+  create_namespace: bool | IResolvable = None,
+  dependency_update: bool | IResolvable = None,
   description: str = None,
-  devel: typing.Union[bool, IResolvable] = None,
-  disable_crd_hooks: typing.Union[bool, IResolvable] = None,
-  disable_openapi_validation: typing.Union[bool, IResolvable] = None,
-  disable_webhooks: typing.Union[bool, IResolvable] = None,
-  force_update: typing.Union[bool, IResolvable] = None,
+  devel: bool | IResolvable = None,
+  disable_crd_hooks: bool | IResolvable = None,
+  disable_openapi_validation: bool | IResolvable = None,
+  disable_webhooks: bool | IResolvable = None,
+  force_update: bool | IResolvable = None,
   keyring: str = None,
-  lint: typing.Union[bool, IResolvable] = None,
+  lint: bool | IResolvable = None,
   max_history: typing.Union[int, float] = None,
   namespace: str = None,
-  pass_credentials: typing.Union[bool, IResolvable] = None,
+  pass_credentials: bool | IResolvable = None,
   postrender: ReleasePostrender = None,
-  recreate_pods: typing.Union[bool, IResolvable] = None,
-  render_subchart_notes: typing.Union[bool, IResolvable] = None,
-  replace: typing.Union[bool, IResolvable] = None,
+  recreate_pods: bool | IResolvable = None,
+  render_subchart_notes: bool | IResolvable = None,
+  replace: bool | IResolvable = None,
   repository: str = None,
   repository_ca_file: str = None,
   repository_cert_file: str = None,
   repository_key_file: str = None,
   repository_password: str = None,
   repository_username: str = None,
-  reset_values: typing.Union[bool, IResolvable] = None,
-  reuse_values: typing.Union[bool, IResolvable] = None,
-  set: typing.Union[IResolvable, typing.List[ReleaseSet]] = None,
-  set_list: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]] = None,
-  set_sensitive: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]] = None,
-  set_wo: typing.Union[IResolvable, typing.List[ReleaseSetWo]] = None,
+  reset_values: bool | IResolvable = None,
+  reuse_values: bool | IResolvable = None,
+  set: IResolvable | typing.List[ReleaseSet] = None,
+  set_list: IResolvable | typing.List[ReleaseSetListStruct] = None,
+  set_sensitive: IResolvable | typing.List[ReleaseSetSensitive] = None,
+  set_wo: IResolvable | typing.List[ReleaseSetWo] = None,
   set_wo_revision: typing.Union[int, float] = None,
-  skip_crds: typing.Union[bool, IResolvable] = None,
+  skip_crds: bool | IResolvable = None,
   timeout: typing.Union[int, float] = None,
   values: typing.List[str] = None,
-  verify: typing.Union[bool, IResolvable] = None,
+  verify: bool | IResolvable = None,
   version: str = None,
-  wait: typing.Union[bool, IResolvable] = None,
-  wait_for_jobs: typing.Union[bool, IResolvable] = None
+  wait: bool | IResolvable = None,
+  wait_for_jobs: bool | IResolvable = None
 )
 ```
 
@@ -69,54 +69,54 @@ release.Release(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.chart">chart</a></code> | <code>str</code> | Chart name to be installed. A path may be used. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.name">name</a></code> | <code>str</code> | Release name. The length must not be longer than 53 characters. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.atomic">atomic</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.cleanupOnFail">cleanup_on_fail</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.createNamespace">create_namespace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Create the namespace if it does not exist. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.dependencyUpdate">dependency_update</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Run helm dependency update before installing the chart. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.atomic">atomic</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.cleanupOnFail">cleanup_on_fail</a></code> | <code>bool \| cdktf.IResolvable</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.createNamespace">create_namespace</a></code> | <code>bool \| cdktf.IResolvable</code> | Create the namespace if it does not exist. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.dependencyUpdate">dependency_update</a></code> | <code>bool \| cdktf.IResolvable</code> | Run helm dependency update before installing the chart. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.description">description</a></code> | <code>str</code> | Add a custom description. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.devel">devel</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableCrdHooks">disable_crd_hooks</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableOpenapiValidation">disable_openapi_validation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableWebhooks">disable_webhooks</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Prevent hooks from running. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.forceUpdate">force_update</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Force resource update through delete/recreate if needed. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.devel">devel</a></code> | <code>bool \| cdktf.IResolvable</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableCrdHooks">disable_crd_hooks</a></code> | <code>bool \| cdktf.IResolvable</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableOpenapiValidation">disable_openapi_validation</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.disableWebhooks">disable_webhooks</a></code> | <code>bool \| cdktf.IResolvable</code> | Prevent hooks from running. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.forceUpdate">force_update</a></code> | <code>bool \| cdktf.IResolvable</code> | Force resource update through delete/recreate if needed. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.keyring">keyring</a></code> | <code>str</code> | Location of public keys used for verification, Used only if 'verify is true'. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.lint">lint</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Run helm lint when planning. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.lint">lint</a></code> | <code>bool \| cdktf.IResolvable</code> | Run helm lint when planning. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.maxHistory">max_history</a></code> | <code>typing.Union[int, float]</code> | Limit the maximum number of revisions saved per release. Use 0 for no limit. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.namespace">namespace</a></code> | <code>str</code> | Namespace to install the release into. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.passCredentials">pass_credentials</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Pass credentials to all domains. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.passCredentials">pass_credentials</a></code> | <code>bool \| cdktf.IResolvable</code> | Pass credentials to all domains. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.postrender">postrender</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | Postrender command config. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.recreatePods">recreate_pods</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Perform pods restart during upgrade/rollback. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.renderSubchartNotes">render_subchart_notes</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, render subchart notes along with the parent. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.recreatePods">recreate_pods</a></code> | <code>bool \| cdktf.IResolvable</code> | Perform pods restart during upgrade/rollback. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.renderSubchartNotes">render_subchart_notes</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, render subchart notes along with the parent. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.replace">replace</a></code> | <code>bool \| cdktf.IResolvable</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repository">repository</a></code> | <code>str</code> | Repository where to locate the requested chart. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryCaFile">repository_ca_file</a></code> | <code>str</code> | The Repositories CA file. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryCertFile">repository_cert_file</a></code> | <code>str</code> | The repositories cert file. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryKeyFile">repository_key_file</a></code> | <code>str</code> | The repositories cert key file. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryPassword">repository_password</a></code> | <code>str</code> | Password for HTTP basic authentication. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.repositoryUsername">repository_username</a></code> | <code>str</code> | Username for HTTP basic authentication. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.resetValues">reset_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When upgrading, reset the values to the ones built into the chart. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.reuseValues">reuse_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.set">set</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]</code> | Custom values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setList">set_list</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]</code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setSensitive">set_sensitive</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]</code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setWo">set_wo</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]</code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.resetValues">reset_values</a></code> | <code>bool \| cdktf.IResolvable</code> | When upgrading, reset the values to the ones built into the chart. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.reuseValues">reuse_values</a></code> | <code>bool \| cdktf.IResolvable</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.set">set</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]</code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setList">set_list</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]</code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setSensitive">set_sensitive</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]</code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setWo">set_wo</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]</code> | Custom values to be merged with the values. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.setWoRevision">set_wo_revision</a></code> | <code>typing.Union[int, float]</code> | The current revision of the write-only "set_wo" attribute. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.skipCrds">skip_crds</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.skipCrds">skip_crds</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | Time in seconds to wait for any individual kubernetes operation. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.values">values</a></code> | <code>typing.List[str]</code> | List of values in raw YAML format to pass to helm. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.verify">verify</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Verify the package before installing it. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.verify">verify</a></code> | <code>bool \| cdktf.IResolvable</code> | Verify the package before installing it. |
 | <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.version">version</a></code> | <code>str</code> | Specify the exact chart version to install. If this is not specified, the latest version is installed. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.wait">wait</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Will wait until all resources are in a ready state before marking the release as successful. |
-| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.waitForJobs">wait_for_jobs</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.wait">wait</a></code> | <code>bool \| cdktf.IResolvable</code> | Will wait until all resources are in a ready state before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.Release.Initializer.parameter.waitForJobs">wait_for_jobs</a></code> | <code>bool \| cdktf.IResolvable</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
 
 ---
 
@@ -140,13 +140,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-helm.release.Release.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-helm.release.Release.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -176,7 +176,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-helm.release.Release.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -202,7 +202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `atomic`<sup>Optional</sup> <a name="atomic" id="@cdktf/provider-helm.release.Release.Initializer.parameter.atomic"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
@@ -212,7 +212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `cleanup_on_fail`<sup>Optional</sup> <a name="cleanup_on_fail" id="@cdktf/provider-helm.release.Release.Initializer.parameter.cleanupOnFail"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
@@ -222,7 +222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `create_namespace`<sup>Optional</sup> <a name="create_namespace" id="@cdktf/provider-helm.release.Release.Initializer.parameter.createNamespace"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Create the namespace if it does not exist.
 
@@ -232,7 +232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `dependency_update`<sup>Optional</sup> <a name="dependency_update" id="@cdktf/provider-helm.release.Release.Initializer.parameter.dependencyUpdate"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Run helm dependency update before installing the chart.
 
@@ -252,7 +252,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `devel`<sup>Optional</sup> <a name="devel" id="@cdktf/provider-helm.release.Release.Initializer.parameter.devel"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored.
 
@@ -262,7 +262,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disable_crd_hooks`<sup>Optional</sup> <a name="disable_crd_hooks" id="@cdktf/provider-helm.release.Release.Initializer.parameter.disableCrdHooks"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook.
 
@@ -272,7 +272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disable_openapi_validation`<sup>Optional</sup> <a name="disable_openapi_validation" id="@cdktf/provider-helm.release.Release.Initializer.parameter.disableOpenapiValidation"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
@@ -282,7 +282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disable_webhooks`<sup>Optional</sup> <a name="disable_webhooks" id="@cdktf/provider-helm.release.Release.Initializer.parameter.disableWebhooks"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Prevent hooks from running.
 
@@ -292,7 +292,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `force_update`<sup>Optional</sup> <a name="force_update" id="@cdktf/provider-helm.release.Release.Initializer.parameter.forceUpdate"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Force resource update through delete/recreate if needed.
 
@@ -312,7 +312,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `lint`<sup>Optional</sup> <a name="lint" id="@cdktf/provider-helm.release.Release.Initializer.parameter.lint"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Run helm lint when planning.
 
@@ -342,7 +342,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `pass_credentials`<sup>Optional</sup> <a name="pass_credentials" id="@cdktf/provider-helm.release.Release.Initializer.parameter.passCredentials"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Pass credentials to all domains.
 
@@ -362,7 +362,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `recreate_pods`<sup>Optional</sup> <a name="recreate_pods" id="@cdktf/provider-helm.release.Release.Initializer.parameter.recreatePods"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Perform pods restart during upgrade/rollback.
 
@@ -372,7 +372,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `render_subchart_notes`<sup>Optional</sup> <a name="render_subchart_notes" id="@cdktf/provider-helm.release.Release.Initializer.parameter.renderSubchartNotes"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, render subchart notes along with the parent.
 
@@ -382,7 +382,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `replace`<sup>Optional</sup> <a name="replace" id="@cdktf/provider-helm.release.Release.Initializer.parameter.replace"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
@@ -454,7 +454,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `reset_values`<sup>Optional</sup> <a name="reset_values" id="@cdktf/provider-helm.release.Release.Initializer.parameter.resetValues"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When upgrading, reset the values to the ones built into the chart.
 
@@ -464,7 +464,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `reuse_values`<sup>Optional</sup> <a name="reuse_values" id="@cdktf/provider-helm.release.Release.Initializer.parameter.reuseValues"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
@@ -474,7 +474,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `set`<sup>Optional</sup> <a name="set" id="@cdktf/provider-helm.release.Release.Initializer.parameter.set"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]
 
 Custom values to be merged with the values.
 
@@ -484,7 +484,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `set_list`<sup>Optional</sup> <a name="set_list" id="@cdktf/provider-helm.release.Release.Initializer.parameter.setList"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]
 
 Custom sensitive values to be merged with the values.
 
@@ -494,7 +494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `set_sensitive`<sup>Optional</sup> <a name="set_sensitive" id="@cdktf/provider-helm.release.Release.Initializer.parameter.setSensitive"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]
 
 Custom sensitive values to be merged with the values.
 
@@ -504,7 +504,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `set_wo`<sup>Optional</sup> <a name="set_wo" id="@cdktf/provider-helm.release.Release.Initializer.parameter.setWo"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]
 
 Custom values to be merged with the values.
 
@@ -526,7 +526,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `skip_crds`<sup>Optional</sup> <a name="skip_crds" id="@cdktf/provider-helm.release.Release.Initializer.parameter.skipCrds"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
@@ -556,7 +556,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `verify`<sup>Optional</sup> <a name="verify" id="@cdktf/provider-helm.release.Release.Initializer.parameter.verify"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Verify the package before installing it.
 
@@ -576,7 +576,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `wait`<sup>Optional</sup> <a name="wait" id="@cdktf/provider-helm.release.Release.Initializer.parameter.wait"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
@@ -586,7 +586,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `wait_for_jobs`<sup>Optional</sup> <a name="wait_for_jobs" id="@cdktf/provider-helm.release.Release.Initializer.parameter.waitForJobs"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
@@ -890,7 +890,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-helm.release.Release.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-helm.release.Release.importFrom"></a>
@@ -953,7 +953,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -969,7 +969,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-helm.release.Release.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -1026,13 +1026,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_set(
-  value: typing.Union[IResolvable, typing.List[ReleaseSet]]
+  value: IResolvable | typing.List[ReleaseSet]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSet.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]
 
 ---
 
@@ -1040,13 +1040,13 @@ def put_set(
 
 ```python
 def put_set_list(
-  value: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]]
+  value: IResolvable | typing.List[ReleaseSetListStruct]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSetList.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]
 
 ---
 
@@ -1054,13 +1054,13 @@ def put_set_list(
 
 ```python
 def put_set_sensitive(
-  value: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]]
+  value: IResolvable | typing.List[ReleaseSetSensitive]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSetSensitive.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]
 
 ---
 
@@ -1068,13 +1068,13 @@ def put_set_sensitive(
 
 ```python
 def put_set_wo(
-  value: typing.Union[IResolvable, typing.List[ReleaseSetWo]]
+  value: IResolvable | typing.List[ReleaseSetWo]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-helm.release.Release.putSetWo.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]
 
 ---
 
@@ -1449,13 +1449,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.manifest">manifest</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.metadata">metadata</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseMetadataOutputReference">ReleaseMetadataOutputReference</a></code> | *No description.* |
@@ -1465,83 +1465,83 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitive">set_sensitive</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList">ReleaseSetSensitiveList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWo">set_wo</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList">ReleaseSetWoList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.status">status</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.atomicInput">atomic_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.atomicInput">atomic_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.chartInput">chart_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFailInput">cleanup_on_fail_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespaceInput">create_namespace_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdateInput">dependency_update_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFailInput">cleanup_on_fail_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespaceInput">create_namespace_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdateInput">dependency_update_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.develInput">devel_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooksInput">disable_crd_hooks_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput">disable_openapi_validation_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooksInput">disable_webhooks_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdateInput">force_update_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.develInput">devel_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooksInput">disable_crd_hooks_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput">disable_openapi_validation_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooksInput">disable_webhooks_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdateInput">force_update_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.keyringInput">keyring_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.lintInput">lint_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.lintInput">lint_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.maxHistoryInput">max_history_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.namespaceInput">namespace_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentialsInput">pass_credentials_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.postrenderInput">postrender_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePodsInput">recreate_pods_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput">render_subchart_notes_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.replaceInput">replace_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentialsInput">pass_credentials_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.postrenderInput">postrender_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePodsInput">recreate_pods_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput">render_subchart_notes_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.replaceInput">replace_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCaFileInput">repository_ca_file_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCertFileInput">repository_cert_file_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryInput">repository_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryKeyFileInput">repository_key_file_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryPasswordInput">repository_password_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryUsernameInput">repository_username_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValuesInput">reset_values_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValuesInput">reuse_values_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setInput">set_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setListInput">set_list_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitiveInput">set_sensitive_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.setWoInput">set_wo_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValuesInput">reset_values_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValuesInput">reuse_values_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setInput">set_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setListInput">set_list_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setSensitiveInput">set_sensitive_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.setWoInput">set_wo_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWoRevisionInput">set_wo_revision_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrdsInput">skip_crds_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrdsInput">skip_crds_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.timeoutInput">timeout_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.valuesInput">values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.verifyInput">verify_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.verifyInput">verify_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.versionInput">version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobsInput">wait_for_jobs_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitInput">wait_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.atomic">atomic</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobsInput">wait_for_jobs_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitInput">wait_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.atomic">atomic</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.chart">chart</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFail">cleanup_on_fail</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespace">create_namespace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdate">dependency_update</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.cleanupOnFail">cleanup_on_fail</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.createNamespace">create_namespace</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.dependencyUpdate">dependency_update</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.description">description</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.devel">devel</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooks">disable_crd_hooks</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidation">disable_openapi_validation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooks">disable_webhooks</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdate">force_update</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.devel">devel</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableCrdHooks">disable_crd_hooks</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableOpenapiValidation">disable_openapi_validation</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.disableWebhooks">disable_webhooks</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.forceUpdate">force_update</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.keyring">keyring</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.lint">lint</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.lint">lint</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.maxHistory">max_history</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.namespace">namespace</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentials">pass_credentials</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePods">recreate_pods</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotes">render_subchart_notes</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.passCredentials">pass_credentials</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.recreatePods">recreate_pods</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.renderSubchartNotes">render_subchart_notes</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.replace">replace</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repository">repository</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCaFile">repository_ca_file</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryCertFile">repository_cert_file</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryKeyFile">repository_key_file</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryPassword">repository_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.repositoryUsername">repository_username</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValues">reset_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValues">reuse_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.resetValues">reset_values</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.reuseValues">reuse_values</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.setWoRevision">set_wo_revision</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrds">skip_crds</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.skipCrds">skip_crds</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.values">values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.verify">verify</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.verify">verify</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.Release.property.version">version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.wait">wait</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobs">wait_for_jobs</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.wait">wait</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.Release.property.waitForJobs">wait_for_jobs</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1620,20 +1620,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-helm.release.Release.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-helm.release.Release.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1680,10 +1680,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-helm.release.Release.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1780,10 +1780,10 @@ status: str
 ##### `atomic_input`<sup>Optional</sup> <a name="atomic_input" id="@cdktf/provider-helm.release.Release.property.atomicInput"></a>
 
 ```python
-atomic_input: typing.Union[bool, IResolvable]
+atomic_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1800,30 +1800,30 @@ chart_input: str
 ##### `cleanup_on_fail_input`<sup>Optional</sup> <a name="cleanup_on_fail_input" id="@cdktf/provider-helm.release.Release.property.cleanupOnFailInput"></a>
 
 ```python
-cleanup_on_fail_input: typing.Union[bool, IResolvable]
+cleanup_on_fail_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `create_namespace_input`<sup>Optional</sup> <a name="create_namespace_input" id="@cdktf/provider-helm.release.Release.property.createNamespaceInput"></a>
 
 ```python
-create_namespace_input: typing.Union[bool, IResolvable]
+create_namespace_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `dependency_update_input`<sup>Optional</sup> <a name="dependency_update_input" id="@cdktf/provider-helm.release.Release.property.dependencyUpdateInput"></a>
 
 ```python
-dependency_update_input: typing.Union[bool, IResolvable]
+dependency_update_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1840,50 +1840,50 @@ description_input: str
 ##### `devel_input`<sup>Optional</sup> <a name="devel_input" id="@cdktf/provider-helm.release.Release.property.develInput"></a>
 
 ```python
-devel_input: typing.Union[bool, IResolvable]
+devel_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `disable_crd_hooks_input`<sup>Optional</sup> <a name="disable_crd_hooks_input" id="@cdktf/provider-helm.release.Release.property.disableCrdHooksInput"></a>
 
 ```python
-disable_crd_hooks_input: typing.Union[bool, IResolvable]
+disable_crd_hooks_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `disable_openapi_validation_input`<sup>Optional</sup> <a name="disable_openapi_validation_input" id="@cdktf/provider-helm.release.Release.property.disableOpenapiValidationInput"></a>
 
 ```python
-disable_openapi_validation_input: typing.Union[bool, IResolvable]
+disable_openapi_validation_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `disable_webhooks_input`<sup>Optional</sup> <a name="disable_webhooks_input" id="@cdktf/provider-helm.release.Release.property.disableWebhooksInput"></a>
 
 ```python
-disable_webhooks_input: typing.Union[bool, IResolvable]
+disable_webhooks_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `force_update_input`<sup>Optional</sup> <a name="force_update_input" id="@cdktf/provider-helm.release.Release.property.forceUpdateInput"></a>
 
 ```python
-force_update_input: typing.Union[bool, IResolvable]
+force_update_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1900,10 +1900,10 @@ keyring_input: str
 ##### `lint_input`<sup>Optional</sup> <a name="lint_input" id="@cdktf/provider-helm.release.Release.property.lintInput"></a>
 
 ```python
-lint_input: typing.Union[bool, IResolvable]
+lint_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1940,50 +1940,50 @@ namespace_input: str
 ##### `pass_credentials_input`<sup>Optional</sup> <a name="pass_credentials_input" id="@cdktf/provider-helm.release.Release.property.passCredentialsInput"></a>
 
 ```python
-pass_credentials_input: typing.Union[bool, IResolvable]
+pass_credentials_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `postrender_input`<sup>Optional</sup> <a name="postrender_input" id="@cdktf/provider-helm.release.Release.property.postrenderInput"></a>
 
 ```python
-postrender_input: typing.Union[IResolvable, ReleasePostrender]
+postrender_input: IResolvable | ReleasePostrender
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>
 
 ---
 
 ##### `recreate_pods_input`<sup>Optional</sup> <a name="recreate_pods_input" id="@cdktf/provider-helm.release.Release.property.recreatePodsInput"></a>
 
 ```python
-recreate_pods_input: typing.Union[bool, IResolvable]
+recreate_pods_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `render_subchart_notes_input`<sup>Optional</sup> <a name="render_subchart_notes_input" id="@cdktf/provider-helm.release.Release.property.renderSubchartNotesInput"></a>
 
 ```python
-render_subchart_notes_input: typing.Union[bool, IResolvable]
+render_subchart_notes_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `replace_input`<sup>Optional</sup> <a name="replace_input" id="@cdktf/provider-helm.release.Release.property.replaceInput"></a>
 
 ```python
-replace_input: typing.Union[bool, IResolvable]
+replace_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2050,60 +2050,60 @@ repository_username_input: str
 ##### `reset_values_input`<sup>Optional</sup> <a name="reset_values_input" id="@cdktf/provider-helm.release.Release.property.resetValuesInput"></a>
 
 ```python
-reset_values_input: typing.Union[bool, IResolvable]
+reset_values_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `reuse_values_input`<sup>Optional</sup> <a name="reuse_values_input" id="@cdktf/provider-helm.release.Release.property.reuseValuesInput"></a>
 
 ```python
-reuse_values_input: typing.Union[bool, IResolvable]
+reuse_values_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `set_input`<sup>Optional</sup> <a name="set_input" id="@cdktf/provider-helm.release.Release.property.setInput"></a>
 
 ```python
-set_input: typing.Union[IResolvable, typing.List[ReleaseSet]]
+set_input: IResolvable | typing.List[ReleaseSet]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]
 
 ---
 
 ##### `set_list_input`<sup>Optional</sup> <a name="set_list_input" id="@cdktf/provider-helm.release.Release.property.setListInput"></a>
 
 ```python
-set_list_input: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]]
+set_list_input: IResolvable | typing.List[ReleaseSetListStruct]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]
 
 ---
 
 ##### `set_sensitive_input`<sup>Optional</sup> <a name="set_sensitive_input" id="@cdktf/provider-helm.release.Release.property.setSensitiveInput"></a>
 
 ```python
-set_sensitive_input: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]]
+set_sensitive_input: IResolvable | typing.List[ReleaseSetSensitive]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]
 
 ---
 
 ##### `set_wo_input`<sup>Optional</sup> <a name="set_wo_input" id="@cdktf/provider-helm.release.Release.property.setWoInput"></a>
 
 ```python
-set_wo_input: typing.Union[IResolvable, typing.List[ReleaseSetWo]]
+set_wo_input: IResolvable | typing.List[ReleaseSetWo]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]
 
 ---
 
@@ -2120,10 +2120,10 @@ set_wo_revision_input: typing.Union[int, float]
 ##### `skip_crds_input`<sup>Optional</sup> <a name="skip_crds_input" id="@cdktf/provider-helm.release.Release.property.skipCrdsInput"></a>
 
 ```python
-skip_crds_input: typing.Union[bool, IResolvable]
+skip_crds_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2150,10 +2150,10 @@ values_input: typing.List[str]
 ##### `verify_input`<sup>Optional</sup> <a name="verify_input" id="@cdktf/provider-helm.release.Release.property.verifyInput"></a>
 
 ```python
-verify_input: typing.Union[bool, IResolvable]
+verify_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2170,30 +2170,30 @@ version_input: str
 ##### `wait_for_jobs_input`<sup>Optional</sup> <a name="wait_for_jobs_input" id="@cdktf/provider-helm.release.Release.property.waitForJobsInput"></a>
 
 ```python
-wait_for_jobs_input: typing.Union[bool, IResolvable]
+wait_for_jobs_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `wait_input`<sup>Optional</sup> <a name="wait_input" id="@cdktf/provider-helm.release.Release.property.waitInput"></a>
 
 ```python
-wait_input: typing.Union[bool, IResolvable]
+wait_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `atomic`<sup>Required</sup> <a name="atomic" id="@cdktf/provider-helm.release.Release.property.atomic"></a>
 
 ```python
-atomic: typing.Union[bool, IResolvable]
+atomic: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2210,30 +2210,30 @@ chart: str
 ##### `cleanup_on_fail`<sup>Required</sup> <a name="cleanup_on_fail" id="@cdktf/provider-helm.release.Release.property.cleanupOnFail"></a>
 
 ```python
-cleanup_on_fail: typing.Union[bool, IResolvable]
+cleanup_on_fail: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `create_namespace`<sup>Required</sup> <a name="create_namespace" id="@cdktf/provider-helm.release.Release.property.createNamespace"></a>
 
 ```python
-create_namespace: typing.Union[bool, IResolvable]
+create_namespace: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `dependency_update`<sup>Required</sup> <a name="dependency_update" id="@cdktf/provider-helm.release.Release.property.dependencyUpdate"></a>
 
 ```python
-dependency_update: typing.Union[bool, IResolvable]
+dependency_update: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2250,50 +2250,50 @@ description: str
 ##### `devel`<sup>Required</sup> <a name="devel" id="@cdktf/provider-helm.release.Release.property.devel"></a>
 
 ```python
-devel: typing.Union[bool, IResolvable]
+devel: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `disable_crd_hooks`<sup>Required</sup> <a name="disable_crd_hooks" id="@cdktf/provider-helm.release.Release.property.disableCrdHooks"></a>
 
 ```python
-disable_crd_hooks: typing.Union[bool, IResolvable]
+disable_crd_hooks: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `disable_openapi_validation`<sup>Required</sup> <a name="disable_openapi_validation" id="@cdktf/provider-helm.release.Release.property.disableOpenapiValidation"></a>
 
 ```python
-disable_openapi_validation: typing.Union[bool, IResolvable]
+disable_openapi_validation: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `disable_webhooks`<sup>Required</sup> <a name="disable_webhooks" id="@cdktf/provider-helm.release.Release.property.disableWebhooks"></a>
 
 ```python
-disable_webhooks: typing.Union[bool, IResolvable]
+disable_webhooks: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `force_update`<sup>Required</sup> <a name="force_update" id="@cdktf/provider-helm.release.Release.property.forceUpdate"></a>
 
 ```python
-force_update: typing.Union[bool, IResolvable]
+force_update: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2310,10 +2310,10 @@ keyring: str
 ##### `lint`<sup>Required</sup> <a name="lint" id="@cdktf/provider-helm.release.Release.property.lint"></a>
 
 ```python
-lint: typing.Union[bool, IResolvable]
+lint: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2350,40 +2350,40 @@ namespace: str
 ##### `pass_credentials`<sup>Required</sup> <a name="pass_credentials" id="@cdktf/provider-helm.release.Release.property.passCredentials"></a>
 
 ```python
-pass_credentials: typing.Union[bool, IResolvable]
+pass_credentials: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `recreate_pods`<sup>Required</sup> <a name="recreate_pods" id="@cdktf/provider-helm.release.Release.property.recreatePods"></a>
 
 ```python
-recreate_pods: typing.Union[bool, IResolvable]
+recreate_pods: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `render_subchart_notes`<sup>Required</sup> <a name="render_subchart_notes" id="@cdktf/provider-helm.release.Release.property.renderSubchartNotes"></a>
 
 ```python
-render_subchart_notes: typing.Union[bool, IResolvable]
+render_subchart_notes: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `replace`<sup>Required</sup> <a name="replace" id="@cdktf/provider-helm.release.Release.property.replace"></a>
 
 ```python
-replace: typing.Union[bool, IResolvable]
+replace: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2450,20 +2450,20 @@ repository_username: str
 ##### `reset_values`<sup>Required</sup> <a name="reset_values" id="@cdktf/provider-helm.release.Release.property.resetValues"></a>
 
 ```python
-reset_values: typing.Union[bool, IResolvable]
+reset_values: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `reuse_values`<sup>Required</sup> <a name="reuse_values" id="@cdktf/provider-helm.release.Release.property.reuseValues"></a>
 
 ```python
-reuse_values: typing.Union[bool, IResolvable]
+reuse_values: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2480,10 +2480,10 @@ set_wo_revision: typing.Union[int, float]
 ##### `skip_crds`<sup>Required</sup> <a name="skip_crds" id="@cdktf/provider-helm.release.Release.property.skipCrds"></a>
 
 ```python
-skip_crds: typing.Union[bool, IResolvable]
+skip_crds: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2510,10 +2510,10 @@ values: typing.List[str]
 ##### `verify`<sup>Required</sup> <a name="verify" id="@cdktf/provider-helm.release.Release.property.verify"></a>
 
 ```python
-verify: typing.Union[bool, IResolvable]
+verify: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2530,20 +2530,20 @@ version: str
 ##### `wait`<sup>Required</sup> <a name="wait" id="@cdktf/provider-helm.release.Release.property.wait"></a>
 
 ```python
-wait: typing.Union[bool, IResolvable]
+wait: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `wait_for_jobs`<sup>Required</sup> <a name="wait_for_jobs" id="@cdktf/provider-helm.release.Release.property.waitForJobs"></a>
 
 ```python
-wait_for_jobs: typing.Union[bool, IResolvable]
+wait_for_jobs: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2575,54 +2575,54 @@ tfResourceType: str
 from cdktf_cdktf_provider_helm import release
 
 release.ReleaseConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   chart: str,
   name: str,
-  atomic: typing.Union[bool, IResolvable] = None,
-  cleanup_on_fail: typing.Union[bool, IResolvable] = None,
-  create_namespace: typing.Union[bool, IResolvable] = None,
-  dependency_update: typing.Union[bool, IResolvable] = None,
+  atomic: bool | IResolvable = None,
+  cleanup_on_fail: bool | IResolvable = None,
+  create_namespace: bool | IResolvable = None,
+  dependency_update: bool | IResolvable = None,
   description: str = None,
-  devel: typing.Union[bool, IResolvable] = None,
-  disable_crd_hooks: typing.Union[bool, IResolvable] = None,
-  disable_openapi_validation: typing.Union[bool, IResolvable] = None,
-  disable_webhooks: typing.Union[bool, IResolvable] = None,
-  force_update: typing.Union[bool, IResolvable] = None,
+  devel: bool | IResolvable = None,
+  disable_crd_hooks: bool | IResolvable = None,
+  disable_openapi_validation: bool | IResolvable = None,
+  disable_webhooks: bool | IResolvable = None,
+  force_update: bool | IResolvable = None,
   keyring: str = None,
-  lint: typing.Union[bool, IResolvable] = None,
+  lint: bool | IResolvable = None,
   max_history: typing.Union[int, float] = None,
   namespace: str = None,
-  pass_credentials: typing.Union[bool, IResolvable] = None,
+  pass_credentials: bool | IResolvable = None,
   postrender: ReleasePostrender = None,
-  recreate_pods: typing.Union[bool, IResolvable] = None,
-  render_subchart_notes: typing.Union[bool, IResolvable] = None,
-  replace: typing.Union[bool, IResolvable] = None,
+  recreate_pods: bool | IResolvable = None,
+  render_subchart_notes: bool | IResolvable = None,
+  replace: bool | IResolvable = None,
   repository: str = None,
   repository_ca_file: str = None,
   repository_cert_file: str = None,
   repository_key_file: str = None,
   repository_password: str = None,
   repository_username: str = None,
-  reset_values: typing.Union[bool, IResolvable] = None,
-  reuse_values: typing.Union[bool, IResolvable] = None,
-  set: typing.Union[IResolvable, typing.List[ReleaseSet]] = None,
-  set_list: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]] = None,
-  set_sensitive: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]] = None,
-  set_wo: typing.Union[IResolvable, typing.List[ReleaseSetWo]] = None,
+  reset_values: bool | IResolvable = None,
+  reuse_values: bool | IResolvable = None,
+  set: IResolvable | typing.List[ReleaseSet] = None,
+  set_list: IResolvable | typing.List[ReleaseSetListStruct] = None,
+  set_sensitive: IResolvable | typing.List[ReleaseSetSensitive] = None,
+  set_wo: IResolvable | typing.List[ReleaseSetWo] = None,
   set_wo_revision: typing.Union[int, float] = None,
-  skip_crds: typing.Union[bool, IResolvable] = None,
+  skip_crds: bool | IResolvable = None,
   timeout: typing.Union[int, float] = None,
   values: typing.List[str] = None,
-  verify: typing.Union[bool, IResolvable] = None,
+  verify: bool | IResolvable = None,
   version: str = None,
-  wait: typing.Union[bool, IResolvable] = None,
-  wait_for_jobs: typing.Union[bool, IResolvable] = None
+  wait: bool | IResolvable = None,
+  wait_for_jobs: bool | IResolvable = None
 )
 ```
 
@@ -2630,74 +2630,74 @@ release.ReleaseConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.chart">chart</a></code> | <code>str</code> | Chart name to be installed. A path may be used. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.name">name</a></code> | <code>str</code> | Release name. The length must not be longer than 53 characters. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.atomic">atomic</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail">cleanup_on_fail</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace">create_namespace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Create the namespace if it does not exist. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate">dependency_update</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Run helm dependency update before installing the chart. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.atomic">atomic</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail">cleanup_on_fail</a></code> | <code>bool \| cdktf.IResolvable</code> | Allow deletion of new resources created in this upgrade when upgrade fails. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace">create_namespace</a></code> | <code>bool \| cdktf.IResolvable</code> | Create the namespace if it does not exist. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate">dependency_update</a></code> | <code>bool \| cdktf.IResolvable</code> | Run helm dependency update before installing the chart. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.description">description</a></code> | <code>str</code> | Add a custom description. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.devel">devel</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks">disable_crd_hooks</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation">disable_openapi_validation</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks">disable_webhooks</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Prevent hooks from running. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate">force_update</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Force resource update through delete/recreate if needed. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.devel">devel</a></code> | <code>bool \| cdktf.IResolvable</code> | Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks">disable_crd_hooks</a></code> | <code>bool \| cdktf.IResolvable</code> | Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation">disable_openapi_validation</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks">disable_webhooks</a></code> | <code>bool \| cdktf.IResolvable</code> | Prevent hooks from running. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate">force_update</a></code> | <code>bool \| cdktf.IResolvable</code> | Force resource update through delete/recreate if needed. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.keyring">keyring</a></code> | <code>str</code> | Location of public keys used for verification, Used only if 'verify is true'. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lint">lint</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Run helm lint when planning. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.lint">lint</a></code> | <code>bool \| cdktf.IResolvable</code> | Run helm lint when planning. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.maxHistory">max_history</a></code> | <code>typing.Union[int, float]</code> | Limit the maximum number of revisions saved per release. Use 0 for no limit. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.namespace">namespace</a></code> | <code>str</code> | Namespace to install the release into. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials">pass_credentials</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Pass credentials to all domains. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials">pass_credentials</a></code> | <code>bool \| cdktf.IResolvable</code> | Pass credentials to all domains. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.postrender">postrender</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | Postrender command config. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods">recreate_pods</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Perform pods restart during upgrade/rollback. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes">render_subchart_notes</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, render subchart notes along with the parent. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods">recreate_pods</a></code> | <code>bool \| cdktf.IResolvable</code> | Perform pods restart during upgrade/rollback. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes">render_subchart_notes</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, render subchart notes along with the parent. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.replace">replace</a></code> | <code>bool \| cdktf.IResolvable</code> | Re-use the given name, even if that name is already used. This is unsafe in production. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repository">repository</a></code> | <code>str</code> | Repository where to locate the requested chart. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryCaFile">repository_ca_file</a></code> | <code>str</code> | The Repositories CA file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryCertFile">repository_cert_file</a></code> | <code>str</code> | The repositories cert file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryKeyFile">repository_key_file</a></code> | <code>str</code> | The repositories cert key file. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryPassword">repository_password</a></code> | <code>str</code> | Password for HTTP basic authentication. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.repositoryUsername">repository_username</a></code> | <code>str</code> | Username for HTTP basic authentication. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.resetValues">reset_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When upgrading, reset the values to the ones built into the chart. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues">reuse_values</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.set">set</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]</code> | Custom values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setList">set_list</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]</code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive">set_sensitive</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]</code> | Custom sensitive values to be merged with the values. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWo">set_wo</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]</code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.resetValues">reset_values</a></code> | <code>bool \| cdktf.IResolvable</code> | When upgrading, reset the values to the ones built into the chart. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues">reuse_values</a></code> | <code>bool \| cdktf.IResolvable</code> | When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.set">set</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]</code> | Custom values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setList">set_list</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]</code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive">set_sensitive</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]</code> | Custom sensitive values to be merged with the values. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWo">set_wo</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]</code> | Custom values to be merged with the values. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.setWoRevision">set_wo_revision</a></code> | <code>typing.Union[int, float]</code> | The current revision of the write-only "set_wo" attribute. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds">skip_crds</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds">skip_crds</a></code> | <code>bool \| cdktf.IResolvable</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | Time in seconds to wait for any individual kubernetes operation. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.values">values</a></code> | <code>typing.List[str]</code> | List of values in raw YAML format to pass to helm. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.verify">verify</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Verify the package before installing it. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.verify">verify</a></code> | <code>bool \| cdktf.IResolvable</code> | Verify the package before installing it. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.version">version</a></code> | <code>str</code> | Specify the exact chart version to install. If this is not specified, the latest version is installed. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.wait">wait</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Will wait until all resources are in a ready state before marking the release as successful. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs">wait_for_jobs</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.wait">wait</a></code> | <code>bool \| cdktf.IResolvable</code> | Will wait until all resources are in a ready state before marking the release as successful. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs">wait_for_jobs</a></code> | <code>bool \| cdktf.IResolvable</code> | If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. |
 
 ---
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-helm.release.ReleaseConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-helm.release.ReleaseConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -2744,10 +2744,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-helm.release.ReleaseConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2782,10 +2782,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `atomic`<sup>Optional</sup> <a name="atomic" id="@cdktf/provider-helm.release.ReleaseConfig.property.atomic"></a>
 
 ```python
-atomic: typing.Union[bool, IResolvable]
+atomic: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
@@ -2796,10 +2796,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `cleanup_on_fail`<sup>Optional</sup> <a name="cleanup_on_fail" id="@cdktf/provider-helm.release.ReleaseConfig.property.cleanupOnFail"></a>
 
 ```python
-cleanup_on_fail: typing.Union[bool, IResolvable]
+cleanup_on_fail: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
@@ -2810,10 +2810,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `create_namespace`<sup>Optional</sup> <a name="create_namespace" id="@cdktf/provider-helm.release.ReleaseConfig.property.createNamespace"></a>
 
 ```python
-create_namespace: typing.Union[bool, IResolvable]
+create_namespace: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Create the namespace if it does not exist.
 
@@ -2824,10 +2824,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `dependency_update`<sup>Optional</sup> <a name="dependency_update" id="@cdktf/provider-helm.release.ReleaseConfig.property.dependencyUpdate"></a>
 
 ```python
-dependency_update: typing.Union[bool, IResolvable]
+dependency_update: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Run helm dependency update before installing the chart.
 
@@ -2852,10 +2852,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `devel`<sup>Optional</sup> <a name="devel" id="@cdktf/provider-helm.release.ReleaseConfig.property.devel"></a>
 
 ```python
-devel: typing.Union[bool, IResolvable]
+devel: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored.
 
@@ -2866,10 +2866,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disable_crd_hooks`<sup>Optional</sup> <a name="disable_crd_hooks" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableCrdHooks"></a>
 
 ```python
-disable_crd_hooks: typing.Union[bool, IResolvable]
+disable_crd_hooks: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook.
 
@@ -2880,10 +2880,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disable_openapi_validation`<sup>Optional</sup> <a name="disable_openapi_validation" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableOpenapiValidation"></a>
 
 ```python
-disable_openapi_validation: typing.Union[bool, IResolvable]
+disable_openapi_validation: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
@@ -2894,10 +2894,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disable_webhooks`<sup>Optional</sup> <a name="disable_webhooks" id="@cdktf/provider-helm.release.ReleaseConfig.property.disableWebhooks"></a>
 
 ```python
-disable_webhooks: typing.Union[bool, IResolvable]
+disable_webhooks: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Prevent hooks from running.
 
@@ -2908,10 +2908,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `force_update`<sup>Optional</sup> <a name="force_update" id="@cdktf/provider-helm.release.ReleaseConfig.property.forceUpdate"></a>
 
 ```python
-force_update: typing.Union[bool, IResolvable]
+force_update: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Force resource update through delete/recreate if needed.
 
@@ -2936,10 +2936,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `lint`<sup>Optional</sup> <a name="lint" id="@cdktf/provider-helm.release.ReleaseConfig.property.lint"></a>
 
 ```python
-lint: typing.Union[bool, IResolvable]
+lint: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Run helm lint when planning.
 
@@ -2978,10 +2978,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `pass_credentials`<sup>Optional</sup> <a name="pass_credentials" id="@cdktf/provider-helm.release.ReleaseConfig.property.passCredentials"></a>
 
 ```python
-pass_credentials: typing.Union[bool, IResolvable]
+pass_credentials: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Pass credentials to all domains.
 
@@ -3006,10 +3006,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recreate_pods`<sup>Optional</sup> <a name="recreate_pods" id="@cdktf/provider-helm.release.ReleaseConfig.property.recreatePods"></a>
 
 ```python
-recreate_pods: typing.Union[bool, IResolvable]
+recreate_pods: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Perform pods restart during upgrade/rollback.
 
@@ -3020,10 +3020,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `render_subchart_notes`<sup>Optional</sup> <a name="render_subchart_notes" id="@cdktf/provider-helm.release.ReleaseConfig.property.renderSubchartNotes"></a>
 
 ```python
-render_subchart_notes: typing.Union[bool, IResolvable]
+render_subchart_notes: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, render subchart notes along with the parent.
 
@@ -3034,10 +3034,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `replace`<sup>Optional</sup> <a name="replace" id="@cdktf/provider-helm.release.ReleaseConfig.property.replace"></a>
 
 ```python
-replace: typing.Union[bool, IResolvable]
+replace: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
@@ -3134,10 +3134,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `reset_values`<sup>Optional</sup> <a name="reset_values" id="@cdktf/provider-helm.release.ReleaseConfig.property.resetValues"></a>
 
 ```python
-reset_values: typing.Union[bool, IResolvable]
+reset_values: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When upgrading, reset the values to the ones built into the chart.
 
@@ -3148,10 +3148,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `reuse_values`<sup>Optional</sup> <a name="reuse_values" id="@cdktf/provider-helm.release.ReleaseConfig.property.reuseValues"></a>
 
 ```python
-reuse_values: typing.Union[bool, IResolvable]
+reuse_values: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
@@ -3162,10 +3162,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set`<sup>Optional</sup> <a name="set" id="@cdktf/provider-helm.release.ReleaseConfig.property.set"></a>
 
 ```python
-set: typing.Union[IResolvable, typing.List[ReleaseSet]]
+set: IResolvable | typing.List[ReleaseSet]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]
 
 Custom values to be merged with the values.
 
@@ -3176,10 +3176,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_list`<sup>Optional</sup> <a name="set_list" id="@cdktf/provider-helm.release.ReleaseConfig.property.setList"></a>
 
 ```python
-set_list: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]]
+set_list: IResolvable | typing.List[ReleaseSetListStruct]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]
 
 Custom sensitive values to be merged with the values.
 
@@ -3190,10 +3190,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_sensitive`<sup>Optional</sup> <a name="set_sensitive" id="@cdktf/provider-helm.release.ReleaseConfig.property.setSensitive"></a>
 
 ```python
-set_sensitive: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]]
+set_sensitive: IResolvable | typing.List[ReleaseSetSensitive]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]
 
 Custom sensitive values to be merged with the values.
 
@@ -3204,10 +3204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `set_wo`<sup>Optional</sup> <a name="set_wo" id="@cdktf/provider-helm.release.ReleaseConfig.property.setWo"></a>
 
 ```python
-set_wo: typing.Union[IResolvable, typing.List[ReleaseSetWo]]
+set_wo: IResolvable | typing.List[ReleaseSetWo]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]
 
 Custom values to be merged with the values.
 
@@ -3234,10 +3234,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `skip_crds`<sup>Optional</sup> <a name="skip_crds" id="@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds"></a>
 
 ```python
-skip_crds: typing.Union[bool, IResolvable]
+skip_crds: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
@@ -3276,10 +3276,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `verify`<sup>Optional</sup> <a name="verify" id="@cdktf/provider-helm.release.ReleaseConfig.property.verify"></a>
 
 ```python
-verify: typing.Union[bool, IResolvable]
+verify: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Verify the package before installing it.
 
@@ -3304,10 +3304,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `wait`<sup>Optional</sup> <a name="wait" id="@cdktf/provider-helm.release.ReleaseConfig.property.wait"></a>
 
 ```python
-wait: typing.Union[bool, IResolvable]
+wait: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
@@ -3318,10 +3318,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `wait_for_jobs`<sup>Optional</sup> <a name="wait_for_jobs" id="@cdktf/provider-helm.release.ReleaseConfig.property.waitForJobs"></a>
 
 ```python
-wait_for_jobs: typing.Union[bool, IResolvable]
+wait_for_jobs: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
@@ -4248,7 +4248,7 @@ def reset_args() -> None
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.binaryPathInput">binary_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.args">args</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.binaryPath">binary_path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a></code> | *No description.* |
 
 ---
 
@@ -4319,10 +4319,10 @@ binary_path: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleasePostrenderOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ReleasePostrender]
+internal_value: IResolvable | ReleasePostrender
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleasePostrender">ReleasePostrender</a>
 
 ---
 
@@ -4458,7 +4458,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]</code> | *No description.* |
 
 ---
 
@@ -4489,10 +4489,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ReleaseSet]]
+internal_value: IResolvable | typing.List[ReleaseSet]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]
 
 ---
 
@@ -4628,7 +4628,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]</code> | *No description.* |
 
 ---
 
@@ -4659,10 +4659,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetListStructList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ReleaseSetListStruct]]
+internal_value: IResolvable | typing.List[ReleaseSetListStruct]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]
 
 ---
 
@@ -4926,7 +4926,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.valueInput">value_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.value">value</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a></code> | *No description.* |
 
 ---
 
@@ -4997,10 +4997,10 @@ value: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetListStructOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ReleaseSetListStruct]
+internal_value: IResolvable | ReleaseSetListStruct
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleaseSetListStruct">ReleaseSetListStruct</a>
 
 ---
 
@@ -5280,7 +5280,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a></code> | *No description.* |
 
 ---
 
@@ -5371,10 +5371,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ReleaseSet]
+internal_value: IResolvable | ReleaseSet
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleaseSet">ReleaseSet</a>
 
 ---
 
@@ -5510,7 +5510,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]</code> | *No description.* |
 
 ---
 
@@ -5541,10 +5541,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetSensitiveList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ReleaseSetSensitive]]
+internal_value: IResolvable | typing.List[ReleaseSetSensitive]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]
 
 ---
 
@@ -5817,7 +5817,7 @@ def reset_type() -> None
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a></code> | *No description.* |
 
 ---
 
@@ -5908,10 +5908,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetSensitiveOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ReleaseSetSensitive]
+internal_value: IResolvable | ReleaseSetSensitive
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleaseSetSensitive">ReleaseSetSensitive</a>
 
 ---
 
@@ -6047,7 +6047,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]</code> | *No description.* |
 
 ---
 
@@ -6078,10 +6078,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetWoList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ReleaseSetWo]]
+internal_value: IResolvable | typing.List[ReleaseSetWo]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]
 
 ---
 
@@ -6354,7 +6354,7 @@ def reset_type() -> None
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a></code> | *No description.* |
 
 ---
 
@@ -6445,10 +6445,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-helm.release.ReleaseSetWoOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ReleaseSetWo]
+internal_value: IResolvable | ReleaseSetWo
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-helm.release.ReleaseSetWo">ReleaseSetWo</a>
 
 ---
 
