@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template
+// https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,259 +15,269 @@ export interface DataHelmTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
   * Kubernetes api versions used for Capabilities.APIVersions.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#api_versions DataHelmTemplate#api_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#api_versions DataHelmTemplate#api_versions}
   */
   readonly apiVersions?: string[];
   /**
   * If set, the installation process purges the chart on fail. The 'wait' flag will be set automatically if 'atomic' is used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#atomic DataHelmTemplate#atomic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#atomic DataHelmTemplate#atomic}
   */
   readonly atomic?: boolean | cdktf.IResolvable;
   /**
   * Chart name to be installed. A path may be used.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#chart DataHelmTemplate#chart}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#chart DataHelmTemplate#chart}
   */
   readonly chart: string;
   /**
   * List of rendered CRDs from the chart.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#crds DataHelmTemplate#crds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#crds DataHelmTemplate#crds}
   */
   readonly crds?: string[];
   /**
   * Create the namespace if it does not exist.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#create_namespace DataHelmTemplate#create_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#create_namespace DataHelmTemplate#create_namespace}
   */
   readonly createNamespace?: boolean | cdktf.IResolvable;
   /**
   * Run helm dependency update before installing the chart.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#dependency_update DataHelmTemplate#dependency_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#dependency_update DataHelmTemplate#dependency_update}
   */
   readonly dependencyUpdate?: boolean | cdktf.IResolvable;
   /**
   * Add a custom description.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#description DataHelmTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#description DataHelmTemplate#description}
   */
   readonly description?: string;
   /**
   * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#devel DataHelmTemplate#devel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#devel DataHelmTemplate#devel}
   */
   readonly devel?: boolean | cdktf.IResolvable;
   /**
   * If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#disable_openapi_validation DataHelmTemplate#disable_openapi_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#disable_openapi_validation DataHelmTemplate#disable_openapi_validation}
   */
   readonly disableOpenapiValidation?: boolean | cdktf.IResolvable;
   /**
   * Prevent hooks from running.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#disable_webhooks DataHelmTemplate#disable_webhooks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#disable_webhooks DataHelmTemplate#disable_webhooks}
   */
   readonly disableWebhooks?: boolean | cdktf.IResolvable;
   /**
   * Include CRDs in the templated output.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#include_crds DataHelmTemplate#include_crds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#include_crds DataHelmTemplate#include_crds}
   */
   readonly includeCrds?: boolean | cdktf.IResolvable;
   /**
   * Set .Release.IsUpgrade instead of .Release.IsInstall.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#is_upgrade DataHelmTemplate#is_upgrade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#is_upgrade DataHelmTemplate#is_upgrade}
   */
   readonly isUpgrade?: boolean | cdktf.IResolvable;
   /**
   * Location of public keys used for verification. Used only if `verify` is true.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#keyring DataHelmTemplate#keyring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#keyring DataHelmTemplate#keyring}
   */
   readonly keyring?: string;
   /**
   * Kubernetes version used for Capabilities.KubeVersion.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#kube_version DataHelmTemplate#kube_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#kube_version DataHelmTemplate#kube_version}
   */
   readonly kubeVersion?: string;
   /**
   * Concatenated rendered chart templates. This corresponds to the output of the `helm template` command.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#manifest DataHelmTemplate#manifest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#manifest DataHelmTemplate#manifest}
   */
   readonly manifest?: string;
   /**
   * Map of rendered chart templates indexed by the template name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#manifests DataHelmTemplate#manifests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#manifests DataHelmTemplate#manifests}
   */
   readonly manifests?: { [key: string]: string };
   /**
   * Release name
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#name DataHelmTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#name DataHelmTemplate#name}
   */
   readonly name: string;
   /**
   * Namespace to install the release into.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#namespace DataHelmTemplate#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#namespace DataHelmTemplate#namespace}
   */
   readonly namespace?: string;
   /**
   * Rendered notes if the chart contains a `NOTES.txt`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#notes DataHelmTemplate#notes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#notes DataHelmTemplate#notes}
   */
   readonly notes?: string;
   /**
   * Pass credentials to all domains
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#pass_credentials DataHelmTemplate#pass_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#pass_credentials DataHelmTemplate#pass_credentials}
   */
   readonly passCredentials?: boolean | cdktf.IResolvable;
   /**
   * Postrender command config
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#postrender DataHelmTemplate#postrender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#postrender DataHelmTemplate#postrender}
   */
   readonly postrender?: DataHelmTemplatePostrender;
   /**
   * If set, render subchart notes along with the parent.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#render_subchart_notes DataHelmTemplate#render_subchart_notes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#render_subchart_notes DataHelmTemplate#render_subchart_notes}
   */
   readonly renderSubchartNotes?: boolean | cdktf.IResolvable;
   /**
   * Re-use the given name, even if that name is already used. This is unsafe in production.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#replace DataHelmTemplate#replace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#replace DataHelmTemplate#replace}
   */
   readonly replace?: boolean | cdktf.IResolvable;
   /**
   * Repository where to locate the requested chart. If it is a URL the chart is installed without installing the repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#repository DataHelmTemplate#repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#repository DataHelmTemplate#repository}
   */
   readonly repository?: string;
   /**
   * The repository's CA file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#repository_ca_file DataHelmTemplate#repository_ca_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#repository_ca_file DataHelmTemplate#repository_ca_file}
   */
   readonly repositoryCaFile?: string;
   /**
   * The repository's cert file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#repository_cert_file DataHelmTemplate#repository_cert_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#repository_cert_file DataHelmTemplate#repository_cert_file}
   */
   readonly repositoryCertFile?: string;
   /**
   * The repository's cert key file
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#repository_key_file DataHelmTemplate#repository_key_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#repository_key_file DataHelmTemplate#repository_key_file}
   */
   readonly repositoryKeyFile?: string;
   /**
   * Password for HTTP basic authentication
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#repository_password DataHelmTemplate#repository_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#repository_password DataHelmTemplate#repository_password}
   */
   readonly repositoryPassword?: string;
   /**
   * Username for HTTP basic authentication
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#repository_username DataHelmTemplate#repository_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#repository_username DataHelmTemplate#repository_username}
   */
   readonly repositoryUsername?: string;
   /**
   * When upgrading, reset the values to the ones built into the chart.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#reset_values DataHelmTemplate#reset_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#reset_values DataHelmTemplate#reset_values}
   */
   readonly resetValues?: boolean | cdktf.IResolvable;
   /**
   * When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#reuse_values DataHelmTemplate#reuse_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#reuse_values DataHelmTemplate#reuse_values}
   */
   readonly reuseValues?: boolean | cdktf.IResolvable;
   /**
   * Custom values to be merged with the values
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#set DataHelmTemplate#set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#set DataHelmTemplate#set}
   */
   readonly set?: DataHelmTemplateSet[] | cdktf.IResolvable;
   /**
   * Custom sensitive values to be merged with the values
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#set_list DataHelmTemplate#set_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#set_list DataHelmTemplate#set_list}
   */
   readonly setList?: DataHelmTemplateSetListStruct[] | cdktf.IResolvable;
   /**
   * Custom sensitive values to be merged with the values
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#set_sensitive DataHelmTemplate#set_sensitive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#set_sensitive DataHelmTemplate#set_sensitive}
   */
   readonly setSensitive?: DataHelmTemplateSetSensitive[] | cdktf.IResolvable;
   /**
+  * Write-only custom values to be merged with the values.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#set_wo DataHelmTemplate#set_wo}
+  */
+  readonly setWo?: DataHelmTemplateSetWo[] | cdktf.IResolvable;
+  /**
   * Only show manifests rendered from the given templates.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#show_only DataHelmTemplate#show_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#show_only DataHelmTemplate#show_only}
   */
   readonly showOnly?: string[];
   /**
   * If set, no CRDs will be installed. By default, CRDs are installed if not already present.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#skip_crds DataHelmTemplate#skip_crds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#skip_crds DataHelmTemplate#skip_crds}
   */
   readonly skipCrds?: boolean | cdktf.IResolvable;
   /**
   * If set, tests will not be rendered. By default, tests are rendered.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#skip_tests DataHelmTemplate#skip_tests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#skip_tests DataHelmTemplate#skip_tests}
   */
   readonly skipTests?: boolean | cdktf.IResolvable;
   /**
   * Time in seconds to wait for any individual Kubernetes operation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#timeout DataHelmTemplate#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#timeout DataHelmTemplate#timeout}
   */
   readonly timeout?: number;
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#timeouts DataHelmTemplate#timeouts}
+  */
+  readonly timeouts?: DataHelmTemplateTimeouts;
+  /**
   * Validate your manifests against the Kubernetes cluster you are currently pointing at. This is the same validation performed on an install.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#validate DataHelmTemplate#validate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#validate DataHelmTemplate#validate}
   */
   readonly validate?: boolean | cdktf.IResolvable;
   /**
   * List of values in raw yaml format to pass to helm.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#values DataHelmTemplate#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#values DataHelmTemplate#values}
   */
   readonly values?: string[];
   /**
   * Verify the package before installing it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#verify DataHelmTemplate#verify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#verify DataHelmTemplate#verify}
   */
   readonly verify?: boolean | cdktf.IResolvable;
   /**
   * Specify the exact chart version to install. If this is not specified, the latest version is installed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#version DataHelmTemplate#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#version DataHelmTemplate#version}
   */
   readonly version?: string;
   /**
   * Will wait until all resources are in a ready state before marking the release as successful.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#wait DataHelmTemplate#wait}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#wait DataHelmTemplate#wait}
   */
   readonly wait?: boolean | cdktf.IResolvable;
 }
@@ -275,13 +285,13 @@ export interface DataHelmTemplatePostrender {
   /**
   * An argument to the post-renderer (can specify multiple)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#args DataHelmTemplate#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#args DataHelmTemplate#args}
   */
   readonly args?: string[];
   /**
   * The common binary path
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#binary_path DataHelmTemplate#binary_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#binary_path DataHelmTemplate#binary_path}
   */
   readonly binaryPath: string;
 }
@@ -401,15 +411,15 @@ export class DataHelmTemplatePostrenderOutputReference extends cdktf.ComplexObje
 }
 export interface DataHelmTemplateSet {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#name DataHelmTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#name DataHelmTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#type DataHelmTemplate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#type DataHelmTemplate#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#value DataHelmTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#value DataHelmTemplate#value}
   */
   readonly value?: string;
 }
@@ -580,11 +590,11 @@ export class DataHelmTemplateSetList extends cdktf.ComplexList {
 }
 export interface DataHelmTemplateSetListStruct {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#name DataHelmTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#name DataHelmTemplate#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#value DataHelmTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#value DataHelmTemplate#value}
   */
   readonly value: string[];
 }
@@ -726,15 +736,15 @@ export class DataHelmTemplateSetListStructList extends cdktf.ComplexList {
 }
 export interface DataHelmTemplateSetSensitive {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#name DataHelmTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#name DataHelmTemplate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#type DataHelmTemplate#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#type DataHelmTemplate#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#value DataHelmTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#value DataHelmTemplate#value}
   */
   readonly value: string;
 }
@@ -900,9 +910,281 @@ export class DataHelmTemplateSetSensitiveList extends cdktf.ComplexList {
     return new DataHelmTemplateSetSensitiveOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataHelmTemplateSetWo {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#name DataHelmTemplate#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#type DataHelmTemplate#type}
+  */
+  readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#value DataHelmTemplate#value}
+  */
+  readonly value: string;
+}
+
+export function dataHelmTemplateSetWoToTerraform(struct?: DataHelmTemplateSetWo | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    type: cdktf.stringToTerraform(struct!.type),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
+export function dataHelmTemplateSetWoToHclTerraform(struct?: DataHelmTemplateSetWo | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DataHelmTemplateSetWoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataHelmTemplateSetWo | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataHelmTemplateSetWo | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class DataHelmTemplateSetWoList extends cdktf.ComplexList {
+  public internalValue? : DataHelmTemplateSetWo[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataHelmTemplateSetWoOutputReference {
+    return new DataHelmTemplateSetWoOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataHelmTemplateTimeouts {
+  /**
+  * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#read DataHelmTemplate#read}
+  */
+  readonly read?: string;
+}
+
+export function dataHelmTemplateTimeoutsToTerraform(struct?: DataHelmTemplateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
+export function dataHelmTemplateTimeoutsToHclTerraform(struct?: DataHelmTemplateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class DataHelmTemplateTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false);
+  }
+
+  public get internalValue(): DataHelmTemplateTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._read !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataHelmTemplateTimeouts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._read = value.read;
+    }
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read;
+  }
+}
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template helm_template}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template helm_template}
 */
 export class DataHelmTemplate extends cdktf.TerraformDataSource {
 
@@ -918,7 +1200,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataHelmTemplate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataHelmTemplate to import
-  * @param importFromId The id of the existing DataHelmTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataHelmTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataHelmTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -930,7 +1212,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.0.2/docs/data-sources/template helm_template} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/data-sources/template helm_template} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -941,7 +1223,7 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       terraformResourceType: 'helm_template',
       terraformGeneratorMetadata: {
         providerName: 'helm',
-        providerVersion: '3.0.2',
+        providerVersion: '3.1.0',
         providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
@@ -986,10 +1268,12 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     this._set.internalValue = config.set;
     this._setList.internalValue = config.setList;
     this._setSensitive.internalValue = config.setSensitive;
+    this._setWo.internalValue = config.setWo;
     this._showOnly = config.showOnly;
     this._skipCrds = config.skipCrds;
     this._skipTests = config.skipTests;
     this._timeout = config.timeout;
+    this._timeouts.internalValue = config.timeouts;
     this._validate = config.validate;
     this._values = config.values;
     this._verify = config.verify;
@@ -1544,6 +1828,22 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
     return this._setSensitive.internalValue;
   }
 
+  // set_wo - computed: false, optional: true, required: false
+  private _setWo = new DataHelmTemplateSetWoList(this, "set_wo", false);
+  public get setWo() {
+    return this._setWo;
+  }
+  public putSetWo(value: DataHelmTemplateSetWo[] | cdktf.IResolvable) {
+    this._setWo.internalValue = value;
+  }
+  public resetSetWo() {
+    this._setWo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get setWoInput() {
+    return this._setWo.internalValue;
+  }
+
   // show_only - computed: false, optional: true, required: false
   private _showOnly?: string[]; 
   public get showOnly() {
@@ -1606,6 +1906,22 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
     return this._timeout;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new DataHelmTemplateTimeoutsOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: DataHelmTemplateTimeouts) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
   }
 
   // validate - computed: false, optional: true, required: false
@@ -1728,10 +2044,12 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
       set: cdktf.listMapper(dataHelmTemplateSetToTerraform, false)(this._set.internalValue),
       set_list: cdktf.listMapper(dataHelmTemplateSetListStructToTerraform, false)(this._setList.internalValue),
       set_sensitive: cdktf.listMapper(dataHelmTemplateSetSensitiveToTerraform, false)(this._setSensitive.internalValue),
+      set_wo: cdktf.listMapper(dataHelmTemplateSetWoToTerraform, false)(this._setWo.internalValue),
       show_only: cdktf.listMapper(cdktf.stringToTerraform, false)(this._showOnly),
       skip_crds: cdktf.booleanToTerraform(this._skipCrds),
       skip_tests: cdktf.booleanToTerraform(this._skipTests),
       timeout: cdktf.numberToTerraform(this._timeout),
+      timeouts: dataHelmTemplateTimeoutsToTerraform(this._timeouts.internalValue),
       validate: cdktf.booleanToTerraform(this._validate),
       values: cdktf.listMapper(cdktf.stringToTerraform, false)(this._values),
       verify: cdktf.booleanToTerraform(this._verify),
@@ -1946,6 +2264,12 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
         type: "set",
         storageClassType: "DataHelmTemplateSetSensitiveList",
       },
+      set_wo: {
+        value: cdktf.listMapperHcl(dataHelmTemplateSetWoToHclTerraform, false)(this._setWo.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataHelmTemplateSetWoList",
+      },
       show_only: {
         value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._showOnly),
         isBlock: false,
@@ -1969,6 +2293,12 @@ export class DataHelmTemplate extends cdktf.TerraformDataSource {
         isBlock: false,
         type: "simple",
         storageClassType: "number",
+      },
+      timeouts: {
+        value: dataHelmTemplateTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataHelmTemplateTimeouts",
       },
       validate: {
         value: cdktf.booleanToHclTerraform(this._validate),
