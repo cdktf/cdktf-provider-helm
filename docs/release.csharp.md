@@ -4,7 +4,7 @@
 
 ### Release <a name="Release" id="@cdktf/provider-helm.release.Release"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release helm_release}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release helm_release}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.release.Release.Initializer"></a>
 
@@ -839,7 +839,7 @@ The construct id used in the generated config for the Release to import.
 
 The id of the existing Release that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -2167,7 +2167,7 @@ new ReleaseConfig {
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.skipCrds">SkipCrds</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set, no CRDs will be installed. By default, CRDs are installed if not already present. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.takeOwnership">TakeOwnership</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If set, Helm will take ownership of resources not already annotated by this release. Useful for migrations or recovery. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.timeout">Timeout</a></code> | <code>double</code> | Time in seconds to wait for any individual kubernetes operation. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseTimeouts">ReleaseTimeouts</a></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#timeouts Release#timeouts}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-helm.release.ReleaseTimeouts">ReleaseTimeouts</a></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#timeouts Release#timeouts}. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.upgradeInstall">UpgradeInstall</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | If true, the provider will install the release at the specified version even if a release not controlled by the provider is present. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.values">Values</a></code> | <code>string[]</code> | List of values in raw YAML format to pass to helm. |
 | <code><a href="#@cdktf/provider-helm.release.ReleaseConfig.property.verify">Verify</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Verify the package before installing it. |
@@ -2257,7 +2257,7 @@ public string Chart { get; set; }
 
 Chart name to be installed. A path may be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#chart Release#chart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#chart Release#chart}
 
 ---
 
@@ -2271,7 +2271,7 @@ public string Name { get; set; }
 
 Release name. The length must not be longer than 53 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}
 
 ---
 
@@ -2285,7 +2285,7 @@ public bool|IResolvable Atomic { get; set; }
 
 If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#atomic Release#atomic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#atomic Release#atomic}
 
 ---
 
@@ -2299,7 +2299,7 @@ public bool|IResolvable CleanupOnFail { get; set; }
 
 Allow deletion of new resources created in this upgrade when upgrade fails.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#cleanup_on_fail Release#cleanup_on_fail}
 
 ---
 
@@ -2313,7 +2313,7 @@ public bool|IResolvable CreateNamespace { get; set; }
 
 Create the namespace if it does not exist.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#create_namespace Release#create_namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#create_namespace Release#create_namespace}
 
 ---
 
@@ -2327,7 +2327,7 @@ public bool|IResolvable DependencyUpdate { get; set; }
 
 Run helm dependency update before installing the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#dependency_update Release#dependency_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#dependency_update Release#dependency_update}
 
 ---
 
@@ -2341,7 +2341,7 @@ public string Description { get; set; }
 
 Add a custom description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#description Release#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#description Release#description}
 
 ---
 
@@ -2355,7 +2355,7 @@ public bool|IResolvable Devel { get; set; }
 
 Use chart development versions, too. Equivalent to version '>0.0.0-0'. If 'version' is set, this is ignored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#devel Release#devel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#devel Release#devel}
 
 ---
 
@@ -2369,7 +2369,7 @@ public bool|IResolvable DisableCrdHooks { get; set; }
 
 Prevent CRD hooks from running, but run other hooks. See helm install --no-crd-hook.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#disable_crd_hooks Release#disable_crd_hooks}
 
 ---
 
@@ -2383,7 +2383,7 @@ public bool|IResolvable DisableOpenapiValidation { get; set; }
 
 If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#disable_openapi_validation Release#disable_openapi_validation}
 
 ---
 
@@ -2397,7 +2397,7 @@ public bool|IResolvable DisableWebhooks { get; set; }
 
 Prevent hooks from running.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#disable_webhooks Release#disable_webhooks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#disable_webhooks Release#disable_webhooks}
 
 ---
 
@@ -2411,7 +2411,7 @@ public bool|IResolvable ForceUpdate { get; set; }
 
 Force resource update through delete/recreate if needed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#force_update Release#force_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#force_update Release#force_update}
 
 ---
 
@@ -2425,7 +2425,7 @@ public string Keyring { get; set; }
 
 Location of public keys used for verification, Used only if 'verify is true'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#keyring Release#keyring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#keyring Release#keyring}
 
 ---
 
@@ -2439,7 +2439,7 @@ public bool|IResolvable Lint { get; set; }
 
 Run helm lint when planning.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#lint Release#lint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#lint Release#lint}
 
 ---
 
@@ -2453,7 +2453,7 @@ public double MaxHistory { get; set; }
 
 Limit the maximum number of revisions saved per release. Use 0 for no limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#max_history Release#max_history}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#max_history Release#max_history}
 
 ---
 
@@ -2467,7 +2467,7 @@ public string Namespace { get; set; }
 
 Namespace to install the release into.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#namespace Release#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#namespace Release#namespace}
 
 ---
 
@@ -2481,7 +2481,7 @@ public bool|IResolvable PassCredentials { get; set; }
 
 Pass credentials to all domains.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#pass_credentials Release#pass_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#pass_credentials Release#pass_credentials}
 
 ---
 
@@ -2495,7 +2495,7 @@ public ReleasePostrender Postrender { get; set; }
 
 Postrender command config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#postrender Release#postrender}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#postrender Release#postrender}
 
 ---
 
@@ -2509,7 +2509,7 @@ public bool|IResolvable RecreatePods { get; set; }
 
 Perform pods restart during upgrade/rollback.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#recreate_pods Release#recreate_pods}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#recreate_pods Release#recreate_pods}
 
 ---
 
@@ -2523,7 +2523,7 @@ public bool|IResolvable RenderSubchartNotes { get; set; }
 
 If set, render subchart notes along with the parent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#render_subchart_notes Release#render_subchart_notes}
 
 ---
 
@@ -2537,7 +2537,7 @@ public bool|IResolvable Replace { get; set; }
 
 Re-use the given name, even if that name is already used. This is unsafe in production.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#replace Release#replace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#replace Release#replace}
 
 ---
 
@@ -2553,7 +2553,7 @@ Repository where to locate the requested chart.
 
 If it is a URL, the chart is installed without installing the repository
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#repository Release#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#repository Release#repository}
 
 ---
 
@@ -2567,7 +2567,7 @@ public string RepositoryCaFile { get; set; }
 
 The Repositories CA file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#repository_ca_file Release#repository_ca_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#repository_ca_file Release#repository_ca_file}
 
 ---
 
@@ -2581,7 +2581,7 @@ public string RepositoryCertFile { get; set; }
 
 The repositories cert file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#repository_cert_file Release#repository_cert_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#repository_cert_file Release#repository_cert_file}
 
 ---
 
@@ -2595,7 +2595,7 @@ public string RepositoryKeyFile { get; set; }
 
 The repositories cert key file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#repository_key_file Release#repository_key_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#repository_key_file Release#repository_key_file}
 
 ---
 
@@ -2609,7 +2609,7 @@ public string RepositoryPassword { get; set; }
 
 Password for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#repository_password Release#repository_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#repository_password Release#repository_password}
 
 ---
 
@@ -2623,7 +2623,7 @@ public string RepositoryUsername { get; set; }
 
 Username for HTTP basic authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#repository_username Release#repository_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#repository_username Release#repository_username}
 
 ---
 
@@ -2637,7 +2637,7 @@ public bool|IResolvable ResetValues { get; set; }
 
 When upgrading, reset the values to the ones built into the chart.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#reset_values Release#reset_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#reset_values Release#reset_values}
 
 ---
 
@@ -2651,7 +2651,7 @@ public bool|IResolvable ReuseValues { get; set; }
 
 When upgrading, reuse the last release's values and merge in any overrides. If 'reset_values' is specified, this is ignored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#reuse_values Release#reuse_values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#reuse_values Release#reuse_values}
 
 ---
 
@@ -2665,7 +2665,7 @@ public IResolvable|ReleaseSet[] Set { get; set; }
 
 Custom values to be merged with the values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#set Release#set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#set Release#set}
 
 ---
 
@@ -2679,7 +2679,7 @@ public IResolvable|ReleaseSetListStruct[] SetList { get; set; }
 
 Custom sensitive values to be merged with the values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#set_list Release#set_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#set_list Release#set_list}
 
 ---
 
@@ -2693,7 +2693,7 @@ public IResolvable|ReleaseSetSensitive[] SetSensitive { get; set; }
 
 Custom sensitive values to be merged with the values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#set_sensitive Release#set_sensitive}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#set_sensitive Release#set_sensitive}
 
 ---
 
@@ -2707,7 +2707,7 @@ public IResolvable|ReleaseSetWo[] SetWo { get; set; }
 
 Custom values to be merged with the values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#set_wo Release#set_wo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#set_wo Release#set_wo}
 
 ---
 
@@ -2723,7 +2723,7 @@ The current revision of the write-only "set_wo" attribute.
 
 Incrementing this integer value will cause Terraform to update the write-only value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#set_wo_revision Release#set_wo_revision}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#set_wo_revision Release#set_wo_revision}
 
 ---
 
@@ -2737,7 +2737,7 @@ public bool|IResolvable SkipCrds { get; set; }
 
 If set, no CRDs will be installed. By default, CRDs are installed if not already present.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#skip_crds Release#skip_crds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#skip_crds Release#skip_crds}
 
 ---
 
@@ -2751,7 +2751,7 @@ public bool|IResolvable TakeOwnership { get; set; }
 
 If set, Helm will take ownership of resources not already annotated by this release. Useful for migrations or recovery.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#take_ownership Release#take_ownership}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#take_ownership Release#take_ownership}
 
 ---
 
@@ -2765,7 +2765,7 @@ public double Timeout { get; set; }
 
 Time in seconds to wait for any individual kubernetes operation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#timeout Release#timeout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#timeout Release#timeout}
 
 ---
 
@@ -2777,7 +2777,7 @@ public ReleaseTimeouts Timeouts { get; set; }
 
 - *Type:* <a href="#@cdktf/provider-helm.release.ReleaseTimeouts">ReleaseTimeouts</a>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#timeouts Release#timeouts}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#timeouts Release#timeouts}.
 
 ---
 
@@ -2793,7 +2793,7 @@ If true, the provider will install the release at the specified version even if 
 
 This is equivalent to running 'helm upgrade --install'. WARNING: this may not be suitable for production use -- see the 'Upgrade Mode' note in the provider documentation. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#upgrade_install Release#upgrade_install}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#upgrade_install Release#upgrade_install}
 
 ---
 
@@ -2807,7 +2807,7 @@ public string[] Values { get; set; }
 
 List of values in raw YAML format to pass to helm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#values Release#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#values Release#values}
 
 ---
 
@@ -2821,7 +2821,7 @@ public bool|IResolvable Verify { get; set; }
 
 Verify the package before installing it.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#verify Release#verify}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#verify Release#verify}
 
 ---
 
@@ -2835,7 +2835,7 @@ public string Version { get; set; }
 
 Specify the exact chart version to install. If this is not specified, the latest version is installed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#version Release#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#version Release#version}
 
 ---
 
@@ -2849,7 +2849,7 @@ public bool|IResolvable Wait { get; set; }
 
 Will wait until all resources are in a ready state before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#wait Release#wait}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#wait Release#wait}
 
 ---
 
@@ -2863,7 +2863,7 @@ public bool|IResolvable WaitForJobs { get; set; }
 
 If wait is enabled, will wait until all Jobs have been completed before marking the release as successful.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#wait_for_jobs Release#wait_for_jobs}
 
 ---
 
@@ -2912,7 +2912,7 @@ public string BinaryPath { get; set; }
 
 The common binary path.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#binary_path Release#binary_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#binary_path Release#binary_path}
 
 ---
 
@@ -2926,7 +2926,7 @@ public string[] Args { get; set; }
 
 An argument to the post-renderer (can specify multiple).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#args Release#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#args Release#args}
 
 ---
 
@@ -2948,9 +2948,9 @@ new ReleaseSet {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#type Release#type}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#value Release#value}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#type Release#type}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSet.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#value Release#value}. |
 
 ---
 
@@ -2962,7 +2962,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}.
 
 ---
 
@@ -2974,7 +2974,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#type Release#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#type Release#type}.
 
 ---
 
@@ -2986,7 +2986,7 @@ public string Value { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#value Release#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#value Release#value}.
 
 ---
 
@@ -3007,8 +3007,8 @@ new ReleaseSetListStruct {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStruct.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStruct.property.value">Value</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#value Release#value}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStruct.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetListStruct.property.value">Value</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#value Release#value}. |
 
 ---
 
@@ -3020,7 +3020,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}.
 
 ---
 
@@ -3032,7 +3032,7 @@ public string[] Value { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#value Release#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#value Release#value}.
 
 ---
 
@@ -3054,9 +3054,9 @@ new ReleaseSetSensitive {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#value Release#value}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#type Release#type}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#value Release#value}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetSensitive.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#type Release#type}. |
 
 ---
 
@@ -3068,7 +3068,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}.
 
 ---
 
@@ -3080,7 +3080,7 @@ public string Value { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#value Release#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#value Release#value}.
 
 ---
 
@@ -3092,7 +3092,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#type Release#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#type Release#type}.
 
 ---
 
@@ -3114,9 +3114,9 @@ new ReleaseSetWo {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWo.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWo.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#value Release#value}. |
-| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWo.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#type Release#type}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWo.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWo.property.value">Value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#value Release#value}. |
+| <code><a href="#@cdktf/provider-helm.release.ReleaseSetWo.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#type Release#type}. |
 
 ---
 
@@ -3128,7 +3128,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#name Release#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#name Release#name}.
 
 ---
 
@@ -3140,7 +3140,7 @@ public string Value { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#value Release#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#value Release#value}.
 
 ---
 
@@ -3152,7 +3152,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#type Release#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#type Release#type}.
 
 ---
 
@@ -3192,7 +3192,7 @@ public string Create { get; set; }
 
 A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#create Release#create}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#create Release#create}
 
 ---
 
@@ -3206,7 +3206,7 @@ public string Delete { get; set; }
 
 A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#delete Release#delete}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#delete Release#delete}
 
 ---
 
@@ -3220,7 +3220,7 @@ public string Read { get; set; }
 
 A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Read operations occur during any refresh or planning operation when refresh is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#read Release#read}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#read Release#read}
 
 ---
 
@@ -3234,7 +3234,7 @@ public string Update { get; set; }
 
 A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.0/docs/resources/release#update Release#update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1/docs/resources/release#update Release#update}
 
 ---
 
