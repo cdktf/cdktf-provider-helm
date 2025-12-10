@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/helm/3.1.1
 #### Initializers <a name="Initializers" id="@cdktf/provider-helm.provider.HelmProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 provider.NewHelmProvider(scope Construct, id *string, config HelmProviderConfig) HelmProvider
 ```
@@ -228,7 +228,7 @@ func ResetRepositoryConfigPath()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-helm.provider.HelmProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 provider.HelmProvider_IsConstruct(x interface{}) *bool
 ```
@@ -260,7 +260,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-helm.provider.HelmProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 provider.HelmProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -274,7 +274,7 @@ provider.HelmProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-helm.provider.HelmProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 provider.HelmProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -288,7 +288,7 @@ provider.HelmProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-helm.provider.HelmProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 provider.HelmProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -715,15 +715,15 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.provider.HelmProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 &provider.HelmProviderConfig {
 	Alias: *string,
 	BurstLimit: *f64,
 	Debug: interface{},
-	Experiments: github.com/cdktf/cdktf-provider-helm-go/helm/v12.provider.HelmProviderExperiments,
+	Experiments: github.com/cdktf/cdktf-provider-helm-go/helm.provider.HelmProviderExperiments,
 	HelmDriver: *string,
-	Kubernetes: github.com/cdktf/cdktf-provider-helm-go/helm/v12.provider.HelmProviderKubernetes,
+	Kubernetes: github.com/cdktf/cdktf-provider-helm-go/helm.provider.HelmProviderKubernetes,
 	PluginsPath: *string,
 	Qps: *f64,
 	Registries: interface{},
@@ -925,7 +925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.provider.HelmProviderExperiments.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 &provider.HelmProviderExperiments {
 	Manifest: interface{},
@@ -959,7 +959,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.provider.HelmProviderKubernetes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 &provider.HelmProviderKubernetes {
 	ClientCertificate: *string,
@@ -970,7 +970,7 @@ import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
 	ConfigContextCluster: *string,
 	ConfigPath: *string,
 	ConfigPaths: *[]*string,
-	Exec: github.com/cdktf/cdktf-provider-helm-go/helm/v12.provider.HelmProviderKubernetesExec,
+	Exec: github.com/cdktf/cdktf-provider-helm-go/helm.provider.HelmProviderKubernetesExec,
 	Host: *string,
 	Insecure: interface{},
 	Password: *string,
@@ -1237,7 +1237,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.provider.HelmProviderKubernetesExec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 &provider.HelmProviderKubernetesExec {
 	ApiVersion: *string,
@@ -1319,7 +1319,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-helm.provider.HelmProviderRegistries.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-helm-go/helm/v12/provider"
+import "github.com/cdktf/cdktf-provider-helm-go/helm/provider"
 
 &provider.HelmProviderRegistries {
 	Password: *string,
